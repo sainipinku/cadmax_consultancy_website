@@ -1,0 +1,148 @@
+/* FLUID AREA */
+.rating-fluid {
+  width: 100%;
+  padding: 60px 0;
+  background: #fafafa;
+}
+
+/* HEADINGS ROW */
+.rating-heading-row {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  display: flex;
+  justify-content: space-between;
+
+  opacity: 0;
+}
+
+/* LEFT HEADING (slide from left) */
+.left-h {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  transform: translateX(-60px);
+  transition: 0.6s ease-out;
+}
+
+/* RIGHT HEADING (slide from right) */
+.right-h {
+  font-size: 20px;
+  width: 45%;
+  font-weight: 500;
+  text-align: right;
+
+  transform: translateX(60px);
+  transition: 0.6s ease-out;
+}
+.rating-heading-row {
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+
+.animate-heading {
+  opacity: 1 !important;
+}
+
+
+/* ACTIVATION FOR HEADINGS */
+.animate-heading .left-h {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.animate-heading .right-h {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* CARDS */
+.rating-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.rating-card {
+  width: 33%;
+  background: white;
+  padding: 25px;
+  border-radius: 2px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: 0.7s ease-out;
+}
+
+/* CARD ACTIVE */
+.animate-card {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* STARS */
+.stars-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.stars-row img {
+  width: 19px;
+  height: 18px;
+}
+
+/* TEXT */
+.review-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #3E4459;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #171717;
+  text-transform: uppercase;
+}
+
+
+/* HOVER INTERACTION: CARD LIFT + OTHER CARDS DOWN */
+.rating-container:hover .rating-card {
+  transform: translateY(20px);   /* all cards go slightly down */
+  opacity: 0.7;
+}
+
+.rating-card:hover {
+  transform: translateY(-15px) !important; /* hovered card goes up */
+  opacity: 1 !important;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
+  z-index: 10;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .rating-heading-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .right-h {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rating-container {
+    flex-direction: column;
+  }
+
+  .rating-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,101 @@
+/* ---------- FLUID CONTAINER ---------- */
+.company-fluid {
+  width: 100%;
+  padding: 50px 0;
+  background: #f7f7f7;
+}
+
+/* ---------- HEADINGS ---------- */
+.company-heading-row {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Initial hidden state (before scroll) */
+.slide-text {
+  opacity: 0;
+  transform: translateX(-70px);
+  transition: opacity 1.05s ease, transform 0.6s ease;
+}
+
+/* When visible becomes true */
+.company-heading-row.visible .slide-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.company-left-heading {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.company-right-heading {
+  font-size: 20px;
+  font-weight: 500;
+  width: 45%;
+  text-align: right;
+}
+
+/* ---------- LOGO ROW ---------- */
+.company-logo-row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  /* AUTO SLIDE LEFT ↔ RIGHT */
+  animation: slideLR 2s ease-in-out infinite alternate;
+}
+
+/* ---------- LOGO BOX ---------- */
+.company-logo-box img {
+  width: 320px;
+  height: 162.5px;
+  object-fit: contain;
+  background: white;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+/* ---------- SLIDE ANIMATION ---------- */
+@keyframes slideLR {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120px);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .company-logo-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none;
+  }
+
+  .company-logo-box img {
+    width: 280px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .company-heading-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .company-right-heading {
+    width: 100%;
+    text-align: center;
+  }
+}

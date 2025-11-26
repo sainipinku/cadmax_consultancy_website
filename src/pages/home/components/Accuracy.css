@@ -1,0 +1,104 @@
+/* MAIN WRAPPER — remove all top space */
+.accuracy-section {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* HEADING */
+.accuracy-section h2 {
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #171717;
+    margin-top: 0 !important;
+}
+
+/* PARAGRAPH */
+.accuracy-section p {
+    font-size: 20px;
+    line-height: 1.2;
+    color: #333;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* IMAGE STYLING */
+.accuracy-image {
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.6s ease;
+    border-radius: 8px;
+}
+
+/* INITIAL TEXT STATE */
+.accuracy-text {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: 0.6s ease-out;
+}
+
+/* ACTIVE TEXT ANIMATION */
+.accuracy-text.animate-show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* INITIAL IMAGE STATE */
+.accuracy-img-wrapper {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: 0.6s ease-out;
+}
+
+/* ACTIVE IMAGE ANIMATION */
+.accuracy-img-wrapper.animate-show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* IMAGE HOVER ZOOM */
+.accuracy-image:hover {
+    transform: scale(1.08);
+}
+
+/* Remove bootstrap row gap */
+.accuracy-section .row {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+    .accuracy-section h2 {
+        font-size: 26px;
+    }
+    .accuracy-section p {
+        font-size: 15px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .accuracy-section {
+        text-align: center;
+    }
+
+    .accuracy-section h2 {
+        font-size: 24px;
+    }
+
+    .accuracy-image {
+        max-width: 90%;
+        margin-top: 10px;
+    }
+}
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 480px) {
+    .accuracy-section h2 {
+        font-size: 22px;
+    }
+    .accuracy-section p {
+        font-size: 14px;
+    }
+}

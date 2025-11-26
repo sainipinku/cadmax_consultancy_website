@@ -1,0 +1,178 @@
+.hero-fluid {
+    width: 100%;
+    background-image: url(../../../assets/Images/slide-image/bg-hero-img.png);
+    padding: 50px 0;
+    background-size: cover;
+    position: relative;
+    height: auto;
+}
+
+/* Smooth swap animation */
+.swap img {
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Middle image highlighted */
+.big.middle img {
+  transform: scale(1.12);
+  z-index: 5;
+}
+
+/* Auto rotation fade/slide */
+.auto-rotate .img-box img {
+  opacity: 0;
+}
+
+.auto-rotate .img-box img {
+  opacity: 1;
+  animation: fadeSlide 1s ease;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ----------- TOP HEADINGS ----------- */
+.heading-row {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-bottom: 40px;
+}
+
+.left-heading {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.right-heading {
+    font-size: 20px;
+    width: 50%;
+    font-weight: 500;
+    text-align: right;
+}
+
+
+
+
+
+/* ----------- IMAGE ROW ----------- */
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 0;                    /* no gap = perfect horizontal overlap */
+    padding-top: 20px;
+    
+}
+
+/* ================================
+   LEFT & RIGHT SMALL IMAGES 
+   Horizontal underlap (60% visible)
+   ================================ */
+
+.img-box.small {
+    width: 460px;
+    height: auto;
+    overflow: hidden;          /* hide extra part */
+    position: relative;
+    z-index: 1;                /* behind middle */
+}
+
+/* LEFT image → right part hidden */
+.img-box.small.left img {
+    width: 100%;
+    height: 320px;
+    border: 15px solid whitesmoke;
+    border-bottom: 60px solid white;
+
+    position: relative;
+    right: -80px;              /* pushes right side under middle */
+}
+
+/* RIGHT image → left part hidden */
+.img-box.small.right img {
+    width: 100%;
+    height: 320px;
+    border: 15px solid white;
+    border-bottom: 60px solid white;
+    position: relative;
+    left: -80px;               /* pushes left side under middle */
+}
+
+/* ================================
+   MIDDLE IMAGE (top layer)
+   ================================ */
+
+.img-box.big {
+    position: relative;
+    z-index: 5;                /* always on top */
+}
+
+.img-box.big img {
+    width: 600px;
+    border: 20px solid white;
+    border-bottom: 60px solid white;
+}
+
+/* ======= RESPONSIVE ======= */
+
+@media (max-width: 1024px) {
+
+    .img-box.big img {
+        width: 520px;
+    }
+
+    .img-box.small {
+        width: 260px;
+    }
+
+    .img-box.small.left img {
+        right: -40px;
+    }
+
+    .img-box.small.right img {
+        left: -40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .heading-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-heading {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .img-box.big img {
+        width: 90%;
+    }
+
+    .img-box.small,
+    .img-box.small img {
+        width: 90%;
+        left: 0 !important;
+        right: 0 !important;
+        overflow: visible;
+    }
+}

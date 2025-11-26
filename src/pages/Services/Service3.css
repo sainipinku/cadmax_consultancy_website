@@ -1,0 +1,87 @@
+/* HERO */
+.service1-hero {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* MAIN COLLAGE WRAPPER */
+.collage-img {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;               /* images ke beech gap */
+  padding: 40px 40px;      /* LEFT & RIGHT GAP = 20px */
+  box-sizing: border-box;
+ ;
+}
+
+/* IMG BOX */
+.img-box {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* IMAGE */
+.img-box img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.55);
+}
+
+/* TEXT ON IMAGE */
+.img-box p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  line-height: 90%;
+  letter-spacing: -2%;
+  pointer-events: none;
+}
+
+/* ----------- RESPONSIVE ----------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .collage-img {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 20px; /* same L/R gap */
+  }
+
+  .img-box {
+    height: 350px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .collage-img {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px 20px; /* still 20px left/right */
+  }
+
+  .img-box {
+    height: 300px;
+  }
+
+  .img-box p {
+    font-size: 20px;
+  }
+}
+

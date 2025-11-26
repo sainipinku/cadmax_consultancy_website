@@ -1,0 +1,81 @@
+/* FULL BACKGROUND SECTION */
+.work-slider-bg {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TITLE */
+.work-title {
+  position: absolute;
+  top: 40px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* CENTER WHITE CARD */
+.work-card {
+  width: 50%;
+  max-width: 900px;
+  background: white;
+  border: solid #ffff 10px;
+  overflow: hidden;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+}
+
+/* CENTER IMAGE INSIDE CARD */
+.work-card-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* TITLE UNDER CARD */
+.work-card-text {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #333;
+  background: white;
+  letter-spacing: 10%;
+}
+
+/* ARROWS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.4);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.left {
+  left: 40px;
+}
+
+.right {
+  right: 40px;
+}

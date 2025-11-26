@@ -1,0 +1,295 @@
+/* HERO */
+.service1-hero {
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* BLACK BOX */
+.black-box {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 20px 200px; /* bottom padding increased */
+    position: relative;
+    z-index: 1;
+}
+
+/* OVERLAP IMAGE — outside black-box */
+.overlap-img-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -160px; /* image overlaps on black-box */
+    position: relative;
+    z-index: 5;
+}
+
+.overlap-img-box img {
+    width: 95%;
+    height: 380px;
+
+}
+
+/* BLACK BOX TEXT */
+.black-box h2 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.black-box p {
+    font-size: 17px;
+    max-width: 900px;
+    margin: 10px auto;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* FLEX SECTION */
+.flex-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+margin-bottom: 20px;
+margin-top: 40px;
+    gap: 30px;
+   
+}
+
+.flex-section h2 {
+    width: 50%;
+     font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+    padding-left: 40px;
+}
+
+.flex-section p {
+    width: 50%;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: -2%;
+    padding-left: 40px;
+}
+/* MAIN COLLAGE WRAPPER */
+.collage {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
+  align-items: stretch;
+margin-bottom: -280px;
+padding-top: 40px;
+}
+
+/* COMMON IMAGE BOX */
+.imgBox {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* IMAGES */
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+/* TEXT ON IMAGE */
+.imgBox p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* LEFT BIG IMAGE */
+.left .imgBox {
+  width: 380px;
+  height: 740px;
+}
+
+/* RIGHT SECTION */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TOP ROW (image 2 & 3) */
+.top {
+  display: flex;
+  gap: 20px;
+}
+
+.top .imgBox {
+  width: 380px;
+  height: 340px;
+}
+
+/* BOTTOM WIDE IMAGE */
+.bottom .imgBox {
+  width: 780px;
+  height: 380px;
+}
+
+/* REMOVE ANY EXTRA SPACE */
+.collage, 
+.collage * {
+  
+  padding: 0 !important;
+}
+
+/* ========= RESPONSIVE ========= */
+
+/* TABLET (992px ↓) */
+@media (max-width: 992px) {
+
+  .collage {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .left .imgBox {
+    width: 90%;
+    height: 600px;
+  }
+
+  .top {
+    flex-direction: row;
+    width: 90%;
+    gap: 15px;
+  }
+
+  .top .imgBox {
+    width: 50%;
+    height: 260px;
+  }
+
+  .bottom .imgBox {
+    width: 90%;
+    height: 320px;
+  }
+}
+
+/* MOBILE (576px ↓) */
+@media (max-width: 576px) {
+
+  .left .imgBox {
+    width: 100%;
+    height: 420px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .top .imgBox {
+    width: 100%;
+    height: 240px;
+  }
+
+  .bottom .imgBox {
+    width: 100%;
+    height: 260px;
+  }
+
+  .imgBox p {
+    font-size: 18px;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+
+    .overlap-img-box {
+        margin-top: -120px;
+    }
+
+    .overlap-img-box img {
+        width: 92%;
+    }
+
+    .black-box {
+        padding-bottom: 150px;
+    }
+
+    .flex-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flex-section h2,
+    .flex-section p {
+        width: 100%;
+    }
+
+    .collage {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+
+    .overlap-img-box {
+        margin-top: -100px;
+    }
+
+    .overlap-img-box img {
+        width: 95%;
+    }
+
+    .black-box {
+        padding-bottom: 130px;
+    }
+
+    .black-box h2 {
+        font-size: 22px;
+    }
+
+    .collage {
+        grid-template-columns: 1fr;
+    }
+}
+
+.top {
+  margin-top: -1px;
+}
+
+.bottom {
+  margin-top: -1px;
+}
+
+.imgBox {
+  margin-bottom: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
