@@ -13,13 +13,25 @@
   }
 }
 
-/* ----------------- TABLET & MOBILE: Scroll OFF ----------------- */
-@media (max-width: 1024px) {
-  .collage-wrapper {
-    overflow: hidden !important;
-    white-space: normal !important;
+/* DESKTOP: Force full width */
+@media(min-width:1025px){
+
+  .collage-wrapper{
+    width: 100vw !important;
+   
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  .collage{
+    width: 1500px !important;  /* 👉 अपनी total collage width के अनुसार adjust करें */
+    height: 1100px !important;
+    position: relative;
+    display: inline-block;
   }
 }
+
 
 /* collage container */
 .collage {

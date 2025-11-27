@@ -1,28 +1,26 @@
-/* MAIN WRAPPER — remove all top space */
+/* KEEP NORMAL SPACING – DO NOT REMOVE */
 .accuracy-section {
-    padding: 0 !important;
-    margin: 0 !important;
+    margin-top: 40px;
 }
 
-/* HEADING */
+/* Heading */
 .accuracy-section h2 {
     font-size: 22px;
     font-weight: 900;
     text-transform: uppercase;
     color: #171717;
-    margin-top: 0 !important;
+    margin-bottom: 15px;
 }
 
-/* PARAGRAPH */
+/* Paragraph */
 .accuracy-section p {
-    font-size: 20px;
-    line-height: 1.2;
+    font-size: 18px;
+    line-height: 1.4;
     color: #333;
     font-weight: 500;
-    margin-top: 5px;
 }
 
-/* IMAGE STYLING */
+/* Image Styling */
 .accuracy-image {
     width: 100%;
     max-width: 500px;
@@ -30,74 +28,51 @@
     border-radius: 8px;
 }
 
-/* INITIAL TEXT STATE */
+/* Text initial */
 .accuracy-text {
     opacity: 0;
     transform: translateX(-60px);
     transition: 0.6s ease-out;
 }
 
-/* ACTIVE TEXT ANIMATION */
+/* On show */
 .accuracy-text.animate-show {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* INITIAL IMAGE STATE */
+/* Image initial */
 .accuracy-img-wrapper {
     opacity: 0;
     transform: translateX(60px);
     transition: 0.6s ease-out;
 }
 
-/* ACTIVE IMAGE ANIMATION */
+/* On show */
 .accuracy-img-wrapper.animate-show {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* IMAGE HOVER ZOOM */
+/* Hover zoom */
 .accuracy-image:hover {
     transform: scale(1.08);
 }
 
-/* Remove bootstrap row gap */
-.accuracy-section .row {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* TABLET */
+/* RESPONSIVE */
 @media (max-width: 991px) {
-    .accuracy-section h2 {
-        font-size: 26px;
-    }
     .accuracy-section p {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
     .accuracy-section {
         text-align: center;
     }
-
-    .accuracy-section h2 {
-        font-size: 24px;
-    }
-
-    .accuracy-image {
-        max-width: 90%;
-        margin-top: 10px;
-    }
 }
 
-/* EXTRA SMALL MOBILE */
 @media (max-width: 480px) {
-    .accuracy-section h2 {
-        font-size: 22px;
-    }
     .accuracy-section p {
         font-size: 14px;
     }
