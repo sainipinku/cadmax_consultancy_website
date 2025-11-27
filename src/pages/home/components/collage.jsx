@@ -13,36 +13,34 @@ const Collage2 = () => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, 1500);
-
     return () => clearInterval(interval);
   }, []);
 
-  // Left, Middle, Right arrangement
   const leftImg = images[index];
   const middleImg = images[(index + 1) % 3];
   const rightImg = images[(index + 2) % 3];
 
   return (
-    <div className="hero-fluid">
-      <div className="content-wrapper">
+    <div className="collage2-hero">
+      <div className="collage2-wrapper">
 
-        <div className="heading-row">
-          <h4 className="left-heading">Work That Demonstrates Capability</h4>
-          <p className="right-heading">
+        <div className="collage2-heading-row">
+          <h4 className="collage2-left-heading">Work That Demonstrates Capability</h4>
+          <p className="collage2-right-heading">
             Each discipline is handled by teams trained to convert field conditions into design-ready data.
           </p>
         </div>
 
-        <div className="image-row auto-rotate">
-          <div className="img-box small left swap">
+        <div className="collage2-row collage2-auto">
+          <div className="collage2-box collage2-small collage2-left collage2-swap">
             <img src={leftImg} alt="Left Collage" />
           </div>
 
-          <div className="img-box big middle swap">
+          <div className="collage2-box collage2-big collage2-middle collage2-swap">
             <img src={middleImg} alt="Middle Collage" />
           </div>
 
-          <div className="img-box small right swap">
+          <div className="collage2-box collage2-small collage2-right collage2-swap">
             <img src={rightImg} alt="Right Collage" />
           </div>
         </div>

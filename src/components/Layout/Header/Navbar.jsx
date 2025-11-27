@@ -13,9 +13,9 @@ const Navbar = () => {
 
     const handleDropdown = (name) => {
         if (openDropdown === name) {
-            setOpenDropdown(null); // close if same dropdown clicked
+            setOpenDropdown(null);
         } else {
-            setOpenDropdown(name); // open clicked dropdown
+            setOpenDropdown(name);
         }
     };
 
@@ -35,7 +35,7 @@ const Navbar = () => {
 
                 <Link to="/" className="nav-link">HOME</Link>
 
-                {/* SERVICES DROPDOWN */}
+                {/* SERVICES DROPDOWN (Only this remains) */}
                 <div 
                     className="dropdown" 
                     onClick={() => handleDropdown("services")}
@@ -51,37 +51,11 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {/* PROJECT DROPDOWN */}
-                <div 
-                    className="dropdown"
-                    onClick={() => handleDropdown("projects")}
-                >
-                    <button className="dropbtn">
-                        PROJECT <i className="fa fa-caret-down"></i>
-                    </button>
+                {/* PROJECT - NO DROPDOWN */}
+                <Link to="/projects" className="nav-link">PROJECT</Link>
 
-                    <div className={`dropdown-content ${openDropdown === "projects" ? "show" : ""}`}>
-                        <Link to="/projects/project1" className="dropdown-link">Project 1</Link>
-                        <Link to="/projects/project2" className="dropdown-link">Project 2</Link>
-                        <Link to="/projects/project3" className="dropdown-link">Project 3</Link>
-                    </div>
-                </div>
-
-                {/* ABOUT DROPDOWN */}
-                <div 
-                    className="dropdown"
-                    onClick={() => handleDropdown("about")}
-                >
-                    <button className="dropbtn">
-                        ABOUT <i className="fa fa-caret-down"></i>
-                    </button>
-
-                    <div className={`dropdown-content ${openDropdown === "about" ? "show" : ""}`}>
-                        <Link to="/about/company" className="dropdown-link">Company</Link>
-                        <Link to="/about/team" className="dropdown-link">Team</Link>
-                        <Link to="/about/mission" className="dropdown-link">Mission</Link>
-                    </div>
-                </div>
+                {/* ABOUT - NO DROPDOWN */}
+                <Link to="/about" className="nav-link">ABOUT</Link>
 
                 <Link to="/contact" className="nav-link">CONTACT</Link>
             </nav>
