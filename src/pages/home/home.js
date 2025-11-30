@@ -8,6 +8,7 @@ import Accuracy from '../home/components/Accuracy'
 import Collage2 from '../home/components/collage'
 import RatingPage from '../home/components/rating'
 import CompanyShowcase from '../home/components/company'
+import MasonryGallery from './components/MasonryGallery';
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
 <Navbar/>
 <Hero/>
 <Textbox/>
-<Image/>
+<MasonryGallery/>
 <Accuracy/>
 <Collage2/>
 <RatingPage/>
