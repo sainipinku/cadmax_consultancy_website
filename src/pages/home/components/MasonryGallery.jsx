@@ -29,7 +29,8 @@ const services = [
   {
     title: "URBAN AND SUBDIVISION PLANNING",
     img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/LANDMARK-001.jpg",
-  }, {
+  },
+  {
     title: "ENGINEERING SURVEY EXECUTION",
     img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/addnew.jpg",
   },
@@ -49,61 +50,52 @@ const services = [
     title: "TOPOGRAPHIC GROUND MODELLING",
     img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/addnew.jpg",
   },
-  {
-    title: "URBAN AND SUBDIVISION PLANNING",
-    img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/LANDMARK-001.jpg",
-  }
 ];
 
 const MasonryGallery = () => {
   return (
-    <div style={{ padding: "0", margin: "0" }}>
+    <div className="p-0 m-0">
       <ResponsiveMasonry
         columnsCountBreakPoints={{
           350: 1,
           600: 2,
           900: 3,
           1200: 4,
-          1500: 4, // ⭐ 5 columns on large screens
+          1500: 4,
         }}
       >
-        <Masonry gutter="8px">  {/* Grid gaps small and clean */}
+        <Masonry gutter="8px">
           {services.map((item, i) => (
-            <div key={i} style={{ position: "relative" }}>
+            <div key={i} className="relative w-full">
+
               <img
                 src={item.img}
                 alt={item.title}
-                style={{
-                  width: "100%",
-                  display: "block",
-                  borderRadius: "6px",
-                }}
+                className="
+                  w-full             
+                   h-auto           
+                   aspect-video       
+                    object-cover      
+                     rounded-md "
               />
 
+
               {/* Overlay */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "rgba(0, 0, 0, 0.45)",
-                  borderRadius: "6px",
-                }}
-              />
+              <div className="absolute inset-0 bg-black/40 rounded-md"></div>
 
               {/* Title */}
               <h3
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  color: "#fff",
-                  fontSize: "14px",
-                  fontWeight: "700",
-                  textAlign: "center",
-                  textTransform: "uppercase",
-                  padding: "0 5px",
-                }}
+                className="
+                  absolute 
+                  top-1/2 left-1/2 
+                  -translate-x-1/2 -translate-y-1/2 
+                  text-white 
+                  text-sm 
+                  font-bold 
+                  text-center 
+                  uppercase 
+                  px-2
+                "
               >
                 {item.title}
               </h3>
