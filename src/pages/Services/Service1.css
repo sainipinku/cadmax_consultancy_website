@@ -10,16 +10,51 @@
     text-align: center;
 }
 
+
+
 .service1-card-1 {
-    display: block;   /* ADD THIS */
-    width: 100%;
-    height: auto;
     position: relative;
+    display: block;
     overflow: hidden;
-    flex-grow: 1;
-    flex-basis: calc(33.33% - 30px);
-    max-width: 390px;
 }
+
+.service1-card-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease-in-out;
+}
+
+.service1-card-1::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.service1-card-1:hover::after {
+    background: rgba(0,0,0,0.10);
+}
+
+.service1-card-1 .card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+
+
+
 
 
 .hero-content h1 {
@@ -46,6 +81,17 @@
     padding: 0 20px;
 }
 
+.service1-card-1 {
+    display: block;  
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: calc(33.33% - 30px);
+    max-width: 390px;
+}
+
 /* IMAGE CARD */
 .service1-card {
     width: 100%;
@@ -53,7 +99,7 @@
     position: relative;
     overflow: hidden;
     flex-grow: 1;
-    flex-basis: calc(33.33% - 30px);   /* 3 per row on large screens */
+    flex-basis: calc(33.33% - 30px);   
     max-width: 390px;
 }
 

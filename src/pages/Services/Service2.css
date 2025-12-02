@@ -68,17 +68,16 @@
 .collage {
   display: flex;
   gap: 20px;
-  width: 100vw !important;
+  width: 100vw !important;       /* FULL DISPLAY WIDTH */
   max-width: 100vw !important;
   margin: 0 auto;
   padding: 0;
   justify-content: center;
   align-items: stretch;
-  overflow: hidden;
+  overflow: hidden;               /* LEFT/RIGHT FALL FIX */
   padding-top: 40px;
-  margin-bottom: 40px;   /* FIXED */
+  margin-bottom: -280px;
 }
-
 
 /* COMMON IMAGE BOX */
 .imgBox {
@@ -88,13 +87,20 @@
   height: 100%;
 }
 
+
+
 /* IMAGES */
 .imgBox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.55);
+  filter: brightness(0.5);
+  transition: 0.35s ease-in-out;  
 }
+.imgBox:hover img {
+  filter: brightness(1);            /* hover = full bright */
+}
+
 
 /* TEXT ON IMAGE */
 .imgBox p {
