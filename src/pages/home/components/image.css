@@ -1,235 +1,146 @@
-/* ----------------- DESKTOP ONLY: Horizontal Scroll ----------------- */
-@media (min-width: 1025px) {
-  .collage-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    /* padding-bottom: 15px; */
-  }
-
-  .collage-wrapper::-webkit-scrollbar {
-    height: 10px;
-  }
+/* MAIN WRAPPER */
+.collage-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* DESKTOP: Force full width */
-@media(min-width:1025px){
-
-  .collage-wrapper{
-    width: 100vw !important;
-   
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-
-  .collage{
-    width: 1500px !important;  /* 👉 अपनी total collage width के अनुसार adjust करें */
-    height: 1100px !important;
-    position: relative;
-    display: inline-block;
-  }
+/* TOP COLLAGE (4 columns on desktop) */
+.top-collage {
+  display: flex;
+  width: 100%;
+  gap: 10px;
 }
 
+/* EACH COLUMN */
+.coll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 25%; /* Desktop */
+}
 
-/* collage container */
-.collage {
+/* COMMON BOX */
+.box {
   position: relative;
-  display: inline-block;
-  height: 1100px;
-  will-change: transform;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
-/* block position base */
-.block {
-  position: absolute;
-  white-space: normal;
-
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  will-change: transform;
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ---------------- TEXT ---------------- */
-.txt {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 20px);
+/* FIXED HEIGHTS FOR DESKTOP */
+.tall { height: 505px; }
+.big { height: 300px; }
+.small { height: 195px; }
 
-  color: #fff;
-  font-weight: 800;
-  font-size: 18px;
+/* BOTTOM COLLAGE */
+.bottom-collage {
+  display: flex;
+  gap: 10px;
+}
+
+.bottom-box {
+  height: 220px;
+  width: 33.33%;
+}
+
+/* OVERLAY AND TEXT */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  line-height: 1.1;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.8);
-
-  width: 85%;
-  padding: 6px 10px;
-
-  opacity: 0;
-  animation: fadeUpText 1s ease forwards;
 }
 
-@keyframes fadeUpText {
-  0% { opacity: 0; transform: translate(-50%, 20px); }
-  100% { opacity: 1; transform: translate(-50%, 0); }
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================*/
+
+/* LARGE LAPTOPS & SMALL DESKTOPS */
+@media (max-width: 1200px) {
+  .tall { height: 450px; }
+  .big { height: 260px; }
+  .small { height: 170px; }
+  .bottom-box { height: 200px; }
 }
 
-/* ----------------- SCALING FIX ----------------- */
-@media (max-width:1300px){
-  .collage{
-    transform: scale(calc(100vw / 1230));
-    transform-origin: top left;
+/* TABLETS (2 COLUMN LAYOUT) */
+@media (max-width: 900px) {
+  .top-collage {
+    flex-wrap: wrap;
+  }
+
+  .coll {
+    width: calc(50% - 5px); /* 2 columns */
+  }
+
+  .tall { height: 380px; }
+  .big { height: 220px; }
+  .small { height: 155px; }
+
+  .bottom-collage {
+    flex-wrap: wrap;
+  }
+
+  .bottom-box {
+    width: calc(50% - 5px);
+    height: 180px;
   }
 }
 
-/* ----------------- DESKTOP ABSOLUTE POSITIONS ----------------- */
-@media (min-width:1025px){
-  .collage{height:1100px;}
-
-  .img1{width:353px;height:650px;top:0;left:0;}
-  .img2{width:353px;height:380px;top:0;left:363px;}
-  .img3{width:353px;height:250px;top:390px;left:363px;}
-  .img4{width:353px;height:450px;top:200px;left:726px;}
-  .img5{width:353px;height:190px;top:0;left:726px;}
-  .img6{width:353px;height:450px;top:0;left:1089px;}
-  .img7{width:353px;height:190px;top:460px;left:1089px;}
-  .img8{width:473px;height:320px;top:660px;left:0;}
-  .img9{width:473px;height:320px;top:660px;left:484px;}
-  .img10{width:473px;height:320px;top:660px;left:968px;}
-
-  .img1 .txt{bottom:20%;}
-  .img2 .txt{bottom:55%;}
-  .img3 .txt{bottom:10%;}
-  .img4 .txt{bottom:60%;}
-  .img5 .txt{bottom:55%;}
-  .img6 .txt{bottom:45%;}
-  .img7 .txt{bottom:30%;}
-  .img8 .txt,
-  .img9 .txt,
-  .img10 .txt{
-    bottom:12%;
-    font-size:20px;
+/* MOBILE WIDE (480–768px) */
+@media (max-width: 768px) {
+  .coll {
+    width: 100%; /* Single column */
   }
-}
-/* Disable desktop text positions on tablet + mobile */
-@media(max-width:1024px){
-  .img1 .txt,
-  .img2 .txt,
-  .img3 .txt,
-  .img4 .txt,
-  .img5 .txt,
-  .img6 .txt,
-  .img7 .txt,
-  .img8 .txt,
-  .img9 .txt,
-  .img10 .txt {
-    bottom: auto !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 90% !important;
-    text-align: center !important;
-  }
-}
 
-
-/* ----------------- TABLET GRID (600–1024px) ----------------- */
-@media (min-width:600px) and (max-width:1024px){
-
-  .collage{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    padding: 20px;
+  .tall,
+  .big,
+  .small,
+  .bottom-box {
     height: auto;
-    transform: none;
   }
 
-  .block{
-    position: relative;
-    width: 100% !important;
-    height: auto !important;
-
-    /* ⭐ CENTER FIX */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .block img{
-    width: auto;
-    max-width: 100%;
-    height: auto !important;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .txt {
-  position: absolute;
-  left: 50% !important;
-  bottom: 15px;
-  transform: translateX(-50%) !important;
-  text-align: center !important;
-
-  opacity: 0;
-  animation: fadeUpTextTab 1s ease forwards;
-  width: 90%; /* text ko center hold karta hai */
-}
-
-}
-
-@keyframes fadeUpTextTab {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ----------------- MOBILE GRID (0–600px) ----------------- */
-@media (max-width:600px){
-  .collage{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-    padding:8px;
-    height:auto;
-    transform:none;
-  }
-
-  .block{
-    position:relative;
-    width:100%!important;
-    height:auto!important;
-
-    /* ⭐ CENTER FIX */
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-
-  .block img{
-    width:auto;
-    max-width:100%;
-    height:auto!important;
-    margin:0 auto;
-    display:block;
-  }
-
-  .txt{
-    position:absolute;
-    left:50%;
-    bottom:10px;
-    transform:translateX(-50%);
-    text-align:center;
-
-    opacity: 0;
-    animation: fadeUpTextMob 1s ease forwards;
+  .box img {
+    height: auto;
   }
 }
 
-@keyframes fadeUpTextMob {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* SMALL MOBILE (Below 480px) */
+@media (max-width: 480px) {
+  .coll {
+    width: 100%;
+  }
+
+  .top-collage {
+    flex-direction: column;
+  }
+
+  .bottom-collage {
+    flex-direction: column;
+  }
+
+  .bottom-box {
+    width: 100%;
+    height: auto;
+  }
 }

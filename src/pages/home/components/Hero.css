@@ -1,19 +1,19 @@
 .hero-section {
     width: 100%;
-    height: 100vh; /* Full screen height */
+    height: 90vh; /* Full screen height */
 
     background-image: url(../../../assets/Images/header/Header-bg-img.png);
-    background-size: cover;        /* Image bilkul screen ke hisaab se adjust hogi */
-    background-position: center;   /* Image ka main part center me rahega */
+    background-size: cover;        
+    background-position: center;   
     background-repeat: no-repeat;
     
-    padding-top: 77px; /* Navbar ke liye jagah */
+    padding-top: 77px; 
 }
 
 /* ---------- LARGE SCREENS (Laptops) ---------- */
 @media(max-width: 1200px) {
     .hero-section {
-        height: 90vh;         /* Thoda adjust */
+        height: 85vh;         
         background-position: center top;
     }
 }
@@ -31,8 +31,8 @@
 @media(max-width: 768px) {
     .hero-section {
         height: 60vh;
-        background-position: top;  /* Upper area zyada visible */
-        padding-top: 65px;         /* Navbar chhota hota hai mobile me */
+        background-position: top;  
+        padding-top: 65px;         
     }
 }
 

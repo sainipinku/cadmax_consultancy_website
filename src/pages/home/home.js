@@ -8,7 +8,8 @@ import Accuracy from '../home/components/Accuracy'
 import Collage2 from '../home/components/collage'
 import RatingPage from '../home/components/rating'
 import CompanyShowcase from '../home/components/company'
-import MasonryGallery from './components/MasonryGallery';
+// import MasonryGallery from './components/MasonryGallery';
+import MasonryGallery from '../home/components/image'
 
 function Home() {
   return (
