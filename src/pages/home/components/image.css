@@ -25,7 +25,7 @@
 .box {
   position: relative;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .box img {
@@ -35,9 +35,9 @@
 }
 
 /* FIXED HEIGHTS FOR DESKTOP */
-.tall { height: 505px; }
-.big { height: 300px; }
-.small { height: 195px; }
+.tall { height: 650px; }
+.big { height: 400px; }
+.small { height: 240px; }
 
 /* BOTTOM COLLAGE */
 .bottom-collage {
@@ -54,7 +54,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.50);
 }
 
 .title {
@@ -65,10 +65,11 @@
   align-items: center;
   padding: 10px;
   color: white;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 900;
   text-transform: uppercase;
   text-align: center;
+  line-height: 1;
 }
 
 /* ===============================
@@ -77,9 +78,9 @@
 
 /* LARGE LAPTOPS & SMALL DESKTOPS */
 @media (max-width: 1200px) {
-  .tall { height: 450px; }
-  .big { height: 260px; }
-  .small { height: 170px; }
+  .tall { height: 650px; }
+  .big { height: 400px; }
+  .small { height: 240px; }
   .bottom-box { height: 200px; }
 }
 

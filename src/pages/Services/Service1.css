@@ -10,6 +10,18 @@
     text-align: center;
 }
 
+.service1-card-1 {
+    display: block;   /* ADD THIS */
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: calc(33.33% - 30px);
+    max-width: 390px;
+}
+
+
 .hero-content h1 {
     font-size: 48px;
     font-weight: 900;

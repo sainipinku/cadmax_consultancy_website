@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
 import "./Service2.css";
+import { Link } from "react-router-dom";
 
 import heroBG from "../../../src/assets/Images/header/Header-bg-img.png";
 import overlapImg from "../../../src/assets/Images/service-page-2/service2-img1.png";
@@ -23,7 +24,7 @@ const Service2 = () => {
 
       {/* BLACK SECTION */}
 
-      
+
       <div className="black-box">
 
         <h2>Engineering That Works on the Ground</h2>
@@ -35,49 +36,58 @@ const Service2 = () => {
           shapes this process, producing layouts that fit the land instead of fighting it.
         </p>
       </div>
-{/* OVERLAP IMAGE ON BLACK SECTION */}
-<div className="overlap-img-box">
-  <img src={overlapImg} alt="overlap" />
-</div>
+      {/* OVERLAP IMAGE ON BLACK SECTION */}
+      <div className="overlap-img-box">
+        <img src={overlapImg} alt="overlap" />
+      </div>
 
-{/* NEXT FLEX SECTION */}
-<div className="flex-section">
-  <h2>What We Offer</h2>
-  <p>A focused set of engineering services that define how a site functions, connects and operates.</p>
-</div>
+      {/* NEXT FLEX SECTION */}
+      <div className="flex-section">
+        <h2>What We Offer</h2>
+        <p>A focused set of engineering services that define how a site functions, connects and operates.</p>
+      </div>
 
-  <div className="collage">
+      <div className="collage">
 
-  <div className="left">
-    <div className="imgBox">
-      <img src={collage1} />
-      <p>MAINGATE AND BOUNDARY CONSTRUCTION</p>
-    </div>
+        <div className="left">
+
+          <Link to="/Services/Service3" className="service1-card-1">
+            <div className="imgBox">
+              <img src={collage1} />
+              <p>MAINGATE AND BOUNDARY CONSTRUCTION</p>
+            </div>
+          </Link>
+
+        </div>
+
+        <div className="right">
+
+          <div className="top">
+            <Link to="/Services/Service3" className="service1-card-1">
+            <div className="imgBox">
+              <img src={collage2} />
+              <p>ROAD NETWORK</p>
+            </div>
+            </Link>
+<Link to="/Services/Service3" className="service1-card-1">
+            <div className="imgBox">
+              <img src={collage3} />
+              <p>WATER SUPPLY</p>
+             
+            </div>
+             </Link>
+          </div>
+<div className="bottom">
+  <div className="imgBox">
+    <img src={collage4} alt="Electricity" />
+    <p>ELECTRICITY</p>
   </div>
-
-  <div className="right">
-
-    <div className="top">
-      <div className="imgBox">
-        <img src={collage2} />
-        <p>ROAD NETWORK</p>
-      </div>
-
-      <div className="imgBox">
-        <img src={collage3} />
-        <p>WATER SUPPLY</p>
-      </div>
-    </div>
-
-    <div className="bottom">
-      <div className="imgBox">
-        <img src={collage4} />
-        <p>ELECTRICITY</p>
-      </div>
-    </div>
-
-  </div>
 </div>
+
+
+
+        </div>
+      </div>
 
 
       <Footer />

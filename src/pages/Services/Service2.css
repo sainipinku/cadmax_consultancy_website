@@ -68,16 +68,17 @@
 .collage {
   display: flex;
   gap: 20px;
-  width: 100vw !important;       /* FULL DISPLAY WIDTH */
+  width: 100vw !important;
   max-width: 100vw !important;
   margin: 0 auto;
   padding: 0;
   justify-content: center;
   align-items: stretch;
-  overflow: hidden;               /* LEFT/RIGHT FALL FIX */
+  overflow: hidden;
   padding-top: 40px;
-  margin-bottom: -280px;
+  margin-bottom: 40px;   /* FIXED */
 }
+
 
 /* COMMON IMAGE BOX */
 .imgBox {

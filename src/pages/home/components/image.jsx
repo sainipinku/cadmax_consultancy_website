@@ -8,7 +8,7 @@ const MasonryGallery = () => {
       {/* ------------------ TOP COLLAGE ------------------ */}
       <div className="top-collage">
 
-        {/* COLUMN 1 */}
+        
         <div className="col-3-md coll">
           <div className="box tall">
             <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/LANDMARK-001.jpg" />
@@ -17,7 +17,7 @@ const MasonryGallery = () => {
           </div>
         </div>
 
-        {/* COLUMN 2 */}
+        
         <div className="col-3-md coll">
           <div className="box big">
             <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/addnew.jpg" />
@@ -32,7 +32,7 @@ const MasonryGallery = () => {
           </div>
         </div>
 
-        {/* COLUMN 3 */}
+        
         <div className="col-3-md coll">
           <div className="box small">
             <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Cadmax.jpg" />
@@ -47,7 +47,7 @@ const MasonryGallery = () => {
           </div>
         </div>
 
-        {/* COLUMN 4 */}
+       
         <div className="col-3-md coll">
           <div className="box big">
             <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ServicesPhoto.jpg" />

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
 import "./Service1.css";
+import { Link } from "react-router-dom";
 
 // IMAGES IMPORT
 import heroBG from "../../../src/assets/Images/header/Header-bg-img.png";
@@ -19,25 +20,29 @@ const Service1 = () => {
                 className="service1-hero"
                 style={{ backgroundImage: `url(${heroBG})` }}
             >
-
             </div>
 
             {/* IMAGE GRID SECTION */}
             <div className="service1-grid">
-                <div className="service1-card">
+
+                {/* CARD 1 */}
+                <Link to="/Services/Service2" className="service1-card-1">
                     <img src={img1} alt="service" />
-                    <div className="card-text">engineering </div>
-                </div>
+                    <div className="card-text">engineering</div>
+                </Link>
 
-                <div className="service1-card">
+                {/* CARD 2 */}
+                <Link to="/Services/Service2" className="service1-card-1">
                     <img src={img2} alt="service" />
-                    <div className="card-text">surveying </div>
-                </div>
+                    <div className="card-text">surveying</div>
+                </Link>
 
-                <div className="service1-card">
+                {/* CARD 3 */}
+                <Link to="/Services/Service2" className="service1-card-1">
                     <img src={img3} alt="service" />
                     <div className="card-text">planning</div>
-                </div>
+                </Link>
+
             </div>
 
             <Footer />
