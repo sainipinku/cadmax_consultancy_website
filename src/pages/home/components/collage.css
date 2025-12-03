@@ -29,6 +29,8 @@
 .collage2-left-heading {
   font-size: 22px;
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2%;
 }
 
 .collage2-right-heading {
