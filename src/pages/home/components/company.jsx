@@ -71,7 +71,7 @@ const CompanyShowcase = () => {
       {/* 3 IMAGE SLIDER */}
       <div className="company-slider-wrapper">
 
-        <h1 className="nav-btn left" onClick={prevSlide}>←</h1>
+        {/* <h1 className="nav-btn left" onClick={prevSlide}>←</h1> */}
 
         <div className="company-slider">
           {images.map((img, index) => {
@@ -99,7 +99,7 @@ const CompanyShowcase = () => {
           })}
         </div>
 
-        <h1 className="nav-btn right" onClick={nextSlide}>→</h1>
+        {/* <h1 className="nav-btn right" onClick={nextSlide}>→</h1> */}
       </div>
 
     </div>

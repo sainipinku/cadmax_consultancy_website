@@ -2,48 +2,54 @@ import React, { useEffect, useRef, useState } from "react";
 import "./rating.css";
 import star from "../../../assets/icons/Rating_icon/Star 1.png";
 
-
+const TOTAL = 6;
+const VISIBLE = 3;
 
 const RatingPage = () => {
   const headingRef = useRef(null);
   const cardsRef = useRef([]);
-  const [index, setIndex] = useState(0);
+  const [start, setStart] = useState(0); // <- starting index of visible group
 
   const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % 6);
+    setStart((prev) => (prev + 1) % TOTAL);
   };
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + 6) % 6);
+    setStart((prev) => (prev - 1 + TOTAL) % TOTAL);
   };
 
+  // prepare 3 visible cards
+  const getVisibleCards = () => {
+    return [
+      start,
+      (start + 1) % TOTAL,
+      (start + 2) % TOTAL,
+    ];
+  };
+
+  const visibleCards = getVisibleCards();
+
+  /* ⭐ Center card highlight */
   function activateCenterCard() {
-  const cards = document.querySelectorAll(".rating-card");
-  cards.forEach((c) => c.classList.remove("active"));
+    const cards = document.querySelectorAll(".rating-card");
+    cards.forEach((c) => c.classList.remove("active"));
 
-  // center card = index + 1
-  if (cards[index + 1]) {
-    cards[index + 1].classList.add("active");
+    if (cards[1]) cards[1].classList.add("active"); 
   }
-}
 
-useEffect(() => {
-  activateCenterCard();
-}, [index]);
+  useEffect(() => {
+    activateCenterCard();
+  }, [start]);
 
-
-
-  // ★★★★★ HEADINGS + CARD ANIMATION FIX
+  /* ⭐ Animations observer */
   useEffect(() => {
     const headingObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("show");
-          }
+          if (e.isIntersecting) e.target.classList.add("show");
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.4 }
     );
 
     if (headingRef.current) headingObserver.observe(headingRef.current);
@@ -51,24 +57,19 @@ useEffect(() => {
     const cardObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("card-show");
-          }
+          if (e.isIntersecting) e.target.classList.add("card-show");
         });
       },
       { threshold: 0.2 }
     );
 
-    cardsRef.current.forEach((card) => {
-      if (card) cardObserver.observe(card);
-    });
+    cardsRef.current.forEach((card) => card && cardObserver.observe(card));
 
     return () => {
       headingObserver.disconnect();
       cardObserver.disconnect();
     };
   }, []);
-  
 
   return (
     <div className="rating-fluid">
@@ -85,17 +86,13 @@ useEffect(() => {
         </h3>
       </div>
 
-      {/* CARDS */}
-      <div
-        className="rating-container"
-        style={{ transform: `translateX(-${index * 33.33}%)` }}
-      >
-        {[0, 1, 2, 3, 4, 5].map((v, i) => (
+      {/* ⭐ FINAL FIXED CAROUSEL */}
+      <div className="rating-container-fixed">
+        {visibleCards.map((i, idx) => (
           <div
-            key={i}
+            key={idx}
             className="rating-card"
-            ref={(el) => (cardsRef.current[i] = el)}
-            style={{ "--delay": `${i * 0.25}s` }}
+            ref={(el) => (cardsRef.current[idx] = el)}
           >
             <div className="stars-row">
               {[1, 2, 3, 4, 5].map((s) => (
@@ -104,19 +101,13 @@ useEffect(() => {
             </div>
 
             <p className="review-text">
-              {i === 0 &&
-                "“Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy.”"}
-              {i === 1 &&
-                "“The dedication and professionalism exhibited by CADMAX is unmatched. Their insights streamline projects and improve efficiency.”"}
-              {i === 2 &&
-                "“With CADMAX's innovative solutions, we've reduced turnaround time significantly. Their expertise is a game-changer.”"}
+              {i === 0 && "“Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy.”"}
+              {i === 1 && "“The dedication and professionalism exhibited by CADMAX is unmatched. Their insights streamline projects and improve efficiency.”"}
+              {i === 2 && "“With CADMAX's innovative solutions, we've reduced turnaround time significantly. Their expertise is a game-changer.”"}
 
-              {i === 3 &&
-                "“Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy.”"}
-              {i === 4 &&
-                "“The dedication and professionalism exhibited by CADMAX is unmatched. Their insights streamline projects and improve efficiency.”"}
-              {i === 5 &&
-                "“With CADMAX's innovative solutions, we've reduced turnaround time significantly. Their expertise is a game-changer.”"}
+              {i === 3 && "“Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy.”"}
+              {i === 4 && "“The dedication and professionalism exhibited by CADMAX is unmatched. Their insights streamline projects and improve efficiency.”"}
+              {i === 5 && "“With CADMAX's innovative solutions, we've reduced turnaround time significantly. Their expertise is a game-changer.”"}
             </p>
 
             <p className="reviewer-name">

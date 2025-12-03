@@ -1,113 +1,20 @@
-/* MAIN FLUID */
+/* WRAPPER */
 .rating-fluid {
   width: 100%;
-  position: relative;
   padding: 80px 0;
-  overflow: hidden;
   background: #faf8f6;
+  position: relative;
+  overflow: hidden;
 }
 
-/* HEADINGS */
-.rating-heading-row {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 50px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
-}
-.rating-heading-row.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.left-h {
-  color: #111;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size: 22px;
-  font-weight: 900;
-}
-.right-h {
-  color: #444;
-  max-width: 600px;
-  margin: auto;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-/* SLIDER WRAPPER */
-.rating-container {
-  display: flex;
-  gap: 30px;
-  transition: transform 0.6s ease;
-  padding: 20px 0;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* SINGLE CARD */
-.rating-card {
-  flex: 0 0 33.33%;
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 40px;
-  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.05);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease var(--delay), opacity 0.4s ease, transform 0.4s ease;
-  min-height: 320px;
-
-  /* side cards fade by default */
-  opacity: 0.4;
-}
-
-/* WHEN CARD IS VISIBLE IN ANIMATION */
-.rating-card.card-show {
-  opacity: 0.4;       /* fade by default */
-  transform: translateY(0);
-}
-
-/* CENTER CARD ACTIVE */
-.rating-card.active {
-  opacity: 1 !important;
-  transform: scale(1.03);
-}
-
-/* STARS */
-.stars-row {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 20px;
-}
-.stars-row img {
-  width: 22px;
-}
-
-/* REVIEW TEXT */
-.review-text {
-  font-size: 17px;
-  color: #333;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-/* NAME */
-.reviewer-name {
-  font-size: 15px;
-  color: #777;
-}
-
-/* NAV BUTTONS */
+/* BUTTONS */
 .nav-btn {
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
-background: white;
+  background: white;
   border: 2px solid #ffae00;
-  color: #ffc64b;
+  color: #ffae00;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -118,45 +25,21 @@ background: white;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-  z-index: 10;
+  z-index: 20;
 }
 
 .nav-btn:hover {
-  background: #ffb922;
-  color: rgb(254, 0, 0);
+  background: #ffc64b;
+  color: #fff;
 }
 
 .prev {
-  left: 20px;
+  left: 15px;
 }
-
 .next {
-  right: 20px;
+  right: 15px;
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-  .rating-container {
-    gap: 20px;
-  }
-
-  .rating-card {
-    flex: 0 0 70%;
-    opacity: 1 !important;
-    transform: scale(1) !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .rating-card {
-    flex: 0 0 100%;
-    padding: 25px;
-  }
-
-  .left-h {
-    font-size: 28px;
-  }
-}
 /* HEADINGS */
 .rating-heading-row {
   max-width: 1200px;
@@ -166,12 +49,11 @@ background: white;
   transform: translateY(40px);
   transition: 0.6s ease;
 
-  /* NEW */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  text-align: left; /* desktop/tablet me left */
+  text-align: left;
 }
 
 .rating-heading-row.show {
@@ -196,32 +78,25 @@ background: white;
   line-height: 1.4;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 900px) {
-  .rating-heading-row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .left-h,
-  .right-h {
-    flex: none;
-  }
-
-  .right-h {
-    max-width: 90%;
-  }
+/* ⭐ FIXED 3-CARD CONTAINER */
+.rating-container-fixed {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 10px;
 }
 
-@media (max-width: 600px) {
-  .left-h {
-    font-size: 26px;
-  }
-}
-
-
-/* CENTER CARD ALWAYS VISIBLE */
+/* CARD */
 .rating-card {
+  width: 33.33%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  min-height: 330px;
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.08);
+
   opacity: 0.4;
   transform: scale(0.9);
   transition: 0.4s ease;
@@ -230,4 +105,69 @@ background: white;
 .rating-card.active {
   opacity: 1;
   transform: scale(1);
+}
+
+/* STARS */
+.stars-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.stars-row img {
+  width: 22px;
+}
+
+/* TEXT */
+.review-text {
+  color: #333;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.reviewer-name {
+  color: #666;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* ⭐ RESPONSIVE */
+@media (max-width: 1024px) {
+  .rating-container-fixed {
+    gap: 20px;
+  }
+  .rating-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .rating-container-fixed {
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .rating-card {
+    min-width: 70%;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .rating-card {
+    min-width: 85%;
+    padding: 25px;
+  }
+
+  .left-h {
+    font-size: 26px;
+  }
 }
