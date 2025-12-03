@@ -42,6 +42,15 @@ const CompanyShowcase = () => {
     return () => observer.disconnect();
   }, []);
 
+  /* ⭐⭐⭐ AUTO SLIDER — ONLY NEW CODE ⭐⭐⭐ */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 2500); // 2.5 sec
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="company-fluid">
 
@@ -59,9 +68,7 @@ const CompanyShowcase = () => {
         </h3>
       </div>
 
-      {/* ===========================
-          UPDATED 3 IMAGE SLIDER
-      ============================ */}
+      {/* 3 IMAGE SLIDER */}
       <div className="company-slider-wrapper">
 
         <h1 className="nav-btn left" onClick={prevSlide}>←</h1>
