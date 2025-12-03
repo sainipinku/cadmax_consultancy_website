@@ -27,7 +27,7 @@
 }
 
 .overlap-img-box img {
-    width: 100%;
+    width: 95%;
     height: 380px;
 }
 
@@ -57,11 +57,25 @@
     gap: 30px;
 }
 
-.flex-section h2,
-.flex-section p {
-    width: 50%;
-    padding-left: 40px;
+
+.flex-section h2{
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  width: 183px;
 }
+
+.flex-section p{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -2%;
+  width: 670px;
+}
+
+/* .flex-section h2 , .flex-section p{
+  padding-left: 20px;
+} */
 
 /* ==================== COLLAGE ==================== */
 
@@ -76,7 +90,8 @@
   align-items: stretch;
   overflow: hidden;               /* LEFT/RIGHT FALL FIX */
   padding-top: 40px;
-  margin-bottom: -280px;
+  margin-bottom: 20px;
+  
 }
 
 /* COMMON IMAGE BOX */
@@ -94,7 +109,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
   transition: 0.35s ease-in-out;  
 }
 .imgBox:hover img {

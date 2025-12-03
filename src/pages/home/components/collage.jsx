@@ -21,7 +21,9 @@ const Collage2 = () => {
   const rightImg = images[(index + 2) % 3];
 
   return (
-    <div className="collage2-hero">
+    <div className="collage2-hero"  style={{
+    backgroundImage: `url(${middleImg})`,
+  }}>
       <div className="collage2-wrapper">
 
         <div className="collage2-heading-row">

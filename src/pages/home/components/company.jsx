@@ -6,20 +6,30 @@ import img2 from "../../../assets/Images/company logo/image 2.png";
 import img3 from "../../../assets/Images/company logo/image 3.png";
 import img4 from "../../../assets/Images/company logo/image 4.png";
 
+const images = [img1, img2, img3, img4, img1, img2, img3, img4];
+
 const CompanyShowcase = () => {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
+
+  const [centerIndex, setCenterIndex] = useState(1);
+
+  const nextSlide = () => {
+    setCenterIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCenterIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // reset first (force restart)
             setVisible(false);
             setTimeout(() => setVisible(true), 50);
           } else {
-            // when its out of screen = reset
             setVisible(false);
           }
         });
@@ -27,9 +37,7 @@ const CompanyShowcase = () => {
       { threshold: 0.4 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -51,12 +59,40 @@ const CompanyShowcase = () => {
         </h3>
       </div>
 
-      {/* LOGO ROW */}
-      <div className="company-logo-row">
-        <div className="company-logo-box"><img src={img1} alt="" /></div>
-        <div className="company-logo-box"><img src={img2} alt="" /></div>
-        <div className="company-logo-box"><img src={img3} alt="" /></div>
-        <div className="company-logo-box"><img src={img4} alt="" /></div>
+      {/* ===========================
+          UPDATED 3 IMAGE SLIDER
+      ============================ */}
+      <div className="company-slider-wrapper">
+
+        <h1 className="nav-btn left" onClick={prevSlide}>←</h1>
+
+        <div className="company-slider">
+          {images.map((img, index) => {
+            let positionClass = "";
+
+            if (index === centerIndex) {
+              positionClass = "center-img";
+            } else if (index === (centerIndex - 1 + images.length) % images.length) {
+              positionClass = "left-img";
+            } else if (index === (centerIndex + 1) % images.length) {
+              positionClass = "right-img";
+            } else {
+              positionClass = "hidden-img";
+            }
+
+            return (
+              <div
+                key={index}
+                className={`company-slide-item ${positionClass}`}
+                onClick={() => setCenterIndex(index)}
+              >
+                <img src={img} alt="" />
+              </div>
+            );
+          })}
+        </div>
+
+        <h1 className="nav-btn right" onClick={nextSlide}>→</h1>
       </div>
 
     </div>
