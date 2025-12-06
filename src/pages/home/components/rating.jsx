@@ -1,128 +1,119 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./rating.css";
-import star from "../../../assets/icons/Rating_icon/Star 1.png";
 
-const TOTAL = 6;
-const VISIBLE = 3;
+export default function SimpleSlider() {
+  const data = [
+    {
+      name: "— N. Ganpathy Subramaniam  ",
+      role: "CEO",
+      review:
+        "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.",
+     
+    
+      stars: 5,
+      // img: "https://via.placeholder.com/90",
+    },
+    {
+      name: "— A. Stevens ",
+      role: "Project Manager",
+      review:
+        "“The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency.”",
+      
+     
+      stars: 5,
+      // img: "https://via.placeholder.com/90",
+    },
+     {
+      name: "— L. Johnson ",
+      role: "Operations Director",
+      review:
+        "“With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow.”",
+      stars: 5,
+      // img: "https://via.placeholder.com/90",
+    },
+  ];
+var settings = {
+  dots: true,
+  infinite: true,
+  speed: 600,
+  arrows: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
 
-const RatingPage = () => {
-  const headingRef = useRef(null);
-  const cardsRef = useRef([]);
-  const [start, setStart] = useState(0); // <- starting index of visible group
+  // 👇 Desktop center show side cards
+  centerMode: true,
+  centerPadding: "160px",
 
-  const nextSlide = () => {
-    setStart((prev) => (prev + 1) % TOTAL);
-  };
-
-  const prevSlide = () => {
-    setStart((prev) => (prev - 1 + TOTAL) % TOTAL);
-  };
-
-  // prepare 3 visible cards
-  const getVisibleCards = () => {
-    return [
-      start,
-      (start + 1) % TOTAL,
-      (start + 2) % TOTAL,
-    ];
-  };
-
-  const visibleCards = getVisibleCards();
-
-  /* ⭐ Center card highlight */
-  function activateCenterCard() {
-    const cards = document.querySelectorAll(".rating-card");
-    cards.forEach((c) => c.classList.remove("active"));
-
-    if (cards[1]) cards[1].classList.add("active"); 
-  }
-
-  useEffect(() => {
-    activateCenterCard();
-  }, [start]);
-
-  /* ⭐ Animations observer */
-  useEffect(() => {
-    const headingObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("show");
-        });
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        centerMode: true,
+        centerPadding: "80px",
       },
-      { threshold: 0.4 }
-    );
-
-    if (headingRef.current) headingObserver.observe(headingRef.current);
-
-    const cardObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("card-show");
-        });
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        centerMode: false,
+        centerPadding: "0px",
       },
-      { threshold: 0.2 }
-    );
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        centerMode: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "0px",
+        arrows: true,
+      },
+    },
+  ],
+};
 
-    cardsRef.current.forEach((card) => card && cardObserver.observe(card));
 
-    return () => {
-      headingObserver.disconnect();
-      cardObserver.disconnect();
-    };
-  }, []);
+
+;
 
   return (
-    <div className="rating-fluid">
+    <div className="slider-bg">
+      <div className="slider-container">
+          <div className="slider-header">
+        <h4 className="header-title">Proof of Performance</h4>
+        <p className="header-sub">Each discipline is handled by teams trained to convert field conditions into design-ready data.</p>
+      </div>
+        <Slider {...settings}>
+  {data.map((d, i) => (
+  <div key={i} className="slide-gap">
+    <div className="review-card">
 
-      {/* BUTTONS */}
-      <button className="nav-btn prev" onClick={prevSlide}>❮</button>
-      <button className="nav-btn next" onClick={nextSlide}>❯</button>
-
-      {/* HEADINGS */}
-      <div className="rating-heading-row" ref={headingRef}>
-        <h2 className="left-h slide-left">Proof of Performance</h2>
-        <h3 className="right-h slide-right">
-          Each discipline is handled by teams trained to convert field conditions into design-ready data.
-        </h3>
+      <div className="left-box">
+        <h3 className="name">{d.name}</h3>
+        <p className="role">{d.role}</p>
+        <div className="stars">
+          {[...Array(d.stars)].map((_, s) => (
+            <span key={s}>⭐</span>
+          ))}
+        </div>
       </div>
 
-      {/* ⭐ FINAL FIXED CAROUSEL */}
-      <div className="rating-container-fixed">
-        {visibleCards.map((i, idx) => (
-          <div
-            key={idx}
-            className="rating-card"
-            ref={(el) => (cardsRef.current[idx] = el)}
-          >
-            <div className="stars-row">
-              {[1, 2, 3, 4, 5].map((s) => (
-                <img key={s} src={star} alt="" />
-              ))}
-            </div>
+      <div className="right-box">
+        <p className="quote">{d.review}</p>
+        <hr className="divider" />
+        <p className="summary">{d.summary}</p>
+      </div>
 
-            <p className="review-text">
-              {i === 0 && "“Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy.”"}
-              {i === 1 && "“The dedication and professionalism exhibited by CADMAX is unmatched. Their insights streamline projects and improve efficiency.”"}
-              {i === 2 && "“With CADMAX's innovative solutions, we've reduced turnaround time significantly. Their expertise is a game-changer.”"}
+    </div>
+  </div>
+))}
 
-              {i === 3 && "“Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy.”"}
-              {i === 4 && "“The dedication and professionalism exhibited by CADMAX is unmatched. Their insights streamline projects and improve efficiency.”"}
-              {i === 5 && "“With CADMAX's innovative solutions, we've reduced turnaround time significantly. Their expertise is a game-changer.”"}
-            </p>
+</Slider>
 
-            <p className="reviewer-name">
-              {i === 0 && "— N. Ganpathy Subramaniam, CEO"}
-              {i === 1 && "— A. Stevens, Project Manager"}
-              {i === 2 && "— L. Johnson, Operations Director"}
-              {i === 3 && "— N. Ganpathy Subramaniam, CEO"}
-              {i === 4 && "— A. Stevens, Project Manager"}
-              {i === 5 && "— L. Johnson, Operations Director"}
-            </p>
-          </div>
-        ))}
       </div>
     </div>
   );
-};
-
-export default RatingPage;
+}

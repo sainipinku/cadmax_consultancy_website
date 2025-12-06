@@ -1,231 +1,178 @@
 /* HERO */
 .service1-hero {
-    width: 100%;
-    height: 420px;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
 }
 
 /* BLACK BOX */
 .black-box {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 20px 20px 200px;
-    position: relative;
-    z-index: 1;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px 20px 200px;
+  position: relative;
+  z-index: 1;
 }
 
-/* OVERLAP IMAGE — outside black-box */
+/* OVERLAP IMAGE */
 .overlap-img-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: -160px;
-    position: relative;
-    z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -160px;
+  position: relative;
+  z-index: 5;
 }
 
 .overlap-img-box img {
-    width: 95%;
-    height: 380px;
+  width: 95%;
+  height: 380px;
 }
 
 /* TEXT */
 .black-box h2 {
-    font-size: 22px;
-    font-weight: 900;
-    margin-top: 20px;
-    text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 20px;
+  text-transform: uppercase;
 }
 
 .black-box p {
-    font-size: 17px;
-    max-width: 900px;
-    margin: 10px auto;
-    opacity: 0.9;
-    line-height: 1.5;
+  font-size: 17px;
+  max-width: 900px;
+  margin: 10px auto;
+  opacity: 0.9;
+  line-height: 1.5;
 }
 
 /* FLEX SECTION */
 .flex-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 40px;
-    gap: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  gap: 30px;
 }
 
-
-.flex-section h2{
+.flex-section h2 {
   font-size: 22px;
   font-weight: 900;
-  letter-spacing: -2%;
   text-transform: uppercase;
   width: 183px;
 }
 
-.flex-section p{
+.flex-section p {
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: -2%;
   width: 670px;
 }
 
-/* .flex-section h2 , .flex-section p{
-  padding-left: 20px;
-} */
+/* ================ COLLAGE ================ */
 
-/* ==================== COLLAGE ==================== */
-
-.collage {
-  display: flex;
-  gap: 20px;
-  width: 100vw !important;       /* FULL DISPLAY WIDTH */
-  max-width: 100vw !important;
-  margin: 0 auto;
-  padding: 0;
-  justify-content: center;
-  align-items: stretch;
-  overflow: hidden;               /* LEFT/RIGHT FALL FIX */
-  padding-top: 40px;
-  margin-bottom: 20px;
-  
+.collage-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  /* left slightly bigger */
+  grid-template-rows: 1fr 1fr;
+  /* gap: 20px; */
+  padding: 0 20px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
-/* COMMON IMAGE BOX */
-.imgBox {
+.collage-item {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-
-
-/* IMAGES */
-.imgBox img {
+.collage-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8);
-  transition: 0.35s ease-in-out;  
-}
-.imgBox:hover img {
-  filter: brightness(1);            /* hover = full bright */
+  filter: brightness(0.82);
+  transition: .3s;
 }
 
+.collage-item:hover img {
+  filter: brightness(1);
+}
 
-/* TEXT ON IMAGE */
-.imgBox p {
+.collage-item h2 {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 22px;
+  color: #fff;
   font-weight: 800;
+  font-size: 23px;
   text-align: center;
-  text-transform: uppercase;
+  width: 90%;
 }
 
-/* LEFT BIG IMAGE */
-.left .imgBox {
-  width: 380px;
-  height: 740px;
-  flex-shrink: 0;
+/* LEFT BIG */
+.item-1 {
+  grid-row: span 2;
+  width: 100%;
+  margin: auto;
+  height: 100%;
 }
 
-/* RIGHT SIDE */
-.right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* RIGHT SMALL */
+.item-2,
+.item-3 {
+  width: 100%;
+  height: 100%;
 }
 
-.top {
-  display: flex;
-  gap: 20px;
+/* BOTTOM FULL */
+.item-4 {
+  grid-column: span 2;
+  width: 100%;
+  height: 100%;
 }
 
-.top .imgBox {
-  width: 380px;
-  height: 340px;
-  flex-shrink: 0;
-}
+/* ============= RESPONSIVE ============= */
 
-.bottom .imgBox {
-  width: 780px;
-  height: 380px;
-  flex-shrink: 0;
-}
-
-/* =============== RESPONSIVE =============== */
-
-/* TABLET */
 @media (max-width: 992px) {
+  .collage-wrapper {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 15px;
+  }
 
-  .collage {
-    flex-direction: column;
-       margin-bottom: 0 !important;   /* footer se upar */
-    gap: 15px;
+  .item-1 {
+    grid-row: auto;
+    grid-column: span 2;
+    height: 420px;
     width: 100%;
   }
 
-  .left .imgBox {
-    width: 100%;
-    height: 520px;
-  }
-
-  .top {
-    flex-direction: row;
-    width: 100%;
-    gap: 15px;
-  }
-
-  .top .imgBox {
-    width: 50%;
-    height: 260px;
-  }
-
-  .bottom .imgBox {
-    width: 100%;
+  .item-4 {
+    grid-column: span 2;
     height: 300px;
   }
 }
 
-/* MOBILE */
 @media (max-width: 576px) {
-
-  .collage {
-    width: 100%;
-    gap: 12px;
-     margin-bottom: 0 ;   
+  .collage-wrapper {
+    grid-template-columns: 1fr;
   }
 
-  .left .imgBox {
-    width: 100%;
-    height: 380px;
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    grid-column: span 1;
+    height: 260px;
   }
 
-  .top {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .top .imgBox {
-    width: 100%;
-    height: 220px;
-  }
-
-  .bottom .imgBox {
-    width: 100%;
-    height: 240px;
-  }
-
-  .imgBox p {
+  .collage-item h2 {
     font-size: 18px;
   }
 }

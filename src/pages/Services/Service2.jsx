@@ -14,7 +14,7 @@ import collage4 from "../../../src/assets/Images/service-page-2/service2-img5.pn
 
 const Service2 = () => {
 
-  // 👉 Tum jitni images chahe add kar sakte ho
+ 
   const collageImages = [
     { img: collage1, title: "MAINGATE AND BOUNDARY CONSTRUCTION" },
     { img: collage2, title: "ROAD NETWORK" },
@@ -51,44 +51,35 @@ const Service2 = () => {
         <p>A focused set of engineering services that define how a site functions, connects and operates.</p>
       </div>
 
-      {/* ⭐⭐ DYNAMIC COLLAGE ⭐⭐ */}
-      <div className="collage">
+     {/* ⭐⭐ DYNAMIC COLLAGE ⭐⭐ */}
+<div className="collage-wrapper">
 
-        {/* LEFT BIG IMAGE (index 0) */}
-        <div className="left">
-          <Link to="/Services/Service3">
-            <div className="imgBox">
-              <img src={collageImages[0].img} />
-              <p>{collageImages[0].title}</p>
-            </div>
-          </Link>
-        </div>
+  {/* ITEM 1 (BIG LEFT) */}
+  <Link to="/Services/Service3" className="collage-item item-1">
+      <img src={collageImages[0].img} alt="" />
+      <h2>{collageImages[0].title}</h2>
+  </Link>
 
-        {/* RIGHT SIDE */}
-        <div className="right">
+  {/* ITEM 2 */}
+  <Link to="/Services/Service3" className="collage-item item-2">
+      <img src={collageImages[1].img} alt="" />
+      <h2>{collageImages[1].title}</h2>
+  </Link>
 
-          {/* TOP TWO (index 1 + index 2) */}
-          <div className="top">
-            {collageImages.slice(1, 3).map((item, i) => (
-              <Link to="/Services/Service3" key={i}>
-                <div className="imgBox">
-                  <img src={item.img} />
-                  <p>{item.title}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
+  {/* ITEM 3 */}
+  <Link to="/Services/Service3" className="collage-item item-3">
+      <img src={collageImages[2].img} alt="" />
+      <h2>{collageImages[2].title}</h2>
+  </Link>
 
-          {/* BOTTOM (index 3) */}
-          <div className="bottom">
-            <div className="imgBox">
-              <img src={collageImages[3].img} />
-              <p>{collageImages[3].title}</p>
-            </div>
-          </div>
+  {/* ITEM 4 (BOTTOM FULL) */}
+  <Link to="/Services/Service3" className="collage-item item-4">
+      <img src={collageImages[3].img} alt="" />
+      <h2>{collageImages[3].title}</h2>
+  </Link>
 
-        </div>
-      </div>
+</div>
+
 
       <Footer />
     </>
