@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./testimonial.css";
 import { gsap } from "gsap";
+import { FaStar } from "react-icons/fa";
+
 import { Draggable } from "gsap/Draggable";
 gsap.registerPlugin(Draggable);
 
@@ -55,19 +57,29 @@ function loadContent(testimonials) {
     elem.classList.add("chat-bubble");
     elem.style.setProperty("--rotation", data.rotation + "deg");
     elem.innerHTML = buildTemplate(
-      `
-    <div class='chat-bubble-header'>
-        <i class='fa fa-quote-left'></i>
-      </div>
-      <div class='content'>{content}</div>
-      <div class='person'>
-        <img class='img' src='https://i.pravatar.cc/150?img=68'>
-        <div class='name'>{name}</div>
-        <div class='role'>{role}</div>
-      </div>
-    `,
-      data
-    );
+  `
+<div class='chat-bubble-header'>
+  <i class='fa fa-quote-left'></i>
+</div>
+<div class='content'>{content}</div>
+<div class='person'>
+  <img class='img' src='https://i.pravatar.cc/150?img=68'>
+  <div class='name'>{name}</div>
+  <div class='star'>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star'></i>
+  </div>
+  <div class='role'>{role}</div>
+</div>
+
+</div>
+`,
+data
+);
+
     setTimeout(() => {
       if (elem.children[2].scrollHeight > elem.children[2].clientHeight) {
         elem.classList.add("truncated");
@@ -124,34 +136,34 @@ function loadContent(testimonials) {
   });
 
   let xPos, dragStartPos;
-  Draggable.create(testimonialsElem, {
-    onDragStart: (e) => {
-      if (e.touches) e.clientX = e.touches[0].clientX;
-      xPos = dragStartPos = Math.round(e.clientX);
-    },
+//   Draggable.create(testimonialsElem, {
+//     onDragStart: (e) => {
+//       if (e.touches) e.clientX = e.touches[0].clientX;
+//       xPos = dragStartPos = Math.round(e.clientX);
+//     },
 
-    onDrag: (e) => {
-      if (e.touches) e.clientX = e.touches[0].clientX;
+//     onDrag: (e) => {
+//       if (e.touches) e.clientX = e.touches[0].clientX;
 
-      gsap.to(testimonialsElem, {
-        rotationY: "+=" + ((Math.round(e.clientX) - xPos) % 360)
-      });
+//       gsap.to(testimonialsElem, {
+//         rotationY: "+=" + ((Math.round(e.clientX) - xPos) % 360)
+//       });
 
-      xPos = Math.round(e.clientX);
-    },
+//       xPos = Math.round(e.clientX);
+//     },
 
-    onDragEnd: () => {
-      const currentRotation =
-        gsap.getProperty(testimonialsElem, "rotationY") * -1;
-      const index = mod(
-        Math.round(currentRotation / rotationAmt),
-        testimonials.length
-      );
-      console.log(xPos, dragStartPos);
-      select(index, xPos < dragStartPos ? 1 : -1);
-      gsap.set(tElem, { x: 0, y: 0 });
-    }
-  });
+//     onDragEnd: () => {
+//       const currentRotation =
+//         gsap.getProperty(testimonialsElem, "rotationY") * -1;
+//       const index = mod(
+//         Math.round(currentRotation / rotationAmt),
+//         testimonials.length
+//       );
+//       console.log(xPos, dragStartPos);
+//       select(index, xPos < dragStartPos ? 1 : -1);
+//       gsap.set(tElem, { x: 0, y: 0 });
+//     }
+//   });
 
   let timeout;
   function update() {
