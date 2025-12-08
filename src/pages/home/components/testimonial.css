@@ -1,0 +1,173 @@
+/* MAIN CONTAINER */
+.testimonial {
+    margin: 0;
+  perspective-origin: 50% 50%;
+  perspective: 100em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  counter-reset: bubble 0;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  min-height: 550px;
+  flex-grow: 1;
+  transform: translateX(0) translateY(0) !important;
+}
+
+/* 3D CAROUSEL AREA */
+.testimonial .testimonials {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transform: translateZ(calc(var(--distance) * -1));
+  transform-style: preserve-3d;
+}
+
+/* ARROWS */
+.testimonial .arrow-left,
+.testimonial .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #0af;
+  z-index: 2;
+  background: white;
+  padding: 5px;
+}
+
+.testimonial .arrow-left { left: 0px; }
+.testimonial .arrow-right { right: 0px; }
+
+/* NAV DOTS */
+.testimonial .navigation {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.testimonial .navigation .nav-dot {
+  padding: 3px;
+  background: #0af;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.testimonial .navigation .focused {
+  background: white;
+}
+
+/* BUBBLES */
+.chat-bubble {
+  padding: 40px 2em;
+ width: 350px;
+height: 380px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 1em;
+  position: absolute;
+  transform: translateX(-50%) rotateY(var(--rotation))
+    translateZ(var(--distance));
+  transition: filter 0.4s ease;
+  pointer-events: none;
+  
+  /* KEY FIXES */
+  filter: blur(3px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: filter, transform;
+}
+
+/* CENTER (ACTIVE) BUBBLE */
+.chat-bubble.focused {
+  filter: blur(0px) !important;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.chat-bubble i {
+  font-size: 30px;
+  color: #aaa;
+  margin-bottom: 0.5em;
+}
+
+/* PERSON DETAILS */
+.chat-bubble .person {
+  display: grid;
+  grid-template: auto auto/auto 1fr;
+  grid-column-gap: 0.4em;
+  margin-top: 1em;
+}
+
+.chat-bubble .person .img {
+  grid-row: 1/-1;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.chat-bubble .person .name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.chat-bubble .person .role {
+  align-self: start;
+}
+
+/* SCROLL TEXT */
+.chat-bubble .content {
+  white-space: pre-wrap;
+  position: relative;
+  max-height: 175px;
+  padding: 5px 0;
+  overflow-y: auto;
+}
+
+/* BUBBLE POINTER */
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 5%;
+  width: 25px;
+  height: 15px;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background-color: inherit;
+}
+
+.center-box {
+  width: 100%;
+  padding-top: 30px;
+  height: auto;     /* responsive height */
+  background: #000;       /* black */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: center;       /* horizontal center */
+  
+  box-sizing: border-box;
+}
+
+.center-box h1 {
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;  /* uppercase */
+  margin-bottom: 10px;
+}
+
+.center-box p {
+  color: #ddd;
+  font-size: 18px;
+  font-weight: 500;
+}

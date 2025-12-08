@@ -3,14 +3,14 @@ import Navbar from '../../components/Layout/Header/Navbar';
 import Hero from './components/Hero';
 import Textbox from '../home/components/text';
 import Footer from '../../components/Layout/Footer/Footer'
-import Image from '../home/components/image'
+// import Image from '../home/components/image'
 import Accuracy from '../home/components/Accuracy'
 import Collage2 from '../home/components/collage'
-import RatingPage from '../home/components/rating'
+// import RatingPage from '../home/components/rating'
 import CompanyShowcase from '../home/components/company'
 // import MasonryGallery from './components/MasonryGallery';
 import MasonryGallery from '../home/components/image'
-
+import Testimonial from '../home/components/testimonial'
 function Home() {
   return (
     <>
@@ -20,7 +20,8 @@ function Home() {
 <MasonryGallery/>
 <Accuracy/>
 <Collage2/>
-<RatingPage/>
+<Testimonial/>
+{/* <RatingPage/> */}
 <CompanyShowcase/>
 <Footer/>
     </>

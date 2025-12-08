@@ -48,7 +48,9 @@ const Collage2 = () => {
         </div>
 
       </div>
+      
     </div>
+    
   );
 };
 
