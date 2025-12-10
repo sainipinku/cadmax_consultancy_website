@@ -1,54 +1,44 @@
-.hero-section {
-    width: 100%;
-    height: 85vh; /* Full screen height */
-
-    background-image: url(../../../assets/Images/header/Header-bg-img.png);
-    background-size: cover;        
-    background-position: center;   
-    background-repeat: no-repeat;
-    
-    padding-top: 77px; 
+/* FULL WIDTH (container-fluid effect) */
+.hero-fluid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------- LARGE SCREENS (Laptops) ---------- */
-@media(max-width: 1200px) {
-    .hero-section {
-        height: 85vh;         
-        background-position: center top;
-    }
+/* SLIDER WRAPPER */
+.hero-slider-container {
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------- TABLETS ---------- */
-@media(max-width: 992px) {
-    .hero-section {
-        height: 75vh;
-        background-size: cover;
-        background-position: center;
-    }
+/* SLIDE BOX */
+.hero-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-/* ---------- SMALL TABLETS / LARGE MOBILE ---------- */
+/* IMAGE FULL COVER */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* RESPONSIVE */
 @media(max-width: 768px) {
-    .hero-section {
-        height: 60vh;
-        background-position: top;  
-        padding-top: 65px;         
-    }
+  .hero-slider-container {
+    height: 60vh;
+  }
 }
 
-/* ---------- MOBILE PHONES ---------- */
-@media(max-width: 576px) {
-    .hero-section {
-        height: 50vh;
-        background-size: cover;
-        background-position: center;
-    }
-}
-
-/* ---------- SMALL MOBILE (<= 400px) ---------- */
-@media(max-width: 400px) {
-    .hero-section {
-        height: 45vh;
-        background-position: top center;
-    }
+@media(max-width: 480px) {
+  .hero-slider-container {
+    height: 50vh;
+  }
 }

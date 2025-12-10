@@ -45,9 +45,9 @@ const Navbar = () => {
                     </button>
 
                     <div className={`dropdown-content ${openDropdown === "services" ? "show" : ""}`}>
-                        <Link to="/Services/Service1" className="dropdown-link">Service 1</Link>
-                        <Link to="/Services/Service2" className="dropdown-link">Service 2</Link>
-                        <Link to="/Services/Service3" className="dropdown-link">Service 3</Link>
+                        <Link to="/Services/Service1" className="dropdown-link">ENGINEERING</Link>
+                        <Link to="/Services/Service2" className="dropdown-link">SURVEYING</Link>
+                        <Link to="/Services/Service3" className="dropdown-link">PLANNING</Link>
                     </div>
                 </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
 
             {/* Header Button */}
             <button className="header-button">
-                <Link to="/enquire">ENQUIRE TODAY</Link>
+                <Link to="/contact">ENQUIRE TODAY</Link>
             </button>
 
         </header>

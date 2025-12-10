@@ -1,205 +1,104 @@
-.slider-bg {
-  width: 100%;
-  padding: 90px 0;
-  background: #03071b;
+/* =========================
+   OUTER BACKGROUND
+========================= */
+.review-bg {
+  background: #eeebe4;
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* ======= HEADING ======= */
-.slider-header {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.header-title {
-  color: white;
-  font-size: 28px;
-  font-weight: 600;
-}
-
-.header-sub {
-  color: rgba(255,255,255,0.65);
-  font-size: 17px;
-  margin-top: 5px;
-}
-
-/* ======= SLIDER CONTAINER ======= */
-.slider-container {
-  width: 90%;
+/* =========================
+   INNER WRAPPER
+========================= */
+.review-wrapper {
+  width: 80%;
   margin: auto;
 }
 
-.slide-gap {
-  padding: 12px;
-}
-
-/* ======= MAIN CARD ======= */
-.review-card {
-  display: flex;
-  gap: 40px;
-  padding: 35px 45px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
-  min-height: 280px;
-  align-items: center;
-  color: #fff;
-}
-
-/* ======= LEFT ======= */
-.person {
-  width: 200px;
+/* =========================
+   HEADING
+========================= */
+.review-title {
   text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+  text-transform: uppercase;
 }
 
-.avatar {
-  width: 92px;
-  height: 92px;
+/* =========================
+   SUB TEXT
+========================= */
+.review-subtitle {
+  text-align: center;
+  color: #656565;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+.review-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 28px 26px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* MESSAGE INSIDE CARD */
+.review-msg {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* =========================
+   CLIENT INFO
+========================= */
+.review-client {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.review-client img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
-.name {
-  margin-top: 12px;
-  font-size: 21px;
+.review-name {
+  font-size: 14px;
+  margin: 0;
   font-weight: 600;
 }
 
-.role {
-  opacity: 0.75;
+.review-role {
+  margin: 0;
   font-size: 13px;
-  margin-bottom: 8px;
+  color: #6d6d6d;
 }
 
-.stars {
-  margin-top: 6px;
+/* =========================
+   SLIDER SPACE FIX
+========================= */
+.review-wrapper .slick-slide {
+  padding: 14px;
 }
 
-/* ======= RIGHT ======= */
-.details {
-  flex: 1;
-}
-
-.quote {
-  font-size: 16px;
-  line-height: 1.55;
-  margin-bottom: 18px;
-}
-
-.divider {
-  opacity: 0.3;
-  margin: 10px 0 22px;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 22px;
-}
-
-.title {
-  opacity: 0.75;
-  font-size: 14px;
-  margin-bottom: 3px;
-}
-
-/* ======= BUTTON ======= */
-.read-btn {
-  background: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-/* ===================================================== */
-/*                       RESPONSIVE                      */
-/* ===================================================== */
-
-/* 📌 Tablets & Small Laptops */
-@media(max-width:1200px) {
-  .slider-container {
-    width: 95%;
-  }
-
-  .review-card {
-    padding: 30px;
-    gap: 30px;
-  }
-}
-
-/* 📌 Tablet Portrait */
-@media(max-width:900px) {
-  .review-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 26px 25px;
-  }
-
-  .person {
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px) {
+  .review-wrapper {
     width: 100%;
-  }
-
-  .info-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* 📌 Large Mobile */
-@media(max-width:600px) {
-  .review-card {
-    padding: 22px 20px;
-    gap: 20px;
-  }
-
-  .name {
-    font-size: 18px;
-  }
-
-  .quote {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .read-btn {
-    padding: 9px 20px;
-    font-size: 13px;
-  }
-}
-/* 📌 Small Phones (FINAL FIX) */
-@media(max-width:430px) {
-
-  /* Card perfect width */
-  .review-card {
-    padding: 18px 14px;
-    width: 88% !important;    /* 👈 width reduced */
-    margin: 0 auto !important;  /* 👈 centered */
-  }
-
-  /* Button full visible */
-  .read-btn {
-    width: 100%;
-    margin-top: 12px;
-    text-align: center;
-  }
-
-  /* Text control */
-  .quote {
-    font-size: 13.5px;
-  }
-
-  /* Slick arrows visible */
-  .slick-list {
-    overflow: visible !important;
-  }
-  .slick-prev, .slick-next {
-    z-index: 99999;
-  }
-  .slick-prev {
-    left: -6px !important;
-  }
-  .slick-next {
-    right: -6px !important;
   }
 }

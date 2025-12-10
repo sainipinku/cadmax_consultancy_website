@@ -11,6 +11,7 @@ import CompanyShowcase from '../home/components/company'
 // import MasonryGallery from './components/MasonryGallery';
 import MasonryGallery from '../home/components/image'
 import Testimonial from '../home/components/testimonial'
+import TestimonialSlider from '../home/components/rating'
 function Home() {
   return (
     <>
@@ -20,8 +21,9 @@ function Home() {
 <MasonryGallery/>
 <Accuracy/>
 <Collage2/>
-<Testimonial/>
+{/* <Testimonial/> */}
 {/* <RatingPage/> */}
+<TestimonialSlider/>
 <CompanyShowcase/>
 <Footer/>
     </>

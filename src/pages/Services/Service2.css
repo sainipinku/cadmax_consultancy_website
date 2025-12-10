@@ -79,7 +79,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;  /* left slightly bigger */
   grid-template-rows: 1fr 1fr;
-  /* gap: 20px; */
+  gap: 20px;
   padding: 0 20px;
   margin-bottom: 40px;
   box-sizing: border-box;
