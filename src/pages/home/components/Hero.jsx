@@ -22,6 +22,8 @@ const Hero = () => {
     slidesToScroll: 1,
     fade: false,
     cssEase: "ease-in-out",
+    pauseOnHover: false,
+
   };
 
   return (

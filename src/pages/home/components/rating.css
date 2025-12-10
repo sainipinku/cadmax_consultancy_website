@@ -1,104 +1,124 @@
-/* =========================
-   OUTER BACKGROUND
-========================= */
-.review-bg {
+/* Outer BG */
+.testimonial-bg {
   background: #eeebe4;
-  padding: 70px 0;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
 }
 
-/* =========================
-   INNER WRAPPER
-========================= */
-.review-wrapper {
-  width: 80%;
+/* Wrapper */
+.testimonial-wrapper {
+  width: 95%;
   margin: auto;
 }
 
-/* =========================
-   HEADING
-========================= */
-.review-title {
+/* Heading */
+.testimonial-title {
   text-align: center;
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #222;
   text-transform: uppercase;
 }
 
-/* =========================
-   SUB TEXT
-========================= */
-.review-subtitle {
+.testimonial-subtitle {
   text-align: center;
-  color: #656565;
+  color: #606060;
   font-size: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
-/* =========================
-   CARD DESIGN
-========================= */
-.review-card {
+/* Slide Spacing */
+.swiper-slide {
+  padding: 5px 0;
+}
+
+/* Card */
+.testimonial-card {
   background: white;
   border-radius: 18px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
-  padding: 28px 26px;
-  height: 300px;
+  padding: 26px 28px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* MESSAGE INSIDE CARD */
-.review-msg {
-  color: #333;
+/* Message */
+.testimonial-msg {
   font-size: 15px;
   line-height: 1.55;
+  margin-bottom: 18px;
+  color: #333;
 }
 
-/* =========================
-   CLIENT INFO
-========================= */
-.review-client {
+/* Client */
+.testimonial-client {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 18px;
 }
 
-.review-client img {
-  width: 40px;
-  height: 40px;
+.testimonial-client img {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
 }
 
-.review-name {
-  font-size: 14px;
-  margin: 0;
+/* Name */
+.client-name {
+  font-size: 15px;
   font-weight: 600;
+  margin: 0;
+  color: #222;
 }
 
-.review-role {
-  margin: 0;
+/* Role */
+.client-role {
   font-size: 13px;
+  margin: 0;
   color: #6d6d6d;
 }
 
-/* =========================
-   SLIDER SPACE FIX
-========================= */
-.review-wrapper .slick-slide {
-  padding: 14px;
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    width: 96%;
+  }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media(max-width:768px) {
-  .review-wrapper {
-    width: 100%;
-  }
+/* --- NAV BUTTONS UPDATED --- */
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  font-size: 10px;
+  /* border-radius: 50%;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.38);
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.15); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8ae00;
+  z-index: 30;
+  transition: 0.3s ease-in-out;
+}
+
+
+/* Arrows position - moved a bit forward */
+.swiper-button-prev {
+  left: -8px !important;
+}
+.swiper-button-next {
+  right: -8px !important;
+}
+
+/* Arrow icon size smaller */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px !important;
 }

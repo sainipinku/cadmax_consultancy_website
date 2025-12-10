@@ -1,71 +1,84 @@
 import React from "react";
-import Slider from "react-slick";
-import "./rating.css";   // <-- new css file name
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./rating.css";
 
 const data = [
   {
-    msg: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.",
-    img: "/images/user1.jpg",
-    name: "— N. Ganpathy Subramaniam ",
-    role: "CEO"
+    img: "/images/profile1.jpg",
+    name: "— N. Ganpathy Subramaniam, CEO",
+    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.CADMAX delivers precise surveying, accurate field data, and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
+  },
+    {
+    img: "/images/profile2.jpg",
+    name: "— A. Stevens, Project Manager",
+    desc:"“The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency.CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.”"
   },
   {
-    msg: "The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency.",
-    img: "/images/user2.jpg",
-    name: "— A. Stevens ",
-    role: "Project Manager"
+    img: "/images/profile3.jpg",
+    name: "— L. Johnson, Operations Director",
+   desc:"“With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow.CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays.”"
+  },
+{
+    img: "/images/profile1.jpg",
+    name: "— N. Ganpathy Subramaniam, CEO",
+ desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.CADMAX delivers precise surveying, accurate field data, and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
   },
   {
-    msg: "With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow.",
-    img: "/images/user3.jpg",
-    name: "— L. Johnson",
-    role: "Operations Director"
+    img: "/images/profile3.jpg",
+    name: "— L. Johnson, Operations Director",
+      desc:"“The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency.CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.”"
+   },
+    {
+    img: "/images/profile3.jpg",
+    name: "— L. Johnson, Operations Director",
+   desc:"“With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow.CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays.”"
   },
 ];
 
 const Testimonial = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    responsive: [
-      { breakpoint: 900, settings: { slidesToShow: 2 } },
-      { breakpoint: 600, settings: { slidesToShow: 1 } },
-    ],
-  };
-
   return (
-    <div className="review-bg">
-      <div className="review-wrapper">
+    <div className="testimonial-bg">
+      <div className="testimonial-wrapper">
 
-        <h2 className="review-title">Proof of Performance</h2>
-        <p className="review-subtitle">
-         Each discipline is handled by teams trained to convert field conditions into design-ready data.
+        <h2 className="testimonial-title">Proof of Performance</h2>
+        <p className="testimonial-subtitle">
+          Each discipline is handled by teams trained to convert field conditions into design-ready data.
         </p>
 
-        <Slider {...settings}>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={25}
+          slidesPerView={3}
+          breakpoints={{
+            900: { slidesPerView: 3 },
+            600: { slidesPerView: 2 },
+            0: { slidesPerView: 1 },
+          }}
+        >
           {data.map((t, i) => (
-            <div key={i}>
-              <div className="review-card">
-                <p className="review-msg">{t.msg}</p>
+            <SwiperSlide key={i}>
+              <div className="testimonial-card">
+                <p className="testimonial-msg">{t.desc}</p>
 
-                <div className="review-client">
+                <div className="testimonial-client">
                   <img src={t.img} alt="" />
                   <div>
-                    <h4 className="review-name">{t.name}</h4>
-                    <p className="review-role">{t.role}</p>
+                    <p className="client-name">{t.name}</p>
+                    <p className="client-role">Client</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </Slider>
-        
+        </Swiper>
+
       </div>
     </div>
   );
