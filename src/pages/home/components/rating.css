@@ -8,7 +8,7 @@
 
 /* Wrapper */
 .testimonial-wrapper {
-  width: 95%;
+  width: 88%;
   margin: auto;
 }
 
@@ -40,7 +40,7 @@
   border-radius: 18px;
   padding: 26px 28px;
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
-  min-height: 250px;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -89,36 +89,43 @@
   }
 }
 
-/* --- NAV BUTTONS UPDATED --- */
+/* --- NAV BUTTONS OUTSIDE VIEW --- */
 
 .swiper-button-prev,
 .swiper-button-next {
   width: 40px;
   height: 40px;
   font-size: 10px;
-  /* border-radius: 50%;
-  backdrop-filter: blur(6px);
-  background: rgba(255,255,255,0.38);
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.15); */
   display: flex;
   justify-content: center;
   align-items: center;
   color: #f8ae00;
   z-index: 30;
   transition: 0.3s ease-in-out;
+  top: 50% !important;
+  transform: translateY(-50%);
 }
 
-
-/* Arrows position - moved a bit forward */
+/* Buttons OUTSIDE */
 .swiper-button-prev {
-  left: -8px !important;
+  left: -30px !important;
 }
 .swiper-button-next {
-  right: -8px !important;
+  right: -30px !important;
 }
 
-/* Arrow icon size smaller */
+/* Arrow icon smaller */
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 18px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.swiper {
+  position: relative;
 }
