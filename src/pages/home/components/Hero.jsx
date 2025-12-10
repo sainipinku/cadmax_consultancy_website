@@ -7,7 +7,6 @@ import img2 from "../../../assets/Images/header/slider1.jpg";
 import img3 from "../../../assets/Images/header/slider2.png";
 import img4 from "../../../assets/Images/header/slider3.jpg";
 
-
 const Hero = () => {
   const sliderImages = [img1, img2, img3, img4];
 
@@ -16,28 +15,25 @@ const Hero = () => {
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: false,
-    cssEase: "ease-in-out",
     pauseOnHover: false,
-
   };
 
   return (
-    <div className="hero-fluid">
-      <div className="hero-slider-container">
+    <section className="hero-wrapper">
+      <div className="hero-slider-box">
         <Slider {...settings}>
           {sliderImages.map((img, i) => (
-            <div key={i} className="hero-slide">
-              <img src={img} alt="slider" className="hero-img" />
+            <div key={i} className="hero-item">
+              <img src={img} alt={`slide-${i}`} className="hero-image" />
             </div>
           ))}
         </Slider>
       </div>
-    </div>
+    </section>
   );
 };
 
