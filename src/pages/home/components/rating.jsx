@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation,  } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,7 +11,7 @@ const data = [
   {
     img: "/images/profile1.jpg",
     name: "— N. Ganpathy Subramaniam, CEO",
-    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.CADMAX delivers precise surveying, accurate field data, and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
+    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
   },
     {
     img: "/images/profile2.jpg",
@@ -26,7 +26,7 @@ const data = [
 {
     img: "/images/profile1.jpg",
     name: "— N. Ganpathy Subramaniam, CEO",
- desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.CADMAX delivers precise surveying, accurate field data, and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
+ desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution.CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
   },
   {
     img: "/images/profile3.jpg",
@@ -50,18 +50,20 @@ const Testimonial = () => {
           Each discipline is handled by teams trained to convert field conditions into design-ready data.
         </p>
 
-        <Swiper
-          modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
-          spaceBetween={25}
-          slidesPerView={3}
-          breakpoints={{
-            900: { slidesPerView: 3 },
-            600: { slidesPerView: 2 },
-            0: { slidesPerView: 1 },
-          }}
-        >
+   <Swiper
+  modules={[Navigation]}
+  navigation
+  spaceBetween={25}
+  slidesPerView={3}
+  loop={true}
+  breakpoints={{
+    900: { slidesPerView: 3 },
+    600: { slidesPerView: 2 },
+    0: { slidesPerView: 1 },
+  }}
+>
+
+
           {data.map((t, i) => (
             <SwiperSlide key={i}>
               <div className="testimonial-card">
