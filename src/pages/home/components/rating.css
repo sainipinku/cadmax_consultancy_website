@@ -49,9 +49,14 @@
 
 /* Message */
 .testimonial-msg {
+  text-align: justify;
+text-justify: inter-word;
+hyphens: auto;
+
   font-size: 15px;
-  line-height: 1.55;
-  margin-bottom: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  letter-spacing: normal;
   color: #333;
 }
 
