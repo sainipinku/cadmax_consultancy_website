@@ -41,7 +41,7 @@
   border-radius: 18px;
   padding: 26px 28px;
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
-  min-height: 320px;
+  min-height: 330px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,8 +63,8 @@
 }
 
 .testimonial-client img {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
