@@ -1,11 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation,  } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "./rating.css";
+
+
 
 const data = [
   {
@@ -39,48 +40,54 @@ const data = [
    desc:"“With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow.CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays.”"
   },
 ];
-
 const Testimonial = () => {
   return (
     <div className="testimonial-bg">
       <div className="testimonial-wrapper">
-
         <h2 className="testimonial-title">Proof of Performance</h2>
         <p className="testimonial-subtitle">
           Each discipline is handled by teams trained to convert field conditions into design-ready data.
         </p>
 
-   <Swiper
-  modules={[Navigation]}
-  navigation
-  spaceBetween={25}
-  slidesPerView={3}
-  loop={true}
-  breakpoints={{
-    900: { slidesPerView: 3 },
-    600: { slidesPerView: 2 },
-    0: { slidesPerView: 1 },
-  }}
->
+        <div className="testimonial-slider-container">
+          {/* LEFT BUTTON */}
+          <div className="swiper-button-prev custom-prev"></div>
 
+          <Swiper
+            modules={[Navigation]}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+            spaceBetween={25}
+            slidesPerView={3}
+            loop={true}
+            breakpoints={{
+              900: { slidesPerView: 3 },
+              600: { slidesPerView: 2 },
+              0: { slidesPerView: 1 },
+            }}
+          >
+            {data.map((t, i) => (
+              <SwiperSlide key={i}>
+                <div className="testimonial-card">
+                  <p className="testimonial-msg">{t.desc}</p>
 
-          {data.map((t, i) => (
-            <SwiperSlide key={i}>
-              <div className="testimonial-card">
-                <p className="testimonial-msg">{t.desc}</p>
-
-                <div className="testimonial-client">
-                  <img src={t.img} alt="" />
-                  <div>
-                    <p className="client-name">{t.name}</p>
-                    <p className="client-role">Client</p>
+                  <div className="testimonial-client">
+                    <img src={t.img} alt="" />
+                    <div>
+                      <p className="client-name">{t.name}</p>
+                      <p className="client-role">Client</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
+          {/* RIGHT BUTTON */}
+          <div className="swiper-button-next custom-next"></div>
+        </div>
       </div>
     </div>
   );
