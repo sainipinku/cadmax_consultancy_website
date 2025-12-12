@@ -1,8 +1,7 @@
 /* KEEP NORMAL SPACING – DO NOT REMOVE */
 .accuracy-section {
     margin-top: 50px;
-   
-
+    padding-bottom: 20px;
 }
 
 /* Heading */
@@ -12,17 +11,35 @@
     text-transform: uppercase;
     color: #171717;
     margin-bottom: 15px;
-    letter-spacing: 0.5px;   /* readable spacing */
-    line-height: 1.2;        /* better height */
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
-
 
 /* Paragraph */
 .accuracy-section p {
     font-size: 17px;
-    line-height: 1.2;
+    line-height: 1.5;       /* better readability */
     color: #333;
     font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Read More button */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #0066cce2;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+    transition: opacity 0.2s ease;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+    opacity: 0.8;
 }
 
 /* Image Styling */
@@ -68,6 +85,7 @@
 @media (max-width: 991px) {
     .accuracy-section p {
         font-size: 16px;
+        line-height: 1.45;
     }
 }
 
@@ -76,10 +94,14 @@
         text-align: center;
         font-size: 14px;
     }
+    .read-more-btn {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
     .accuracy-section p {
         font-size: 14px;
+        line-height: 1.4;
     }
 }

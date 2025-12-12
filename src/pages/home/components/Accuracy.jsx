@@ -1,11 +1,22 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Accuracy.css';
 import image from "../../../assets/Images/Other/Accuracy.jpg";
 
 const Accuracy = () => {
-
   const textRef = useRef(null);
   const imageRef = useRef(null);
+
+  // Read More State
+  const [expanded, setExpanded] = useState(false);
+
+  // Full Text
+  const fullText = `
+    ACCURACY- Architech Company’s CADMAX Accuracy represents a new benchmark in precision-driven design technology, engineered specifically for industries where even the smallest deviation can have large-scale consequences. Built on advanced computational geometry and next-generation CAD algorithms, CADMAX Accuracy enables architects, engineers, and construction specialists to produce highly detailed models with micron-level fidelity. Its intelligent error-correction engine continuously analyzes geometric relationships, detecting inconsistencies before they impact downstream planning or fabrication. The platform integrates seamlessly into digital project pipelines, supporting real-time collaboration, version control, and automated compliance checks with global building standards. By combining computational speed, data integrity, and ultra-fine measurement precision, Architech Company ensures that CADMAX Accuracy not only enhances design reliability but also significantly reduces rework, improves construction efficiency, and elevates overall project quality—making it a cornerstone solution for any organization committed to uncompromising accuracy in the built environment.
+  `;
+
+  const previewLength = 792; // Yeh part hamesha dikhega
+  const isLongText = fullText.length > previewLength;
+  const shownText = expanded ? fullText : fullText.slice(0, previewLength) ;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -14,11 +25,11 @@ const Accuracy = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-show");
           } else {
-            entry.target.classList.remove("animate-show"); // repeat animation
+            entry.target.classList.remove("animate-show");
           }
         });
       },
-      { threshold: 0.1 } // better for mobile
+      { threshold: 0.1 }
     );
 
     if (textRef.current) observer.observe(textRef.current);
@@ -34,9 +45,16 @@ const Accuracy = () => {
         {/* LEFT TEXT */}
         <div className="col-md-6 accuracy-text" ref={textRef}>
           <h2>How CADMAX Maintains Accuracy</h2>
-          <p>
-            ACCURACY- Architech Company’s CadMax Accuracy represents a new benchmark in precision-driven design technology, engineered specifically for industries where even the smallest deviation can have large-scale consequences. Built on advanced computational geometry and next-generation CAD algorithms, CadMax Accuracy enables architects, engineers, and construction specialists to produce highly detailed models with micron-level fidelity. Its intelligent error-correction engine continuously analyzes geometric relationships, detecting inconsistencies before they impact downstream planning or fabrication. The platform integrates seamlessly into digital project pipelines, supporting real-time collaboration, version control, and automated compliance checks with global building standards. By combining computational speed, data integrity, and ultra-fine measurement precision, Architech Company ensures that CadMax Accuracy not only enhances design reliability but also significantly reduces rework, improves construction efficiency, and elevates overall project quality—making it a cornerstone solution for any organization committed to uncompromising accuracy in the built environment
-          </p>
+          <p>{shownText}</p>
+
+          {isLongText && (
+            <button
+              className="read-more-btn"
+              onClick={() => setExpanded(!expanded)}
+            >
+              {expanded ? "Read Less" : "Read More"}
+            </button>
+          )}
         </div>
 
         {/* RIGHT IMAGE */}
