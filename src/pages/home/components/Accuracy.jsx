@@ -11,10 +11,10 @@ const Accuracy = () => {
 
   // Full Text
   const fullText = `
-    ACCURACY- Architech Company’s CADMAX Accuracy represents a new benchmark in precision-driven design technology, engineered specifically for industries where even the smallest deviation can have large-scale consequences. Built on advanced computational geometry and next-generation CAD algorithms, CADMAX Accuracy enables architects, engineers, and construction specialists to produce highly detailed models with micron-level fidelity. Its intelligent error-correction engine continuously analyzes geometric relationships, detecting inconsistencies before they impact downstream planning or fabrication. The platform integrates seamlessly into digital project pipelines, supporting real-time collaboration, version control, and automated compliance checks with global building standards. By combining computational speed, data integrity, and ultra-fine measurement precision, Architech Company ensures that CADMAX Accuracy not only enhances design reliability but also significantly reduces rework, improves construction efficiency, and elevates overall project quality—making it a cornerstone solution for any organization committed to uncompromising accuracy in the built environment.
+     Architech Company’s CADMAX Accuracy represents a new benchmark in precision-driven design technology, engineered specifically for industries where even the smallest deviation can have large-scale consequences. Built on advanced computational geometry and next-generation CAD algorithms, CADMAX Accuracy enables architects, engineers, and construction specialists to produce highly detailed models with micron-level fidelity. Its intelligent error-correction engine continuously analyzes geometric relationships, detecting inconsistencies before they impact downstream planning or fabrication. The platform integrates seamlessly into digital project pipelines, supporting real-time collaboration, version control, and automated compliance checks with global building standards. By combining computational speed, data integrity, and ultra-fine measurement precision, Architech Company ensures that CADMAX Accuracy not only enhances design reliability but also significantly reduces rework, improves construction efficiency, and elevates overall project quality—making it a cornerstone solution for any organization committed to uncompromising accuracy in the built environment.
   `;
 
-  const previewLength = 792; // Yeh part hamesha dikhega
+  const previewLength = 783;      // content show part
   const isLongText = fullText.length > previewLength;
   const shownText = expanded ? fullText : fullText.slice(0, previewLength) ;
 
@@ -39,7 +39,7 @@ const Accuracy = () => {
   }, []);
 
   return (
-    <div className="container mb-5 accuracy-section">
+    <div className="container mb-4 accuracy-section">
       <div className="row align-items-center g-5">
 
         {/* LEFT TEXT */}
