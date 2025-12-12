@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Accuracy.css';
-import image from "../../../assets/Images/Other/Rectangle 48.png";
+import image from "../../../assets/Images/Other/Accuracy.jpg";
 
 const Accuracy = () => {
 
@@ -35,15 +35,7 @@ const Accuracy = () => {
         <div className="col-md-6 accuracy-text" ref={textRef}>
           <h2>How CADMAX Maintains Accuracy</h2>
           <p>
-            CADMAX operates on a workflow built to eliminate uncertainty at every stage.
-            Field data is captured through automated electronic systems to remove variance
-            and human-dependent inconsistencies. GPS and DGPS receivers lock positional
-            accuracy to a consistent standard, ensuring every point collected reflects
-            real-world conditions without drift. All processing moves through CAD-driven
-            environments, preventing manual drafting errors and preserving fidelity from
-            field to final drawing. The team’s experience across large-scale urban,
-            industrial and infrastructure projects reinforces this accuracy, enabling
-            decisions grounded in years of operational judgment.
+            ACCURACY- Architech Company’s CadMax Accuracy represents a new benchmark in precision-driven design technology, engineered specifically for industries where even the smallest deviation can have large-scale consequences. Built on advanced computational geometry and next-generation CAD algorithms, CadMax Accuracy enables architects, engineers, and construction specialists to produce highly detailed models with micron-level fidelity. Its intelligent error-correction engine continuously analyzes geometric relationships, detecting inconsistencies before they impact downstream planning or fabrication. The platform integrates seamlessly into digital project pipelines, supporting real-time collaboration, version control, and automated compliance checks with global building standards. By combining computational speed, data integrity, and ultra-fine measurement precision, Architech Company ensures that CadMax Accuracy not only enhances design reliability but also significantly reduces rework, improves construction efficiency, and elevates overall project quality—making it a cornerstone solution for any organization committed to uncompromising accuracy in the built environment
           </p>
         </div>
 
