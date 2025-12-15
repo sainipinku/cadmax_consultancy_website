@@ -62,7 +62,7 @@ const Testimonial = () => {
             slidesPerView={3}
             loop={true}
             breakpoints={{
-              900: { slidesPerView: 3 },
+              1000: { slidesPerView: 3 },
               600: { slidesPerView: 2 },
               0: { slidesPerView: 1 },
             }}
