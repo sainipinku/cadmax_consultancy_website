@@ -11,12 +11,12 @@ const Accuracy = () => {
 
   // Full Text
   const fullText = `
-     Architech Company’s CADMAX Accuracy represents a new benchmark in precision-driven design technology, engineered specifically for industries where even the smallest deviation can have large-scale consequences. Built on advanced computational geometry and next-generation CAD algorithms, CADMAX Accuracy enables architects, engineers, and construction specialists to produce highly detailed models with micron-level fidelity. Its intelligent error-correction engine continuously analyzes geometric relationships, detecting inconsistencies before they impact downstream planning or fabrication. The platform integrates seamlessly into digital project pipelines, supporting real-time collaboration, version control, and automated compliance checks with global building standards. By combining computational speed, data integrity, and ultra-fine measurement precision, Architech Company ensures that CADMAX Accuracy not only enhances design reliability but also significantly reduces rework, improves construction efficiency, and elevates overall project quality—making it a cornerstone solution for any organization committed to uncompromising accuracy in the built environment.
+    We build trust before we build structures. That’s the CadMax difference.Customers choose CadMax because we turn complex ideas into precise, buildable designs—on time, every time.CadMax: Where accuracy meets creativity. Trusted by clients who value quality, innovation, and flawless execution.We don’t just design spaces—CadMax designs solutions. That’s why clients trust us to deliver excellence from concept to completion.CadMax stands out for our attention to detail, advanced CAD technology, and commitment to client satisfaction.From 2D to 3D perfection—customers choose CadMax for designs that are accurate, clear, and construction-ready.Because CadMax delivers plans that save time, reduce errors, and cut construction costs.Smart designs, smooth construction—CadMax makes building easier.CadMax combines industry expertise with cutting-edge technology to bring your vision to life.Clients choose CadMax for our fast turnaround, top-tier accuracy, and designs engineered for real-world success.
   `;
 
-  const previewLength = 783;      // content show part
+  const previewLength = 736;      // content show part
   const isLongText = fullText.length > previewLength;
-  const shownText = expanded ? fullText : fullText.slice(0, previewLength) ;
+  const shownText = expanded ? fullText : fullText.slice(0, previewLength);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,7 +59,7 @@ const Accuracy = () => {
 
         {/* RIGHT IMAGE */}
         <div className="col-md-6 text-center accuracy-img-wrapper" ref={imageRef}>
-          <img 
+          <img
             src={image}
             className="img-fluid accuracy-image"
             alt="Accuracy"
