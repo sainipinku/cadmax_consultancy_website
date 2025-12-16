@@ -49,13 +49,14 @@
 }
 
 .company-logo-box img {
-  width: 320px;
-  height: 162.5px;
+  width: 280px;
+  height: 122.5px;
   object-fit: contain;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
 }
+
 
 @keyframes slideLR {
   0% { transform: translateX(0); }

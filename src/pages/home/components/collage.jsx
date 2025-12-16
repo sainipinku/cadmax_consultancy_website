@@ -5,6 +5,7 @@ import image1 from "../../../assets/Images/slide-image/1st-img.png";
 import image2 from "../../../assets/Images/slide-image/middle-img.png";
 import image3 from "../../../assets/Images/slide-image/3rd-img.png";
 
+
 const Collage2 = () => {
   const images = [image1, image2, image3];
   const [index, setIndex] = useState(0);

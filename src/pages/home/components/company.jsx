@@ -1,12 +1,21 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./company.css";
 
-import img1 from "../../../assets/Images/company logo/image 1.png";
-import img2 from "../../../assets/Images/company logo/image 2.png";
-import img3 from "../../../assets/Images/company logo/image 3.png";
-import img4 from "../../../assets/Images/company logo/image 4.png";
+// import img1 from "../../../assets/Images/company logo/image 1.png";
+// import img2 from "../../../assets/Images/company logo/image 2.png";
+// import img3 from "../../../assets/Images/company logo/image 3.png";
+// import img4 from "../../../assets/Images/company logo/image 4.png";
+import img5 from "../../../assets/Images/company logo/ANUKAMPA LOGO.jpg";
+import img6 from "../../../assets/Images/company logo/FS REALITY COMPANY LOGO.jpg";
+import img7 from "../../../assets/Images/company logo/HG INFRA.jpg";
+import img8 from "../../../assets/Images/company logo/HOMELAND GROUP LOGO.jpg";
+import img9 from "../../../assets/Images/company logo/JAIPUR DEVELOPMENT AUTHORITY LOGO.jpg";
+import img10 from "../../../assets/Images/company logo/JECRC FOUNDATION LOGO.png";
+import img11 from "../../../assets/Images/company logo/Shriram-Group-Logo.png";
+import img12 from "../../../assets/Images/company logo/UDAY GAJRAJ logo.jpg";
+import img13 from "../../../assets/Images/company logo/chiripal-logo.png";
 
-const images = [img1, img2, img3, img4, img1, img2, img3, img4];
+const images = [img5, img6, img7, img8, img9, img10, img11, img12 ,img13];
 
 const CompanyShowcase = () => {
   const sectionRef = useRef(null);

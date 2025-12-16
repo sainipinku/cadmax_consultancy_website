@@ -35,21 +35,11 @@ const Navbar = () => {
 
                 <Link to="/" className="nav-link">HOME</Link>
 
-                {/* SERVICES DROPDOWN (Only this remains) */}
-                <div 
-                    className="dropdown" 
-                    onClick={() => handleDropdown("services")}
-                >
-                    <button className="dropbtn">
-                        SERVICES <i className="fa fa-caret-down"></i>
-                    </button>
+                {/* SERVICES (No Dropdown) */}
+                <Link to="/Services/Service1" className="dropbtn">
+                    SERVICES
+                </Link>
 
-                    <div className={`dropdown-content ${openDropdown === "services" ? "show" : ""}`}>
-                        <Link to="/Services/Service1" className="dropdown-link">ENGINEERING</Link>
-                        <Link to="/Services/Service2" className="dropdown-link">SURVEYING</Link>
-                        <Link to="/Services/Service3" className="dropdown-link">PLANNING</Link>
-                    </div>
-                </div>
 
                 {/* PROJECT - NO DROPDOWN */}
                 <Link to="/projects" className="nav-link">PROJECT</Link>
