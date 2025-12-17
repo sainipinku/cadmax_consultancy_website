@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./rating.css";
-import img1 from "../../../assets/Images/Other/rating-img.jpeg"
+import img1 from "../../../assets/Images/Other/img1.jpg"
 
 
 const data = [
@@ -76,7 +76,7 @@ const Testimonial = () => {
                     <img src={t.img} alt="" />
                     <div>
                       <p className="client-name">{t.name}</p>
-                      <p className="client-role">Client</p>
+                      {/* <p className="client-role">Client</p> */}
                     </div>
                   </div>
                 </div>
