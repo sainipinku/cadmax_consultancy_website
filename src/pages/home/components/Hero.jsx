@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import "./Hero.css";
 
 import img1 from "../../../assets/Images/header/Header-bg-img.png";
-import img2 from "../../../assets/Images/header/slider1.jpg";
+ import img2 from "../../../assets/Images/header/slider1.jpg";
+//import img2 from "../../../assets/Images/header/DEEPENDRA-JI-LANDSCAPING-VIEW-_9_.avif";
 import img3 from "../../../assets/Images/header/slider2.jpg";
 import img4 from "../../../assets/Images/header/slider3.jpg";
 
@@ -11,11 +12,11 @@ const Hero = () => {
   const sliderImages = [img1, img2, img3, img4];
 
   const settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
