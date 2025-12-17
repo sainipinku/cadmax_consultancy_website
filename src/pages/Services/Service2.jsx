@@ -14,7 +14,7 @@ import collage4 from "../../../src/assets/Images/service-page-2/service2-img5.pn
 
 const Service2 = () => {
 
- 
+
   const collageImages = [
     { img: collage1, title: "MAINGATE AND BOUNDARY CONSTRUCTION" },
     { img: collage2, title: "ROAD NETWORK" },
@@ -51,34 +51,34 @@ const Service2 = () => {
         <p>A focused set of engineering services that define how a site functions, connects and operates.</p>
       </div>
 
-     {/* ⭐⭐ DYNAMIC COLLAGE ⭐⭐ */}
-<div className="collage-wrapper">
+      {/* ⭐⭐ DYNAMIC COLLAGE ⭐⭐ */}
+      <div className="collage-wrapper">
 
-  {/* ITEM 1 (BIG LEFT) */}
-  <Link to="/Services/Service3" className="collage-item item-1">
-      <img src={collageImages[0].img} alt="" />
-      <h2>{collageImages[0].title}</h2>
-  </Link>
+        {/* ITEM 1 (BIG LEFT) */}
+        <Link to="/Services/Service3" className="collage-item item-1">
+          <img src={collageImages[0].img} alt="" />
+          <h2>{collageImages[0].title}</h2>
+        </Link>
 
-  {/* ITEM 2 */}
-  <Link to="/Services/Service3" className="collage-item item-2">
-      <img src={collageImages[1].img} alt="" />
-      <h2>{collageImages[1].title}</h2>
-  </Link>
+        {/* ITEM 2 */}
+        <Link to="/Services/Service3" className="collage-item item-2">
+          <img src={collageImages[1].img} alt="" />
+          <h2>{collageImages[1].title}</h2>
+        </Link>
 
-  {/* ITEM 3 */}
-  <Link to="/Services/Service3" className="collage-item item-3">
-      <img src={collageImages[2].img} alt="" />
-      <h2>{collageImages[2].title}</h2>
-  </Link>
+        {/* ITEM 3 */}
+        <Link to="/Services/Service3" className="collage-item item-3">
+          <img src={collageImages[2].img} alt="" />
+          <h2>{collageImages[2].title}</h2>
+        </Link>
 
-  {/* ITEM 4 (BOTTOM FULL) */}
-  <Link to="/Services/Service3" className="collage-item item-4">
-      <img src={collageImages[3].img} alt="" />
-      <h2>{collageImages[3].title}</h2>
-  </Link>
+        {/* ITEM 4 (BOTTOM FULL) */}
+        <Link to="/Services/Service3" className="collage-item item-4">
+          <img src={collageImages[3].img} alt="" />
+          <h2>{collageImages[3].title}</h2>
+        </Link>
 
-</div>
+      </div>
 
 
       <Footer />

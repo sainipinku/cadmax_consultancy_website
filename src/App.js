@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import AppRouter from "./Router/AppRouter";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 

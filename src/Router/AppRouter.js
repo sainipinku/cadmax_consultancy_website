@@ -15,12 +15,12 @@ export default function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-       <Route path="/Services/Service1" element={<Service1 />} />
-       <Route path="/Services/Service2" element={<Service2 />} />
-       <Route path="/Services/Service3" element={<Service3 />} />
-       <Route path="/projects" element={<Project />} />
-         <Route path="/about" element={<About />} />
-         <Route path="/contact" element={<Contact />} /> 
+        <Route path="/Services/Service1" element={<Service1 />} />
+        <Route path="/Services/Service2" element={<Service2 />} />
+        <Route path="/Services/Service3" element={<Service3 />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
