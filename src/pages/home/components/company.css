@@ -59,8 +59,13 @@
 
 
 @keyframes slideLR {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-120px); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-120px);
+  }
 }
 
 /* ---------- RESPONSIVE LOGO ---------- */
@@ -70,6 +75,7 @@
     justify-content: center;
     animation: none;
   }
+
   .company-logo-box img {
     width: 280px;
     height: auto;
@@ -82,6 +88,7 @@
     text-align: center;
     gap: 15px;
   }
+
   .company-right-heading {
     width: 100%;
     text-align: center;
@@ -119,32 +126,39 @@
   object-fit: contain;
   background: white;
   border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 /* --- CENTER IMAGE (little smaller than before) --- */
 .center-img {
   left: 50%;
   top: 50px;
-  transform: translateX(-50%) scale(1.12);   /* 1.20 → 1.12 */
+  transform: translateX(-50%) scale(1.12);
+  /* 1.20 → 1.12 */
   z-index: 4;
   opacity: 1;
 }
 
 /* --- LEFT SMALL (more OUTSIDE, not under center img) --- */
 .left-img {
-  left: 6%;              /* 8% → 3% (more outside) */
-  top: 55px;             /* 35px → 55px (down so no overlap) */
-  transform: scale(0.88); /* 0.90 → 0.88 */
+  left: 6%;
+  /* 8% → 3% (more outside) */
+  top: 55px;
+  /* 35px → 55px (down so no overlap) */
+  transform: scale(0.88);
+  /* 0.90 → 0.88 */
   z-index: 3;
   opacity: 1;
 }
 
 /* --- RIGHT SMALL (more OUTSIDE, not under center img) --- */
 .right-img {
-  right: 6%;             /* 8% → 3% */
-  top: 55px;             /* 35px → 55px */
-  transform: scale(0.88); /* 0.90 → 0.88 */
+  right: 6%;
+  /* 8% → 3% */
+  top: 55px;
+  /* 35px → 55px */
+  transform: scale(0.88);
+  /* 0.90 → 0.88 */
   z-index: 3;
   opacity: 1;
 }
@@ -158,31 +172,61 @@
 
 /* ---------- RESPONSIVE SLIDER ---------- */
 @media (max-width: 900px) {
-  .company-slider-wrapper { height: 260px; }
+  .company-slider-wrapper {
+    height: 260px;
+  }
 
   .company-slide-item img {
     width: 360px;
     height: 200px;
   }
 
-  .center-img { transform: translateX(-50%) scale(1.15); top: 20px; }
-  .left-img { left: 10%; top: 40px; transform: scale(0.85); }
-  .right-img { right: 10%; top: 40px; transform: scale(0.85); }
+  .center-img {
+    transform: translateX(-50%) scale(1.15);
+    top: 20px;
+  }
+
+  .left-img {
+    left: 10%;
+    top: 40px;
+    transform: scale(0.85);
+  }
+
+  .right-img {
+    right: 10%;
+    top: 40px;
+    transform: scale(0.85);
+  }
 
   /* .nav-btn { font-size: 40px; padding: 3px 10px; } */
 }
 
 @media (max-width: 600px) {
-  .company-slider-wrapper { height: 230px; }
+  .company-slider-wrapper {
+    height: 230px;
+  }
 
   .company-slide-item img {
     width: 260px;
     height: 150px;
   }
 
-  .center-img { top: 25px; transform: translateX(-50%) scale(1.1); }
-  .left-img { left: 5%; top: 55px; transform: scale(0.75); }
-  .right-img { right: 5%; top: 55px; transform: scale(0.75); }
+  .center-img {
+    top: 25px;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  .left-img {
+    left: 5%;
+    top: 55px;
+    transform: scale(0.75);
+  }
+
+  .right-img {
+    right: 5%;
+    top: 55px;
+    transform: scale(0.75);
+  }
 
   /* ONLY SIZE CHANGE — NO POSITION CHANGE */
   /* .nav-btn { font-size: 30px; padding: 3px 8px; } */
@@ -194,10 +238,19 @@
     height: 130px;
   }
 
-  .center-img { transform: translateX(-50%) scale(1.05); }
+  .center-img {
+    transform: translateX(-50%) scale(1.05);
+  }
 
-  .left-img { left: 2%; transform: scale(0.70); }
-  .right-img { right: 2%; transform: scale(0.70); }
+  .left-img {
+    left: 2%;
+    transform: scale(0.70);
+  }
+
+  .right-img {
+    right: 2%;
+    transform: scale(0.70);
+  }
 
   /* .nav-btn { font-size: 24px; padding: 2px 6px; } */
 }

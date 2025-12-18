@@ -28,7 +28,7 @@ const Project = () => {
         style={{ backgroundImage: `url(${heroBG})` }}
       >
         <h1>PROJECT</h1>
-        
+
       </div>
 
       <div className="project-wrapper">
@@ -55,10 +55,10 @@ const Project = () => {
             { img: image6, title: "CRYSTAL LAKE", desc: "A beautiful lakeside area perfect for fishing and boating. Covering 150 Hect." },
             { img: image7, title: "MAPLE GROVE", desc: "A community famous for its autumn foliage, with 220 Hect dedicated to parks and recreation." },
             { img: image8, title: "CEDAR RIDGE", desc: "A mountain enclave offering stunning views, covering 180 Hect." },
-            {img:  image9,title:"VERDANT RESIDENTIAL ENCLAVE" , desc:"A beautifully planned residential township featuring mid-rise apartment blocks surrounded by lush green landscapes."}
+            { img: image9, title: "VERDANT RESIDENTIAL ENCLAVE", desc: "A beautifully planned residential township featuring mid-rise apartment blocks surrounded by lush green landscapes." }
           ].map((item, index) => (
             <div className="project-card" key={index}>
-              
+
               <div className="img-box">
                 <img src={item.img} alt="" className="project-img" />
                 <div className="download-icon">

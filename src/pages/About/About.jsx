@@ -29,20 +29,20 @@ const About = () => {
       <div className="about-hero" style={{ backgroundImage: `url(${heroBG})` }}></div>
 
       {/* OUR STORY */}
-      <div style={{background:"black"}}>
-      <div className="story-section">
-        <h2>OUR STORY</h2>
-        <p>
-          CADMAX began as a response to a gap in the industry; engineering firms produced drawings,
-          but contractors still had to reinterpret them. The founders built CADMAX to eliminate that gap.
-          The company was structured around field-driven data, rigorous drafting discipline and a commitment
-          to produce engineering that moves straight into execution. Over the years, the operation expanded 
-          from basic surveying to complete engineering and planning units powered by upgraded instruments, 
-          automated workflows and specialised personnel trained for accuracy under pressure.
-        </p>
+      <div style={{ background: "black" }}>
+        <div className="story-section">
+          <h2>OUR STORY</h2>
+          <p>
+            CADMAX began as a response to a gap in the industry; engineering firms produced drawings,
+            but contractors still had to reinterpret them. The founders built CADMAX to eliminate that gap.
+            The company was structured around field-driven data, rigorous drafting discipline and a commitment
+            to produce engineering that moves straight into execution. Over the years, the operation expanded
+            from basic surveying to complete engineering and planning units powered by upgraded instruments,
+            automated workflows and specialised personnel trained for accuracy under pressure.
+          </p>
 
-        <img src={storyImage} alt="our story" className="story-image" />
-      </div>
+          <img src={storyImage} alt="our story" className="story-image" />
+        </div>
       </div>
 
       {/* MISSION & VISION */}
@@ -65,49 +65,49 @@ const About = () => {
           </p>
         </div>
       </div>
-{/* CAPABILITIES SECTION */}
-<div className="cap-section">
+      {/* CAPABILITIES SECTION */}
+      <div className="cap-section">
 
-  <div className="cap-header">
-    <h2>CAPABILITIES THAT HOLD UP IN THE FIELD</h2>
-    <p>Systems, tools and methods built to reduce ambiguity, stabilise decisions 
-      and keep engineering aligned with real site conditions.</p>
-  </div>
+        <div className="cap-header">
+          <h2>CAPABILITIES THAT HOLD UP IN THE FIELD</h2>
+          <p>Systems, tools and methods built to reduce ambiguity, stabilise decisions
+            and keep engineering aligned with real site conditions.</p>
+        </div>
 
-  <div className="cap-collage">
+        <div className="cap-collage">
 
-    {/* LEFT BIG IMAGE */}
-    <div className="cap-big">
-      <img src={cap1} alt="" />
-      <h3>LAND DEVELOPMENT ENGINEERING ACROSS RESIDENTIAL AND COMMERCIAL SECTORS</h3>
-    </div>
+          {/* LEFT BIG IMAGE */}
+          <div className="cap-big">
+            <img src={cap1} alt="" />
+            <h3>LAND DEVELOPMENT ENGINEERING ACROSS RESIDENTIAL AND COMMERCIAL SECTORS</h3>
+          </div>
 
-    {/* RIGHT 4 GRID IMAGES */}
-    <div className="cap-right-grid">
-      <div className="cap-small">
-        <img src={cap2} alt="" />
-        <h3>END-TO-END SURVEYING WITH MODERN EQUIPMENT AND GPS INTEGRATION</h3>
+          {/* RIGHT 4 GRID IMAGES */}
+          <div className="cap-right-grid">
+            <div className="cap-small">
+              <img src={cap2} alt="" />
+              <h3>END-TO-END SURVEYING WITH MODERN EQUIPMENT AND GPS INTEGRATION</h3>
+            </div>
+
+            <div className="cap-small">
+              <img src={cap3} alt="" />
+              <h3>DATA-DRIVEN PLANNING WORKFLOWS ALIGNED WITH ON-SITE CONDITIONS</h3>
+            </div>
+
+            <div className="cap-small">
+              <img src={cap4} alt="" />
+              <h3>DRAFTING PIPELINES DESIGNED TO REDUCE REVISIONS AND APPROVAL DELAYS</h3>
+            </div>
+
+            <div className="cap-small">
+              <img src={cap5} alt="" />
+              <h3>INTEGRATED DESIGN — SURVEY COORDINATION FOR PREDICTABLE EXECUTION</h3>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-
-      <div className="cap-small">
-        <img src={cap3} alt="" />
-        <h3>DATA-DRIVEN PLANNING WORKFLOWS ALIGNED WITH ON-SITE CONDITIONS</h3>
-      </div>
-
-      <div className="cap-small">
-        <img src={cap4} alt="" />
-        <h3>DRAFTING PIPELINES DESIGNED TO REDUCE REVISIONS AND APPROVAL DELAYS</h3>
-      </div>
-
-      <div className="cap-small">
-       <img src={cap5} alt="" />
-        <h3>INTEGRATED DESIGN — SURVEY COORDINATION FOR PREDICTABLE EXECUTION</h3>
-      </div>
-    </div>
-
-  </div>
-
-</div>
 
       {/* METHODOLOGY SECTION */}
       <div className="method-section">
@@ -117,7 +117,7 @@ const About = () => {
             CADMAX operates on a system-first model. Field data is collected with calibrated instruments,
             validated against known benchmarks and transferred into controlled digital environments without
             manual interpretation. Each dataset moves through predefined checks for consistency, error
-            margins, engineering compliance and cross-discipline alignment. Drawings, levels and networks are 
+            margins, engineering compliance and cross-discipline alignment. Drawings, levels and networks are
             generated only after the underlying logic is verified, referenced and traceable.
           </p>
         </div>
@@ -129,47 +129,47 @@ const About = () => {
 
 
       <div className="values-section">
-        <div style={{display:"flex" , justifyContent:"space-between"}}>
-  <div className="values-left">
-    <h2>OPERATIONAL VALUES THAT ANCHOR<br/>EVERY DELIVERABLE</h2>
-  </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="values-left">
+            <h2>OPERATIONAL VALUES THAT ANCHOR<br />EVERY DELIVERABLE</h2>
+          </div>
 
-  <div className="values-right">
-    <p>
-      Clear principles applied as measurable behaviours across design, 
-      surveying and engineering.
-    </p>
-  </div>
-  </div>
+          <div className="values-right">
+            <p>
+              Clear principles applied as measurable behaviours across design,
+              surveying and engineering.
+            </p>
+          </div>
+        </div>
 
-  <div className="values-grid">
+        <div className="values-grid">
 
-    <div className="value-box">
-      <img src={svg1} className="value-icon" />
-      <h5>INNOVATION</h5>
-      <p>Methods upgraded deliberately to remove inefficiency.</p>
-    </div>
+          <div className="value-box">
+            <img src={svg1} className="value-icon" />
+            <h5>INNOVATION</h5>
+            <p>Methods upgraded deliberately to remove inefficiency.</p>
+          </div>
 
-    <div className="value-box">
-      <img src={svg2} className="value-icon" />
-      <h5>EXCELLENCE</h5>
-      <p>Accuracy treated as a requirement, not a target.</p>
-    </div>
+          <div className="value-box">
+            <img src={svg2} className="value-icon" />
+            <h5>EXCELLENCE</h5>
+            <p>Accuracy treated as a requirement, not a target.</p>
+          </div>
 
-    <div className="value-box">
-      <img src={svg3} className="value-icon" />
-      <h5>INTEGRITY</h5>
-      <p>Documentation built to withstand scrutiny.</p>
-    </div>
+          <div className="value-box">
+            <img src={svg3} className="value-icon" />
+            <h5>INTEGRITY</h5>
+            <p>Documentation built to withstand scrutiny.</p>
+          </div>
 
-    <div className="value-box">
-      <img src={svg4} className="value-icon" />
-      <h5>RESPONSIBILITY</h5>
-      <p>Ownership applied from data capture to final output.</p>
-    </div>
+          <div className="value-box">
+            <img src={svg4} className="value-icon" />
+            <h5>RESPONSIBILITY</h5>
+            <p>Ownership applied from data capture to final output.</p>
+          </div>
 
-  </div>
-</div>
+        </div>
+      </div>
 
 
       <Footer />
