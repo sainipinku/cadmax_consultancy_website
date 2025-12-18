@@ -13,7 +13,7 @@ import img9 from "../../../assets/Images/company logo/JAIPUR DEVELOPMENT AUTHORI
 import img10 from "../../../assets/Images/company logo/Frame 38.jpg";
 import img11 from "../../../assets/Images/company logo/Shriram-Group-Logo.png";
 import img12 from "../../../assets/Images/company logo/UDAY GAJRAJ logo.jpg";
-import img13 from "../../../assets/Images/company logo/chiripal-logo.png";
+import img13 from "../../../assets/Images/company logo/chiripal-logo.jpg";
 import img14 from "../../../assets/Images/company logo/Frame 1.jpg";
 import img15 from "../../../assets/Images/company logo/Frame 2.jpg";
 import img16 from "../../../assets/Images/company logo/Frame 3.jpg";
@@ -21,7 +21,7 @@ import img17 from "../../../assets/Images/company logo/Frame 4.jpg";
 import img18 from "../../../assets/Images/company logo/Frame 5.jpg";
 import img19 from "../../../assets/Images/company logo/Frame 6.jpg";
 import img20 from "../../../assets/Images/company logo/Frame 7.jpg";
-import img21 from "../../../assets/Images/company logo/Frame 35.jpg";
+import img21 from "../../../assets/Images/company logo/Frame 8.jpg";
 import img22 from "../../../assets/Images/company logo/Frame 9.jpg";
 import img23 from "../../../assets/Images/company logo/Frame 10.jpg";
 import img24 from "../../../assets/Images/company logo/Frame 11.jpg";
@@ -33,7 +33,7 @@ import img29 from "../../../assets/Images/company logo/Frame 16.jpg";
 import img30 from "../../../assets/Images/company logo/Frame 18.jpg";
 import img31 from "../../../assets/Images/company logo/Frame 19.jpg";
 import img32 from "../../../assets/Images/company logo/Frame 20.jpg";
-import img33 from "../../../assets/Images/company logo/Frame 21.jpg";
+import img33 from "../../../assets/Images/company logo/Frame 35.jpg";
 import img34 from "../../../assets/Images/company logo/Frame 22.jpg";
 import img35 from "../../../assets/Images/company logo/Frame 23.jpg";
 import img36 from "../../../assets/Images/company logo/Frame 24.jpg";
@@ -47,8 +47,7 @@ import img43 from "../../../assets/Images/company logo/Frame 31.jpg";
 import img44 from "../../../assets/Images/company logo/Frame 32.jpg";
 import img45 from "../../../assets/Images/company logo/Frame 33.jpg";
 import img46 from "../../../assets/Images/company logo/Frame 34.jpg";
-import img47 from "../../../assets/Images/company logo/Frame 8.jpg";
-
+import img47 from "../../../assets/Images/company logo/Frame 21.jpg";
 
 const images = [img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31, img32, img33, img34, img35, img36, img37, img38, img39, img40, img41, img42, img43, img44, img45, img46, img47];
 
