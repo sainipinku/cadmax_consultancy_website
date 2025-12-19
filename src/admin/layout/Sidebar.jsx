@@ -26,7 +26,7 @@ const Sidebar = () => {
         CADMAX
       </div>
 
-      <nav className="flex-1 p-4 space-y-2">
+      <nav className="flex-1 p-4 text-white space-y-2">
         <NavItem to="/admin" icon={<LayoutDashboard />} label="Overview" />
         <NavItem to="/admin/team" icon={<Users />} label="Add Team Member" />
         <NavItem to="/admin/contacts" icon={<Phone />} label="Contact List" />

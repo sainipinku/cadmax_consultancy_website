@@ -11,6 +11,7 @@ import ProjectList from "../pages/projects/ProjectList";
 import ProfileUpdate from "../pages/settings/ProfileUpdate";
 import ResetPassword from "../pages/settings/ResetPassword";
 
+
 const isAuth = () => localStorage.getItem("isAdminAuth") === "true";
 
 const AdminRoutes = () => {
