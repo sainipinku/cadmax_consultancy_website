@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "./Hero.css";
 
 import img1 from "../../../assets/Images/header/Header-bg-img.png";
- import img2 from "../../../assets/Images/header/slider1.jpg";
+import img2 from "../../../assets/Images/header/slider1.jpg";
 //import img2 from "../../../assets/Images/header/DEEPENDRA-JI-LANDSCAPING-VIEW-_9_.avif";
 import img3 from "../../../assets/Images/header/slider2.jpg";
 import img4 from "../../../assets/Images/header/slider3.jpg";

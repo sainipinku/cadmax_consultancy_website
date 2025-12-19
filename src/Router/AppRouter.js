@@ -6,8 +6,13 @@ import Service1 from "../pages/Services/Service1";
 import Service2 from "../pages/Services/Service2";
 import Service3 from "../pages/Services/Service3";
 import Project from "../pages/Project/Project";
-
 import Contact from "../pages/contact/Contact";
+
+
+// admin import
+import AdminRoutes from "../admin/routes/AdminRoutes";
+
+
 
 
 export default function AppRouter() {
@@ -21,6 +26,14 @@ export default function AppRouter() {
         <Route path="/projects" element={<Project />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+
+
+
+        {/* admin */}
+
+        <Route path="/*" element={<AdminRoutes />} />
+
+
       </Routes>
     </BrowserRouter>
   );

@@ -15,17 +15,17 @@ import TestimonialSlider from '../home/components/rating'
 function Home() {
   return (
     <>
-<Navbar/>
-<Hero/>
-<Textbox/>
-<MasonryGallery/>
-<Accuracy/>
-<Collage2/>
-{/* <Testimonial/> */}
-{/* <RatingPage/> */}
-<TestimonialSlider/>
-<CompanyShowcase/>
-<Footer/>
+      <Navbar />
+      <Hero />
+      <Textbox />
+      <MasonryGallery />
+      <Accuracy />
+      <Collage2 />
+      {/* <Testimonial/> */}
+      {/* <RatingPage/> */}
+      <TestimonialSlider />
+      <CompanyShowcase />
+      <Footer />
     </>
   )
 }
