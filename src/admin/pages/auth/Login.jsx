@@ -69,7 +69,7 @@ const Login = () => {
         >
           Login
         </button>
-       <p className=" font-bold mb-6 text-right pt-3 cursor-pointer text-white">forgot password ?</p>
+       <p className="  mb-6 text-right pt-3 cursor-pointer text-white">forgot password ?</p>
       
       </form>
     </div>

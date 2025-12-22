@@ -66,9 +66,8 @@
 .mv-icon i {
   font-size: 22px;
   color: #fff;             
-  background-color: #000;   /* black bg */
-  padding: 8px;             /* equal padding */
-       
+  background-color: #000;   
+  padding: 8px;             
   display: inline-flex;
   align-items: center;
   justify-content: center;
