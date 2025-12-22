@@ -65,10 +65,10 @@
 
 .mv-icon i {
   font-size: 22px;
-  color: #fff;              /* icon color */
+  color: #fff;             
   background-color: #000;   /* black bg */
   padding: 8px;             /* equal padding */
-  border-radius: 50%;       /* perfect circle */
+       
   display: inline-flex;
   align-items: center;
   justify-content: center;

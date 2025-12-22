@@ -18,7 +18,7 @@ const careers = [
     resume: "View"
   },
   {
-    name: "Rohit Verma",
+    name: "Rohit saini",
     email: "rohit@gmail.com",
     phone: "+91 91234 56789",
     position: "Backend Developer",
