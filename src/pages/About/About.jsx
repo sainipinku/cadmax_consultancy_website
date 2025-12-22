@@ -43,7 +43,9 @@ const About = () => {
       {/* MISSION & VISION */}
       <div className="mission-vision">
         <div className="mv-card">
-          <div className="mv-icon"><i className="bi bi-bullseye"></i></div>
+          <div className="mv-icon ">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
           <h3>OUR MISSION</h3>
           <p>
             Cadmax Consultancy’s mission is to deliver accurate, innovative, and reliable architectural solutions that meet client needs and industry standards. The firm is committed to quality design, strong teamwork, and efficient project execution while maintaining integrity and professionalism. Through continuous improvement and the use of advanced technology, Cadmax Consultancy aims to create sustainable and practical designs that add lasting value.
@@ -51,10 +53,13 @@ const About = () => {
         </div>
 
         <div className="mv-card">
-          <div className="mv-icon"><i className="bi bi-eye"></i></div>
+          <div className="mv-icon">
+            <i className="bi bi-eye"></i>
+          </div>
+
           <h3>OUR VISION</h3>
           <p>
-           To be a trusted leader in architectural and technical consultancy, delivering innovative, accurate, and design-ready solutions by seamlessly translating real-world site conditions into intelligent, sustainable, and future-focused outcomes that inspire confidence and long-term value
+            To be a trusted leader in architectural and technical consultancy, delivering innovative, accurate, and design-ready solutions by seamlessly translating real-world site conditions into intelligent, sustainable, and future-focused outcomes that inspire confidence and long-term value
           </p>
         </div>
       </div>

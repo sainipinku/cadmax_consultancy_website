@@ -12,9 +12,9 @@ const ResetPassword = () => {
       <div className="bg-white rounded-xl shadow-sm border">
         {/* Tabs */}
         <div className="flex gap-2 border-b px-6 pt-4">
-          <button className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-slate-700">
+          {/* <button className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-slate-700">
             Profile Update
-          </button>
+          </button> */}
           <button className="px-4 py-2 text-sm font-medium rounded-md border border-blue-500 text-blue-600 bg-blue-50">
             Reset Password
           </button>

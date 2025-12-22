@@ -2,7 +2,7 @@ import React from 'react'
 import './Contact.css'
 import Navbar from '../../components/Layout/Header/Navbar'
 import Footer from '../../components/Layout/Footer/Footer'
-import heroBG from '../../assets/Images/contact/Rectangle_40.png'
+import heroBG from '../../assets/Images/contact/contact-hero.png'
 
 
 const Contact = () => {
