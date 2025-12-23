@@ -1,4 +1,6 @@
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .project-hero {
   width: 100%;
   height: 500px;
@@ -6,33 +8,39 @@
   background-position: center;
 }
 
-/* WRAPPER */
+/* =========================
+   WRAPPER
+========================= */
 .project-wrapper {
   width: 100%;
-  max-width: 1350px;
+  max-width: 1400px;
   margin: auto;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
-/* HEADING */
+/* =========================
+   HEADING
+========================= */
 .project-title {
   text-align: center;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-/* TABS */
+/* =========================
+   TABS
+========================= */
 .project-tabs {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 40px;
+  gap: 14px;
+  margin-bottom: 45px;
 }
 
 .tab {
-  padding: 10px 18px;
+  padding: 10px 20px;
   border: none;
   background: #ebebeb;
   font-size: 14px;
@@ -46,26 +54,37 @@
   color: white;
 }
 
-/* GRID */
+/* =========================
+   GRID (DEFAULT → LAPTOP)
+   Laptop = 3 cards
+========================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .project-card {
   background: white;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-/* IMAGE BOX */
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   IMAGE BOX
+========================= */
 .img-box {
   position: relative;
   width: 100%;
-  height: auto;
-  /* height: 200px; */
+  height: 230px;
 }
 
 .project-img {
@@ -73,13 +92,15 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* DOWNLOAD ICON */
 .download-icon {
   position: absolute;
   right: 12px;
-  width: 40px;
   bottom: 12px;
+  width: 42px;
+  height: 42px;
   background: white;
-  padding: 6px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -88,46 +109,74 @@
 
 .download-icon i {
   font-size: 18px;
-  color:black;
+  color: black;
 }
 
-/* CARD CONTENT */
+/* =========================
+   CARD CONTENT
+========================= */
 .project-content {
-  padding: 15px;
+  padding: 18px;
 }
 
 .project-content h3 {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .project-content p {
-  font-size: 13px;
+  font-size: 14px;
   opacity: 0.8;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* LOAD MORE BUTTON */
+/* =========================
+   LOAD MORE
+========================= */
 .load-more {
-  margin: 40px auto 0;
+  margin: 50px auto 0;
   display: block;
-  padding: 12px 28px;
+  padding: 12px 30px;
   background: white;
-  border: solid black 1px;
+  border: 1px solid black;
   color: black;
   font-size: 14px;
   cursor: pointer;
 }
 
-/* RESPONSIVE — TABLET */
+/* =========================
+   DESKTOP (Large Screens)
+   👉 2 cards only
+========================= */
+@media (min-width: 1200px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img-box {
+    height: 280px;
+  }
+}
+
+/* =========================
+   TABLET
+   👉 2 cards
+========================= */
 @media (max-width: 992px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .img-box {
+    height: 220px;
+  }
 }
 
-/* RESPONSIVE — MOBILE */
+/* =========================
+   MOBILE
+   👉 1 card
+========================= */
 @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
@@ -139,5 +188,13 @@
 
   .project-title {
     font-size: 22px;
+  }
+
+  .project-content h3 {
+    font-size: 15px;
+  }
+
+  .project-content p {
+    font-size: 13px;
   }
 }
