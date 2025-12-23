@@ -12,7 +12,7 @@ import img3 from "../../assets/Images/service-page-1/service3.png";
 
 const Service1 = () => {
     return (
-        <>
+        <> 
             <Navbar />
 
             {/* HERO SECTION */}
@@ -23,22 +23,22 @@ const Service1 = () => {
             </div>
 
             {/* IMAGE GRID SECTION */}
-            <div className="service1-grid">
+            <div className="service1-grid slide-in">
 
                 {/* CARD 1 */}
-                <Link to="/Services/Service2" className="service1-card-1">
+                <Link to="/Services/Service2" className="service1-card-1 delay-1">
                     <img src={img1} alt="service" />
                     <div className="card-text">engineering</div>
                 </Link>
 
                 {/* CARD 2 */}
-                <Link to="/Services/Service2" className="service1-card-1">
+                <Link to="/Services/Service2" className="service1-card-1 delay-2">
                     <img src={img2} alt="service" />
                     <div className="card-text">surveying</div>
                 </Link>
 
                 {/* CARD 3 */}
-                <Link to="/Services/Service2" className="service1-card-1">
+                <Link to="/Services/Service2" className="service1-card-1 delay-3">
                     <img src={img3} alt="service" />
                     <div className="card-text">planning</div>
                 </Link>

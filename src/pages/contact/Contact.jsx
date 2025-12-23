@@ -51,13 +51,15 @@ const Contact = () => {
 
       {/* MAP SECTION */}
       <div className="contact-map">
-        <iframe
-          title="office-location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.325029709002!2d75.79034407519299!3d26.89320787665808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db51ffc35283f%3A0xca00e02cd8cbbd51!2sPrism%20Tower%2C%20Lalkothi%2C%20Jaipur%2C%20Rajasthan%20302015!5e0!3m2!1sen!2sin!4v1702887345678"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        
+  <iframe
+    title="office-location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.325029709002!2d75.79034407519299!3d26.89320787665808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db51ffc35283f%3A0xca00e02cd8cbbd51!2sPrism%20Tower%2C%20Lalkothi%2C%20Jaipur%2C%20Rajasthan%20302015!5e0!3m2!1sen!2sin!4v1702887345678"
+    allowFullScreen
+    loading="lazy"
+  ></iframe>
+
+
       </div>
 
 
