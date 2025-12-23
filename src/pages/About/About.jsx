@@ -4,7 +4,7 @@ import Navbar from '../../components/Layout/Header/Navbar';
 import Footer from '../../components/Layout/Footer/Footer';
 
 import heroBG from "../../../src/assets/Images/about/About-hero-bg.jpg";
-import storyImage from "../../../src/assets/Images/about/over-story-img.png";
+import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
 
 import cap1 from "../../../src/assets/Images/about/Rectangle 70.png";
 import cap2 from "../../../src/assets/Images/about/Rectangle 71.png";

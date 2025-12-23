@@ -1,57 +1,92 @@
 import React, { useEffect, useState } from "react";
 import "./collage.css";
 
-import image1 from "../../../assets/Images/slide-image/1st-img.png";
-import image2 from "../../../assets/Images/slide-image/middle-img.png";
-import image3 from "../../../assets/Images/slide-image/3rd-img.png";
-
+import image1 from "../../../assets/Images/slide-image/collage-slider1.jpg";
+import image2 from "../../../assets/Images/slide-image/collage-slider2.jpg";
+import image3 from "../../../assets/Images/slide-image/collage-slider3.jpg";
+import image4 from "../../../assets/Images/slide-image/collage-silder4.jpg";
+import image5 from "../../../assets/Images/slide-image/collage-slider5.jpg";
 
 const Collage2 = () => {
-  const images = [image1, image2, image3];
+  const slides = [
+    {
+      img: image1,
+      desc: "SHYAMASHISH BRIJ VATIKA – VILLAGE GAJADHARPURA, KALWAR ROAD JAIPUR.",
+    },
+    {
+      img: image2,
+      desc: "CLUB HOUSE- BICHPADI, NEAR AJMER ROAD, JAIPUR",
+    },
+    {
+      img: image3,
+      desc: "DIPRNDRA JI HOUSE- GONER ROAD, JAIPUR.",
+    },
+    {
+      img: image4,
+      desc: "SANDEEP SARASWAT JI – BEELWA TONK ROAD, JAIPUR.",
+    },
+    {
+      img: image5,
+      desc: "PARTH JI ELEVATION",
+    },
+  ];
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
+      setIndex((prev) => (prev + 1) % slides.length);
     }, 1500);
-    return () => clearInterval(interval);
-  }, []);
 
-  const leftImg = images[index];
-  const middleImg = images[(index + 1) % 3];
-  const rightImg = images[(index + 2) % 3];
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const left = slides[index];
+  const middle = slides[(index + 1) % slides.length];
+  const right = slides[(index + 2) % slides.length];
 
   return (
-    <div className="collage2-hero" style={{
-      backgroundImage: `url(${middleImg})`,
-    }}>
+    <div
+      className="collage2-hero"
+      style={{ backgroundImage: `url(${middle.img})` }}
+    >
       <div className="collage2-wrapper">
 
+        {/* Heading Row */}
         <div className="collage2-heading-row">
-          <h4 className="collage2-left-heading">Work That Demonstrates Capability</h4>
+          <h4 className="collage2-left-heading">
+            Capability in Every Project
+          </h4>
           <p className="collage2-right-heading">
-            Each discipline is handled by teams trained to convert field conditions into design-ready data.
+            CADMAX provides comprehensive architectural, surveying, and planning
+            services, supporting construction, infrastructure, industrial, and
+            township projects with precise and reliable workflows.
           </p>
         </div>
 
+        {/* Image Row */}
         <div className="collage2-row collage2-auto">
-          <div className="collage2-box collage2-small collage2-left collage2-swap">
-            <img src={leftImg} alt="Left Collage" />
+          {/* Left Image */}
+          <div className="collage2-box collage2-small">
+            <img src={left.img} alt="Left Collage" />
+            <div className="collage2-descs">{left.desc}</div>
           </div>
 
-          <div className="collage2-box collage2-big collage2-middle collage2-swap">
-            <img src={middleImg} alt="Middle Collage" />
+          {/* Middle Image */}
+          <div className="collage2-box collage2-big">
+            <img src={middle.img} alt="Middle Collage" />
+            <div className="collage2-desc">{middle.desc}</div>
           </div>
 
-          <div className="collage2-box collage2-small collage2-right collage2-swap">
-            <img src={rightImg} alt="Right Collage" />
+          {/* Right Image */}
+          <div className="collage2-box collage2-small">
+            <img src={right.img} alt="Right Collage" />
+            <div className="collage2-descs">{right.desc}</div>
           </div>
         </div>
 
       </div>
-
     </div>
-
   );
 };
 

@@ -18,24 +18,21 @@ const Contact = () => {
 
         {/* LEFT BOX */}
         <div className="contact-left">
-          <h3>CONTACT CADMAX WITHOUT INTERMEDIARIES</h3>
+          <h3>BUILD YOUR DREAMS, WITH US</h3>
           <p>
-            Communication enters directly into engineering, surveying and planning teams.
-            No layers, no filtering, no delay. This structure keeps decisions fast,
-            instructions accurate and project cycles predictable.
+            Contact CADMAX directly  no delays. Get clear communication, expert guidance, and personalized solutions straight from our team to bring your project to life with confidence.
           </p>
 
           <h4>ADDRESS</h4>
           <p>
-            301–302, Prism Tower, Lalkothi Scheme, Opp. Police Headquarters,
-            Nehru Place, Tonk Road, Jaipur 302015
+            GROUND FLOOR-1,2,3 AND 302-3RD FLOOR, PRISM TOWER, OPP. RAJASTHAN POLICE HEADQUARTER, LAL KOTHI SCHEME, TONK ROAD, JAIPUR (RAJ.)
           </p>
 
           <h4>PHONE</h4>
           <p>0141-411-3111</p>
 
           <h4>EMAIL</h4>
-          <p>CONSULTANCY@CADMAX.CO.IN</p>
+          <p>cadmaxconsultancy@gmail.com</p>
         </div>
 
         {/* RIGHT BOX */}

@@ -4,16 +4,31 @@
 
 .collage2-hero {
   width: 100%;
-  /* background-image: url(../../../assets/Images/slide-image/bg-hero-img.png); */
   background-size: cover;
   background-position: center;
   padding: 70px 0;
+   position: relative;
 }
 
 .collage2-wrapper {
   width: 90%;
   margin: auto;
+    position: relative;
+  z-index: 2;
 }
+
+
+/* Overlay for 80% visibility */
+.collage2-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2); /* 20% dark = 80% visible */
+  z-index: 1;
+}
+
+
+
 
 /* ===========================
    HEADINGS
@@ -22,26 +37,26 @@
 .collage2-heading-row {
   display: flex;
   justify-content: space-between;
-  color: white;
+  color: #f9f9f9;
   padding-bottom: 40px;
 }
 
 .collage2-left-heading {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -2%;
 }
 
 .collage2-right-heading {
-  font-size: 18px;
+  font-size: 19px;
   width: 50%;
-  text-align: right;
+  font-weight: 500;
+  
   line-height: 1.4;
 }
 
 /* ===========================
-   IMAGE ROW (OVERLAPPING)
+   IMAGE ROW (OVERLAP)
 =========================== */
 
 .collage2-row {
@@ -51,34 +66,38 @@
   align-items: center;
 }
 
-/* BASE */
+/* ===========================
+   BASE BOX
+=========================== */
+
 .collage2-box {
   position: relative;
+  background: #fff; /* border ko solid rakhta hai */
 }
 
 .collage2-box img {
-  display: block;
   width: 100%;
+  display: block;
   object-fit: cover;
 }
 
 /* ===========================
-   MIDDLE IMAGE (TOP)
+   MIDDLE IMAGE
 =========================== */
 
 .collage2-big {
-  z-index: 3;
   width: 650px;
+  z-index: 3;
   margin: 0 20px;
 }
 
 .collage2-big img {
-  border: 20px solid white;
-  border-bottom: 60px solid white;
+  border: 20px solid #fff;
+  border-bottom: 60px solid #fff;
 }
 
 /* ===========================
-   LEFT IMAGE (UNDERLAP)
+   LEFT & RIGHT IMAGE
 =========================== */
 
 .collage2-small {
@@ -86,35 +105,71 @@
   z-index: 1;
 }
 
-.collage2-left {
-  margin-right: -180px; /* overlap middle */
+/* LEFT */
+.collage2-row .collage2-box:first-child {
+  margin-right: -80px;
 }
 
-.collage2-left img {
-  border: 15px solid white;
-  border-bottom: 60px solid white;
+/* RIGHT */
+.collage2-row .collage2-box:last-child {
+  margin-left: -80px;
 }
 
-/* ===========================
-   RIGHT IMAGE (UNDERLAP)
-=========================== */
-
-.collage2-right {
-  margin-left: -180px; /* overlap middle */
-}
-
-.collage2-right img {
-  border: 15px solid white;
-  border-bottom: 60px solid white;
+/* LEFT + RIGHT BORDER */
+.collage2-small img {
+  border: 15px solid #fff;
+  border-bottom: 60px solid #fff;
 }
 
 /* ===========================
-   SWAP ANIMATION
+   DESCRIPTION (INSIDE BORDER)
 =========================== */
 
-.collage2-swap img {
-  transition: 0.8s ease;
+.collage2-desc {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  line-height: 1.4;
+
+  pointer-events: none;
+  animation: descFadeUp 0.8s ease forwards;
 }
+
+.collage2-descs{
+
+   position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(80% - 20px);
+
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  line-height: 1.4;
+
+  pointer-events: none;
+  animation: descFadeUp 0.8s ease forwards;
+
+}
+
+/* Middle image description */
+.collage2-big .collage2-desc {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ===========================
+   IMAGE ANIMATION
+=========================== */
 
 .collage2-auto .collage2-box img {
   opacity: 0;
@@ -122,13 +177,25 @@
 }
 
 @keyframes fadeInSlide {
-  0% {
+  from {
     opacity: 0;
-    transform: scale(0.9) translateY(20px);
+    transform: scale(0.92) translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: scale(1) translateY(0);
+  }
+}
+
+/* Description animation */
+@keyframes descFadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -140,13 +207,16 @@
   .collage2-small {
     width: 300px;
   }
+
   .collage2-big {
     width: 500px;
   }
-  .collage2-left {
+
+  .collage2-row .collage2-box:first-child {
     margin-right: -120px;
   }
-  .collage2-right {
+
+  .collage2-row .collage2-box:last-child {
     margin-left: -120px;
   }
 }
@@ -166,13 +236,18 @@
     flex-direction: column;
   }
 
-  .collage2-left,
-  .collage2-right {
+  .collage2-row .collage2-box:first-child,
+  .collage2-row .collage2-box:last-child {
     margin: 0;
   }
 
   .collage2-small,
   .collage2-big {
     width: 90%;
+  }
+
+  .collage2-desc {
+    font-size: 13px;
+    bottom: 12px;
   }
 }
