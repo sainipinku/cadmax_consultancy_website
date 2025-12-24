@@ -18,7 +18,7 @@ const CareerPath = () => {
 
       {/* HERO SECTION */}
       <div
-        className="w-full h-[550px] bg-cover bg-center flex items-center justify-center relative"
+        className="w-full h-[650px] bg-cover bg-center flex items-center justify-center relative"
         style={{ backgroundImage: `url(${heroBGCareer})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
