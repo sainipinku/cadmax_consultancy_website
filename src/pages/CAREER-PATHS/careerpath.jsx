@@ -17,10 +17,11 @@ const CareerPath = () => {
       <Navbar />
 
       {/* HERO SECTION */}
-      <div
-        className="w-full h-[650px] bg-cover bg-center flex items-center justify-center relative"
-        style={{ backgroundImage: `url(${heroBGCareer})` }}
-      >
+    <div
+  className="w-full h-[600px] xl:h-[650px] bg-cover bg-center flex items-center justify-center relative"
+  style={{ backgroundImage: `url(${heroBGCareer})` }}
+>
+
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative text-white text-4xl md:text-5xl font-bold tracking-wide">
           {/* Career Path at CADMAX */}
