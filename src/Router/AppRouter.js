@@ -7,7 +7,7 @@ import Service2 from "../pages/Services/Service2";
 import Service3 from "../pages/Services/Service3";
 import Project from "../pages/Project/Project";
 import Contact from "../pages/contact/Contact";
-
+import Careerpath from "../pages/CAREER-PATHS/careerpath"
 
 // admin import
 import AdminRoutes from "../admin/routes/AdminRoutes";
@@ -26,6 +26,7 @@ export default function AppRouter() {
         <Route path="/projects" element={<Project />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/careerpath" element={<Careerpath/>} />
 
 
 

@@ -48,6 +48,7 @@ const Navbar = () => {
                 <Link to="/about" className="nav-link">ABOUT</Link>
 
                 <Link to="/contact" className="nav-link">CONTACT</Link>
+                <Link to="/careerpath" className="nav-link">CAREER</Link>
             </nav>
 
             {/* Header Button */}
