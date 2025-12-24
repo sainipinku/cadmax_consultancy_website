@@ -3,13 +3,12 @@ import AdminLayout from "../layout/AdminLayout";
 
 import Login from "../pages/auth/Login";
 import Dashboard from "../pages/dashboard/Dashboard";
-import AddTeamMember from "../pages/team/AddTeamMember";
-import ContactList from "../pages/contacts/ContactList";
-import JobList from "../pages/jobs/JobList";
-import CareerList from "../pages/careers/CareerList";
 import ProjectList from "../pages/projects/ProjectList";
 import ProfileUpdate from "../pages/settings/ProfileUpdate";
 import ResetPassword from "../pages/settings/ResetPassword";
+import AddService from "../pages/services/AddService";
+import EditService from "../pages/services/EditService";
+import ServiceList from "../pages/services/ServiceList";
 
 
 const isAuth = () => localStorage.getItem("isAdminAuth") === "true";
@@ -28,13 +27,17 @@ const AdminRoutes = () => {
         }
       >
         <Route index element={<Dashboard />} />
-        <Route path="team" element={<AddTeamMember />} />
-        <Route path="contacts" element={<ContactList />} />
-        <Route path="jobs" element={<JobList />} />
-        <Route path="careers" element={<CareerList />} />
         <Route path="projects" element={<ProjectList />} />
         <Route path="profile" element={<ProfileUpdate />} />
         <Route path="reset-password" element={<ResetPassword />} />
+        <Route path="/admin/services" element={<ServiceList />} />
+        <Route path="/admin/services/add" element={<AddService />} />
+
+        
+        <Route
+          path="/admin/services/edit/:id"
+          element={<EditService />}
+        />
       </Route>
     </Routes>
   );

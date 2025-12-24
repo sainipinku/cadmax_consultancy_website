@@ -75,6 +75,18 @@ const Navbar = () => {
               Update Profile
             </button>
 
+
+            <button
+              onClick={() => {
+                navigate("/admin/reset-password");
+                setOpen(false);
+              }}
+              className="w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-slate-100"
+            >
+              <User size={16} />
+              Reset Password
+            </button>
+
             <button
               onClick={handleLogout}
               className="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50"

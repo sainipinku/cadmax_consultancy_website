@@ -60,8 +60,9 @@ const CareerPath = () => {
 
         </motion.div>
 
+        
         {/* SECTION 2 */}
-           <motion.div
+        <motion.div
   variants={fadeUp}
   initial="hidden"
   whileInView="visible"
@@ -69,14 +70,26 @@ const CareerPath = () => {
   transition={{ duration: 0.8 }}
   className="grid md:grid-cols-2 gap-10 items-center"
 >
-          <h2 className="text-2xl font-semibold mb-4">
-            2. Learning & Development
-          </h2>
-          <p className="text-gray-600 leading-relaxed">
-           “We encourage a culture of learning where our team continuously develops new skills, explores fresh ideas, and grows together. This commitment to development strengthens both our people and our projects.” 
-          </p>
-        </motion.div>
+    <motion.img
+  src={img1}
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: false, amount: 0.3 }}
+  transition={{ duration: 0.7 }}
+  className="rounded-2xl h-auto shadow-lg"
+/>
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">
+             2. Learning & Development- 
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+            “We encourage a culture of learning where our team continuously develops new skills, explores fresh ideas, and grows together. This commitment to development strengthens both our people and our projects.”
+            </p>
+          </div>
 
+     
+
+        </motion.div>
         {/* SECTION 3 */}
         <motion.div
           variants={fadeUp}
@@ -86,14 +99,7 @@ const CareerPath = () => {
           transition={{ duration: 0.8 }}
           className="grid md:grid-cols-2 gap-10 items-center"
         >
-            <motion.img
-  src={img2}
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.7 }}
-  className="rounded-2xl shadow-lg"
-/>
+          
 
           <div>
             <h2 className="text-2xl font-semibold mb-4">
@@ -103,6 +109,16 @@ const CareerPath = () => {
              A supportive Managing Director and a positive work culture make this company a place where teamwork, learning, and mutual respect are valued. The environment motivates employees to deliver their best work every day.”.
             </p>
           </div>
+
+
+            <motion.img
+  src={img2}
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: false, amount: 0.3 }}
+  transition={{ duration: 0.7 }}
+  className="rounded-2xl shadow-lg"
+/>
         </motion.div>
 
       </div>
