@@ -28,8 +28,18 @@ const Hero = () => {
         <Slider {...settings}>
           {sliderImages.map((img, i) => (
             <div key={i} className="hero-item">
-              <img src={img} alt={`slide-${i}`} className="hero-image" />
+              <img src={img} alt={`slide-${i}`} className="hero-image"
+              
+              
+              />
+              {/* <div className="hero-center-btn">
+  <button className="header-button">
+    <Link to="/contact">ENQUIRE TODAY</Link>
+  </button>
+</div> */}
+
             </div>
+            
           ))}
         </Slider>
       </div>

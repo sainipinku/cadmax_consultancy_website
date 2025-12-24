@@ -3,41 +3,52 @@ import AdminLayout from "../layout/AdminLayout";
 
 import Login from "../pages/auth/Login";
 import Dashboard from "../pages/dashboard/Dashboard";
+
+// Projects
 import ProjectList from "../pages/projects/ProjectList";
-import ProfileUpdate from "../pages/settings/ProfileUpdate";
-import ResetPassword from "../pages/settings/ResetPassword";
+import AddProject from "../pages/projects/AddProject";
+import EditProject from "../pages/projects/EditProject";
+
+// Services
+import ServiceList from "../pages/services/ServiceList";
 import AddService from "../pages/services/AddService";
 import EditService from "../pages/services/EditService";
-import ServiceList from "../pages/services/ServiceList";
 
+// Settings
+import ProfileUpdate from "../pages/settings/ProfileUpdate";
+import ResetPassword from "../pages/settings/ResetPassword";
 
 const isAuth = () => localStorage.getItem("isAdminAuth") === "true";
 
 const AdminRoutes = () => {
   return (
     <Routes>
-      {/* Public */}
+      {/* PUBLIC ROUTE */}
       <Route path="/admin/login" element={<Login />} />
 
-      {/* Protected */}
+      {/* PROTECTED ROUTES */}
       <Route
         path="/admin"
         element={
           isAuth() ? <AdminLayout /> : <Navigate to="/admin/login" replace />
         }
       >
+        {/* Dashboard */}
         <Route index element={<Dashboard />} />
+
+        {/* Projects */}
         <Route path="projects" element={<ProjectList />} />
+        <Route path="projects/add" element={<AddProject />} />
+        <Route path="projects/edit/:id" element={<EditProject />} />
+
+        {/* Services */}
+        <Route path="services" element={<ServiceList />} />
+        <Route path="services/add" element={<AddService />} />
+        <Route path="services/edit/:id" element={<EditService />} />
+
+        {/* Settings */}
         <Route path="profile" element={<ProfileUpdate />} />
         <Route path="reset-password" element={<ResetPassword />} />
-        <Route path="/admin/services" element={<ServiceList />} />
-        <Route path="/admin/services/add" element={<AddService />} />
-
-        
-        <Route
-          path="/admin/services/edit/:id"
-          element={<EditService />}
-        />
       </Route>
     </Routes>
   );

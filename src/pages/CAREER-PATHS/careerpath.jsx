@@ -1,10 +1,14 @@
 import React from "react";
 import Navbar from "../../components/Layout/Header/Navbar";
+import Footer from "../../components/Layout/Footer/Footer"
 import { motion } from "framer-motion";
 
-import heroBGCareer from "../../../src/assets/Images/careerpath/hero-img.jpg";
+
+import heroBGCareer from "../../../src/assets/Images/careerpath/HERO-BG.png";
 import img1 from "../../../src/assets/Images/careerpath/development-img.jpg";
 import img2 from "../../../src/assets/Images/careerpath/environment-img.jpg";
+import img3 from "../../../src/assets/Images/careerpath/mid-img.jpeg"
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -72,7 +76,8 @@ const CareerPath = () => {
   className="grid md:grid-cols-2 gap-10 items-center"
 >
     <motion.img
-  src={img1}
+  src={img3}
+
   initial={{ opacity: 0, scale: 0.9 }}
   whileInView={{ opacity: 1, scale: 1 }}
   viewport={{ once: false, amount: 0.3 }}
@@ -123,6 +128,7 @@ const CareerPath = () => {
         </motion.div>
 
       </div>
+      <Footer/>
     </>
   );
 };
