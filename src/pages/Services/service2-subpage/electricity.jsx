@@ -3,7 +3,7 @@ import heroBG from "../../..//assets/Images/service-page-2/ELECTRICITY.jpg";
 import Navbar from "../../../components/Layout/Header/Navbar";
 import Footer from "../../../components/Layout/Footer/Footer";
 import img1 from "../../../assets/Images/service-page-3/collage-img.png";
-
+//slider-part
 import WorkSlider from "../../../components/common/slider/ourworkSlider";
 import img2 from "../../../assets/Images/service-page-2/electricity1.jpg";
 import img3 from "../../../assets/Images/service-page-2/electricity2.jpg";

@@ -5,7 +5,7 @@ import Footer from "../../../components/Layout/Footer/Footer";
 import WorkSlider from "../../../components/common/slider/ourworkSlider";
 import img1 from "../../../assets/Images/service-page-3/collage-img.png";
 
-
+//slider-part
 import img2 from "../../../assets/Images/service-page-2/roadnetwork1.jpg";
 import img3 from "../../../assets/Images/service-page-2/roadnetwork2.jpg";
 import img4 from "../../../assets/Images/service-page-2/roadnetwork3.jpg";
