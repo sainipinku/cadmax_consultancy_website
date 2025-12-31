@@ -148,7 +148,7 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(80% - 20px);
+  width: calc(70% - 20px);
 
   font-size: 12px;
   font-weight: 600;
