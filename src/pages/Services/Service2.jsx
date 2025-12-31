@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 import heroBG from "../../../src/assets/Images/service-page-2/engineer-banner.jpg";
 import overlapImg from "../../../src/assets/Images/service-page-2/survey-img.jpg";
 
-import collage1 from "../../../src/assets/Images/service-page-2/service2-img2.png";
-import collage2 from "../../../src/assets/Images/service-page-2/service2-img3.png";
-import collage3 from "../../../src/assets/Images/service-page-2/service2-img4.png";
-import collage4 from "../../../src/assets/Images/service-page-2/service2-img5.png";
+import collage1 from "../../../src/assets/Images/service-page-2/main-gate.jpg";
+import collage2 from "../../../src/assets/Images/service-page-2/road-network.jpg";
+import collage3 from "../../../src/assets/Images/service-page-2/water-supply.jpg";
+import collage4 from "../../../src/assets/Images/service-page-2/ELECTRICITY.jpg";
 
 const Service2 = () => {
 
@@ -55,25 +55,25 @@ const Service2 = () => {
       <div className="collage-wrapper">
 
         
-        <Link to="/Services/Service3" className="collage-item item-1">
+        <Link to="/Services/maingate" className="collage-item item-1">
           <img src={collageImages[0].img} alt="" />
           <h2>{collageImages[0].title}</h2>
         </Link>
 
         
-        <Link to="/Services/Service3" className="collage-item item-2">
+        <Link to="/Services/roadNetwork" className="collage-item item-2">
           <img src={collageImages[1].img} alt="" />
           <h2>{collageImages[1].title}</h2>
         </Link>
 
         
-        <Link to="/Services/Service3" className="collage-item item-3">
+        <Link to="/Services/waterSupply" className="collage-item item-3">
           <img src={collageImages[2].img} alt="" />
           <h2>{collageImages[2].title}</h2>
         </Link>
 
         
-        <Link to="/Services/Service3" className="collage-item item-4">
+        <Link to="/Services/electricity" className="collage-item item-4">
           <img src={collageImages[3].img} alt="" />
           <h2>{collageImages[3].title}</h2>
         </Link>

@@ -1,0 +1,78 @@
+import React from "react";
+import heroBG from "../../..//assets/Images/service-page-2/ELECTRICITY.jpg";
+import Navbar from "../../../components/Layout/Header/Navbar";
+import Footer from "../../../components/Layout/Footer/Footer";
+import img1 from "../../../assets/Images/service-page-3/collage-img.png";
+
+import WorkSlider from "../../../components/common/slider/ourworkSlider";
+import img2 from "../../../assets/Images/service-page-2/electricity1.jpg";
+import img3 from "../../../assets/Images/service-page-2/electricity2.jpg";
+import img4 from "../../../assets/Images/service-page-2/electricity3.jpg";
+import img5 from "../../../assets/Images/service-page-2/electricity4.jpg";
+import img6 from "../../../assets/Images/service-page-2/electricity5.jpg";
+
+
+   
+ 
+
+
+const Electricity1 = () => {
+  return (
+    <>
+      <Navbar />
+
+      {/* SERVICE 3 WRAPPER */}
+      <section className="service3-wrapper">
+
+        {/* HERO */}
+        <div
+          className="service3-hero w-full h-[420px] bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBG})` }}
+        />
+
+        {/* COLLAGE */}
+        <div className="service3-grid w-full grid grid-cols-4 gap-5 px-10 py-10
+                        max-[992px]:grid-cols-2
+                        max-[576px]:grid-cols-1">
+
+          {[
+            "Maingate and boundary construction",
+            "Road network",
+            "Water supply",
+            "Electricity",
+          ].map((text, i) => (
+            <div key={i} className="service3-card relative overflow-hidden group">
+              <img
+                src={img1}
+                alt=""
+                className="service3-img w-full h-full object-cover
+                           brightness-[0.4] transition-all duration-500
+                           group-hover:brightness-75 group-hover:scale-110"
+              />
+              <p className="service3-text absolute top-1/2 left-1/2
+                            -translate-x-1/2 -translate-y-1/2
+                            text-white text-lg font-black uppercase
+                            text-center pointer-events-none">
+                {text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+       <WorkSlider
+      prefix="electricity"
+      slides={[
+        { url: img2, title: "ELECTRICITY DISTRIBUTION SYSTEM" },
+        { url: img3, title: "POWER SUBSTATION PROJECT" },
+        { url: img4, title: "HIGH VOLTAGE NETWORK" },
+        { url: img5, title: "HIGH VOLTAGE NETWORK" },
+        { url: img6, title: "HIGH VOLTAGE NETWORK" },
+      ]}
+    />
+      <Footer />
+    </>
+  );
+};
+
+export default Electricity1;
