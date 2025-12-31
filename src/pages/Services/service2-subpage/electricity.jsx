@@ -63,11 +63,14 @@ const Electricity1 = () => {
        <WorkSlider
       prefix="electricity"
       slides={[
-        { url: img2, title: "ELECTRICITY DISTRIBUTION SYSTEM" },
-        { url: img3, title: "POWER SUBSTATION PROJECT" },
-        { url: img4, title: "HIGH VOLTAGE NETWORK" },
-        { url: img5, title: "HIGH VOLTAGE NETWORK" },
-        { url: img6, title: "HIGH VOLTAGE NETWORK" },
+       
+  { url: img2, title: "INDUSTRIAL POWER NETWORK " },
+  { url: img3, title: "POWER SUBSTATION PROJECT" },
+  { url: img4, title: "ELECTRICAL GRID INFRASTRUCTURE" },
+  { url: img5, title: "ELECTRICITY DISTRIBUTION SYSTEM" },
+  { url: img6, title: " HIGH VOLTAGE TRANSMISSION LINE" },
+
+
       ]}
     />
       <Footer />

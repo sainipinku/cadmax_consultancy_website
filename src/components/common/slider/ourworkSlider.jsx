@@ -26,7 +26,7 @@ const WorkSlider = ({ slides, prefix }) => {
 
   return (
     <section
-      className={`${prefix}-bg w-full h-[600px] bg-cover bg-center relative flex items-center justify-center`}
+      className={`${prefix}-bg w-full h-[600px] bg-cover bg-center relative flex items-center justify-center brightness-90`}
       style={{ backgroundImage: `url(${slides[index].url})` }}
     >
       {/* TITLE */}

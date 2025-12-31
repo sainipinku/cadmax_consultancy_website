@@ -1,5 +1,5 @@
 import React from "react";
-import heroBG from "../../../assets/Images/service-page-2/main-gate.jpg";
+import heroBG from "../../../assets/Images/service-page-2/main-gate-Copy.jpg";
 import Navbar from "../../../components/Layout/Header/Navbar";
 import Footer from "../../../components/Layout/Footer/Footer";
 import WorkSlider from "../../../components/common/slider/ourworkSlider";
