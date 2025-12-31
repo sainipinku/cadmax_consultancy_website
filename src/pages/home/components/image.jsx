@@ -1,5 +1,15 @@
 import React from "react";
 import "./image.css";
+import image1 from "../../../assets/Images/collage/high-accuracy.jpeg"
+import image2 from "../../../assets/Images/collage/engineer-survay.jpeg"
+import image3 from "../../../assets/Images/collage/TOPOGRAPHIC-GROUND.jpg"
+import image4 from "../../../assets/Images/collage/land-survay.jpeg"
+import image5 from "../../../assets/Images/collage/mobile-mapping.jpeg"
+import image6 from "../../../assets/Images/collage/urban-plan.jpg"
+import image7 from "../../../assets/Images/collage/on-site-marking.jpeg"
+import image8 from "../../../assets/Images/collage/geodetic-surveying.jpg"
+import image9 from "../../../assets/Images/collage/insfructure-survay.jpeg"
+
 
 const MasonryGallery = () => {
   return (
@@ -10,7 +20,7 @@ const MasonryGallery = () => {
 
         <div className="gallery-col">
           <div className="gallery-card tall">
-            <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/LANDMARK-001.jpg" />
+            <img src={image1} />
             <div className="gallery-overlay" />
             <div className="gallery-title">HIGH-ACCURACY DGPS SURVEY</div>
           </div>
@@ -18,13 +28,13 @@ const MasonryGallery = () => {
 
         <div className="gallery-col">
           <div className="gallery-card big">
-            <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/addnew.jpg" />
+            <img src={image2} />
             <div className="gallery-overlay" />
             <div className="gallery-title">ENGINEERING SURVEY EXECUTION</div>
           </div>
 
           <div className="gallery-card small">
-            <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/addnew.jpg" />
+            <img src={image3} />
             <div className="gallery-overlay" />
             <div className="gallery-title">TOPOGRAPHIC GROUND MODELLING</div>
           </div>
@@ -32,15 +42,15 @@ const MasonryGallery = () => {
 
         <div className="gallery-col">
           <div className="gallery-card small">
-            <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Cadmax.jpg" />
+            <img src={image4} />
             <div className="gallery-overlay" />
             <div className="gallery-title">LAND BOUNDARY AND CONDITION SURVEYING</div>
           </div>
 
           <div className="gallery-card big">
-            <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ServicesPhoto.jpg" />
+            <img src={image5} />
             <div className="gallery-overlay" />
-            <div className="gallery-title">MOBILE MAPPING + GIS PRODUCTION</div>
+            <div className="gallery-title">DRON SRUVEY + GIS PRODUCTION</div>
           </div>
         </div>
 
@@ -52,7 +62,7 @@ const MasonryGallery = () => {
           </div>
 
           <div className="gallery-card small">
-            <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/LANDMARK-001.jpg" />
+            <img src={image6} />
             <div className="gallery-overlay" />
             <div className="gallery-title">URBAN AND SUBDIVISION PLANNING</div>
           </div>
@@ -64,19 +74,19 @@ const MasonryGallery = () => {
       <div className="gallery-bottom">
 
         <div className="gallery-card bottom-card">
-          <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/LANDMARK-001.jpg" />
+          <img src={image7} />
           <div className="gallery-overlay" />
           <div className="gallery-title">ON-SITE LAYOUT MARKING</div>
         </div>
 
         <div className="gallery-card bottom-card">
-          <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ServicesPhoto.jpg" />
+          <img src={image8} />
           <div className="gallery-overlay" />
           <div className="gallery-title">GEODETIC AND ADVANCED POSITIONING</div>
         </div>
 
         <div className="gallery-card bottom-card">
-          <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/addnew.jpg" />
+          <img src={image9} />
           <div className="gallery-overlay" />
           <div className="gallery-title">INFRASTRUCTURE SURVEY SYSTEMS</div>
         </div>

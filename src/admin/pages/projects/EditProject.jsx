@@ -1,14 +1,97 @@
 import { ArrowLeft, Upload, Trash2 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import API from "../../../api/axios";
+
+const CATEGORIES = [
+  "MANORATE AND BOUNDARY CONSTRUCTION",
+  "ROAD NETWORK",
+  "WATER SUPPLY",
+  "ELECTRICITY",
+];
 
 const EditProject = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  const [form, setForm] = useState({
+    title: "",
+    category: "",
+    description: "",
+  });
+
+  const [currentImage, setCurrentImage] = useState("");
+  const [newImage, setNewImage] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  /* ================= FETCH PROJECT ================= */
+  useEffect(() => {
+    fetchProject();
+    // eslint-disable-next-line
+  }, []);
+
+  const fetchProject = async () => {
+    try {
+      const res = await API.get(`/projects`);
+      const project = res.data.find((p) => p._id === id);
+
+      if (!project) {
+        alert("Project not found");
+        return navigate("/admin/projects");
+      }
+
+      setForm({
+        title: project.title,
+        category: project.category,
+        description: project.description,
+      });
+
+      setCurrentImage(project.image);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to load project");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  /* ================= CHANGE ================= */
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  /* ================= SUBMIT ================= */
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("title", form.title);
+    formData.append("category", form.category);
+    formData.append("description", form.description);
+
+    if (newImage) {
+      formData.append("image", newImage);
+    }
+
+    try {
+      await API.put(`/projects/${id}`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      navigate("/admin/projects");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to update project");
+    }
+  };
+
+  if (loading) return <p>Loading project...</p>;
 
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <div className="space-y-1">
+        <div>
           <h1 className="text-2xl font-semibold text-slate-800">
             Edit Project
           </h1>
@@ -26,112 +109,84 @@ const EditProject = () => {
         </button>
       </div>
 
-      {/* Form Card */}
+      {/* Form */}
       <div className="bg-white rounded-xl border shadow-sm p-6">
-        <form className="space-y-6">
-          {/* Project Title */}
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
-              Project Title
-            </label>
-            <input
-              type="text"
-              defaultValue="Cadmax Group Headoffice"
-              className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Title */}
+          <input
+            name="title"
+            value={form.title}
+            onChange={handleChange}
+            placeholder="Project title"
+            className="w-full rounded-lg border px-4 py-2.5"
+            required
+          />
 
-          {/* Client & Category */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">
-                Client Name
-              </label>
-              <input
-                type="text"
-                defaultValue="Mr. Hanuman S & Mr. Ramesh Sharma"
-                className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">
-                Category
-              </label>
-              <input
-                type="text"
-                defaultValue="Interior Design"
-                className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-          </div>
+          {/* Category */}
+          <select
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+            className="w-full rounded-lg border px-4 py-2.5"
+            required
+          >
+            <option value="">Select category</option>
+            {CATEGORIES.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
 
           {/* Description */}
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
-              Project Description
-            </label>
-            <textarea
-              rows="4"
-              defaultValue="This project stands as a remarkable architectural statement, designed with precision and elegance."
-              className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-            />
-          </div>
+          <textarea
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+            rows="4"
+            placeholder="Project description"
+            className="w-full rounded-lg border px-4 py-2.5"
+          />
 
           {/* Current Image */}
-          <div className="space-y-3">
-            <label className="block text-sm font-medium text-slate-700">
-              Current Image
-            </label>
-
-            <div className="relative w-full max-w-md">
+          {currentImage && (
+            <div>
+              <label className="block text-sm font-medium mb-2">
+                Current Image
+              </label>
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                src={`http://localhost:5000${currentImage}`}
                 alt="Project"
-                className="rounded-lg border object-cover"
+                className="w-full max-w-md rounded border object-cover"
               />
-
-              <button
-                type="button"
-                className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700"
-                title="Remove image"
-              >
-                <Trash2 size={16} />
-              </button>
             </div>
-          </div>
+          )}
 
           {/* Replace Image */}
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
-              Replace Image
-            </label>
-
-            <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-300 rounded-lg p-6 cursor-pointer hover:border-blue-500 transition">
-              <Upload className="text-slate-400 mb-2" />
-              <span className="text-sm text-slate-600">
-                Click to upload new image
-              </span>
-              <span className="text-xs text-slate-400 mt-1">
-                PNG, JPG up to 5MB
-              </span>
-              <input type="file" className="hidden" />
-            </label>
-          </div>
+          <label className="flex flex-col items-center justify-center border-2 border-dashed rounded-lg p-6 cursor-pointer">
+            <Upload />
+            <span className="text-sm">Replace image</span>
+            <input
+              type="file"
+              hidden
+              accept="image/*"
+              onChange={(e) => setNewImage(e.target.files[0])}
+            />
+          </label>
 
           {/* Actions */}
-          <div className="flex justify-end gap-3 pt-4 border-t">
+          <div className="flex justify-end gap-3 border-t pt-4">
             <button
               type="button"
               onClick={() => navigate(-1)}
-              className="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100"
+              className="px-5 py-2.5 border rounded-lg"
             >
               Cancel
             </button>
 
             <button
               type="submit"
-              className="px-6 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+              className="px-6 py-2.5 bg-blue-600 text-white rounded-lg"
             >
               Update Project
             </button>

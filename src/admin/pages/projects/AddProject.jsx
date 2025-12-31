@@ -1,14 +1,58 @@
 import { ArrowLeft, Upload } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import API from "../../../api/axios";
 
 const AddProject = () => {
   const navigate = useNavigate();
+
+  const [form, setForm] = useState({
+    title: "",
+    category: "MANORATE AND BOUNDARY CONSTRUCTION",
+    description: "",
+  });
+
+  const [image, setImage] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!image) {
+      alert("Please upload project image");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("title", form.title);
+    formData.append("category", form.category);
+    formData.append("description", form.description);
+    formData.append("image", image);
+
+    try {
+      setLoading(true);
+      await API.post("/projects", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      alert("Project added successfully");
+      navigate("/admin/projects");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to add project");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <div className="space-y-1">
+        <div>
           <h1 className="text-2xl font-semibold text-slate-800">
             Add New Project
           </h1>
@@ -26,91 +70,73 @@ const AddProject = () => {
         </button>
       </div>
 
-      {/* Form Card */}
+      {/* Form */}
       <div className="bg-white rounded-xl border shadow-sm p-6">
-        <form className="space-y-6">
-          {/* Project Title */}
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
-              Project Title
-            </label>
-            <input
-              type="text"
-              placeholder="Enter project title"
-              className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Title */}
+          <input
+            name="title"
+            value={form.title}
+            onChange={handleChange}
+            placeholder="Project title"
+            className="w-full rounded-lg border px-4 py-2.5"
+            required
+          />
 
-          {/* Client & Category */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">
-                Client Name
-              </label>
-              <input
-                type="text"
-                placeholder="Client name"
-                className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">
-                Category
-              </label>
-              <input
-                type="text"
-                placeholder="Architecture / Planning"
-                className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-          </div>
+          {/* Category (ENUM FIXED) */}
+          <select
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+            className="w-full rounded-lg border px-4 py-2.5"
+            required
+          >
+            <option>MANORATE AND BOUNDARY CONSTRUCTION</option>
+            <option>ROAD NETWORK</option>
+            <option>WATER SUPPLY</option>
+            <option>ELECTRICITY</option>
+          </select>
 
           {/* Description */}
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
-              Project Description
-            </label>
-            <textarea
-              rows="4"
-              placeholder="Short project description"
-              className="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          <textarea
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+            rows="4"
+            placeholder="Project description"
+            className="w-full rounded-lg border px-4 py-2.5"
+            required
+          />
+
+          {/* Image */}
+          <label className="flex flex-col items-center justify-center border-2 border-dashed rounded-lg p-6 cursor-pointer">
+            <Upload />
+            <span className="text-sm">
+              {image ? image.name : "Click to upload image"}
+            </span>
+            <input
+              type="file"
+              hidden
+              accept="image/*"
+              onChange={(e) => setImage(e.target.files[0])}
             />
-          </div>
-
-          {/* Image Upload */}
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
-              Project Image
-            </label>
-
-            <label className="flex flex-col items-center justify-center border-2 border-dashed border-slate-300 rounded-lg p-6 cursor-pointer hover:border-blue-500 transition">
-              <Upload className="text-slate-400 mb-2" />
-              <span className="text-sm text-slate-600">
-                Click to upload image
-              </span>
-              <span className="text-xs text-slate-400 mt-1">
-                PNG, JPG up to 5MB
-              </span>
-              <input type="file" className="hidden" />
-            </label>
-          </div>
+          </label>
 
           {/* Actions */}
-          <div className="flex justify-end gap-3 pt-4 border-t">
+          <div className="flex justify-end gap-3 border-t pt-4">
             <button
               type="button"
               onClick={() => navigate(-1)}
-              className="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100"
+              className="px-5 py-2.5 border rounded-lg"
             >
               Cancel
             </button>
-
             <button
               type="submit"
-              className="px-6 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+              disabled={loading}
+              className="px-6 py-2.5 bg-blue-600 text-white rounded-lg"
             >
-              Save Project
+              {loading ? "Saving..." : "Save Project"}
             </button>
           </div>
         </form>

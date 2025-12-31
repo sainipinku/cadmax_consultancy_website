@@ -1,127 +1,114 @@
-import { Plus, Pencil, Trash2 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Pencil, Trash2, Plus } from "lucide-react";
+import API from "../../../api/axios";
 import { useNavigate } from "react-router-dom";
 
-const projects = [
-  {
-    title: "Cadmax Group Headoffice",
-    client: "Mr. Hanuman S & Mr. Ramesh Sharma",
-    category: "Interior Design",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-  },
-  {
-    title: "Riyasat Sankalp",
-    client: "Riyasat Infra Developers",
-    category: "Urban Planning",
-    image:
-      "https://images.unsplash.com/photo-1501183638710-841dd1904471"
-  },
-  {
-    title: "Rudra Mahal",
-    client: "Jugal Kishore Meena",
-    category: "Architecture",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-  },
-  {
-    title: "Kedia’s Landmark",
-    client: "Kedia Bdl",
-    category: "Urban Planning",
-    image:
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994"
-  }
-];
-
 const ProjectList = () => {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  return (
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-semibold text-slate-800">
-            Projects
-          </h1>
-          <p className="text-sm text-slate-500">
-            Manage all your architectural and planning projects
-          </p>
-        </div>
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
-        {/* Add Project Button */}
+  const fetchProjects = async () => {
+    try {
+      const res = await API.get("/projects");
+      setProjects(res.data);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to load projects");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    const confirm = window.confirm("Are you sure you want to delete this project?");
+    if (!confirm) return;
+
+    try {
+      await API.delete(`/projects/${id}`);
+      setProjects((prev) => prev.filter((p) => p._id !== id));
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete project");
+    }
+  };
+
+  if (loading) return <p>Loading projects...</p>;
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-semibold">Projects</h1>
         <button
           onClick={() => navigate("/admin/projects/add")}
-          className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition shadow-sm"
+          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg"
         >
-          <Plus size={18} />
+          <Plus size={16} />
           Add Project
         </button>
       </div>
 
-      {/* Project Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="group bg-white rounded-xl border shadow-sm hover:shadow-md transition overflow-hidden"
-          >
-            {/* Image Wrapper */}
-            <div className="relative overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-52 object-cover"
-              />
+      {/* Table */}
+      <div className="bg-white rounded-xl border overflow-hidden">
+        <table className="w-full">
+          <thead className="bg-slate-100">
+            <tr className="text-left text-sm text-slate-600">
+              <th className="p-4">Image</th>
+              <th>Title</th>
+              <th>Category</th>
+              <th className="text-right p-4">Actions</th>
+            </tr>
+          </thead>
 
-              {/* Overlay Actions */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-end gap-3 p-4 z-10">
-                <button
-                  title="Edit Project"
-                  onClick={() =>
-                    navigate(`/admin/projects/edit/${index}`)
-                  }
-                  className="p-2 bg-white text-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition"
-                >
-                  <Pencil size={16} />
-                </button>
+          <tbody>
+            {projects.length === 0 && (
+              <tr>
+                <td colSpan="4" className="p-6 text-center text-slate-500">
+                  No projects found
+                </td>
+              </tr>
+            )}
 
-                <button
-                  title="Delete Project"
-                  className="p-2 bg-white text-slate-800 rounded-full hover:bg-red-600 hover:text-white transition"
-                >
-                  <Trash2 size={16} />
-                </button>
-              </div>
-            </div>
+            {projects.map((item) => (
+              <tr key={item._id} className="border-t">
+                <td className="p-4">
+                  <img
+                    src={`http://localhost:5000${item.image}`}
+                    alt={item.title}
+                    className="w-20 h-14 object-cover rounded"
+                  />
+                </td>
 
-            {/* Content */}
-            <div className="p-5 space-y-3">
-              <h2 className="text-lg font-semibold text-slate-800 leading-snug">
-                {project.title}
-              </h2>
+                <td className="font-medium">{item.title}</td>
 
-              <div className="text-sm text-slate-600 space-y-1">
-                <p>
-                  <span className="font-medium text-slate-700">
-                    Client:
-                  </span>{" "}
-                  {project.client}
-                </p>
-                <p>
-                  <span className="font-medium text-slate-700">
-                    Category:
-                  </span>{" "}
-                  {project.category}
-                </p>
-              </div>
+                <td className="text-sm text-slate-600">{item.category}</td>
 
-              <p className="text-sm text-slate-500 line-clamp-2">
-                This project stands as a remarkable architectural
-                statement, designed with precision and modern aesthetics.
-              </p>
-            </div>
-          </div>
-        ))}
+                <td className="p-4 text-right flex justify-end gap-3">
+                  <button
+                    onClick={() =>
+                      navigate(`/admin/projects/edit/${item._id}`)
+                    }
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <Pencil size={16} />
+                  </button>
+
+                  <button
+                    onClick={() => handleDelete(item._id)}
+                    className="text-red-600 hover:text-red-800"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

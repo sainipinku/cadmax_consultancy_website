@@ -94,7 +94,7 @@ const Project = () => {
     <>
       <Navbar />
 
-      {/* HERO SECTION */}
+      
       <div
         className="project-hero"
         style={{ backgroundImage: `url(${heroBG})` }}
@@ -103,10 +103,10 @@ const Project = () => {
       </div>
 
       <div className="project-wrapper">
-        {/* TOP HEADING */}
+       
         <h2 className="project-title uppercase">Projects That Inspire.</h2>
 
-        {/* CATEGORY TABS */}
+       
         <div className="project-tabs">
           <button className="tab active">
             MANORATE AND BOUNDARY CONSTRUCTION
@@ -116,7 +116,7 @@ const Project = () => {
           <button className="tab">ELECTRICITY</button>
         </div>
 
-        {/* PROJECT GRID */}
+      
         <div className="project-grid">
           {projects.slice(0, visibleCount).map((item, index) => (
             <div className="project-card" key={index}>
@@ -135,7 +135,7 @@ const Project = () => {
           ))}
         </div>
 
-        {/* LOAD MORE BUTTON */}
+        
         {visibleCount < projects.length && (
           <button
             className="load-more"
@@ -152,3 +152,126 @@ const Project = () => {
 };
 
 export default Project;
+
+
+
+// import React, { useEffect, useState } from "react";
+// import "./Project.css";
+// import Navbar from "../../components/Layout/Header/Navbar";
+// import Footer from "../../components/Layout/Footer/Footer";
+// import API from "../../api/axios";
+
+// import heroBG from "../../../src/assets/Images/project/hero-project-banner.jpg";
+
+// const CATEGORIES = [
+//   "MANORATE AND BOUNDARY CONSTRUCTION",
+//   "ROAD NETWORK",
+//   "WATER SUPPLY",
+//   "ELECTRICITY",
+// ];
+
+// const Project = () => {
+//   const [projects, setProjects] = useState([]);
+//   const [visibleCount, setVisibleCount] = useState(12);
+//   const [activeTab, setActiveTab] = useState(CATEGORIES[0]);
+
+//   /* ================= FETCH PROJECTS ================= */
+//   useEffect(() => {
+//     const fetchProjects = async () => {
+//       try {
+//         const res = await API.get("/projects");
+//         setProjects(res.data || []);
+//       } catch (error) {
+//         console.error("Project fetch error", error);
+//       }
+//     };
+//     fetchProjects();
+//   }, []);
+
+//   /* ================= RESET LOAD MORE ON TAB CHANGE ================= */
+//   useEffect(() => {
+//     setVisibleCount(12);
+//   }, [activeTab]);
+
+//   /* ================= FILTER ================= */
+//   const filteredProjects = projects.filter(
+//     (item) => item.category === activeTab
+//   );
+
+//   return (
+//     <>
+//       <Navbar />
+
+//       {/* HERO */}
+//       <div
+//         className="project-hero"
+//         style={{ backgroundImage: `url(${heroBG})` }}
+//       >
+//         <h1>PROJECT</h1>
+//       </div>
+
+//       <div className="project-wrapper">
+//         <h2 className="project-title uppercase">Projects That Inspire.</h2>
+
+//         {/* TABS */}
+//         <div className="project-tabs">
+//           {CATEGORIES.map((cat) => (
+//             <button
+//               key={cat}
+//               className={`tab ${activeTab === cat ? "active" : ""}`}
+//               onClick={() => setActiveTab(cat)}
+//             >
+//               {cat}
+//             </button>
+//           ))}
+//         </div>
+
+//         {/* GRID */}
+//         <div className="project-grid">
+//           {filteredProjects.length === 0 && (
+//             <p style={{ textAlign: "center", gridColumn: "1/-1" }}>
+//               No projects found in this category.
+//             </p>
+//           )}
+
+//           {filteredProjects.slice(0, visibleCount).map((item) => (
+//             <div className="project-card" key={item._id}>
+//               <div className="img-box">
+//                 <img
+//                   src={`http://localhost:5000${item.image}`}
+//                   alt={item.title}
+//                   className="project-img"
+//                 />
+
+//                 <div className="download-icon">
+//                   <i className="bi bi-download"></i>
+//                 </div>
+//               </div>
+
+//               <div className="project-content">
+//                 <h3>{item.title}</h3>
+//                 <p>{item.description}</p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* LOAD MORE */}
+//         {visibleCount < filteredProjects.length && (
+//           <button
+//             className="load-more"
+//             onClick={() =>
+//               setVisibleCount((prev) => prev + 12)
+//             }
+//           >
+//             LOAD MORE
+//           </button>
+//         )}
+//       </div>
+
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default Project;

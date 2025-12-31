@@ -4,8 +4,8 @@ import Footer from "../../components/Layout/Footer/Footer";
 import "./Service2.css";
 import { Link } from "react-router-dom";
 
-import heroBG from "../../../src/assets/Images/header/Header-bg-img.png";
-import overlapImg from "../../../src/assets/Images/service-page-2/service2-img1.png";
+import heroBG from "../../../src/assets/Images/service-page-2/engineer-banner.jpg";
+import overlapImg from "../../../src/assets/Images/service-page-2/survey-img.jpg";
 
 import collage1 from "../../../src/assets/Images/service-page-2/service2-img2.png";
 import collage2 from "../../../src/assets/Images/service-page-2/service2-img3.png";
@@ -26,53 +26,53 @@ const Service2 = () => {
     <>
       <Navbar />
 
-      {/* HERO */}
+   
       <div
         className="service1-hero"
         style={{ backgroundImage: `url(${heroBG})` }}
       ></div>
 
-      {/* BLACK */}
+      
       <div className="black-box">
-        <h2>Engineering That Works on the Ground</h2>
+        <h2> Where imagination meets structure</h2>
         <p>
-          CADMAX approaches engineering with one expectation: the design must perform exactly as executed on site. The team studies gradients, utilities, movement patterns and regulations before drawing the first line. Fifteen years of land-development experience shapes this process, producing layouts that fit the land instead of fighting it.
+         Turning concepts into concrete reality, our engineering team works hand in hand with architectural vision to design, plan, and build spaces that are strong,         functional, and timeless. Every detail reflects precision, collaboration, and a commitment to quality that shapes structures built to serve generations.
         </p>
       </div>
 
-      {/* OVERLAP */}
+      
       <div className="overlap-img-box">
         <img src={overlapImg} alt="" />
       </div>
 
-      {/* HEADING */}
+      
       <div className="flex-section">
         <h2>What We Offer</h2>
-        <p>A focused set of engineering services that define how a site functions, connects and operates.</p>
+        <p>An architectural and engineering company plays a vital role in planning and designing essential infrastructure such as water supply systems, road networks, and electricity distribution. Engineers in the company analyze site conditions, safety standards, and community needs to design reliable water supply systems that ensure clean and efficient delivery. They also plan and develop road networks that support smooth transportation, proper drainage, and long-term durability. In addition, electrical engineers design and coordinate electricity layouts to ensure safe, efficient, and sustainable power distribution. Together, these services contribute to well-organized, functional, and sustainable built environments.</p>
       </div>
 
-      {/* ⭐⭐ DYNAMIC COLLAGE ⭐⭐ */}
+      
       <div className="collage-wrapper">
 
-        {/* ITEM 1 (BIG LEFT) */}
+        
         <Link to="/Services/Service3" className="collage-item item-1">
           <img src={collageImages[0].img} alt="" />
           <h2>{collageImages[0].title}</h2>
         </Link>
 
-        {/* ITEM 2 */}
+        
         <Link to="/Services/Service3" className="collage-item item-2">
           <img src={collageImages[1].img} alt="" />
           <h2>{collageImages[1].title}</h2>
         </Link>
 
-        {/* ITEM 3 */}
+        
         <Link to="/Services/Service3" className="collage-item item-3">
           <img src={collageImages[2].img} alt="" />
           <h2>{collageImages[2].title}</h2>
         </Link>
 
-        {/* ITEM 4 (BOTTOM FULL) */}
+        
         <Link to="/Services/Service3" className="collage-item item-4">
           <img src={collageImages[3].img} alt="" />
           <h2>{collageImages[3].title}</h2>
@@ -87,3 +87,93 @@ const Service2 = () => {
 };
 
 export default Service2;
+
+
+
+
+
+
+
+// import React, { useEffect, useState } from "react";
+// import Navbar from "../../components/Layout/Header/Navbar";
+// import Footer from "../../components/Layout/Footer/Footer";
+// import "./Service2.css";
+// import { Link } from "react-router-dom";
+// import API from "../../api/axios";
+
+// import heroBG from "../../../src/assets/Images/header/Header-bg-img.png";
+
+// const Service2 = () => {
+//   const [data, setData] = useState(null);
+
+//   useEffect(() => {
+//     const fetchService2 = async () => {
+//       try {
+//         const res = await API.get("/services/service2");
+//         setData(res.data);
+//       } catch (error) {
+//         console.error("Service2 fetch error", error);
+//       }
+//     };
+
+//     fetchService2();
+//   }, []);
+
+//   if (!data) return null;
+
+//   return (
+//     <>
+//       <Navbar />
+
+//       {/* HERO */}
+//       <div
+//         className="service1-hero"
+//         style={{ backgroundImage: `url(${heroBG})` }}
+//       ></div>
+
+//       {/* BLACK BOX */}
+//       <div className="black-box">
+//         <h2>{data.blackBox.title}</h2>
+//         <p>{data.blackBox.description}</p>
+//       </div>
+
+//       {/* OVERLAP IMAGE */}
+//       <div className="overlap-img-box">
+//         <img
+//           src={`http://localhost:5000${data.overlapImage}`}
+//           alt=""
+//         />
+//       </div>
+
+//       {/* FLEX TEXT */}
+//       <div className="flex-section">
+//         <h2>What We Offer</h2>
+//         <p>
+//           A focused set of engineering services that define how a site functions,
+//           connects and operates.
+//         </p>
+//       </div>
+
+//       {/* COLLAGE – REFERENCE IMAGE PART */}
+//       <div className="collage-wrapper">
+//         {data.collage.map((item, index) => (
+//           <Link
+//             key={item._id}
+//             to="/Services/Service3"
+//             className={`collage-item item-${index + 1}`}
+//           >
+//             <img
+//               src={`http://localhost:5000${item.image}`}
+//               alt={item.title}
+//             />
+//             <h2>{item.title}</h2>
+//           </Link>
+//         ))}
+//       </div>
+
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default Service2;
