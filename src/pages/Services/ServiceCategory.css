@@ -1,40 +1,22 @@
-/* ================= HERO ================= */
-
+/* HERO */
 .service1-hero {
   width: 100%;
-  height: clamp(360px, 38vw, 520px);
+  height: 420px;
   background-size: cover;
   background-position: center;
 }
 
-/* ================= BLACK BOX ================= */
-
+/* BLACK BOX */
 .black-box {
   background: #111;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 24px 20px 220px;
+  padding: 20px 20px 200px;
   position: relative;
   z-index: 1;
 }
 
-.black-box h2 {
-  font-size: clamp(20px, 1.6vw, 26px);
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-top: 20px;
-}
-
-.black-box p {
-  font-size: clamp(15px, 1.1vw, 18px);
-  max-width: 1000px;
-  margin: 12px auto;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-/* ================= OVERLAP IMAGE ================= */
-
+/* OVERLAP IMAGE */
 .overlap-img-box {
   width: 100%;
   display: flex;
@@ -45,60 +27,77 @@
 }
 
 .overlap-img-box img {
-  width: min(85%, 1200px);
-  height: clamp(320px, 32vw, 460px);
-  object-fit: cover;
+  width: 85%;
+  height: 450px;
 }
 
-/* ================= FLEX SECTION ================= */
+/* TEXT */
+.black-box h2 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.black-box p {
+  font-size: 17px;
+  max-width: 900px;
+  margin: 10px auto;
+  opacity: 0.9;
+  line-height: 1.5;
+}
 
 .flex-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 40px auto 20px;
+  flex-direction: column;   
+  align-items: center;      
+  /* text-align: center;        */
+  margin-top: 40px;
+  margin-bottom: 20px;
   gap: 20px;
-  max-width: 1200px;
 }
 
 .flex-section h2 {
-  font-size: clamp(20px, 1.6vw, 26px);
+  font-size: 22px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .flex-section p {
-  font-size: clamp(16px, 1.2vw, 20px);
+  font-size: 20px;
   font-weight: 500;
-  max-width: 95%;
+  max-width: 95%;   
 }
 
-/* ================= COLLAGE ================= */
+
+/* ================ COLLAGE ================ */
 
 .collage-wrapper {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;  /* left slightly bigger */
   grid-template-rows: 1fr 1fr;
-  gap: 24px;
+  gap: 20px;
   padding: 0 20px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   box-sizing: border-box;
 }
 
 .collage-item {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .collage-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.55);
-  transition: 0.35s ease;
+  filter: brightness(0.50);
+  transition: .3s;
 }
 
 .collage-item:hover img {
@@ -107,35 +106,39 @@
 
 .collage-item h2 {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
   font-weight: 800;
-  font-size: clamp(18px, 1.6vw, 24px);
+  font-size: 23px;
   text-align: center;
-  padding: 10px;
+  width: 90%;
 }
 
-/* ================= COLLAGE ITEMS ================= */
-
+/* LEFT BIG */
 .item-1 {
   grid-row: span 2;
-  height: clamp(480px, 40vw, 680px);
+  width: 100%;
+  margin: auto;
+  height: 620px;
 }
 
+/* RIGHT SMALL */
 .item-2,
 .item-3 {
-  height: clamp(220px, 20vw, 320px);
+  width: 100%;
+  height: 300px;
 }
 
+/* BOTTOM FULL */
 .item-4 {
   grid-column: span 2;
-  height: clamp(240px, 22vw, 340px);
+  width: 100%;
+  height: 300px;
 }
 
-/* ================= LAPTOP ================= */
+/* ============= RESPONSIVE ============= */
 
 @media (max-width: 1200px) {
   .collage-wrapper {
@@ -212,3 +215,8 @@
     height: 720px;
   }
 }
+
+
+
+
+
