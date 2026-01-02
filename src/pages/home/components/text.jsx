@@ -30,10 +30,9 @@ const Textbox = () => {
 
       {/* 🔹 Top Big Text */}
       <div className="text-box scroll-up">
+        <h2>From your ideas to smart designs—Architech listens.</h2>
         <p>
-          End-to-end engineering, surveying and planning workflows for construction,<br />
-          infrastructure, industrial and township projects. All processes run on electronic <br />
-          data collection, CAD drafting and modern positioning technology
+          At Architech, every detail counts. From innovative interiors that inspire to engineering solutions that endure,<br /> we’re committed to shaping spaces where design meets precision. Take our survey and help us craft environments <br /> that reflect your vision.
         </p>
       </div>
 

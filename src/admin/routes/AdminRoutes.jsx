@@ -10,9 +10,12 @@ import AddProject from "../pages/projects/AddProject";
 import EditProject from "../pages/projects/EditProject";
 
 
-import ServicesHeroForm from "../pages/services/ServicesHeroForm";
-import ServicesHomeForm from "../pages/services/ServicesHomeForm";
-import ServicesHomeList from "../pages/services/ServicesHomeList";
+// import ServicesHeroForm from "../pages/services/ServicesHeroForm";
+// import ServicesHomeForm from "../pages/services/ServicesHomeForm";
+// import ServicesHomeList from "../pages/services/ServicesHomeList";
+
+import ServiceCategoryList from "../pages/services/ServiceCategoryList";
+import EngineeringList from "../pages/services/EngineeringList";
 
 // Settings
 import ProfileUpdate from "../pages/settings/ProfileUpdate";
@@ -41,12 +44,14 @@ const AdminRoutes = () => {
         <Route path="projects/add" element={<AddProject />} />
         <Route path="projects/edit/:id" element={<EditProject />} />
 
-     <Route path="/admin/services/home" element={<ServicesHomeList />} />
+     {/* <Route path="/admin/services/home" element={<ServicesHomeList />} />
 <Route path="/admin/services/home/add" element={<ServicesHomeForm />} />
 <Route path="/admin/services/home/edit/:id" element={<ServicesHomeForm />} />
-<Route path="/admin/services/home/hero" element={<ServicesHeroForm />} />
+<Route path="/admin/services/home/hero" element={<ServicesHeroForm />} /> */}
 
 
+<Route path="/admin/services/categories" element={<ServiceCategoryList />} />
+<Route path="/admin/services/engineering" element={<EngineeringList />} />
 
 
 
