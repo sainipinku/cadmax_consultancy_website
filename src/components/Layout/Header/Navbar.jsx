@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link to="/" className="nav-link">HOME</Link>
 
                 {/* SERVICES (No Dropdown) */}
-                <Link to="/Services/Service1" className="dropbtn">
+                <Link to="/Services" className="dropbtn">
                     SERVICES
                 </Link>
 

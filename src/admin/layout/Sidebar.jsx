@@ -2,6 +2,7 @@ import {
   LayoutDashboard,
   FolderKanban,
   Layers,
+  Grid,
   LogOut,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -23,55 +24,57 @@ const Sidebar = () => {
       </div>
 
       {/* NAV */}
-      <nav className="flex-1 p-4 space-y-2">
+      <nav className="flex-1 p-4 space-y-6">
+        {/* DASHBOARD */}
         <NavItem
           to="/admin"
           icon={<LayoutDashboard size={18} />}
-          label="Overview"
+          label="Dashboard"
         />
 
-        <div className="mt-6">
+        {/* PROJECTS */}
+        <div>
           <p className="text-xs uppercase text-slate-400 px-3 mb-2">
-            Project
+            Projects
           </p>
-        <NavItem
-          to="/admin/projects"
-          icon={<FolderKanban size={18} />}
-          label="Projects"
-        />
+          <NavItem
+            to="/admin/projects"
+            icon={<FolderKanban size={18} />}
+            label="All Projects"
+          />
         </div>
 
         {/* SERVICES */}
-        <div className="mt-6">
+        <div>
           <p className="text-xs uppercase text-slate-400 px-3 mb-2">
             Services
           </p>
 
-          {/* MASTER LIST */}
+          {/* MASTER SERVICE LIST */}
           <NavItem
             to="/admin/services"
             icon={<Layers size={18} />}
-            label="Service List"
+            label="Service Categories"
           />
 
-          {/* PAGE WISE
+          {/* CATEGORY WISE */}
           <NavItem
-            to="/admin/services/page/1"
-            icon={<Layers size={16} />}
-            label="Service Page One"
-          />
-
-          <NavItem
-            to="/admin/services/page/2"
-            icon={<Layers size={16} />}
-            label="Service Page Two"
+            to="/admin/services/engineering"
+            icon={<Grid size={18} />}
+            label="Engineering"
           />
 
           <NavItem
-            to="/admin/services/page/3"
-            icon={<Layers size={16} />}
-            label="Service Page Three"
-          /> */}
+            to="/admin/services/surveying"
+            icon={<Grid size={18} />}
+            label="Surveying"
+          />
+
+          <NavItem
+            to="/admin/services/planning"
+            icon={<Grid size={18} />}
+            label="Planning"
+          />
         </div>
       </nav>
 
@@ -79,7 +82,8 @@ const Sidebar = () => {
       <div className="p-4 border-t border-slate-700">
         <button
           onClick={handleLogout}
-          className="flex items-center gap-3 w-full px-3 py-2 rounded-lg hover:bg-red-600 text-red-400 hover:text-white"
+          className="flex items-center gap-3 w-full px-3 py-2 rounded-lg
+                     hover:bg-red-600 text-red-400 hover:text-white transition"
         >
           <LogOut size={18} />
           Logout

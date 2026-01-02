@@ -9,7 +9,7 @@ const ServiceList = () => {
 
   const fetchServices = async () => {
     try {
-      const res = await API.get("/services");
+      const res = await API.get("/admin/services");
       setServices(res.data);
     } catch (err) {
       console.error(err);
@@ -23,7 +23,7 @@ const ServiceList = () => {
     if (!window.confirm("Delete this service?")) return;
 
     try {
-      await API.delete(`/services/${id}`);
+      await API.delete(`/admin/services/${id}`);
       fetchServices();
     } catch (err) {
       console.error(err);
@@ -38,7 +38,7 @@ const ServiceList = () => {
   const filteredServices =
     filter === "all"
       ? services
-      : services.filter((s) => s.pageType === filter);
+      : services.filter((s) => s.category === filter);
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm">
@@ -61,10 +61,10 @@ const ServiceList = () => {
           onChange={(e) => setFilter(e.target.value)}
           className="border rounded-lg px-3 py-2"
         >
-          <option value="all">All Pages</option>
-          <option value="service1">Service Page One</option>
-          <option value="service2">Service Page Two</option>
-          <option value="service3">Service Page Three</option>
+          <option value="all">All Categories</option>
+          <option value="engineering">Engineering</option>
+          <option value="surveying">Surveying</option>
+          <option value="planning">Planning</option>
         </select>
       </div>
 
@@ -79,7 +79,7 @@ const ServiceList = () => {
             <tr>
               <th className="p-3 border">Image</th>
               <th className="p-3 border">Title</th>
-              <th className="p-3 border">Page</th>
+              <th className="p-3 border">Category</th>
               <th className="p-3 border">Actions</th>
             </tr>
           </thead>
@@ -89,9 +89,9 @@ const ServiceList = () => {
               <tr key={service._id} className="border-t">
                 <td className="p-3 border">
                   <img
-                    src={service.image}
+                    src={service.thumbnail?.url}
                     alt={service.title}
-                    className="w-16 h-12 object-cover rounded"
+                    className="w-20 h-14 object-cover rounded"
                   />
                 </td>
 
@@ -99,13 +99,11 @@ const ServiceList = () => {
                   {service.title}
                 </td>
 
-                <td className="p-3 border">
-                  {service.pageType === "service1" && "Service Page One"}
-                  {service.pageType === "service2" && "Service Page Two"}
-                  {service.pageType === "service3" && "Service Page Three"}
+                <td className="p-3 border capitalize">
+                  {service.category}
                 </td>
 
-                <td className="p-3 border space-x-3">
+                <td className="p-3 border space-x-4">
                   <Link
                     to={`/admin/services/edit/${service._id}`}
                     className="text-blue-600 hover:underline"

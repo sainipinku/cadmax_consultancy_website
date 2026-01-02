@@ -27,8 +27,9 @@ const EditService = () => {
           image: null,
         });
 
-        if (res.data.image) {
-          setPreview(`http://localhost:5000${res.data.image}`);
+        // ✅ CLOUDINARY IMAGE
+        if (res.data.thumbnail?.url) {
+          setPreview(res.data.thumbnail.url);
         }
 
         setLoading(false);
@@ -59,9 +60,12 @@ const EditService = () => {
       const data = new FormData();
       data.append("title", form.title);
       data.append("description", form.description);
-      if (form.image) data.append("image", form.image);
 
-      await API.put(`/services/${id}`, data);
+      if (form.image) {
+        data.append("image", form.image);
+      }
+
+      await API.put(`/admin/services/${id}`, data);
 
       navigate("/admin/services");
     } catch (error) {

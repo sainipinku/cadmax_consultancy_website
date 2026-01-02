@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
-import "./Service2.css";
+import "./ServiceCategory.css";
 import { Link } from "react-router-dom";
 
 import heroBG from "../../../src/assets/Images/service-page-2/engineer-banner.jpg";
@@ -91,89 +91,3 @@ export default Service2;
 
 
 
-
-
-
-// import React, { useEffect, useState } from "react";
-// import Navbar from "../../components/Layout/Header/Navbar";
-// import Footer from "../../components/Layout/Footer/Footer";
-// import "./Service2.css";
-// import { Link } from "react-router-dom";
-// import API from "../../api/axios";
-
-// import heroBG from "../../../src/assets/Images/header/Header-bg-img.png";
-
-// const Service2 = () => {
-//   const [data, setData] = useState(null);
-
-//   useEffect(() => {
-//     const fetchService2 = async () => {
-//       try {
-//         const res = await API.get("/services/service2");
-//         setData(res.data);
-//       } catch (error) {
-//         console.error("Service2 fetch error", error);
-//       }
-//     };
-
-//     fetchService2();
-//   }, []);
-
-//   if (!data) return null;
-
-//   return (
-//     <>
-//       <Navbar />
-
-//       {/* HERO */}
-//       <div
-//         className="service1-hero"
-//         style={{ backgroundImage: `url(${heroBG})` }}
-//       ></div>
-
-//       {/* BLACK BOX */}
-//       <div className="black-box">
-//         <h2>{data.blackBox.title}</h2>
-//         <p>{data.blackBox.description}</p>
-//       </div>
-
-//       {/* OVERLAP IMAGE */}
-//       <div className="overlap-img-box">
-//         <img
-//           src={`http://localhost:5000${data.overlapImage}`}
-//           alt=""
-//         />
-//       </div>
-
-//       {/* FLEX TEXT */}
-//       <div className="flex-section">
-//         <h2>What We Offer</h2>
-//         <p>
-//           A focused set of engineering services that define how a site functions,
-//           connects and operates.
-//         </p>
-//       </div>
-
-//       {/* COLLAGE – REFERENCE IMAGE PART */}
-//       <div className="collage-wrapper">
-//         {data.collage.map((item, index) => (
-//           <Link
-//             key={item._id}
-//             to="/Services/Service3"
-//             className={`collage-item item-${index + 1}`}
-//           >
-//             <img
-//               src={`http://localhost:5000${item.image}`}
-//               alt={item.title}
-//             />
-//             <h2>{item.title}</h2>
-//           </Link>
-//         ))}
-//       </div>
-
-//       <Footer />
-//     </>
-//   );
-// };
-
-// export default Service2;

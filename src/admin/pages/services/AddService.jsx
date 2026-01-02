@@ -8,8 +8,9 @@ const AddService = () => {
   const [form, setForm] = useState({
     title: "",
     description: "",
-    image: null,
-    pageType: "service1", // 👈 IMPORTANT
+    category: "engineering",
+    type: "sub-service",
+    thumbnail: null
   });
 
   const [loading, setLoading] = useState(false);
@@ -17,28 +18,25 @@ const AddService = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!form.title || !form.image) {
-      alert("Title and Image are required");
+    if (!form.title || !form.thumbnail) {
+      alert("Title & image required");
       return;
     }
 
+    const data = new FormData();
+    data.append("title", form.title);
+    data.append("description", form.description);
+    data.append("category", form.category);
+    data.append("type", form.type);
+    data.append("thumbnail", form.thumbnail);
+
     try {
       setLoading(true);
-
-      const data = new FormData();
-      data.append("title", form.title);
-      data.append("description", form.description);
-      data.append("image", form.image);
-      data.append("pageType", form.pageType); // 👈 SEND TO BACKEND
-
-      
-      await API.post("/services", data);
-
-
+      await API.post("/admin/services", data);
       navigate("/admin/services");
-    } catch (error) {
-      console.error(error);
-      alert("Failed to add service");
+    } catch (err) {
+      console.log(err);
+      alert("Failed to save");
     } finally {
       setLoading(false);
     }
@@ -49,17 +47,18 @@ const AddService = () => {
       <h1 className="text-xl font-semibold mb-6">Add Service</h1>
 
       <form onSubmit={handleSubmit} className="space-y-5">
-        {/* SERVICE PAGE */}
+
+        {/* CATEGORY */}
         <select
           className="w-full border rounded-lg p-3"
-          value={form.pageType}
+          value={form.category}
           onChange={(e) =>
-            setForm({ ...form, pageType: e.target.value })
+            setForm({ ...form, category: e.target.value })
           }
         >
-          <option value="service1">Service Page One</option>
-          <option value="service2">Service Page Two</option>
-          <option value="service3">Service Page Three</option>
+          <option value="engineering">Engineering</option>
+          <option value="surveying">Surveying</option>
+          <option value="planning">Planning</option>
         </select>
 
         {/* TITLE */}
@@ -75,7 +74,7 @@ const AddService = () => {
 
         {/* DESCRIPTION */}
         <textarea
-          placeholder="Short Description"
+          placeholder="Description"
           rows="4"
           className="w-full border rounded-lg p-3"
           value={form.description}
@@ -84,33 +83,21 @@ const AddService = () => {
           }
         />
 
-        {/* IMAGE */}
+        {/* THUMBNAIL */}
         <input
           type="file"
           accept="image/*"
-          className="w-full"
           onChange={(e) =>
-            setForm({ ...form, image: e.target.files[0] })
+            setForm({ ...form, thumbnail: e.target.files[0] })
           }
         />
 
-        <div className="flex gap-3">
-          <button
-            type="submit"
-            disabled={loading}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg disabled:opacity-60"
-          >
-            {loading ? "Saving..." : "Save Service"}
-          </button>
-
-          <button
-            type="button"
-            onClick={() => navigate(-1)}
-            className="border px-6 py-2 rounded-lg"
-          >
-            Cancel
-          </button>
-        </div>
+        <button
+          disabled={loading}
+          className="bg-blue-600 text-white px-6 py-2 rounded-lg"
+        >
+          {loading ? "Saving..." : "Save"}
+        </button>
       </form>
     </div>
   );
