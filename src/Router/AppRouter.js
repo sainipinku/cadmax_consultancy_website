@@ -37,9 +37,7 @@ export default function AppRouter() {
         <Route path="/Services/electricity" element={<Electricity1 />} />
         <Route path="/Services/roadNetwork" element={<Roadnetwork />} />
         <Route path="/Services/waterSupply" element={<Watersupply />} />
-        {/* <Route path="/services" element={<Services />} />
-<Route path="/services/:category" element={<ServiceCategory />} />
-<Route path="/services/:category/:slug" element={<ServiceDetail />} /> */}
+       
         <Route path="/projects" element={<Project />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
