@@ -28,7 +28,7 @@
 
 .overlap-img-box img {
   width: 85%;
-  height: 450px;
+  height: 600px;
 }
 
 /* TEXT */
@@ -139,6 +139,17 @@
 }
 
 /* ============= RESPONSIVE ============= */
+
+@media (min-width: 1600px) {
+  .collage-wrapper {
+    max-width: 1600px;
+  }
+
+  .item-1 {
+    height: 720px;
+  }
+}
+
 
 @media (max-width: 992px) {
   .collage-wrapper {
