@@ -1,5 +1,5 @@
 import React from "react";
-import heroBG from "../../../assets/Images/service-page-2/water-supply.jpg";
+import heroBG from "../../../assets/Images/service-page-2/watersupply-banner.jpeg";
 import Navbar from "../../../components/Layout/Header/Navbar";
 import Footer from "../../../components/Layout/Footer/Footer";
 import WorkSlider from "../../../components/common/slider/SliderSection";

@@ -1,5 +1,5 @@
 import React from "react";
-import heroBG from "../../..//assets/Images/service-page-2/ELECTRICITY.jpg";
+import heroBG from "../../..//assets/Images/service-page-2/elecrticity-banner.jpeg";
 import Navbar from "../../../components/Layout/Header/Navbar";
 import Footer from "../../../components/Layout/Footer/Footer";
 import img1 from "../../../assets/Images/service-page-3/collage-img.png";
