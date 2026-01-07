@@ -1,56 +1,84 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
-import "./Services.css";
-import { Link } from "react-router-dom";
+import API from "../../api/axios";
 
-
-import heroBG from "../../../src/assets/Images/service-page-1/service-banner.jpg";
-import img1 from "../../assets/Images/service-page-1/engineer-img.jpg";
-import img2 from "../../assets/Images/service-page-1/service2.png";
-import img3 from "../../assets/Images/service-page-1/service3.png";
 
 const Service1 = () => {
-    return (
-        <> 
-            <Navbar />
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-           
-            <div
-                className="service1-hero"
-                style={{ backgroundImage: `url(${heroBG})` }}
-            >
-            </div>
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const res = await API.get("/categories");
+        setCategories(res.data); // ✅ FIX HERE
+        console.log(res.data, "categories");
+      } catch (error) {
+        console.error("Failed to load services", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-           
-            <div className="service1-grid slide-in">
+    fetchCategories();
+  }, []);
 
-               
-                <Link to="/Services/ServiceCategory" className="service1-card-1 delay-1">
-                    <img src={img1} alt="service" />
-                    <div className="card-text">engineering</div>
-                </Link>
+  return (
+    <>
+      <Navbar />
 
-               
-                <Link to="/Services/ServiceCategory" className="service1-card-1 delay-2">
-                    <img src={img2} alt="service" />
-                    <div className="card-text">surveying</div>
-                </Link>
+      {/* HERO */}
+      <div
+        className="w-full h-[400px] bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url(/assets/Images/service-page-1/service-banner.jpg)",
+        }}
+      />
 
-                
-                <Link to="/Services/ServiceCategory" className="service1-card-1 delay-3">
-                    <img src={img3} alt="service" />
-                    <div className="card-text">planning</div>
-                </Link>
+      {/* GRID */}
+      <div className="max-w-[1300px] mx-auto px-5 py-12">
+        {loading ? (
+          <p className="text-center text-lg">Loading services...</p>
+        ) : (
+          <div className="flex flex-wrap justify-center gap-6">
+            {categories.map((item, index) => (
+              <Link
+                key={item._id}
+                to={`/services/${item.slug}`}
+                className="group relative w-full sm:w-[48%] lg:w-[32%] max-w-[390px]
+                           overflow-hidden rounded-lg  animate-slideIn"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {/* IMAGE */}
+                <img
+                  src={item.image?.url}
+                  alt={item.name}
+                  className="w-full h-[420px] object-cover transition-transform
+                             duration-500 group-hover:scale-110"
+                />
 
-            </div>
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/45
+                                group-hover:bg-black/10 transition-all duration-300" />
 
-            <Footer />
-        </>
-    );
+                {/* TEXT */}
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <h2 className="text-white text-2xl md:text-3xl font-extrabold uppercase text-center drop-shadow-lg">
+                    {item.name}
+                  </h2>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <Footer />
+    </>
+  );
 };
 
 export default Service1;
-
-
-

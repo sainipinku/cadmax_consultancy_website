@@ -11,9 +11,10 @@ const Login = () => {
     e.preventDefault();
 
     if (email === "admin@cadmax.com" && password === "admin123") {
-      localStorage.setItem("isAdminAuth", "true");
-      navigate("/admin", { replace: true });
-      window.location.reload();
+      localStorage.setItem("isAdminAuth", "true"); // ✅ string
+      localStorage.setItem("adminToken", "dummy-admin-token"); // ✅ optional but recommended
+
+      navigate("/admin", { replace: true }); // ✅ enough
     } else {
       alert("Invalid credentials");
     }
@@ -22,12 +23,10 @@ const Login = () => {
   return (
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center relative"
-     style={{ backgroundImage: `url(${img})` }}
+      style={{ backgroundImage: `url(${img})` }}
     >
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* Glass Card */}
       <form
         onSubmit={handleLogin}
         className="relative z-10 w-96 p-8 rounded-2xl
@@ -36,11 +35,11 @@ const Login = () => {
                    shadow-2xl"
       >
         <h3 className="text-2xl font-bold mb-3 text-center text-white">
-         Cadmax Consultancy  
+          Cadmax Consultancy
         </h3>
 
-        <p className=" font-bold mb-6 text-center text-white">
-         Login to your Account 
+        <p className="font-bold mb-6 text-center text-white">
+          Login to your Account
         </p>
 
         <input
@@ -64,13 +63,16 @@ const Login = () => {
         />
 
         <button
+          type="submit"
           className="w-full py-2 rounded font-semibold
                      bg-white text-slate-900 hover:bg-slate-200 transition"
         >
           Login
         </button>
-       <p className="  mb-6 text-right pt-3 cursor-pointer text-white">forgot password ?</p>
-      
+
+        <p className="mb-6 text-right pt-3 cursor-pointer text-white">
+          forgot password ?
+        </p>
       </form>
     </div>
   );

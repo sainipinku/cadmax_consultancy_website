@@ -91,3 +91,68 @@ export default Service2;
 
 
 
+
+
+
+
+// import React, { useEffect, useState } from "react";
+// import Navbar from "../../components/Layout/Header/Navbar";
+// import Footer from "../../components/Layout/Footer/Footer";
+// import { Link, useParams } from "react-router-dom";
+// import { getSubCategoriesByCategory } from "../../api/subCategory.api";
+
+// const ServiceCategory = () => {
+//   const { categoryId } = useParams();
+//   const [category, setCategory] = useState(null);
+//   const [subCats, setSubCats] = useState([]);
+
+//   useEffect(() => {
+//     getSubCategoriesByCategory(categoryId).then(res => {
+//       setCategory(res?.data?.category);
+//       setSubCats(res?.data?.subCategories || []);
+//     });
+//   }, [categoryId]);
+
+//   return (
+//     <>
+//       <Navbar />
+
+//       {/* HERO */}
+//       <div
+//         className="service1-hero"
+//         style={{ backgroundImage: `url(${category?.Image})` }}
+//       />
+
+//       {/* BLACK BOX */}
+//       <div className="black-box">
+//         <h2>{category?.name}</h2>
+//         <p>{category?.description}</p>
+//       </div>
+
+//       {/* OVERLAP IMAGE */}
+//       {category?.Image && (
+//         <div className="overlap-img-box">
+//           <img src={category.Image} alt="" />
+//         </div>
+//       )}
+
+//       {/* COLLAGE */}
+//       <div className="collage-wrapper">
+//         {subCats.map((item, i) => (
+//           <Link
+//             key={item._id}
+//             to={`/services/${categoryId}/${item._id}`}
+//             className={`collage-item item-${i + 1}`}
+//           >
+//             <img src={item.Image} alt={item.name} />
+//             <h2>{item.name}</h2>
+//           </Link>
+//         ))}
+//       </div>
+
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default ServiceCategory;

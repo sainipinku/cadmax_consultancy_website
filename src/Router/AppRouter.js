@@ -25,11 +25,23 @@ import AdminRoutes from "../admin/routes/AdminRoutes";
 
 
 
+// import Services from "../pages/Services/Services";
+// import ServiceSubCategory from "../pages/Services/ServiceSubCategory";
+
+
+
+
+
+
+
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+
+
         <Route path="/Services" element={<Services />} />
         <Route path="/Services/ServiceCategory" element={<ServiceCategory />} />
         <Route path="/Services/Service3" element={<Service3 />} />
@@ -48,6 +60,24 @@ export default function AppRouter() {
         {/* admin */}
 
         <Route path="/*" element={<AdminRoutes />} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 
+        <Route path="/services" element={<Services />} />
+<Route path="/services/:categoryId" element={<ServiceSubCategory />} /> */}
 
 
       </Routes>
