@@ -2,10 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "./Hero.css";
 
-import img1 from "../../../assets/Images/header/home-slider1.jpg";
-import img2 from "../../../assets/Images/header/home-slider2.jpg";
-import img3 from "../../../assets/Images/header/home-slider3.jpg";
-import img4 from "../../../assets/Images/header/home-slider4.jpg";
+import img1 from "../../../assets/Images/header/home-banner.jpg";
+import img2 from "../../../assets/Images/header/home-slider1.jpg";
+import img3 from "../../../assets/Images/header/home-slider2.jpg";
+import img4 from "../../../assets/Images/header/home-banner-img.jpg";
+
+
 
 const Hero = () => {
   const sliderImages = [img1, img2, img3, img4];

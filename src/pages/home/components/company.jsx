@@ -103,7 +103,7 @@ const CompanyShowcase = () => {
         ref={sectionRef}
       >
         <h2 className="company-left-heading slide-text">
-          Aligned Technology Partners
+          Clients who inspire us
         </h2>
 
         <h3 className="company-right-heading slide-text">

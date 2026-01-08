@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
-import "./ServiceCategory.css";
+import "./Engineering.css";
 import { Link } from "react-router-dom";
 
 import heroBG from "../../../src/assets/Images/service-page-2/engineer-banner.jpg";
@@ -12,7 +12,7 @@ import collage2 from "../../../src/assets/Images/service-page-2/road-network.jpg
 import collage3 from "../../../src/assets/Images/service-page-2/water-supply.jpg";
 import collage4 from "../../../src/assets/Images/service-page-2/ELECTRICITY.jpg";
 
-const Service2 = () => {
+const Engineering = () => {
 
 
   const collageImages = [
@@ -86,7 +86,7 @@ const Service2 = () => {
   );
 };
 
-export default Service2;
+export default Engineering;
 
 
 
@@ -101,7 +101,7 @@ export default Service2;
 // import { Link, useParams } from "react-router-dom";
 // import { getSubCategoriesByCategory } from "../../api/subCategory.api";
 
-// const ServiceCategory = () => {
+// const Engineering = () => {
 //   const { categoryId } = useParams();
 //   const [category, setCategory] = useState(null);
 //   const [subCats, setSubCats] = useState([]);
@@ -155,4 +155,4 @@ export default Service2;
 //   );
 // };
 
-// export default ServiceCategory;
+// export default Engineering;
