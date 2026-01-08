@@ -1,19 +1,42 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { createCategory, updateCategory } from "../../api/category.api";
 
 const CategoryForm = ({ editData, onClose, refresh }) => {
   const fileRef = useRef(null);
 
   const [form, setForm] = useState({
-    name: editData?.name || "",
+    name: "",
     image: null,
   });
 
+  const [preview, setPreview] = useState(null);
+
+  /* ================= PREFILL ON EDIT ================= */
+  useEffect(() => {
+    if (editData) {
+      setForm({
+        name: editData.name || "",
+        image: null,
+      });
+      setPreview(editData.image?.url || null);
+    }
+  }, [editData]);
+
+  /* ================= IMAGE CHANGE ================= */
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setForm({ ...form, image: file });
+    setPreview(URL.createObjectURL(file));
+  };
+
+  /* ================= SUBMIT ================= */
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // 🚨 image required when creating
+      // 🚨 image required only on CREATE
       if (!editData && !form.image) {
         alert("Please select an image");
         return;
@@ -32,8 +55,9 @@ const CategoryForm = ({ editData, onClose, refresh }) => {
         await createCategory(fd);
       }
 
-      // ✅ RESET FORM AFTER SUCCESS
+      // ✅ RESET
       setForm({ name: "", image: null });
+      setPreview(null);
       if (fileRef.current) fileRef.current.value = "";
 
       refresh();
@@ -52,7 +76,7 @@ const CategoryForm = ({ editData, onClose, refresh }) => {
         </h3>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* SECTION NAME */}
+          {/* NAME */}
           <input
             className="w-full border rounded px-3 py-2"
             placeholder="Section Name"
@@ -63,14 +87,23 @@ const CategoryForm = ({ editData, onClose, refresh }) => {
             required
           />
 
+          {/* IMAGE PREVIEW */}
+          {preview && (
+            <div className="flex justify-center">
+              <img
+                src={preview}
+                alt="Preview"
+                className="h-24 w-24 object-cover rounded border"
+              />
+            </div>
+          )}
+
           {/* IMAGE UPLOAD */}
           <input
             ref={fileRef}
             type="file"
             accept="image/*"
-            onChange={(e) =>
-              setForm({ ...form, image: e.target.files[0] })
-            }
+            onChange={handleImageChange}
           />
 
           {/* ACTIONS */}
@@ -79,7 +112,7 @@ const CategoryForm = ({ editData, onClose, refresh }) => {
               Cancel
             </button>
             <button className="bg-blue-600 text-white px-4 py-2 rounded">
-              Save
+              {editData ? "Update" : "Save"}
             </button>
           </div>
         </form>

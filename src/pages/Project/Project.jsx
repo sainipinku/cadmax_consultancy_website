@@ -155,6 +155,8 @@ export default Project;
 
 
 
+
+
 // import React, { useEffect, useState } from "react";
 // import "./Project.css";
 // import Navbar from "../../components/Layout/Header/Navbar";
@@ -185,6 +187,7 @@ export default Project;
 //         console.error("Project fetch error", error);
 //       }
 //     };
+
 //     fetchProjects();
 //   }, []);
 
@@ -193,9 +196,9 @@ export default Project;
 //     setVisibleCount(12);
 //   }, [activeTab]);
 
-//   /* ================= FILTER ================= */
+//   /* ================= FILTER PROJECTS ================= */
 //   const filteredProjects = projects.filter(
-//     (item) => item.category === activeTab
+//     (item) => item.category?.toUpperCase() === activeTab
 //   );
 
 //   return (
@@ -229,7 +232,7 @@ export default Project;
 //         {/* GRID */}
 //         <div className="project-grid">
 //           {filteredProjects.length === 0 && (
-//             <p style={{ textAlign: "center", gridColumn: "1/-1" }}>
+//             <p style={{ textAlign: "center", gridColumn: "1 / -1" }}>
 //               No projects found in this category.
 //             </p>
 //           )}
@@ -238,7 +241,7 @@ export default Project;
 //             <div className="project-card" key={item._id}>
 //               <div className="img-box">
 //                 <img
-//                   src={`http://localhost:5000${item.image}`}
+//                   src={item.image}  
 //                   alt={item.title}
 //                   className="project-img"
 //                 />
@@ -260,9 +263,7 @@ export default Project;
 //         {visibleCount < filteredProjects.length && (
 //           <button
 //             className="load-more"
-//             onClick={() =>
-//               setVisibleCount((prev) => prev + 12)
-//             }
+//             onClick={() => setVisibleCount((prev) => prev + 12)}
 //           >
 //             LOAD MORE
 //           </button>

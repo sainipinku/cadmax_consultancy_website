@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   addSubCategory,
   updateSubCategory,
@@ -14,17 +14,48 @@ const SubCategoryForm = ({ onClose, refresh, editData }) => {
     status: true,
   });
 
+  const [imagePreview, setImagePreview] = useState(null);
+
+  /* ================= PREFILL ON EDIT ================= */
+  useEffect(() => {
+    if (editData) {
+      setForm({
+        service: editData.service || "",
+        sectionType: editData.sectionType || "",
+        title: editData.title || "",
+        link: editData.link || "",
+        image: null, // ❗ file yahan nahi bharte
+        status: editData.status ?? true,
+      });
+
+      setImagePreview(editData.image?.url || null);
+    }
+  }, [editData]);
+
+  /* ================= IMAGE CHANGE ================= */
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setForm({ ...form, image: file });
+    setImagePreview(URL.createObjectURL(file));
+  };
+
+  /* ================= SUBMIT ================= */
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const fd = new FormData();
-    fd.append("service", form.service);        // engineering
-    fd.append("sectionType", form.sectionType); // hero / overlap / collage
+    fd.append("service", form.service);
+    fd.append("sectionType", form.sectionType);
     fd.append("title", form.title);
     fd.append("link", form.link);
     fd.append("status", form.status);
 
-    if (form.image) fd.append("image", form.image);
+    // 🔥 image sirf tab bhejo jab nayi select ho
+    if (form.image) {
+      fd.append("image", form.image);
+    }
 
     if (editData) {
       await updateSubCategory(editData._id, fd);
@@ -40,7 +71,7 @@ const SubCategoryForm = ({ onClose, refresh, editData }) => {
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-md rounded-xl p-6">
         <h3 className="text-xl font-bold mb-4">
-          Add Service Content
+          {editData ? "Edit Service Content" : "Add Service Content"}
         </h3>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -77,7 +108,7 @@ const SubCategoryForm = ({ onClose, refresh, editData }) => {
             </select>
           )}
 
-          {/* COLLAGE EXTRA FIELDS */}
+          {/* COLLAGE FIELDS */}
           {form.sectionType === "collage" && (
             <>
               <input
@@ -91,7 +122,7 @@ const SubCategoryForm = ({ onClose, refresh, editData }) => {
                 required
               />
 
-              <input
+              {/* <input
                 type="text"
                 placeholder="Page Link ( /services/maingate )"
                 className="w-full border px-3 py-2 rounded"
@@ -100,17 +131,24 @@ const SubCategoryForm = ({ onClose, refresh, editData }) => {
                   setForm({ ...form, link: e.target.value })
                 }
                 required
-              />
+              /> */}
             </>
           )}
 
-          {/* IMAGE */}
+          {/* IMAGE PREVIEW */}
+          {imagePreview && (
+            <img
+              src={imagePreview}
+              className="w-full h-40 object-cover rounded"
+              alt="preview"
+            />
+          )}
+
+          {/* IMAGE INPUT */}
           <input
             type="file"
-            required
-            onChange={(e) =>
-              setForm({ ...form, image: e.target.files[0] })
-            }
+            onChange={handleImageChange}
+            required={!editData} // 🔥 add ke time required, edit me optional
           />
 
           {/* STATUS */}

@@ -107,7 +107,8 @@ const CompanyShowcase = () => {
         </h2>
 
         <h3 className="company-right-heading slide-text">
-          Each discipline is handled by teams trained to convert field conditions into design-ready data.
+          At Architech Company, our clients are our greatest inspiration.
+Their vision drives every design we create.
         </h3>
       </div>
 

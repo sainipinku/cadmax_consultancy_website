@@ -11,6 +11,7 @@ import collage1 from "../../../src/assets/Images/service-page-2/main-gate.jpg";
 import collage2 from "../../../src/assets/Images/service-page-2/road-network.jpg";
 import collage3 from "../../../src/assets/Images/service-page-2/water-supply.jpg";
 import collage4 from "../../../src/assets/Images/service-page-2/ELECTRICITY.jpg";
+import collage5 from "../../../src/assets/Images/service-page-2/rainwater-harvesting.jpg";
 
 const Engineering = () => {
 
@@ -19,7 +20,8 @@ const Engineering = () => {
     { img: collage1, title: "MAINGATE AND BOUNDARY CONSTRUCTION" },
     { img: collage2, title: "ROAD NETWORK" },
     { img: collage3, title: "WATER SUPPLY" },
-    { img: collage4, title: "ELECTRICITY" }
+    { img: collage4, title: "ELECTRICITY" },
+     { img: collage5, title: "SEWER AND RAIN WATER HARVESTING" }
   ];
 
   return (
@@ -78,6 +80,11 @@ const Engineering = () => {
           <h2>{collageImages[3].title}</h2>
         </Link>
 
+        <Link to="/Services/electricity" className="collage-item item-4">
+          <img src={collageImages[4].img} alt="" />
+          <h2>{collageImages[4].title}</h2>
+        </Link>
+
       </div>
 
 
@@ -93,59 +100,106 @@ export default Engineering;
 
 
 
+// import { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
+// import API from "../../api/axios";
 
-
-// import React, { useEffect, useState } from "react";
 // import Navbar from "../../components/Layout/Header/Navbar";
 // import Footer from "../../components/Layout/Footer/Footer";
-// import { Link, useParams } from "react-router-dom";
-// import { getSubCategoriesByCategory } from "../../api/subCategory.api";
+// import "./Engineering.css";
 
 // const Engineering = () => {
-//   const { categoryId } = useParams();
-//   const [category, setCategory] = useState(null);
-//   const [subCats, setSubCats] = useState([]);
+//   const [hero, setHero] = useState(null);
+//   const [overlap, setOverlap] = useState(null);
+//   const [collage, setCollage] = useState([]);
+
+
+//    const collageLinks = [
+//     "/Services/maingate",
+//     "/Services/roadNetwork",
+//     "/Services/waterSupply",
+//     "/Services/electricity",
+//   ];
+
+//   const loadData = async () => {
+//     try {
+//       const res = await API.get(
+//         "/subcategories?service=engineering&status=true"
+//       );
+
+//       const data = res.data.data; // ⚠️ important
+
+//       setHero(data.find((i) => i.sectionType === "hero"));
+//       setOverlap(data.find((i) => i.sectionType === "overlap"));
+//       setCollage(data.filter((i) => i.sectionType === "collage"));
+//     } catch (err) {
+//       console.error("ENGINEERING LOAD ERROR:", err);
+//     }
+//   };
 
 //   useEffect(() => {
-//     getSubCategoriesByCategory(categoryId).then(res => {
-//       setCategory(res?.data?.category);
-//       setSubCats(res?.data?.subCategories || []);
-//     });
-//   }, [categoryId]);
+//     loadData();
+//   }, []);
 
 //   return (
 //     <>
 //       <Navbar />
 
-//       {/* HERO */}
-//       <div
-//         className="service1-hero"
-//         style={{ backgroundImage: `url(${category?.Image})` }}
-//       />
+//       {/* HERO IMAGE (DYNAMIC) */}
+//       {hero && (
+//         <div
+//           className="service1-hero"
+//           style={{ backgroundImage: `url(${hero.image.url})` }}
+//         />
+//       )}
 
-//       {/* BLACK BOX */}
+//       {/* STATIC TEXT */}
 //       <div className="black-box">
-//         <h2>{category?.name}</h2>
-//         <p>{category?.description}</p>
+//         <h2>Where imagination meets structure</h2>
+//         <p>
+//           Turning concepts into concrete reality, our engineering team works hand
+//           in hand with architectural vision to design, plan, and build spaces
+//           that are strong, functional, and timeless. Every detail reflects
+//           precision, collaboration, and a commitment to quality that shapes
+//           structures built to serve generations.
+//         </p>
 //       </div>
 
-//       {/* OVERLAP IMAGE */}
-//       {category?.Image && (
+//       {/* OVERLAP IMAGE (DYNAMIC) */}
+//       {overlap && (
 //         <div className="overlap-img-box">
-//           <img src={category.Image} alt="" />
+//           <img src={overlap.image.url} alt="" />
 //         </div>
 //       )}
 
-//       {/* COLLAGE */}
+//       {/* STATIC TEXT */}
+//       <div className="flex-section">
+//         <h2>What We Offer</h2>
+//         <p>
+//           An architectural and engineering company plays a vital role in planning
+//           and designing essential infrastructure such as water supply systems,
+//           road networks, and electricity distribution. Engineers in the company
+//           analyze site conditions, safety standards, and community needs to
+//           design reliable water supply systems that ensure clean and efficient
+//           delivery. They also plan and develop road networks that support smooth
+//           transportation, proper drainage, and long-term durability. In addition,
+//           electrical engineers design and coordinate electricity layouts to
+//           ensure safe, efficient, and sustainable power distribution. Together,
+//           these services contribute to well-organized, functional, and
+//           sustainable built environments.
+//         </p>
+//       </div>
+
+//       {/* COLLAGE (DYNAMIC) */}
 //       <div className="collage-wrapper">
-//         {subCats.map((item, i) => (
+//         {collage.map((item, index) => (
 //           <Link
 //             key={item._id}
-//             to={`/services/${categoryId}/${item._id}`}
-//             className={`collage-item item-${i + 1}`}
+//             to={collageLinks[index]}   // ✅ STATIC LINK
+//             className={`collage-item item-${index + 1}`}
 //           >
-//             <img src={item.Image} alt={item.name} />
-//             <h2>{item.name}</h2>
+//             <img src={item.image.url} alt={item.title} />
+//             <h2>{item.title}</h2>
 //           </Link>
 //         ))}
 //       </div>
@@ -156,3 +210,4 @@ export default Engineering;
 // };
 
 // export default Engineering;
+
