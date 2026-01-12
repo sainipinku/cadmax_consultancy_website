@@ -24,67 +24,66 @@ const Project = () => {
     {
       img: image1,
       title: "HOMELAND GROUP – KESHAV VATSALYA",
-      desc: "Located at Aryer Road, client Moti Son's Jewelers area 900 Hect.",
+      
     },
     {
       img: image2,
       title: "HAPPY HOMES – ALWAR SCHEME",
-      desc: "Located in the heart of the desert, a tranquil retreat with 151 Hect. for outdoor activities.",
+      
     },
     {
       img: image3,
       title: "MADHAV MARKET - KALWAR ROAD",
-      desc: "A serene community surrounded by lush forests, offering 210 Hect. of green space.",
+     
     },
     {
       img: image4,
       title: "NATURE HOME TULSI",
-      desc: "An upscale neighborhood on the outskirts of the city featuring 340 Hect. of premium real estate.",
+      
     },
     {
       img: image5,
       title: "SONAMATI FARMS",
-      desc: "A picturesque area known for rolling hills and vibrant wildlife, encompassing 120 Hect.",
+     
     },
     {
       img: image6,
       title: "MUKUNDAM HOMELAND",
-      desc: "A beautiful lakeside area perfect for fishing and boating. Covering 150 Hect.",
     },
     {
       img: image7,
       title: "NAIWALA SCHEME",
-      desc: "A community famous for its autumn foliage, with 220 Hect dedicated to parks and recreation.",
+     
     },
     {
       img: image8,
       title: "SANDEEP PRABHAKER VILLA",
-      desc: "A mountain enclave offering stunning views, covering 180 Hect.",
+     
     },
     {
       img: image9,
       title: "SUNRISE APARTMENT",
-      desc: "A beautifully planned residential township featuring mid-rise apartment blocks surrounded by lush green landscapes.",
+      
     },
     {
       img: image10,
       title: "SWASTIK RESIDENCY - PAWALIYA",
-      desc: "A beautifully planned residential township featuring mid-rise apartment blocks surrounded by lush green landscapes.",
+      
     },
     {
       img: image11,
       title: "YADURAJ ENCLAVE JAICHANDPURA",
-      desc: "A beautifully planned residential township featuring mid-rise apartment blocks surrounded by lush green landscapes.",
+     
     },
     {
       img: image12,
       title: "HOLIDAY FARMS",
-      desc: "A beautifully planned residential township featuring mid-rise apartment blocks surrounded by lush green landscapes.",
+      
     },
     {
       img: image13,
       title: "RIYASAT OFFICE SPACE",
-      desc: "A beautifully planned residential township featuring mid-rise apartment blocks surrounded by lush green landscapes.",
+      
     },
   ];
 
@@ -129,7 +128,6 @@ const Project = () => {
 
               <div className="project-content">
                 <h3>{item.title}</h3>
-                <p>{item.desc}</p>
               </div>
             </div>
           ))}
@@ -156,6 +154,8 @@ export default Project;
 
 
 
+
+ //  dynamic page here ====>  //
 
 // import React, { useEffect, useState } from "react";
 // import "./Project.css";

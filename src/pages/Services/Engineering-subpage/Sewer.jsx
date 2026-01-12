@@ -1,22 +1,29 @@
 import React from "react";
-import heroBG from "../../..//assets/Images/service-page-2/elecrticity-banner.jpeg";
+import heroBG from "../../../assets/Images/service-page-2/sewer-img4.jpeg";
 import Navbar from "../../../components/Layout/Header/Navbar";
 import Footer from "../../../components/Layout/Footer/Footer";
-import img1 from "../../../assets/Images/service-page-3/collage-img.png";
-//slider-part
 import WorkSlider from "../../../components/common/slider/ourworkSlider";
-import img2 from "../../../assets/Images/service-page-2/electricity1.jpg";
-import img3 from "../../../assets/Images/service-page-2/electricity2.jpg";
-import img4 from "../../../assets/Images/service-page-2/electricity3.jpg";
-import img5 from "../../../assets/Images/service-page-2/electricity4.jpg";
-import img6 from "../../../assets/Images/service-page-2/electricity5.jpg";
+import img1 from "../../../assets/Images/service-page-3/collage-img.png";
 
 
-   
- 
 
 
-const Electricity1 = () => {
+import img2 from "../../../assets/Images/service-page-2/sewer-img2.jpeg";
+import img3 from "../../../assets/Images/service-page-2/sewer-img3.jpeg";
+import img4 from "../../../assets/Images/service-page-2/sewer-img4.jpeg";
+import img5 from "../../../assets/Images/service-page-2/sewer-img5.jpeg";
+import img6 from "../../../assets/Images/service-page-2/sewer-img6.jpeg";
+import img7 from "../../../assets/Images/service-page-2/sewer-img7.jpeg";
+import img8 from "../../../assets/Images/service-page-2/sewer-img8.jpeg";
+import img9 from "../../../assets/Images/service-page-2/sewer-img1.jpeg";
+
+
+
+
+
+
+
+const Sewer = () => {
   return (
     <>
       <Navbar />
@@ -60,22 +67,27 @@ const Electricity1 = () => {
         </div>
       </section>
 
-       <WorkSlider
-      prefix="electricity"
+     
+    <WorkSlider
+      prefix="sewer"
       slides={[
-       
-  { url: img2, title: "INDUSTRIAL POWER NETWORK " },
-  { url: img3, title: "POWER SUBSTATION PROJECT" },
-  { url: img4, title: "ELECTRICAL GRID INFRASTRUCTURE" },
-  { url: img5, title: "ELECTRICITY DISTRIBUTION SYSTEM" },
-  { url: img6, title: " HIGH VOLTAGE TRANSMISSION LINE" },
+        { url: img2, title: "SEWER AND RAIN WATER HARVESTING" },
+        { url: img3, title: "SEWER AND RAIN WATER HARVESTING" },
+        { url: img4, title: "SEWER AND RAIN WATER HARVESTING" },
+        { url: img5, title: "SEWER AND RAIN WATER HARVESTING" },
+        { url: img6, title: "SEWER AND RAIN WATER HARVESTING" },
+        { url: img7, title: "SEWER AND RAIN WATER HARVESTING" },
+        { url: img8, title: "SEWER AND RAIN WATER HARVESTING" },
+        { url: img9, title: "SEWER AND RAIN WATER HARVESTING" },
+        
+        
 
-
+        
       ]}
     />
       <Footer />
     </>
-  );
-};
 
-export default Electricity1;
+  )
+};
+    export default Sewer;

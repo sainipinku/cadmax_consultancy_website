@@ -53,6 +53,11 @@ const Service1 = () => {
 export default Service1;
 
 
+
+
+  //  dynamic page here ====>  //
+
+
 // import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 // import Navbar from "../../components/Layout/Header/Navbar";
