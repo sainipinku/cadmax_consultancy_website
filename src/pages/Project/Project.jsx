@@ -253,7 +253,7 @@ export default Project;
 
 //               <div className="project-content">
 //                 <h3>{item.title}</h3>
-//                 <p>{item.description}</p>
+                
 //               </div>
 //             </div>
 //           ))}

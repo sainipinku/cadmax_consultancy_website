@@ -9,7 +9,6 @@ const AddProject = () => {
   const [form, setForm] = useState({
     title: "",
     category: "MANORATE AND BOUNDARY CONSTRUCTION",
-    description: "",
   });
 
   const [image, setImage] = useState(null);
@@ -30,7 +29,6 @@ const AddProject = () => {
     const formData = new FormData();
     formData.append("title", form.title);
     formData.append("category", form.category);
-    formData.append("description", form.description);
     formData.append("image", image);
 
     try {
@@ -97,16 +95,7 @@ const AddProject = () => {
             <option>ELECTRICITY</option>
           </select>
 
-          {/* Description */}
-          <textarea
-            name="description"
-            value={form.description}
-            onChange={handleChange}
-            rows="4"
-            placeholder="Project description"
-            className="w-full rounded-lg border px-4 py-2.5"
-            required
-          />
+         
 
           {/* Image */}
           <label className="flex flex-col items-center justify-center border-2 border-dashed rounded-lg p-6 cursor-pointer">

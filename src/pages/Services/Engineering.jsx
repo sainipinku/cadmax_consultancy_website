@@ -11,7 +11,7 @@ import collage1 from "../../../src/assets/Images/service-page-2/main-gate.jpg";
 import collage2 from "../../../src/assets/Images/service-page-2/road-network.jpg";
 import collage3 from "../../../src/assets/Images/service-page-2/water-supply.jpg";
 import collage4 from "../../../src/assets/Images/service-page-2/ELECTRICITY.jpg";
-import collage5 from "../../../src/assets/Images/service-page-2/rainwater-harvesting.jpg";
+import collage5 from "../../../src/assets/Images/service-page-2/sewer-img8.jpeg";
 
 const Engineering = () => {
 
@@ -99,6 +99,8 @@ export default Engineering;
 
 
 
+// dynamic page here ===>
+
 
 
 // import { useEffect, useState } from "react";
@@ -120,6 +122,8 @@ export default Engineering;
 //     "/Services/roadNetwork",
 //     "/Services/waterSupply",
 //     "/Services/electricity",
+//     "/Services/Sewer",
+
 //   ];
 
 //   const loadData = async () => {
