@@ -5,18 +5,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
-    const [openDropdown, setOpenDropdown] = useState(null);
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const handleDropdown = (name) => {
-        if (openDropdown === name) {
-            setOpenDropdown(null);
-        } else {
-            setOpenDropdown(name);
-        }
+        setMenuOpen(prev => !prev);
     };
 
     return (
@@ -25,29 +16,20 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="cadmax">CADMAX</Link>
 
-            {/* Hamburger Icon */}
+            {/* Hamburger / Close Icon */}
             <div className="menu-icon" onClick={toggleMenu}>
-                ☰
+                {menuOpen ? "✖" : "☰"}
             </div>
 
             {/* Navbar Menu */}
             <nav className={`navbar ${menuOpen ? "active" : ""}`}>
 
-                <Link to="/" className="nav-link">HOME</Link>
-
-                {/* SERVICES (No Dropdown) */}
-                <Link to="/Services" className="dropbtn">
-                    SERVICES
-                </Link>
-
-
-                {/* PROJECT - NO DROPDOWN */}
-                <Link to="/projects" className="nav-link">PROJECT</Link>
-
-                {/* ABOUT - NO DROPDOWN */}
-                <Link to="/about" className="nav-link">ABOUT</Link>
-                <Link to="/careerpath" className="nav-link">CAREER-PATH</Link>
-                <Link to="/contact" className="nav-link">CONTACT</Link>
+                <Link to="/" className="nav-link" onClick={toggleMenu}>HOME</Link>
+                <Link to="/Services" className="nav-link" onClick={toggleMenu}>SERVICES</Link>
+                <Link to="/projects" className="nav-link" onClick={toggleMenu}>PROJECT</Link>
+                <Link to="/about" className="nav-link" onClick={toggleMenu}>ABOUT</Link>
+                <Link to="/careerpath" className="nav-link" onClick={toggleMenu}>CAREER-PATH</Link>
+                <Link to="/contact" className="nav-link" onClick={toggleMenu}>CONTACT</Link>
 
             </nav>
 

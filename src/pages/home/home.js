@@ -10,24 +10,25 @@ import Collage2 from '../home/components/collage'
 import CompanyShowcase from '../home/components/company'
 // import MasonryGallery from './components/MasonryGallery';
 import MasonryGallery from '../home/components/image'
-import Testimonial from '../home/components/testimonial'
+
 import TestimonialSlider from '../home/components/rating'
 function Home() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Textbox />
-      <MasonryGallery />
-      <Accuracy />
-      <Collage2 />
-      {/* <Testimonial/> */}
-      {/* <RatingPage/> */}
-      <TestimonialSlider />
-      <CompanyShowcase />
-      <Footer />
-    </>
-  )
+
+ return (
+  <div className="min-h-screen bg-[#f1f5f9]">
+    <Navbar />
+    <Hero />
+    <Textbox />
+    <MasonryGallery />
+    <Accuracy />
+    <Collage2 />
+    <TestimonialSlider />
+    <CompanyShowcase />
+    <Footer />
+  </div>
+);
+
+
 }
 
 export default Home

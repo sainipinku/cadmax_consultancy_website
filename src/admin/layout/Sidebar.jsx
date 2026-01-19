@@ -43,13 +43,13 @@ const Sidebar = () => {
           <NavItem
             to="/admin/services/categories"
             icon={<Layers size={18} />}
-            label="Categories"
+            label="Service page"
           />
 
           <NavItem
             to="/admin/services/subcategories"
             icon={<ListTree size={18} />}
-            label="Sub Categories"
+            label="Service subpage"
           />
         </div>
 

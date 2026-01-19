@@ -8,7 +8,7 @@ const Navbar = () => {
 
   // 🔹 Static admin data (later backend se aayega)
   const admin = {
-    name: "Aarav saini",
+    name: "cadmax",
     email: "admin@cadmax.com",
     avatar: "https://i.pravatar.cc/100?img=3",
   };

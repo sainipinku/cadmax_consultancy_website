@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import AdminLayout from "../layout/AdminLayout";
+import AdminPrivate from "../routes/AdminPrivate";
 
 /* AUTH */
 import Login from "../pages/auth/Login";
@@ -22,26 +23,25 @@ import EditProject from "../pages/projects/EditProject";
 import ProfileUpdate from "../pages/settings/ProfileUpdate";
 import ResetPassword from "../pages/settings/ResetPassword";
 
-const isAuth = () => localStorage.getItem("isAdminAuth") === "true";
-
 const AdminRoutes = () => {
   return (
     <Routes>
-      {/* PUBLIC */}
-      <Route path="/admin/login" element={<Login />} />
+      {/* ================= PUBLIC ================= */}
+      <Route path="login" element={<Login />} />
 
-      {/* PROTECTED */}
+      {/* ================= PROTECTED ================= */}
       <Route
-        path="/admin"
+        path="/"
         element={
-          isAuth() ? <AdminLayout /> : <Navigate to="/admin/login" replace />
+          <AdminPrivate>
+            <AdminLayout />
+          </AdminPrivate>
         }
       >
         {/* Dashboard */}
         <Route index element={<Dashboard />} />
 
         {/* ===== SERVICES ===== */}
-        {/* Category */}
         <Route path="services/categories" element={<CategoryList />} />
         <Route path="services/categories/add" element={<CategoryForm />} />
         <Route
@@ -49,7 +49,6 @@ const AdminRoutes = () => {
           element={<CategoryForm />}
         />
 
-        {/* SubCategory */}
         <Route path="services/subcategories" element={<SubCategoryList />} />
         <Route
           path="services/subcategories/add"
@@ -69,6 +68,9 @@ const AdminRoutes = () => {
         <Route path="profile" element={<ProfileUpdate />} />
         <Route path="reset-password" element={<ResetPassword />} />
       </Route>
+
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/admin/login" replace />} />
     </Routes>
   );
 };

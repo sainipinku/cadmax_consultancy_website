@@ -9,71 +9,74 @@ const stats = [
   {
     title: "Team Members",
     value: 12,
-    icon: <Users className="w-6 h-6 text-blue-600" />,
-    bg: "bg-blue-50"
+    icon: Users,
   },
   {
-    title: "Total Jobs",
+    title: "Active Projects",
+    value: 13,
+    icon: FolderKanban,
+  },
+  {
+    title: "Job Openings",
     value: 8,
-    icon: <Briefcase className="w-6 h-6 text-green-600" />,
-    bg: "bg-green-50"
+    icon: Briefcase,
   },
   {
-    title: "Contacts",
+    title: "Client Contacts",
     value: 45,
-    icon: <Phone className="w-6 h-6 text-purple-600" />,
-    bg: "bg-purple-50"
+    icon: Phone,
   },
-  {
-    title: "Projects",
-    value: 6,
-    icon: <FolderKanban className="w-6 h-6 text-orange-600" />,
-    bg: "bg-orange-50"
-  }
 ];
 
 const Dashboard = () => {
   return (
-    <div className="space-y-6">
-      {/* Page Header */}
+    <div className="space-y-8">
+      
+      {/* HEADER */}
       <div>
         <h1 className="text-2xl font-semibold text-slate-800">
-          Dashboard Overview
+          Dashboard
         </h1>
         <p className="text-sm text-slate-500">
-          Welcome back
+          Cadmax Consultancy Overview
         </p>
       </div>
 
-      {/* Stats Cards */}
+      {/* STATS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-sm border p-5 flex items-center justify-between"
-          >
-            <div>
-              <p className="text-sm text-slate-500">{item.title}</p>
-              <h2 className="text-2xl font-bold text-slate-800">
-                {item.value}
-              </h2>
-            </div>
+        {stats.map((item, index) => {
+          const Icon = item.icon;
+          return (
             <div
-              className={`w-12 h-12 flex items-center justify-center rounded-lg ${item.bg}`}
+              key={index}
+              className="bg-white border rounded-lg p-5 flex items-center gap-4"
             >
-              {item.icon}
+              <div className="w-11 h-11 flex items-center justify-center rounded-md bg-slate-100">
+                <Icon className="w-5 h-5 text-slate-700" />
+              </div>
+
+              <div>
+                <p className="text-sm text-slate-500">
+                  {item.title}
+                </p>
+                <h2 className="text-xl font-semibold text-slate-800">
+                  {item.value}
+                </h2>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* Recent Sections */}
+      {/* RECENT ACTIVITY */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Recent Contacts */}
-        <div className="bg-white rounded-xl shadow-sm border p-6">
-          <h3 className="text-lg font-semibold text-slate-800 mb-4">
-            Recent Contacts
+
+        {/* RECENT CONTACTS */}
+        <div className="bg-white border rounded-lg p-6">
+          <h3 className="text-base font-semibold text-slate-800 mb-4">
+            Recent Client Contacts
           </h3>
+
           <ul className="space-y-3 text-sm text-slate-600">
             <li className="flex justify-between">
               <span>Rahul Sharma</span>
@@ -90,26 +93,28 @@ const Dashboard = () => {
           </ul>
         </div>
 
-        {/* Recent Jobs */}
-        <div className="bg-white rounded-xl shadow-sm border p-6">
-          <h3 className="text-lg font-semibold text-slate-800 mb-4">
-            Recent Jobs
+        {/* RECENT PROJECTS */}
+        <div className="bg-white border rounded-lg p-6">
+          <h3 className="text-base font-semibold text-slate-800 mb-4">
+            Recent Projects
           </h3>
+
           <ul className="space-y-3 text-sm text-slate-600">
             <li className="flex justify-between">
-              <span>Frontend Developer</span>
-              <span className="text-green-600 font-medium">Active</span>
+              <span>Boundary Construction</span>
+              <span className="text-green-600 font-medium">Ongoing</span>
             </li>
             <li className="flex justify-between">
-              <span>Backend Developer</span>
-              <span className="text-green-600 font-medium">Active</span>
+              <span>Road Network Planning</span>
+              <span className="text-green-600 font-medium">Ongoing</span>
             </li>
             <li className="flex justify-between">
-              <span>UI/UX Designer</span>
-              <span className="text-red-500 font-medium">Closed</span>
+              <span>Water Supply Layout</span>
+              <span className="text-slate-500 font-medium">Completed</span>
             </li>
           </ul>
         </div>
+
       </div>
     </div>
   );

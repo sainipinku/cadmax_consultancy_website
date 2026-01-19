@@ -21,7 +21,7 @@ const Engineering = () => {
     { img: collage2, title: "ROAD NETWORK" },
     { img: collage3, title: "WATER SUPPLY" },
     { img: collage4, title: "ELECTRICITY" },
-     { img: collage5, title: "SEWER AND RAIN WATER HARVESTING" }
+    { img: collage5, title: "SEWER AND RAIN WATER HARVESTING" }
   ];
 
   return (

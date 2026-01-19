@@ -1,11 +1,8 @@
-import AuthLayout from './AuthLayout';
-import React from 'react'
-import SideBar from './sidebar';
+import AuthLayout from "./AuthLayout";
+import SideBar from "./sidebar";
 
-export default function AdminLayout({ children, page }) {
-  return (
-    <AuthLayout sidebar={<SideBar />} page={page}>
-      {children}
-    </AuthLayout>
-  );
-}
+const AdminLayout = () => {
+  return <AuthLayout sidebar={<SideBar />} />;
+};
+
+export default AdminLayout;

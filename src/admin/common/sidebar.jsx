@@ -65,14 +65,14 @@ function SideBar() {
                             className={`flex items-center py-2.5 px-3 md:px-4 lg:px-6  gap-2 text-[#565F66] text-base font-medium tracking-[-0.06em] ${pathname === "/admin/category" ? "text-white bg-[#000000]" : "hover:bg-gray-100"} `}
                         >
                             <PiStudentFill size={20} />
-                            Category
+                            service page
                         </Link>
                         <Link
                             href="/admin/subcategory"
                             className={`flex items-center py-2.5 px-3 md:px-4 lg:px-6 gap-2 text-[#565F66] text-base font-medium tracking-[-0.06em] ${pathname === "/admin/subcategory" ? "text-white bg-[#000000]" : "hover:bg-gray-100"} `}
                         >
                             <MdReviews size={20} />
-                            Sub  Category
+                            service subpage
                         </Link>
                         <Link
                             href="/admin/product"
