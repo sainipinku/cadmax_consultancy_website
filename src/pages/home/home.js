@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Layout/Header/Navbar';
 import Hero from './components/Hero';
-import Textbox from '../home/components/text';
+import Textbox from './components/Textbox';
 import Footer from '../../components/Layout/Footer/Footer'
 // import Image from '../home/components/image'
 import Accuracy from '../home/components/Accuracy'

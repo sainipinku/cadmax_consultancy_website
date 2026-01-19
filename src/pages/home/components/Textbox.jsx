@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './text.css'
+import './Textbox.css'
 
 const Textbox = () => {
 
