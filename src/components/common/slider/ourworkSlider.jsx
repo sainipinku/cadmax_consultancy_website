@@ -22,7 +22,7 @@ const WorkSlider = ({ slides, prefix }) => {
   useEffect(() => {
     start();
     return () => stop();
-  }, []);
+  }, [start,stop]);
 
   return (
     <section

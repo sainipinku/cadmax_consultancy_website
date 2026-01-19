@@ -33,7 +33,7 @@ const WorkSlider = () => {
   useEffect(() => {
     startAutoSlide();
     return () => stopAutoSlide();
-  }, []);
+  }, [startAutoSlide,stopAutoSlide]);
 
   return (
     <div
