@@ -1,0 +1,196 @@
+import React from 'react'
+import './Contact.css'
+import { motion } from "framer-motion";
+
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import contactBG from "../../assets/Images/contact/comtact-bg.jpeg";
+import Navbar from '../../components/Layout/Header/Navbar'
+import Footer from '../../components/Layout/Footer/Footer'
+import heroBG from '../../assets/Images/contact/contact-hero.png'
+
+const Contact = () => {
+  return (
+    <>
+      <Navbar />
+
+      {/* HERO */}
+      <div
+        className="contact-hero"
+        style={{ backgroundImage: `url(${heroBG})` }}
+      ></div>
+
+   {/* CONTACT SECTION */}
+<div
+  className="w-full relative bg-cover bg-center"
+  style={{ backgroundImage: `url(${contactBG})` }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/80"></div>
+
+  <div className="relative max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    {/* LEFT SIDE — CONTACT DETAILS */}
+    <motion.div
+      initial={{ opacity: 0, x: -80 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="text-white"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        BUILD YOUR DREAMS, WITH US
+      </h2>
+
+      <p className="text-lg text-gray-200 mb-8 max-w-xl">
+        Contact CADMAX directly no delays. Get clear communication, expert guidance, and personalized solutions straight from our team to bring your project to life with confidence.
+      </p>
+
+      <div className="h-[3px] w-90 bg-orange-500 mb-10"></div>
+
+      {/* PHONE */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="flex items-start gap-4 mb-6"
+      >
+        <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
+          <FaPhoneAlt className="text-orange-500 text-lg" />
+        </div>
+        <p className="text-lg font-semibold">0141-411-3111</p>
+      </motion.div>
+
+      {/* ADDRESS */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="flex items-start gap-4 mb-6"
+      >
+        <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
+          <FaMapMarkerAlt className="text-orange-500 text-lg" />
+        </div>
+        <p className="text-gray-200 leading-relaxed max-w-lg">
+          GROUND FLOOR-1,2,3 AND 302-3RD FLOOR, PRISM TOWER,  
+          OPP. RAJASTHAN POLICE HEADQUARTER, LAL KOTHI SCHEME,  
+          TONK ROAD, JAIPUR (RAJ.)
+        </p>
+      </motion.div>
+
+      {/* EMAIL */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="flex items-start gap-4"
+      >
+        <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
+          <FaEnvelope className="text-orange-500 text-lg" />
+        </div>
+        <p className="text-lg font-semibold">
+          cadmaxconsultancy@gmail.com
+        </p>
+      </motion.div>
+    </motion.div>
+
+    {/* RIGHT SIDE — FORM CARD */}
+    <motion.div
+      initial={{ opacity: 0, x: 80, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="bg-white rounded-2xl shadow-xl p-6 md:p-8 w-full max-w-md mx-auto"
+    >
+      <h3 className="text-2xl font-bold text-gray-900 mb-6">
+        Get in Touch
+      </h3>
+
+      {/* FULL NAME */}
+      <motion.input
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        viewport={{ once: true }}
+        type="text"
+        placeholder="Full Name"
+        className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm mb-4 outline-none focus:ring-2 focus:ring-orange-500"
+      />
+
+      {/* EMAIL */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35, duration: 0.5 }}
+        viewport={{ once: true }}
+        className="relative mb-4"
+      >
+        <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-orange-500"
+        />
+      </motion.div>
+
+      {/* PHONE */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
+        className="relative mb-4"
+      >
+        <FaPhoneAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+        <input
+          type="text"
+          placeholder="Phone"
+          className="w-full border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-orange-500"
+        />
+      </motion.div>
+
+      {/* MESSAGE */}
+      <motion.textarea
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.65, duration: 0.5 }}
+        viewport={{ once: true }}
+        placeholder="Message"
+        className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm mb-5 h-28 resize-none outline-none focus:ring-2 focus:ring-orange-500"
+      ></motion.textarea>
+
+      {/* BUTTON */}
+      <motion.button
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+        viewport={{ once: true }}
+        className="w-full bg-orange-500 text-white font-semibold py-3 rounded-lg hover:bg-orange-600 transition"
+      >
+        Submit
+      </motion.button>
+    </motion.div>
+
+  </div>
+</div>
+
+
+
+      {/* MAP SECTION */}
+      <div className="contact-map">
+        <iframe
+          title="office-location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.XXXXXX!2d75.7984772!3d26.8862782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDUzJzEwLjYiTiA3NcKwNDcnNTQuNSJF!5e0!3m2!1sen!2sin!4v0000000000000"
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <Footer />
+    </>
+  )
+}
+
+export default Contact

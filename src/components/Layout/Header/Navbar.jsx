@@ -28,7 +28,7 @@ const Navbar = () => {
                 <Link to="/Services" className="nav-link" onClick={toggleMenu}>SERVICES</Link>
                 <Link to="/projects" className="nav-link" onClick={toggleMenu}>PROJECT</Link>
                 <Link to="/about" className="nav-link" onClick={toggleMenu}>ABOUT</Link>
-                <Link to="/careerpath" className="nav-link" onClick={toggleMenu}>CAREER-PATH</Link>
+                <Link to="/careerpath" className="nav-link" onClick={toggleMenu}>CAREER</Link>
                 <Link to="/contact" className="nav-link" onClick={toggleMenu}>CONTACT</Link>
 
             </nav>

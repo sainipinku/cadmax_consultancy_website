@@ -29,11 +29,11 @@ const Service1 = () => {
         </Link>
 
         <Link
-          to="/Services/Engineering"
+          to="/Services/Architecture"
           className="service1-card-1 delay-2"
         >
           <img src={img2} alt="service" />
-          <div className="card-text">surveying</div>
+          <div className="card-text">ARCHITECTURE</div>
         </Link>
 
         <Link
@@ -41,7 +41,7 @@ const Service1 = () => {
           className="service1-card-1 delay-3"
         >
           <img src={img3} alt="service" />
-          <div className="card-text">planning</div>
+          <div className="card-text">infrastructure</div>
         </Link>
       </div>
 

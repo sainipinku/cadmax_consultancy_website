@@ -11,6 +11,7 @@ import About from "../pages/About/About";
 // services
 import Services from "../pages/Services/Services";
 import Engineering from "../pages/Services/Engineering";
+import Architecture from "../pages/Services/Architecture";
 
 // engineering sub-pages
 import Maingate from "../pages/Services/Engineering-subpage/maingate";
@@ -41,6 +42,8 @@ export default function AppRouter() {
 
         <Route path="/services" element={<Services />} />
         <Route path="/services/engineering" element={<Engineering />} />
+        <Route path="/services/Architecture" element={<Architecture/>} />
+
 
         <Route path="/services/maingate" element={<Maingate />} />
         <Route path="/services/electricity" element={<Electricity1 />} />
