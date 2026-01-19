@@ -8,6 +8,37 @@
   background-position: center;
 }
 
+
+/* ICON + TEXT ROW */
+.contact-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.contact-info .icon {
+  font-size: 18px;
+  color: #000;
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.contact-info h4 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.contact-info p {
+  margin-top: 5px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+
 /* ===========================
    CONTACT MAIN GRID
 =========================== */

@@ -15,7 +15,7 @@ import TestimonialSlider from '../home/components/rating'
 function Home() {
 
  return (
-  <div className="min-h-screen bg-[#f1f5f9]">
+  <div className="min-h-screen bg-[#f1f1f1]">
     <Navbar />
     <Hero />
     <Textbox />
