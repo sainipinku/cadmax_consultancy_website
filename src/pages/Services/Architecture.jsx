@@ -7,9 +7,7 @@ import img2 from "../../assets/Images/urbanmax/image-2.jpg"
 import img3 from "../../assets/Images/urbanmax/image-3.jpg"
 
 const Architecture = () => {
-     const images = [img1, img2, img3];
-
-   
+     
   return (
     <>
     <Navbar />
