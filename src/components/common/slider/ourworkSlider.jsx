@@ -1,28 +1,33 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const WorkSlider = ({ slides, prefix }) => {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef(null);
 
-  const next = () => setIndex(i => (i + 1) % slides.length);
-  const prev = () => setIndex(i => (i - 1 + slides.length) % slides.length);
+  const next = useCallback(() => {
+    setIndex(i => (i + 1) % slides.length);
+  }, [slides.length]);
 
-  const start = () => {
-    stop();
-    intervalRef.current = setInterval(next, 1500);
-  };
+  const prev = useCallback(() => {
+    setIndex(i => (i - 1 + slides.length) % slides.length);
+  }, [slides.length]);
 
-  const stop = () => {
+  const stop = useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-  };
+  }, []);
+
+  const start = useCallback(() => {
+    stop();
+    intervalRef.current = setInterval(next, 1500);
+  }, [next, stop]);
 
   useEffect(() => {
     start();
     return () => stop();
-  }, [start,stop]);
+  }, [start, stop]);
 
   return (
     <section
@@ -42,7 +47,7 @@ const WorkSlider = ({ slides, prefix }) => {
       >
         <img
           src={slides[index].url}
-          alt=""
+          alt="work slide"
           className={`${prefix}-img w-full h-[320px] object-cover`}
         />
         <p

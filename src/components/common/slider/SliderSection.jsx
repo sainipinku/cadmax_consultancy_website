@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./SliderSection.css";
 
 import img1 from '../../../assets/Images/service-page-3/slider-img1.png';
@@ -15,25 +15,30 @@ const WorkSlider = () => {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef(null);
 
-  const next = () => setIndex(i => (i + 1) % images.length);
-  const prev = () => setIndex(i => (i - 1 + images.length) % images.length);
+  const next = useCallback(() => {
+    setIndex(i => (i + 1) % images.length);
+  }, []);
 
-  const startAutoSlide = () => {
-    stopAutoSlide();
-    intervalRef.current = setInterval(next, 1500);
-  };
+  const prev = useCallback(() => {
+    setIndex(i => (i - 1 + images.length) % images.length);
+  }, []);
 
-  const stopAutoSlide = () => {
+  const stopAutoSlide = useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-  };
+  }, []);
+
+  const startAutoSlide = useCallback(() => {
+    stopAutoSlide();
+    intervalRef.current = setInterval(next, 1500);
+  }, [next, stopAutoSlide]);
 
   useEffect(() => {
     startAutoSlide();
     return () => stopAutoSlide();
-  }, [startAutoSlide,stopAutoSlide]);
+  }, [startAutoSlide, stopAutoSlide]);
 
   return (
     <div
@@ -42,13 +47,11 @@ const WorkSlider = () => {
     >
       <h2 className="work-title">OUR WORK</h2>
 
-      {/* CENTER CARD */}
       <div className="work-card">
         <img src={images[index].url} className="work-card-img" alt="slide" />
         <p className="work-card-text">{images[index].title}</p>
       </div>
 
-      {/* ARROWS */}
       <button
         className="arrow left"
         onClick={prev}
