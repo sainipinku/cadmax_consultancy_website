@@ -57,6 +57,8 @@ const Accuracy = () => {
           )}
         </div>
 
+
+
         {/* RIGHT IMAGE */}
         <div className="col-md-6 text-center accuracy-img-wrapper" ref={imageRef}>
           <img
