@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from "react-router-dom";
+import logo from "../../../assets/Images/cadmax-logo/Cadmax-logo.png"
 
 const Navbar = () => {
 
@@ -14,7 +15,11 @@ const Navbar = () => {
         <header className="header">
 
             {/* Logo */}
-            <Link to="/" className="cadmax">CADMAX</Link>
+            <Link to="/" className="cadmax"><img
+          src={logo}
+          alt="Logo"
+          className="footer-logo"
+        /></Link>
 
             {/* Hamburger / Close Icon */}
             <div className="menu-icon" onClick={toggleMenu}>
