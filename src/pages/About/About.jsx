@@ -138,25 +138,25 @@ const About = () => {
         <div className="values-grid">
 
           <div className="value-box">
-            <img src={svg1} className="value-icon" />
+            <img src={svg1} className="value-icon" alt=''/>
             <h5>INNOVATION</h5>
             <p>Innovation drives the architectural vision of CADMAX Consultancy. We integrate creative design thinking with advanced architectural technologies to produce functional, sustainable, and visually striking spaces</p>
           </div>
 
           <div className="value-box">
-            <img src={svg2} className="value-icon" />
+            <img src={svg2} className="value-icon" alt=''/>
             <h5>EXCELLENCE</h5>
             <p>Excellence is reflected in every stage of our architectural process—from concept development to project completion..</p>
           </div>
 
           <div className="value-box">
-            <img src={svg3} className="value-icon" />
+            <img src={svg3} className="value-icon" alt=''/>
             <h5>INTEGRITY</h5>
             <p>CADMAX Consultancy maintains clear communication, realistic commitments, and compliance with all regulatory standards. We build lasting relationships with clients, consultants, and contractors based on trust and mutual respect.</p>
           </div>
 
           <div className="value-box">
-            <img src={svg4} className="value-icon" />
+            <img src={svg4} className="value-icon" alt=''/>
             <h5>RESPONSIBILITY</h5>
             <p>Our responsibility extends to ensuring safety, regulatory compliance, cost efficiency, and timely project delivery while creating architecture that positively impacts communities.</p>
           </div>
