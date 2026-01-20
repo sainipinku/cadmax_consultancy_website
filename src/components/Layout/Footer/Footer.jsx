@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/Images/cadmax-logo/Cadmax-logo.png";
+import logo from "../../../assets/Images/cadmax-logo/footer-logo.png";
 import facebook from '../../../assets/icons/Social_icon/Vector.png';
 import instagram from '../../../assets/icons/Social_icon/mdi_instagram.png';
 import linkdin from '../../../assets/icons/Social_icon/mdi_linkedin.png';

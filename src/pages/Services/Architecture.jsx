@@ -14,7 +14,7 @@ const Architecture = () => {
     
 
  <div
-  className="w-full h-[420px] bg-cover bg-center"
+  className="w-full h-[500px] bg-cover bg-center"
   style={{ backgroundImage: `url(${heroBG})` }}
 ></div>
 

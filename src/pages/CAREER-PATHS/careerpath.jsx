@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import heroBGCareer from "../../../src/assets/Images/careerpath/HERO-BG.png";
 import img1 from "../../../src/assets/Images/careerpath/development-img.jpg";
 import img2 from "../../../src/assets/Images/careerpath/environment-img.jpg";
-import img3 from "../../../src/assets/Images/careerpath/mid-img.jpeg"
+import img3 from "../../../src/assets/Images/careerpath/learning-and-development.jpeg"
 
 
 const fadeUp = {
@@ -21,10 +21,14 @@ const CareerPath = () => {
       <Navbar />
 
       {/* HERO SECTION */}
-    <div
+  <div
   className="w-full h-[600px] xl:h-[650px] bg-cover bg-center flex items-center justify-center relative"
-  style={{ backgroundImage: `url(${heroBGCareer})` }}
+  style={{
+    backgroundImage: `url(${heroBGCareer})`,
+    filter: "brightness(1.5)", 
+  }}
 >
+
 
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative text-white text-4xl md:text-5xl font-bold tracking-wide">
@@ -89,7 +93,7 @@ const CareerPath = () => {
              2. Learning & Development- 
             </h2>
             <p className="text-gray-600 leading-relaxed">
-            “We encourage a culture of learning where our team continuously develops new skills, explores fresh ideas, and grows together. This commitment to development strengthens both our people and our projects.”
+            Learning & Development at CADMAX Consultancy is the driving force behind our creativity and innovation. We nurture a culture where ideas grow, skills evolve, and knowledge is constantly redefined. By investing in continuous learning, hands-on training, and the latest architectural tools and technologies, we empower our team to think beyond boundaries. This dedication to development allows us to craft intelligent, sustainable, and future-focused design solutions that add lasting value for our clients and the built environment.
             </p>
           </div>
 
@@ -112,7 +116,7 @@ const CareerPath = () => {
               3. Work Environment
             </h2>
             <p className="text-gray-600 leading-relaxed">
-             A supportive Managing Director and a positive work culture make this company a place where teamwork, learning, and mutual respect are valued. The environment motivates employees to deliver their best work every day.”.
+            CADMAX Consultancy provides a positive and inspiring work environment where creativity, collaboration, and professionalism thrive. We believe that a supportive workplace encourages innovation and excellence, allowing our team to perform at their best. Open communication, mutual respect, and teamwork form the core of our culture, while modern tools and well-structured processes ensure efficiency and growth. By fostering a healthy balance between learning and work, CADMAX Consultancy creates an environment where talent is valued, ideas are encouraged, and individuals grow along with the organization.
             </p>
           </div>
 
