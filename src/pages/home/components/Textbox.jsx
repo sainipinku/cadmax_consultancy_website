@@ -32,7 +32,7 @@ const Textbox = () => {
       <div className="text-box scroll-up">
         <h2>From your ideas to smart designs—Architech listens.</h2>
         <p>
-          At Architech, every detail counts. From innovative interiors that inspire to engineering solutions that endure,<br /> we’re committed to shaping spaces where design meets precision. Take our survey and help us craft environments <br /> that reflect your vision.
+          At Architech, every detail counts. From innovative interiors that inspire to engineering solutions that endure, we’re committed to shaping spaces where design meets precision. Take our survey and help us craft environments  that reflect your vision.
         </p>
       </div>
 

@@ -9,34 +9,40 @@ import img1 from "../../../assets/Images/Other/img1.jpg"
 
 const data = [
   {
-    img: img1,
-    name: "— N. Ganpathy Subramaniam, CEO",
-    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution. CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
+    // img: img1,
+    name: "— N. Ganpathy Subramaniam, ",
+    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution. CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results." ,
+  Role :"CEO"
   },
   {
-    img: img1,
-    name: "— A. Stevens, Project Manager",
-    desc: "“The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency. CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.”"
+    // img: img1,
+    name: "— A. Stevens, ",
+    desc: "The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency. CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.",
+    Role :"Project Manager"
   },
   {
-    img: img1,
-    name: "— L. Johnson, Operations Director",
-    desc: "“With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow. CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays.”"
+    // img: img1,
+    name: "— L. Johnson, ",
+    desc: "With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow. CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays.",
+    Role :"Operations Director"
   },
   {
-    img: img1,
-    name: "— N. Ganpathy Subramaniam, CEO",
-    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution. CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results."
+    // img: img1,
+    name: "— N. Ganpathy Subramaniam,",
+    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution. CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results.",
+    Role :" CEO"
   },
   {
-    img: img1,
-    name: "— L. Johnson, Operations Director",
-    desc: "“The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency. CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.”"
+    // img: img1,
+    name: "— L. Johnson, ",
+    desc: "“The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency. CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.",
+    Role :" Operations Director"
   },
   {
-    img: img1,
-    name: "— L. Johnson, Operations Director",
-    desc: "“With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow. CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays.”"
+    // img: img1,
+    name: "— A. Stevens",
+    desc: "With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow. CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays." ,
+ Role :"Project Manager"
   },
 ];
 const Testimonial = () => {
@@ -73,10 +79,10 @@ const Testimonial = () => {
                   <p className="testimonial-msg">{t.desc}</p>
 
                   <div className="testimonial-client">
-                    <img src={t.img} alt="" />
+                    {/* <img src={t.img} alt="" /> */}
                     <div>
                       <p className="client-name">{t.name}</p>
-                      {/* <p className="client-role">Client</p> */}
+                      <p className="client-role">{t.Role}</p>
                     </div>
                   </div>
                 </div>
