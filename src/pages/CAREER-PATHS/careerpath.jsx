@@ -25,7 +25,7 @@ const CareerPath = () => {
   className="w-full h-[600px] xl:h-[650px] bg-cover bg-center flex items-center justify-center relative"
   style={{
     backgroundImage: `url(${heroBGCareer})`,
-    filter: "brightness(1.5)", 
+    filter: "brightness(1.8)", 
   }}
 >
 
