@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./rating.css";
-import img1 from "../../../assets/Images/Other/img1.jpg"
+// import img1 from "../../../assets/Images/Other/img1.jpg"
 
 
 const data = [

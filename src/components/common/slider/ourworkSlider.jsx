@@ -36,7 +36,7 @@ const WorkSlider = ({ slides, prefix }) => {
     >
       {/* TITLE */}
       <h2
-        className={`${prefix}-title absolute top-10 text-white text-[18px] tracking-widest font-bold`}
+        className={`${prefix}-title absolute top-10 text-white text-[22px] tracking-widest font-garamond font-bold`}
       >
         OUR WORK
       </h2>

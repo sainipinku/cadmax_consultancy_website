@@ -36,7 +36,7 @@ const Collage2 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 1500);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [slides.length]);

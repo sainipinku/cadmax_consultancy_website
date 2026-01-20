@@ -103,7 +103,7 @@ const Project = () => {
 
       <div className="project-wrapper">
        
-        <h2 className="project-title uppercase">Projects That Inspire.</h2>
+        <h2 className="project-title uppercase">Projects That Inspire</h2>
 
        
         <div className="project-tabs">

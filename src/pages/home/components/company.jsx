@@ -85,7 +85,7 @@ const CompanyShowcase = () => {
     return () => observer.disconnect();
   }, []);
 
-  /* ⭐⭐⭐ AUTO SLIDER — ONLY NEW CODE ⭐⭐⭐ */
+  /*  AUTO SLIDER — ONLY NEW CODE */
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();

@@ -19,11 +19,32 @@ const Footer = () => {
         />
 
         {/* Social PNG icons */}
-        <div className="footer-social">
-          <img src={facebook} alt="Instagram" className="social-icon" />
-          <img src={instagram} alt="Facebook" className="social-icon" />
-          <img src={linkdin} alt="LinkedIn" className="social-icon" />
-        </div>
+       <div className="footer-social">
+  <a
+    href="https://www.facebook.com/CadMaxProjectsJPR"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={facebook} alt="Facebook" className="social-icon" />
+  </a>
+
+  <a
+    href="https://www.instagram.com/cadmaxconsultancy/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={instagram} alt="Instagram" className="social-icon" />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/cadmax-projects-pvt-ltd/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={linkdin} alt="LinkedIn" className="social-icon" />
+  </a>
+</div>
+
 
       </div>
 
