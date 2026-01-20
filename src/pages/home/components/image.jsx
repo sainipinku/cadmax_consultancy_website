@@ -22,7 +22,7 @@ const MasonryGallery = () => {
           <div className="gallery-card tall">
             <img src={image1} alt=""/>
             <div className="gallery-overlay" />
-            <div className="gallery-title">HIGH-ACCURACY DGPS SURVEY</div>
+            <div className="gallery-title">HIGH ACCURACY DGPS STATIC SURVEY</div>
           </div>
         </div>
 
@@ -30,13 +30,13 @@ const MasonryGallery = () => {
           <div className="gallery-card big">
             <img src={image2} alt=""/>
             <div className="gallery-overlay" />
-            <div className="gallery-title">ENGINEERING SURVEY EXECUTION</div>
+            <div className="gallery-title">ROAD ALIGNMENT SURVEY</div>
           </div>
 
           <div className="gallery-card small">
             <img src={image3} alt=""/>
             <div className="gallery-overlay" />
-            <div className="gallery-title">TOPOGRAPHIC GROUND MODELLING</div>
+            <div className="gallery-title">DETAIL TOPOGRAPHICAL MODELING</div>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ const MasonryGallery = () => {
           <div className="gallery-card small">
             <img src={image4} alt="" />
             <div className="gallery-overlay" />
-            <div className="gallery-title">LAND BOUNDARY AND CONDITION SURVEYING</div>
+            <div className="gallery-title">BACK STATION FOR TOPOGRAPHICAL SURVEY</div>
           </div>
 
           <div className="gallery-card big">
@@ -58,13 +58,13 @@ const MasonryGallery = () => {
           <div className="gallery-card big">
             <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ServicesPhoto.jpg" alt=""/>
             <div className="gallery-overlay" />
-            <div className="gallery-title">MEP DESIGN ENGINEERING</div>
+            <div className="gallery-title">GATE DESIGN</div>
           </div>
 
           <div className="gallery-card small">
             <img src={image6} alt=""/>
             <div className="gallery-overlay" />
-            <div className="gallery-title">URBAN AND SUBDIVISION PLANNING</div>
+            <div className="gallery-title">URBAN PLANNING</div>
           </div>
         </div>
 
@@ -82,13 +82,13 @@ const MasonryGallery = () => {
         <div className="gallery-card bottom-card">
           <img src={image8} alt=""/>
           <div className="gallery-overlay" />
-          <div className="gallery-title">GEODETIC AND ADVANCED POSITIONING</div>
+          <div className="gallery-title">BM FIXING ROAD ALIGNMENT SURVEY</div>
         </div>
 
         <div className="gallery-card bottom-card">
           <img src={image9} alt=""/>
           <div className="gallery-overlay" />
-          <div className="gallery-title">INFRASTRUCTURE SURVEY SYSTEMS</div>
+          <div className="gallery-title">CANEL / RIVER SURVEY</div>
         </div>
 
       </div>
