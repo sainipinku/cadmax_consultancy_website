@@ -43,15 +43,15 @@
   }
 }
 
-/* Mobile (≤ 768px) */
-@media (max-width: 768px) {
+
+@media (max-width: 770px) {
   .cadmax img {
     height: 50px;
     width: 70%;
   }
 }
 
-/* Small Mobile (≤ 480px) */
+
 @media (max-width: 480px) {
   .cadmax img {
     height: 45px;

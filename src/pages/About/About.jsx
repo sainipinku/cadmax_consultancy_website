@@ -13,7 +13,7 @@ import cap4 from "../../../src/assets/Images/about/Rectangle 73.png";
 import cap5 from "../../../src/assets/Images/about/Rectangle 74.png";
 
 
-import methodImg from "../../../src/assets/Images/about/METHODOLOGY.jpg";
+import methodImg from "../../../src/assets/Images/about/METHODOLOGYy.jpg";
 
 import svg1 from "../../../src/assets/Images/about/Frame 35.png";
 import svg2 from "../../../src/assets/Images/about/Frame 35 (1).png";
@@ -124,7 +124,7 @@ const About = () => {
       <div className="values-section">
         <div className='value-texts'>
           <div className="values-left">
-            <h2>OPERATIONAL VALUES THAT ANCHOR<br />EVERY DELIVERABLE</h2>
+            <h2>OPERATIONAL VALUES THAT ANCHOR EVERY DELIVERABLE</h2>
           </div>
 
           <div className="values-right">

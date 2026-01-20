@@ -50,7 +50,7 @@ const MasonryGallery = () => {
           <div className="gallery-card big">
             <img src={image5} alt=""/>
             <div className="gallery-overlay" />
-            <div className="gallery-title">DRON SRUVEY + GIS PRODUCTION</div>
+            <div className="gallery-title">DRON SURVEY + GIS PRODUCTION</div>
           </div>
         </div>
 
