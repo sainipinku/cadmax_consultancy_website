@@ -8,8 +8,8 @@ import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
 
 import cap1 from "../../../src/assets/Images/about/image-1.jpeg";
 import cap2 from "../../../src/assets/Images/about/image-2.jpeg";
-import cap3 from "../../../src/assets/Images/about/image-3.jpeg";
-import cap4 from "../../../src/assets/Images/about/image-4.jpeg";
+import cap3 from "../../../src/assets/Images/about/image-4.jpeg";
+import cap4 from "../../../src/assets/Images/about/image-3.jpeg";
 import cap5 from "../../../src/assets/Images/about/image-5.jpeg";
 import cap6 from "../../../src/assets/Images/about/image-6.jpeg";
 
@@ -74,32 +74,38 @@ const About = () => {
 
        <div className="cap-collage">
 
-  <div className="cap-item">
+  {/* 1st BIG */}
+  <div className="cap-item cap-big">
     <img src={cap1} alt="" />
     <h3>TOTAL STATION</h3>
   </div>
 
-  <div className="cap-item">
+  {/* 2nd */}
+  <div className="cap-item cap-small">
     <img src={cap2} alt="" />
     <h3>DRONE</h3>
   </div>
 
-  <div className="cap-item">
-    <img src={cap3} alt="" />
+  {/* 4th */}
+  <div className="cap-item cap-small">
+    <img src={cap4} alt="" />
     <h3>DGPS</h3>
   </div>
 
-  <div className="cap-item">
-    <img src={cap4} alt="" />
+  {/* 3rd */}
+  <div className="cap-item cap-big">
+    <img src={cap3} alt="" />
     <h3>GPS</h3>
   </div>
 
-  <div className="cap-item">
+  {/* 5th */}
+  <div className="cap-item cap-small">
     <img src={cap5} alt="" />
     <h3>LIDAR</h3>
   </div>
 
-  <div className="cap-item">
+  {/* 6th BIG */}
+  <div className="cap-item cap-small">
     <img src={cap6} alt="" />
     <h3>AUTO LEVEL</h3>
   </div>
@@ -141,25 +147,25 @@ const About = () => {
         <div className="values-grid">
 
           <div className="value-box">
-            <img src={svg1} className="value-icon" alt=''/>
+            <img src={svg1} className="value-icon" alt='' />
             <h5>INNOVATION</h5>
             <p>Innovation drives the architectural vision of CADMAX Consultancy. We integrate creative design thinking with advanced architectural technologies to produce functional, sustainable, and visually striking spaces</p>
           </div>
 
           <div className="value-box">
-            <img src={svg2} className="value-icon" alt=''/>
+            <img src={svg2} className="value-icon" alt='' />
             <h5>EXCELLENCE</h5>
             <p>Excellence is reflected in every stage of our architectural process—from concept development to project completion..</p>
           </div>
 
           <div className="value-box">
-            <img src={svg3} className="value-icon" alt=''/>
+            <img src={svg3} className="value-icon" alt='' />
             <h5>INTEGRITY</h5>
             <p>CADMAX Consultancy maintains clear communication, realistic commitments, and compliance with all regulatory standards. We build lasting relationships with clients, consultants, and contractors based on trust and mutual respect.</p>
           </div>
 
           <div className="value-box">
-            <img src={svg4} className="value-icon" alt=''/>
+            <img src={svg4} className="value-icon" alt='' />
             <h5>RESPONSIBILITY</h5>
             <p>Our responsibility extends to ensuring safety, regulatory compliance, cost efficiency, and timely project delivery while creating architecture that positively impacts communities.</p>
           </div>
