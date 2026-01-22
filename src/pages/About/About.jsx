@@ -7,7 +7,7 @@ import heroBG from "../../../src/assets/Images/about/About-hero-bg.jpg";
 import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
 
 import cap1 from "../../../src/assets/Images/about/image-1.jpeg";
-import cap2 from "../../../src/assets/Images/about/image-2.jpeg";
+import cap2 from "../../../src/assets/Images/about/image-2.png";
 import cap3 from "../../../src/assets/Images/about/image-4.jpeg";
 import cap4 from "../../../src/assets/Images/about/image-3.jpeg";
 import cap5 from "../../../src/assets/Images/about/image-5.jpeg";

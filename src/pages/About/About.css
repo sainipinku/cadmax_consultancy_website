@@ -108,7 +108,8 @@
 .cap-item {
   position: relative;
   overflow: hidden;
-  border: 1px solid #000;
+  border-radius: 8px;
+  /* border: 1px solid #d3d3d3; */
 }
 
 /* Big cards */
@@ -135,8 +136,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);   /* 👈 default dark overlay */
-  transition: background 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);   /* 👈 default dark overlay */
+  transition: background 0.0s ease;
   z-index: 1;
 }
 
