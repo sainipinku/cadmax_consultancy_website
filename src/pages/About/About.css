@@ -101,7 +101,7 @@
 .cap-collage {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
-  grid-template-rows: 250px 250px;   /* FIXED HEIGHT */
+  grid-template-rows: 275px 275px;   /* FIXED HEIGHT */
   gap: 12px;
 }
 

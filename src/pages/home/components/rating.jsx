@@ -11,7 +11,7 @@ const data = [
   {
     // img: img1,
     name: "— RAVI KUMAWAT ",
-    desc: "A professional architectural practice with strong design expertise and excellent project coordination. Their commitment to quality, clear communication, and client satisfaction is evident in every stage of their work. From concept development to final execution, the team demonstrated creativity, technical precision, and a deep understanding of our requirements. We truly appreciate their dedication, responsiveness, and ability to deliver results that exceeded our expectations." ,
+    desc: "A professional architectural practice with strong design expertise and excellent project coordination. Their commitment to quality, clear communication, and client satisfaction is evident at every stage of their work. From concept to final execution, the team demonstrated creativity, technical precision, and a clear understanding of our requirements, delivering results that truly exceeded our expectations." ,
   Role :"SHREE RAM GROUP"
   },
   {
@@ -29,7 +29,7 @@ const data = [
   {
     // img: img1,
     name: "— CHARAN KHANGAROAT",
-    desc: "The firm managed the project efficiently, consistently maintaining agreed timelines and delivering high-quality, well-structured documentation. Their reliability, transparency, and highly organized workflow gave us confidence throughout the entire design and development process. The team’s proactive coordination and attention to detail ensured smooth progress, minimized delays, and resulted in a final outcome that met both our technical requirements and business expectations.",
+    desc: "The firm managed the project efficiently, maintaining agreed timelines and delivering high-quality, well-structured documentation. Their reliability, transparency, and organized workflow gave us confidence throughout the design and development process. The team’s proactive coordination and attention to detail ensured smooth progress and resulted in a final outcome that met our technical requirements and expectations",
     Role :" FS REALITY"
   },
   {
