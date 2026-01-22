@@ -6,11 +6,12 @@ import Footer from '../../components/Layout/Footer/Footer';
 import heroBG from "../../../src/assets/Images/about/About-hero-bg.jpg";
 import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
 
-import cap1 from "../../../src/assets/Images/about/Rectangle 70.png";
-import cap2 from "../../../src/assets/Images/about/Rectangle 71.png";
-import cap3 from "../../../src/assets/Images/about/Rectangle 72.png";
-import cap4 from "../../../src/assets/Images/about/Rectangle 73.png";
-import cap5 from "../../../src/assets/Images/about/Rectangle 74.png";
+import cap1 from "../../../src/assets/Images/about/image-1.jpeg";
+import cap2 from "../../../src/assets/Images/about/image-2.jpeg";
+import cap3 from "../../../src/assets/Images/about/image-3.jpeg";
+import cap4 from "../../../src/assets/Images/about/image-4.jpeg";
+import cap5 from "../../../src/assets/Images/about/image-5.jpeg";
+import cap6 from "../../../src/assets/Images/about/image-6.jpeg";
 
 
 import methodImg from "../../../src/assets/Images/about/METHODOLOGYy.jpg";
@@ -71,38 +72,40 @@ const About = () => {
           <p>Cadmax Consultancy’s capabilities stand strong in the field through its commitment to precision, innovation, and practical execution. With a skilled team, advanced design technology, and thorough on-site coordination, the firm successfully translates concepts into reliable, buildable solutions. Every project reflects a balance of technical accuracy, creative design, and real-world performance, ensuring quality from planning to completion. This dedication to excellence allows Cadmax Consultancy to deliver results that consistently meet professional standards and client expectations on the ground.</p>
         </div>
 
-        <div className="cap-collage">
+       <div className="cap-collage">
 
-          {/* LEFT BIG IMAGE */}
-          <div className="cap-big">
-            <img src={cap1} alt="" />
-            <h3>LAND DEVELOPMENT ENGINEERING ACROSS RESIDENTIAL AND COMMERCIAL SECTORS</h3>
-          </div>
+  <div className="cap-item">
+    <img src={cap1} alt="" />
+    <h3>TOTAL STATION</h3>
+  </div>
 
-          {/* RIGHT 4 GRID IMAGES */}
-          <div className="cap-right-grid">
-            <div className="cap-small">
-              <img src={cap2} alt="" />
-              <h3>END-TO-END SURVEYING WITH MODERN EQUIPMENT AND GPS INTEGRATION</h3>
-            </div>
+  <div className="cap-item">
+    <img src={cap2} alt="" />
+    <h3>DRONE</h3>
+  </div>
 
-            <div className="cap-small">
-              <img src={cap3} alt="" />
-              <h3>DATA-DRIVEN PLANNING WORKFLOWS ALIGNED WITH ON-SITE CONDITIONS</h3>
-            </div>
+  <div className="cap-item">
+    <img src={cap3} alt="" />
+    <h3>DGPS</h3>
+  </div>
 
-            <div className="cap-small">
-              <img src={cap4} alt="" />
-              <h3>DRAFTING PIPELINES DESIGNED TO REDUCE REVISIONS AND APPROVAL DELAYS</h3>
-            </div>
+  <div className="cap-item">
+    <img src={cap4} alt="" />
+    <h3>GPS</h3>
+  </div>
 
-            <div className="cap-small">
-              <img src={cap5} alt="" />
-              <h3>INTEGRATED DESIGN — SURVEY COORDINATION FOR PREDICTABLE EXECUTION</h3>
-            </div>
-          </div>
+  <div className="cap-item">
+    <img src={cap5} alt="" />
+    <h3>LIDAR</h3>
+  </div>
 
-        </div>
+  <div className="cap-item">
+    <img src={cap6} alt="" />
+    <h3>AUTO LEVEL</h3>
+  </div>
+
+</div>
+
 
       </div>
 

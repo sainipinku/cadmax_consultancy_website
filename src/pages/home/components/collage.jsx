@@ -19,7 +19,7 @@ const Collage2 = () => {
     },
     {
       img: image3,
-      desc: "DIPRNDRA JI HOUSE- GONER ROAD, JAIPUR.",
+      desc: "DIPENDRA JI HOUSE- GONER ROAD, JAIPUR.",
     },
     {
       img: image4,

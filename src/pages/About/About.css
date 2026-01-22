@@ -51,7 +51,6 @@
   display: flex;
   gap: 25px;
   padding: 50px 20px 0;
-
 }
 
 .mv-card {
@@ -59,20 +58,20 @@
   padding: 35px;
   border: 1px solid #e1e1e1;
 }
+
 .mv-icon {
   padding-bottom: 15px;
 }
 
 .mv-icon i {
   font-size: 22px;
-  color: #fff;             
-  background-color: #000;   
-  padding: 8px;             
+  color: #fff;
+  background-color: #000;
+  padding: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .mv-card h3 {
   font-size: 22px;
@@ -90,17 +89,14 @@
       CAPABILITIES
 ================================ */
 .cap-section {
-  /* max-width: 1300px; */
   margin: 60px auto 40px;
   padding: 20px;
- 
 }
 
 .cap-header {
-  /* display: flex; */
   justify-content: space-between;
   margin-bottom: 40px;
-   text-align: center;
+  text-align: center;
   align-items: center;
 }
 
@@ -118,59 +114,58 @@
   line-height: 1.4;
 }
 
-/* Collage layout */
+/* ===== 6 IMAGE GRID COLLAGE ===== */
 .cap-collage {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
-/* Left big Image */
-.cap-big {
+.cap-item {
   position: relative;
-  height: 570px;
+  height: 260px;
+  overflow: hidden;
 }
 
-.cap-big img {
+/* Image */
+.cap-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: solid 1px black;
+  display: block;
 }
 
-/* Right 4-grid */
-.cap-right-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+/* Black overlay */
+.cap-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
-.cap-small {
-  position: relative;
-  height: 278px;
-}
-
-.cap-small img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Hover → remove overlay */
+.cap-item:hover::after {
+  opacity: 0;
 }
 
 /* Text over images */
-.cap-big h3,
-.cap-small h3 {
+.cap-item h3 {
   position: absolute;
   left: 50%;
-  top: 40%;
-  transform: translateX(-50%);
+  top: 45%;
+  transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 900;
   text-align: center;
+  padding: 0 12px;
+  line-height: 1.3;
+  z-index: 2;
+  pointer-events: none;
 }
-
-
-
-
 
 /* ================================
       RESPONSIVE
@@ -193,22 +188,31 @@
   }
 
   .cap-collage {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .cap-big {
-    height: 350px;
+  .cap-item {
+    height: 220px;
   }
 
-  .cap-small {
-    height: 200px;
+  .cap-item h3 {
+    font-size: 13px;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-  .cap-small {
-    height: 170px;
+  .cap-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .cap-item {
+    height: 180px;
+  }
+
+  .cap-item h3 {
+    font-size: 11px;
+    line-height: 1.2;
   }
 
   .mv-card {
@@ -229,14 +233,12 @@
   padding: 60px 20px;
   display: flex;
   gap: 100px;
-  /* background: #e1e1e1; */
   justify-content: space-around;
   align-items: center;
 }
 
 .method-text {
   width: 50%;
-  /* padding-top: 80px; */
 }
 
 .method-text h2 {
@@ -252,7 +254,7 @@
 }
 
 .method-image img {
- width: 480px;
+  width: 480px;
   height: 480px;
   align-items: end;
   padding-left: 40px;
@@ -290,7 +292,6 @@
 
 .values-right p {
   font-size: 18px;
-  /* max-width: 500px; */
   color: #666;
   margin-bottom: 30px;
 }
@@ -327,7 +328,8 @@
   line-height: 1.4;
   color: #444;
 }
-.value-texts{
+
+.value-texts {
   display: flex;
   justify-content: space-between;
 }
@@ -347,41 +349,16 @@
   .values-section {
     padding: 30px 20px;
   }
-}
 
-/* TEXT SIZE RESPONSIVE */
-
-/* Tablet ↓ (992px) */
-@media (max-width: 992px) {
-
-  .cap-big h3,
-  .cap-small h3 {
-    font-size: 16px;
-    /* smaller but readable */
+  .method-image img {
+    padding-left: 0px;
   }
-}
 
-/* Mobile ↓ (576px) */
-@media (max-width: 576px) {
-
-  .cap-big h3,
-  .cap-small h3 {
-    font-size: 10px;
-    /* mobile perfect */
-    line-height: 1;
-
-
+  .value-texts {
+    display: block;
   }
-.method-image img{
-  padding-left: 0px;
-}
-.value-texts{
-  display: block;
-}
 
-.values-left{
-  font-size: 14px;
-}
-
-
+  .values-left {
+    font-size: 14px;
+  }
 }

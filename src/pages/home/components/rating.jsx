@@ -10,39 +10,70 @@ import "./rating.css";
 const data = [
   {
     // img: img1,
-    name: "— N. Ganpathy Subramaniam, ",
-    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution. CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results." ,
-  Role :"CEO"
+    name: "— RAVI KUMAWAT ",
+    desc: "A professional architectural practice with strong design expertise and excellent project coordination. Their commitment to quality, clear communication, and client satisfaction is evident in their work." ,
+  Role :"SHREE RAM GROUP"
   },
   {
     // img: img1,
-    name: "— A. Stevens, ",
-    desc: "The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency. CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.",
-    Role :"Project Manager"
+    name: "— MUKESH SHARMA ",
+    desc: "We were highly satisfied with the firm’s design approach and attention to detail. The architects balanced creativity with practicality, delivering a solution that was both visually strong and highly functional. Their thoughtful planning and technical knowledge were evident at every stage of the project.",
+    Role :" HOMELAND GROUP"
   },
   {
     // img: img1,
-    name: "— L. Johnson, ",
-    desc: "With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow. CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays.",
-    Role :"Operations Director"
+    name: "— SANWAR MAM ",
+    desc: "Working with the cadmax group  architects was a positive experience. They listened carefully to our requirements, responded thoughtfully to feedback, and provided clear guidance at every stage. Their collaborative approach contributed greatly to the success of the project.",
+    Role :" ASHIANA"
   },
   {
     // img: img1,
-    name: "— N. Ganpathy Subramaniam,",
-    desc: "Reliable, fast and accurate. CADMAX resolves field issues without delay and maintains tight control over survey accuracy. They understand engineering intent and deliver data that supports correct execution. CADMAX delivers precise surveying and reliable engineering support, ensuring every project runs smoothly with zero delays and trusted results.",
-    Role :" CEO"
+    name: "— CHARAN KHANGAROAT",
+    desc: "The firm managed the project efficiently, maintaining agreed timelines and delivering high-quality documentation. Their reliability and organized workflow gave us confidence throughout the design and development process.",
+    Role :" FS REALITY"
   },
   {
     // img: img1,
-    name: "— L. Johnson, ",
-    desc: "“The level of dedication and professionalism exhibited by the CADMAX team is unmatched. Their insights have been pivotal in streamlining our projects and enhancing overall efficiency. CADMAX specializes in detailed surveying, fast field solutions, and quality execution, helping engineers maintain accuracy, save time, and build confidently.",
-    Role :" Operations Director"
+    name: "— Manish  ",
+    desc: "CADMAX GROUP made our dream home a reality with their exceptional design and support. We were particularly impressed by their collaborative approach and willingness to listen to our feedback, making us feel like valued partners in the process.",
+    Role :" KGK Group"
   },
   {
+
     // img: img1,
-    name: "— A. Stevens",
-    desc: "With CADMAX's innovative solutions, we have significantly reduced our turnaround time for critical projects. Their expertise is a game-changer in our workflow. CADMAX provides reliable surveying services, sharp data accuracy, professional execution, and quick response, ensuring seamless project workflow without errors or unnecessary delays." ,
- Role :"Project Manager"
+    name: "— Sandeep Sharma",
+    desc: "We were particularly impressed by their collaborative approach and willingness to listen to our feedback, making us feel like valued partners in the process. Their thoughtful planning and technical knowledge were evident at every stage of the project." ,
+ Role :"Udaygajraj Group"
+  },
+
+
+    {
+
+    // img: img1,
+    name: "— Ashish Kumar",
+    desc: "The strength of our company lies in its people—professionals whose knowledge, discipline, and passion add distinction and prestige to every project we deliver." ,
+ Role :"Ashish Group"
+  },
+    {
+
+    // img: img1,
+    name: "— Ram Chandra Yadav",
+    desc: "Their team was professional, highly responsive, and guided us seamlessly through every stage of the project. We would not hesitate to recommend their services to anyone looking for a truly collaborative and talented architectural partner." ,
+ Role :"Aryan Landmark"
+  },
+    {
+
+    // img: img1,
+    name: "— Abhishek Kumawat",
+    desc: "We are absolutely delighted with the work of CADMAX CONSULTANCY They took our initial ideas and transformed them into a beautiful, functional design that exceeded our expectations." ,
+ Role :"Mahima Group"
+  },
+    {
+
+    // img: img1,
+    name: "— Babu Lal  Kulariya",
+    desc: "The firm proved to be a reliable and capable partner. They adhered to agreed timelines and budgets while maintaining a high standard of design and documentation. Their structured approach and attention to detail gave us confidence throughout the project." ,
+ Role :"SHYAMASHISH GROUP"
   },
 ];
 const Testimonial = () => {
