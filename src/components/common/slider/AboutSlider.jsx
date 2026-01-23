@@ -47,7 +47,8 @@ const AboutSlider = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 pt-0 pb-20 overflow-hidden">
+   <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 pt-0 pb-20 overflow-hidden">
+
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 40 }}

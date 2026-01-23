@@ -88,8 +88,8 @@
 
 /* 🔥 Icon wrapper */
 .mv-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: #000;
   border-radius: 50%;
   display: flex;
@@ -101,7 +101,7 @@
 /* 🔥 Actual icon */
 .mv-icon i {
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* Text styling remains same */
