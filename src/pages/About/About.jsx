@@ -15,7 +15,6 @@ import cap5 from "../../../src/assets/Images/about/image-5.jpeg";
 import cap6 from "../../../src/assets/Images/about/image-6.jpeg";
 
 
-import methodImg from "../../../src/assets/Images/about/METHODOLOGYy.jpg";
 
 import svg1 from "../../../src/assets/Images/about/Frame 35.png";
 import svg2 from "../../../src/assets/Images/about/Frame 35 (1).png";
@@ -116,19 +115,7 @@ const About = () => {
 
       </div>
 
-      {/* METHODOLOGY SECTION */}
-      {/* <div className="method-section container-fluid">
-        <div className="method-text col-6-md">
-          <h2>METHODOLOGY THAT REMOVES GUESSWORK</h2>
-          <p>
-            Our architectural methodology removes guesswork by following a clear, structured, and data-driven design process. Each project is developed through detailed analysis, accurate planning, and precise documentation, supported by advanced design tools and regular reviews. This systematic approach ensures clarity, reduces errors, and delivers confident, reliable outcomes from concept to completion.
-          </p>
-        </div>
-
-        <div className="method-image col-6-md">
-          <img src={methodImg} alt="methodology" />
-        </div>
-      </div> */}
+     
 
       <AboutSlider/>
 
