@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import AboutSlider from "../../components/common/slider/AboutSlider";
 import Navbar from '../../components/Layout/Header/Navbar';
 import Footer from '../../components/Layout/Footer/Footer';
 
@@ -107,7 +108,7 @@ const About = () => {
   {/* 6th BIG */}
   <div className="cap-item cap-small">
     <img src={cap6} alt="" />
-    <h3>AUTO LEVEL</h3>
+    <h3> DIGITAL AUTO LEVEL</h3>
   </div>
 
 </div>
@@ -116,7 +117,7 @@ const About = () => {
       </div>
 
       {/* METHODOLOGY SECTION */}
-      <div className="method-section container-fluid">
+      {/* <div className="method-section container-fluid">
         <div className="method-text col-6-md">
           <h2>METHODOLOGY THAT REMOVES GUESSWORK</h2>
           <p>
@@ -127,7 +128,11 @@ const About = () => {
         <div className="method-image col-6-md">
           <img src={methodImg} alt="methodology" />
         </div>
-      </div>
+      </div> */}
+
+      <AboutSlider/>
+
+
 
 
       <div className="values-section">

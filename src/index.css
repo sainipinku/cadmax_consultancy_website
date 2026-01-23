@@ -48,3 +48,13 @@ code {
 .animate-slideIn {
   animation: slideIn 0.9s ease forwards;
 }
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
