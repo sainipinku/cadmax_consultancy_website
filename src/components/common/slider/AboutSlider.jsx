@@ -82,7 +82,7 @@ const AboutSlider = () => {
           {loopImages.map((img, index) => (
             <motion.div
               key={index}
-              className="min-w-[220px] md:min-w-[320px] flex-shrink-0"
+              className="min-w-[220px] md:min-w-[320px] xl:min-w-[380px] 2xl:min-w-[420px] flex-shrink-0"
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{
