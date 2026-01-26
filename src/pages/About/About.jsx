@@ -66,23 +66,22 @@ const About = () => {
         </div>
       </div>
 
-{/* award section  */}
- <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-5">
-        
+      {/* award section  */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-5">
+
         {/* LEFT CONTENT */}
-
-
-        
         <div>
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight mb-6">
-             Inspiring Leadership, Remarkable Achievements
+            Inspiring Leadership, Remarkable Achievements
           </h2>
 
-           <p className="text-gray-600 text-base leading-relaxed mb-5">
-           It is truly commendable that Mr. Hanuman Sahay Sharma, Managing Director of Y Cadmax, has achieved numerous milestones through his dedication, perseverance, and visionary approach. His consistent efforts and leadership have played a key role in the growth and success of the organization. With a strong commitment to excellence and innovation, he has inspired many professionals and students alike. His achievements reflect not only personal success but also his positive impact on the industry, making him a respected and motivating leader.
+          <p className="text-gray-600 text-base leading-relaxed mb-5">
+            It is truly commendable that Mr. Hanuman Sahay Sharma, Managing Director of Y Cadmax, has achieved numerous milestones through his dedication, perseverance, and visionary approach. His consistent efforts and leadership have played a key role in the growth and success of the organization. With a strong commitment to excellence and innovation, he has inspired many professionals and students alike. His achievements reflect not only personal success but also his positive impact on the industry, making him a respected and motivating leader.
           </p>
 
-
+          <p className="text-gray-800 font-medium">
+            A Journey of Vision, Dedication, and Success
+          </p>
           <p className="text-gray-800 font-medium">
             Driven by innovation, guided by experience, and built on trust.
           </p>
@@ -108,52 +107,52 @@ const About = () => {
           <p>Cadmax Consultancy’s capabilities stand strong in the field through its commitment to precision, innovation, and practical execution. With a skilled team, advanced design technology, and thorough on-site coordination, the firm successfully translates concepts into reliable, buildable solutions. Every project reflects a balance of technical accuracy, creative design, and real-world performance, ensuring quality from planning to completion. This dedication to excellence allows Cadmax Consultancy to deliver results that consistently meet professional standards and client expectations on the ground.</p>
         </div>
 
-       <div className="cap-collage">
+        <div className="cap-collage">
 
-  {/* 1st BIG */}
-  <div className="cap-item cap-big">
-    <img src={cap1} alt="" />
-    <h3>TOTAL STATION</h3>
-  </div>
+          {/* 1st BIG */}
+          <div className="cap-item cap-big">
+            <img src={cap1} alt="" />
+            <h3>TOTAL STATION</h3>
+          </div>
 
-  {/* 2nd */}
-  <div className="cap-item cap-small">
-    <img src={cap2} alt="" />
-    <h3>DRONE</h3>
-  </div>
+          {/* 2nd */}
+          <div className="cap-item cap-small">
+            <img src={cap2} alt="" />
+            <h3>DRONE</h3>
+          </div>
 
-  {/* 4th */}
-  <div className="cap-item cap-small">
-    <img src={cap4} alt="" />
-    <h3>DGPS</h3>
-  </div>
+          {/* 4th */}
+          <div className="cap-item cap-small">
+            <img src={cap4} alt="" />
+            <h3>DGPS</h3>
+          </div>
 
-  {/* 3rd */}
-  <div className="cap-item cap-big">
-    <img src={cap3} alt="" />
-    <h3>GPS</h3>
-  </div>
+          {/* 3rd */}
+          <div className="cap-item cap-big">
+            <img src={cap3} alt="" />
+            <h3>GPS</h3>
+          </div>
 
-  {/* 5th */}
-  <div className="cap-item cap-small">
-    <img src={cap5} alt="" />
-    <h3>LIDAR</h3>
-  </div>
+          {/* 5th */}
+          <div className="cap-item cap-small">
+            <img src={cap5} alt="" />
+            <h3>LIDAR</h3>
+          </div>
 
-  {/* 6th BIG */}
-  <div className="cap-item cap-small">
-    <img src={cap6} alt="" />
-    <h3> DIGITAL AUTO LEVEL</h3>
-  </div>
+          {/* 6th BIG */}
+          <div className="cap-item cap-small">
+            <img src={cap6} alt="" />
+            <h3> DIGITAL AUTO LEVEL</h3>
+          </div>
 
-</div>
+        </div>
 
 
       </div>
 
-     
 
-      <AboutSlider/>
+
+      <AboutSlider />
 
 
 
