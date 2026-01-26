@@ -72,7 +72,7 @@ const Contact = () => {
         style={{ backgroundImage: `url(${heroBG})` }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -135,7 +135,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-xl p-6 md:p-8 w-full max-w-md mx-auto"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-3xl font-bold text-orange-500 mb-6">
               Get in Touch
             </h3>
 
