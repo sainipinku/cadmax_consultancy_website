@@ -57,7 +57,7 @@ const AboutSlider = () => {
         viewport={{ once: true }}
         className="text-4xl md:text-5xl font-serif text-center mb-4"
       >
-        Popular States We Serve
+        Popular States And Cities We Serve
       </motion.h2>
 
       {/* Subtitle line */}

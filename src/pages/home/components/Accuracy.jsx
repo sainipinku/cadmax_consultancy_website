@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Accuracy.css';
-import image from "../../../assets/Images/Other/Accuracy-min.jpg";
+import image from "../../../assets/Images/Other/accuracy-part.jpg.jpeg";
 
 const Accuracy = () => {
   const textRef = useRef(null);

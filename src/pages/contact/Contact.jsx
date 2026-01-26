@@ -35,6 +35,12 @@ const Contact = () => {
       await API.post("/inquiries", form);
 
       setSuccess("Your inquiry has been sent successfully!");
+
+      // 🔹 2 seconds baad success message hata do
+      setTimeout(() => {
+        setSuccess("");
+      }, 2500);
+
       setForm({
         fullName: "",
         email: "",
@@ -195,7 +201,7 @@ const Contact = () => {
               required
             ></textarea>
 
-            {success && <p className="form-success">{success}</p>}
+            {success && <p className="form-success text-white">{success}</p>}
             {error && <p className="form-error">{error}</p>}
 
             <button className="submit-btn" type="submit" disabled={loading}>

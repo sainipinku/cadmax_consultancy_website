@@ -4,17 +4,38 @@ import {
   Layers,
   ListTree,
   LogOut,
+  Mail,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import API from "../../api/axios"; // ⚠️ path check kar lena
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const [unreadCount, setUnreadCount] = useState(0);
 
   const handleLogout = () => {
     localStorage.removeItem("adminToken");
     localStorage.removeItem("isAdminAuth");
     navigate("/admin/login", { replace: true });
   };
+
+  // 🔥 fetch unread inquiries
+  const fetchUnreadCount = async () => {
+    try {
+      const res = await API.get("/inquiries");
+      const unread = res.data.filter((i) => i.status === "new").length;
+      setUnreadCount(unread);
+    } catch (err) {
+      console.error("Failed to fetch inquiry count", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchUnreadCount();
+    const interval = setInterval(fetchUnreadCount, 30000); // every 30s
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <aside className="w-64 bg-slate-900 text-white flex flex-col">
@@ -32,6 +53,14 @@ const Sidebar = () => {
           icon={<LayoutDashboard size={18} />}
           label="Dashboard"
           exact
+        />
+
+        {/* INQUIRIES 🔥 */}
+        <NavItem
+          to="/admin/inquiries"
+          icon={<Mail size={18} />}
+          label="Inquiries"
+          badge={unreadCount}
         />
 
         {/* SERVICES */}
@@ -82,20 +111,28 @@ const Sidebar = () => {
   );
 };
 
-const NavItem = ({ to, icon, label, exact }) => (
+const NavItem = ({ to, icon, label, exact, badge }) => (
   <NavLink
     to={to}
     end={exact}
     className={({ isActive }) =>
-      `flex items-center gap-3 px-3 py-2 rounded-lg transition ${
+      `flex items-center justify-between gap-3 px-3 py-2 rounded-lg transition ${
         isActive
           ? "bg-slate-800 text-white"
           : "text-slate-300 hover:bg-slate-800 hover:text-white"
       }`
     }
   >
-    {icon}
-    <span>{label}</span>
+    <div className="flex items-center gap-3">
+      {icon}
+      <span>{label}</span>
+    </div>
+
+    {badge > 0 && (
+      <span className="bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">
+        {badge}
+      </span>
+    )}
   </NavLink>
 );
 

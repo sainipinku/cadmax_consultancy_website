@@ -10,7 +10,7 @@ import img6 from "../../../assets/Images/company logo/FS REALITY COMPANY LOGO.jp
 import img7 from "../../../assets/Images/company logo/HG INFRA.jpg";
 import img8 from "../../../assets/Images/company logo/HOMELAND GROUP LOGO.jpg";
 import img9 from "../../../assets/Images/company logo/JAIPUR DEVELOPMENT AUTHORITY LOGO.jpg";
-import img10 from "../../../assets/Images/company logo/Frame 38.jpg";
+
 import img11 from "../../../assets/Images/company logo/Shriram-Group-Logo.png";
 import img12 from "../../../assets/Images/company logo/UDAY GAJRAJ logo.jpg";
 import img13 from "../../../assets/Images/company logo/chiripal-logo.jpg";
@@ -32,7 +32,6 @@ import img28 from "../../../assets/Images/company logo/Frame 15.jpg";
 import img29 from "../../../assets/Images/company logo/Frame 16.jpg";
 import img30 from "../../../assets/Images/company logo/Frame 18.jpg";
 import img31 from "../../../assets/Images/company logo/Frame 19.jpg";
-import img32 from "../../../assets/Images/company logo/Frame 20.jpg";
 import img33 from "../../../assets/Images/company logo/Frame 35.jpg";
 import img34 from "../../../assets/Images/company logo/Frame 22.jpg";
 import img35 from "../../../assets/Images/company logo/Frame 23.jpg";
@@ -49,7 +48,7 @@ import img45 from "../../../assets/Images/company logo/Frame 33.jpg";
 import img46 from "../../../assets/Images/company logo/Frame 34.jpg";
 import img47 from "../../../assets/Images/company logo/Frame 21.jpg";
 
-const images = [img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31, img32, img33, img34, img35, img36, img37, img38, img39, img40, img41, img42, img43, img44, img45, img46, img47];
+const images = [img5, img6, img7, img8, img9, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31,  img33, img34, img35, img36, img37, img38, img39, img40, img41, img42, img43, img44, img45, img46, img47];
 
 const CompanyShowcase = () => {
   const sectionRef = useRef(null);

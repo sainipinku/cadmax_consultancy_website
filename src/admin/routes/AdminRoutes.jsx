@@ -8,6 +8,9 @@ import Login from "../pages/auth/Login";
 /* DASHBOARD */
 import Dashboard from "../pages/dashboard/Dashboard";
 
+/* INQUIRIES */
+import Inquiries from "../pages/Inquiries/Inquiries"; // ✅ correct import
+
 /* SERVICES */
 import CategoryList from "../pages/services/CategoryList";
 import CategoryForm from "../pages/services/CategoryForm";
@@ -40,6 +43,9 @@ const AdminRoutes = () => {
       >
         {/* Dashboard */}
         <Route index element={<Dashboard />} />
+
+        {/* ===== INQUIRIES ===== */}
+        <Route path="inquiries" element={<Inquiries />} />
 
         {/* ===== SERVICES ===== */}
         <Route path="services/categories" element={<CategoryList />} />

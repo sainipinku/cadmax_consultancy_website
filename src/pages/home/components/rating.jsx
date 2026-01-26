@@ -22,19 +22,19 @@ const data = [
   },
   {
     // img: img1,
-    name: "— SANWAR MAM ",
+    name: "— SANWARMAL ",
     desc: "Working with the Cadmax Group architects was a thoroughly positive experience. They listened carefully to our requirements, responded thoughtfully to every piece of feedback, and provided clear, professional guidance at each stage of the process. Their collaborative and solution-oriented approach greatly contributed to the smooth execution of the project and played a key role in its overall success.",
-    Role :" ASHIANA"
+    Role :" AHIANA HOUSING LTD"
   },
   {
     // img: img1,
     name: "— CHARAN KHANGAROAT",
     desc: "The firm managed the project efficiently, maintaining agreed timelines and delivering high-quality, well-structured documentation. Their reliability, transparency, and organized workflow gave us confidence throughout the design and development process. The team’s proactive coordination and attention to detail ensured smooth progress and resulted in a final outcome that met our technical requirements and expectations",
-    Role :" FS REALITY"
+    Role :" FS REALITY GROUP"
   },
   {
     // img: img1,
-    name: "— Manish  ",
+    name: "— MANISH GOYAL  ",
     desc: "CADMAX Group truly made our dream home a reality through their exceptional design quality, professionalism, and constant support. We were particularly impressed by their collaborative approach and genuine willingness to listen to our feedback, which made us feel like valued partners throughout the process. We highly recommend their services to anyone seeking creative, reliable, and client-focused architectural solutions.",
     Role :" KGK Group"
   },

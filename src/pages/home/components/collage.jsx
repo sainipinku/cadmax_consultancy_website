@@ -58,8 +58,8 @@ const Collage2 = () => {
             Capability in Every Project
           </h4>
           <p className="collage2-right-heading">
-            CADMAX provides comprehensive architectural, surveying, and planning
-            services, supporting construction, infrastructure, industrial, and
+            CADMAX provides comprehensive architectural, surveying and planning
+            services, supporting construction, infrastructure, industrial and
             township projects with precise and reliable workflows.
           </p>
         </div>

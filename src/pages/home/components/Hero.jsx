@@ -6,11 +6,13 @@ import img1 from "../../../assets/Images/header/home-banner.jpg";
 import img2 from "../../../assets/Images/header/home-slider1.jpg";
 import img3 from "../../../assets/Images/header/home-slider2.jpg";
 import img4 from "../../../assets/Images/header/home-banner-img.jpg";
+import img5 from "../../../assets/Images/header/banner-home-1.jpeg";
+import img6 from "../../../assets/Images/header/banner-home-2.jpeg";
 
 
 
 const Hero = () => {
-  const sliderImages = [img1, img2, img3, img4];
+  const sliderImages = [img1, img2, img3, img4 , img5 , img6];
 
   const settings = {
     dots: false,

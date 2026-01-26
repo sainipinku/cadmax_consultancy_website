@@ -15,16 +15,14 @@
   overflow: hidden;
 }
 
-/* Dark overlay */
 .contact-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.60); /* adjust darkness */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
-/* Text container */
 .contact-hero-content {
   position: relative;
   z-index: 2;
@@ -37,54 +35,49 @@
   font-size: 42px;
   font-weight: 900;
   margin-bottom: 10px;
-  letter-spacing: 1px;
 }
 
 .contact-hero-content h2 {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 12px;
-  opacity: 0.9;
 }
 
 .contact-hero-content p {
   font-size: 16px;
   line-height: 1.6;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-hero {
-    height: 360px;
-  }
+/* ===========================
+   CONTACT MAIN GRID
+=========================== */
 
-  .contact-hero-content h1 {
-    font-size: 28px;
-  }
-
-  .contact-hero-content h2 {
-    font-size: 16px;
-  }
-
-  .contact-hero-content p {
-    font-size: 14px;
-  }
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 70px 40px;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* // just for try // */
+/* ===========================
+   LEFT SIDE
+=========================== */
 
+.contact-left h3 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
 
-/* .contact-hero {
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  
-} */
+.contact-left p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
 
-
-/* ICON + TEXT ROW */
 .contact-info {
   display: flex;
   align-items: flex-start;
@@ -100,62 +93,9 @@
   border-radius: 50%;
 }
 
-.contact-info h4 {
-  margin: 0;
-  font-weight: 900;
-  font-size: 14px;
-}
-
 .contact-info p {
-  margin-top: 5px;
+  margin: 0;
   font-size: 15px;
-  line-height: 1.6;
-  color: #333;
-}
-
-
-/* ===========================
-   CONTACT MAIN GRID
-=========================== */
-.contact-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 60px 40px;
-  gap: 50px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* ===========================
-   LEFT SIDE
-=========================== */
-.contact-left {
-  width: 100%; /* fixed width removed for responsiveness */
-}
-
-.contact-right {
-  width: 100%; /* fixed width removed */
-  border: solid 1px #e0dddd;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.contact-left h3 {
-  font-size: 22px;
-  font-weight: 900;
-  margin-bottom: 15px;
-  line-height: 1.3;
-}
-
-.contact-left h4 {
-  margin-top: 22px;
-  font-weight: 900;
-  font-size: 14px;
-}
-
-.contact-left p {
-  font-size: 15px;
-  font-weight: 500;
   line-height: 1.6;
   color: #333;
 }
@@ -163,49 +103,13 @@
 /* ===========================
    RIGHT SIDE (FORM)
 =========================== */
-/* .contact-right h3 {
-  font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 25px;
-}
 
-.contact-right input,
-.contact-right textarea {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #ddd;
-  padding: 12px 0;
-  margin-bottom: 25px;
-  font-size: 15px;
-  outline: none;
-}
-
-.contact-right textarea {
-  height: 130px;
-  resize: none;
-}
-
-.submit-btn {
-  background: #000;
-  color: #fff;
-  padding: 12px 32px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.2s;
-}
-
-.submit-btn:hover {
-  opacity: 0.8;
-} */
-
-/* Right form container background black */
 .contact-right {
-  background: #000000;
-  /* padding: 40px 35px; */
+  background: #000;
+  padding: 35px 30px;
+  border-radius: 6px;
 }
 
-/* Heading */
 .contact-right h3 {
   font-size: 20px;
   font-weight: 800;
@@ -213,13 +117,12 @@
   color: #fff;
 }
 
-/* Inputs + textarea as white boxes */
 .contact-right input,
 .contact-right textarea {
   width: 100%;
   border: 1px solid #ddd;
   padding: 12px 14px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   font-size: 15px;
   outline: none;
   background: #fff;
@@ -227,19 +130,44 @@
   border-radius: 4px;
 }
 
-/* Placeholder color */
-.contact-right input::placeholder,
-.contact-right textarea::placeholder {
-  color: #777;
+.contact-right input:focus,
+.contact-right textarea:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
 }
 
-/* Textarea */
 .contact-right textarea {
   height: 130px;
   resize: none;
 }
 
-/* Button */
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+  color: #777;
+}
+
+/* SUCCESS + ERROR */
+
+.form-success {
+  background: #16a34a;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.form-error {
+  background: #dc2626;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* BUTTON */
+
 .submit-btn {
   background: #fff;
   color: #000;
@@ -248,7 +176,7 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
-  transition: 0.2s;
+  transition: 0.25s ease;
   border-radius: 4px;
 }
 
@@ -256,19 +184,20 @@
   opacity: 0.85;
 }
 
-
-
-/* follow icon  */
-
-/* FOLLOW US BLOCK */
-.contact-follow {
-  margin-top: 35px;
-  color: #000000;
-  text-transform: uppercase;
-  
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-/* Header row */
+/* ===========================
+   FOLLOW US
+=========================== */
+
+.contact-follow {
+  margin-top: 35px;
+  text-transform: uppercase;
+}
+
 .follow-header {
   display: flex;
   align-items: center;
@@ -277,20 +206,17 @@
 }
 
 .follow-header h4 {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 900;
   margin: 0;
-  white-space: nowrap;
 }
 
-/* Horizontal line */
 .follow-line {
   flex: 1;
   height: 1px;
-  background: rgb(0, 0, 0);
+  background: #000;
 }
 
-/* Icons row */
 .follow-icons {
   display: flex;
   gap: 22px;
@@ -298,24 +224,33 @@
 }
 
 .follow-icons a {
-  color: #000000;
+  color: #000;
   font-size: 20px;
   transition: 0.3s ease;
 }
 
 .follow-icons a:hover {
-  color: #787878;
+  color: #777;
   transform: translateY(-2px);
 }
 
+/* ===========================
+   GOOGLE MAP
+=========================== */
 
+.contact-map iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+}
 
 /* ===========================
-   RESPONSIVE TABLET (1024px)
+   RESPONSIVE
 =========================== */
+
 @media (max-width: 1024px) {
   .contact-section {
-    padding: 40px 30px;
+    padding: 50px 30px;
     gap: 40px;
   }
 
@@ -325,67 +260,32 @@
   }
 }
 
-/* ===========================
-   RESPONSIVE MOBILE (768px)
-=========================== */
 @media (max-width: 768px) {
-  .contact-section {
-    grid-template-columns: 1fr;
-    padding: 30px 20px;
-    gap: 40px;
+  .contact-hero {
+    height: 360px;
   }
 
-  .contact-left p {
-    font-size: 14px;
-    line-height: 1.5;
+  .contact-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .contact-hero-content h2 {
+    font-size: 16px;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 35px 20px;
+    gap: 35px;
   }
 
   .contact-right {
-    padding: 20px 15px;
+    padding: 25px 20px;
   }
 
   .submit-btn {
     width: 100%;
     padding: 14px 0;
-  }
-}
-
-/* ===========================
-   EXTRA SMALL (480px)
-=========================== */
-@media (max-width: 480px) {
-  .contact-section {
-    padding: 20px 15px;
-  }
-
-  .contact-left h3,
-  .contact-right h3 {
-    font-size: 18px;
-  }
-
-  .contact-left p {
-    font-size: 13px;
-  }
-}
-
-/* ===========================
-   GOOGLE MAP
-=========================== */
-.contact-map {
-  /* width: 90%; */
-  /* margin: 50px auto; */
-}
-
-.contact-map iframe {
-  width: 100%;
-  height: 380px;
-  border: none;
-}
-
-/* MOBILE MAP */
-@media (max-width: 768px) {
-  .contact-map {
-    width: 95%;
   }
 
   .contact-map iframe {
@@ -394,6 +294,21 @@
 }
 
 @media (max-width: 480px) {
+  .contact-left h3,
+  .contact-right h3 {
+    font-size: 18px;
+  }
+
+  .contact-left p {
+    font-size: 13px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 14px;
+    padding: 11px 12px;
+  }
+
   .contact-map iframe {
     height: 250px;
   }

@@ -18,12 +18,13 @@ import image10 from "../../assets/Images/project/img-10.jpg";
 import image11 from "../../assets/Images/project/img-11.jpg";
 import image12 from "../../assets/Images/project/img-12.jpg";
 import image13 from "../../assets/Images/project/img-13.jpg";
+import image14 from "../../assets/Images/project/img-14.jpeg";
 
 const Project = () => {
   const projects = [
     {
       img: image1,
-      title: "HOMELAND GROUP – KESHAV VATSALYA",
+      title: "HOMELAND GROUP- KESHVAM HOMELAND",
       
     },
     {
@@ -38,17 +39,17 @@ const Project = () => {
     },
     {
       img: image4,
-      title: "NATURE HOME TULSI",
+      title: " NATURE HOMES TULSI - DIGGI ROAD",
       
     },
     {
       img: image5,
-      title: "SONAMATI FARMS",
+      title: " SONAMATI FARMAS- AGRA ROAD",
      
     },
     {
       img: image6,
-      title: "MUKUNDAM HOMELAND",
+      title: " MUKUNDAM HOMELAND-MUKUNDAM ROAD",
     },
     {
       img: image7,
@@ -67,7 +68,7 @@ const Project = () => {
     },
     {
       img: image10,
-      title: "SWASTIK RESIDENCY - PAWALIYA",
+      title: "SWASTIK RESIDENCY 1",
       
     },
     {
@@ -83,6 +84,12 @@ const Project = () => {
     {
       img: image13,
       title: "RIYASAT OFFICE SPACE",
+      
+    },
+
+      {
+      img: image14,
+      title: " DRAVYAVATI RIVER-TATA PROJECT",
       
     },
   ];
