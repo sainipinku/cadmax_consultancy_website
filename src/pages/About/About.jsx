@@ -76,7 +76,7 @@ const About = () => {
           </h2>
 
           <p className="text-gray-600 text-base leading-relaxed mb-5">
-            It is truly commendable that Mr. Hanuman Sahay Sharma, Managing Director of Y Cadmax, has achieved numerous milestones through his dedication, perseverance, and visionary approach. His consistent efforts and leadership have played a key role in the growth and success of the organization. With a strong commitment to excellence and innovation, he has inspired many professionals and students alike. His achievements reflect not only personal success but also his positive impact on the industry, making him a respected and motivating leader.
+            It is truly commendable that Mr. Hanuman Sahay Sharma, Managing Director of  Cadmax, has achieved numerous milestones through his dedication, perseverance, and visionary approach. His consistent efforts and leadership have played a key role in the growth and success of the organization. With a strong commitment to excellence and innovation, he has inspired many professionals and students alike. His achievements reflect not only personal success but also his positive impact on the industry, making him a respected and motivating leader.
           </p>
 
           <p className="text-gray-800 font-medium">
