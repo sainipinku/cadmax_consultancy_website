@@ -68,7 +68,7 @@ const AboutSlider = () => {
         viewport={{ once: true }}
         className="text-center max-w-4xl mx-auto text-base md:text-lg text-gray-600 mb-14 leading-relaxed"
       >
-        From concept to construction, Cadmac Consultancy serves multiple states
+        From concept to construction, Cadmac Consultancy serves multiple states and cities
         with expert architectural planning and infrastructure solutions—shaping
         sustainable, future-ready environments wherever we build.
       </motion.p>

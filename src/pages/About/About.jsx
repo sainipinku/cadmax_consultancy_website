@@ -6,6 +6,7 @@ import Footer from '../../components/Layout/Footer/Footer';
 
 import heroBG from "../../../src/assets/Images/about/About-hero-bg.jpg";
 import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
+import awardimg from "../../assets/Images/about/md-sir-image.jpeg"
 
 import cap1 from "../../../src/assets/Images/about/image-1.jpeg";
 import cap2 from "../../../src/assets/Images/about/image-2.png";
@@ -64,6 +65,41 @@ const About = () => {
           </p>
         </div>
       </div>
+
+{/* award section  */}
+ <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-5">
+        
+        {/* LEFT CONTENT */}
+
+
+        
+        <div>
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight mb-6">
+             Inspiring Leadership, Remarkable Achievements
+          </h2>
+
+           <p className="text-gray-600 text-base leading-relaxed mb-5">
+           It is truly commendable that Mr. Hanuman Sahay Sharma, Managing Director of Y Cadmax, has achieved numerous milestones through his dedication, perseverance, and visionary approach. His consistent efforts and leadership have played a key role in the growth and success of the organization. With a strong commitment to excellence and innovation, he has inspired many professionals and students alike. His achievements reflect not only personal success but also his positive impact on the industry, making him a respected and motivating leader.
+          </p>
+
+
+          <p className="text-gray-800 font-medium">
+            Driven by innovation, guided by experience, and built on trust.
+          </p>
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src={awardimg}
+            alt="About Cadmac Consultancy"
+            className="w-full max-w-md h-[480px] rounded-xl shadow-lg object-cover"
+          />
+        </div>
+
+      </div>
+
+
       {/* CAPABILITIES SECTION */}
       <div className="cap-section">
 
