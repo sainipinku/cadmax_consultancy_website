@@ -94,7 +94,7 @@ const Contact = () => {
               bring your project to life with confidence.
             </p>
 
-            <div className="h-[3px] w-95 bg-orange-500 mb-10"></div>
+            <div className="h-[3px] w-85 bg-orange-500 mb-10"></div>
 
             {/* PHONE */}
             <div className="flex items-start gap-4 mb-6">
