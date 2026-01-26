@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
-import './Contact.css'
+import React, { useState } from "react";
+import "./Contact.css";
+import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-import Navbar from '../../components/Layout/Header/Navbar'
-import Footer from '../../components/Layout/Footer/Footer'
-import heroBG from '../../assets/Images/contact/contact-hero.png'
-import API from '../../api/axios'   // 👈 axios instance
+
+import heroBG from "../../assets/Images/contact/contact-hero.png";
+
+import Navbar from "../../components/Layout/Header/Navbar";
+import Footer from "../../components/Layout/Footer/Footer";
+
+import API from "../../api/axios"; // 👈 axios instance
 
 const Contact = () => {
-
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -36,7 +38,6 @@ const Contact = () => {
 
       setSuccess("Your inquiry has been sent successfully!");
 
-      // 🔹 2 seconds baad success message hata do
       setTimeout(() => {
         setSuccess("");
       }, 2500);
@@ -47,7 +48,6 @@ const Contact = () => {
         phone: "",
         message: "",
       });
-
     } catch (err) {
       console.error(err);
       setError("Failed to send inquiry. Please try again.");
@@ -61,155 +61,148 @@ const Contact = () => {
       <Navbar />
 
       {/* HERO */}
-      <div
+      {/* <div
         className="contact-hero"
         style={{ backgroundImage: `url(${heroBG})` }}
-      >
-        <div className="contact-hero-content">
-          <h1>Contact Us</h1>
-          <h2>Where vision takes shape and structures stand strong —</h2>
-          <p>
-            delivering architecture built for beauty, function, and longevity.
-          </p>
-        </div>
-      </div>
+      ></div> */}
 
       {/* CONTACT SECTION */}
-      <div className="contact-section">
+      <div
+        className="w-full relative bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBG})` }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/80"></div>
 
-        {/* LEFT BOX */}
-        <div className="contact-left">
-          <h3>BUILD YOUR DREAMS, WITH US</h3>
-          <p>
-            Contact CADMAX directly—no delays. Get clear communication,
-            expert guidance, and personalized solutions straight from our
-            team to bring your project to life with confidence.
-          </p>
+        <div className="relative max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          <div className="follow-header">
-            <h4>REACH US</h4>
-            <span className="follow-line"></span>
-          </div>
+          {/* LEFT SIDE — CONTACT DETAILS */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-white"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              BUILD YOUR DREAMS, WITH US
+            </h2>
 
-          {/* ADDRESS */}
-          <div className="contact-info">
-            <span className="icon">
-              <FaMapMarkerAlt />
-            </span>
-            <div>
-              <p>
-                GROUND FLOOR-1,2,3 AND 302-3RD FLOOR, PRISM TOWER,
-                OPP. RAJASTHAN POLICE HEADQUARTER, LAL KOTHI SCHEME,
+            <p className="text-lg text-gray-200 mb-8 max-w-xl">
+              Contact CADMAX directly—no delays. Get clear communication, expert
+              guidance, and personalized solutions straight from our team to
+              bring your project to life with confidence.
+            </p>
+
+            <div className="h-[3px] w-95 bg-orange-500 mb-10"></div>
+
+            {/* PHONE */}
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
+                <FaPhoneAlt className="text-orange-500 text-lg" />
+              </div>
+              <p className="text-lg font-semibold">0141-411-3111</p>
+            </div>
+
+            {/* ADDRESS */}
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
+                <FaMapMarkerAlt className="text-orange-500 text-lg" />
+              </div>
+              <p className="text-gray-200 leading-relaxed max-w-lg">
+                GROUND FLOOR-1,2,3 AND 302-3RD FLOOR, PRISM TOWER,  
+                OPP. RAJASTHAN POLICE HEADQUARTER, LAL KOTHI SCHEME,  
                 TONK ROAD, JAIPUR (RAJ.)
               </p>
             </div>
-          </div>
 
-          {/* PHONE */}
-          <div className="contact-info">
-            <span className="icon">
-              <FaPhoneAlt />
-            </span>
-            <div>
-              <p>0141-411-3111</p>
+            {/* EMAIL */}
+            <div className="flex items-start gap-4">
+              <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
+                <FaEnvelope className="text-orange-500 text-lg" />
+              </div>
+              <p className="text-lg font-semibold">
+                cadmaxconsultancy@gmail.com
+              </p>
             </div>
-          </div>
+          </motion.div>
 
-          {/* EMAIL */}
-          <div className="contact-info">
-            <span className="icon">
-              <FaEnvelope />
-            </span>
-            <div>
-              <p>cadmaxconsultancy@gmail.com</p>
-            </div>
-          </div>
+          {/* RIGHT SIDE — FORM CARD */}
+          <motion.div
+            initial={{ opacity: 0, x: 80, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl shadow-xl p-6 md:p-8 w-full max-w-md mx-auto"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              Get in Touch
+            </h3>
 
-          {/* FOLLOW US */}
-          <div className="contact-follow">
-            <div className="follow-header">
-              <h4>Follow Us</h4>
-              <span className="follow-line"></span>
-            </div>
+            <form onSubmit={handleSubmit}>
+              {/* FULL NAME */}
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                value={form.fullName}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm mb-4 outline-none focus:ring-2 focus:ring-orange-500"
+              />
 
-            <div className="follow-icons">
-              <a
-                href="https://www.facebook.com/CadMaxProjectsJPR"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noreferrer"
+              {/* EMAIL */}
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm mb-4 outline-none focus:ring-2 focus:ring-orange-500"
+              />
+
+              {/* PHONE */}
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone"
+                value={form.phone}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm mb-4 outline-none focus:ring-2 focus:ring-orange-500"
+              />
+
+              {/* MESSAGE */}
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={form.message}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm mb-5 h-28 resize-none outline-none focus:ring-2 focus:ring-orange-500"
+              ></textarea>
+
+              {/* SUCCESS / ERROR */}
+              {success && (
+                <p className="text-green-600 text-sm mb-3">{success}</p>
+              )}
+              {error && (
+                <p className="text-red-600 text-sm mb-3">{error}</p>
+              )}
+
+              {/* BUTTON */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-orange-500 text-white font-semibold py-3 rounded-lg hover:bg-orange-600 transition disabled:opacity-60"
               >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://www.instagram.com/cadmaxconsultancy/"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/cadmax-projects-pvt-ltd/"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
-          </div>
+                {loading ? "SENDING..." : "SUBMIT"}
+              </button>
+            </form>
+          </motion.div>
+
         </div>
-
-        {/* RIGHT BOX – FORM */}
-        <div className="contact-right">
-          <h3>GET IN TOUCH WITH US</h3>
-
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="fullName"
-              placeholder="FULL NAME"
-              value={form.fullName}
-              onChange={handleChange}
-              required
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="EMAIL"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-
-            <input
-              type="text"
-              name="phone"
-              placeholder="PHONE"
-              value={form.phone}
-              onChange={handleChange}
-              required
-            />
-
-            <textarea
-              name="message"
-              placeholder="MESSAGE"
-              value={form.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-
-            {success && <p className="form-success text-white">{success}</p>}
-            {error && <p className="form-error">{error}</p>}
-
-            <button className="submit-btn" type="submit" disabled={loading}>
-              {loading ? "SENDING..." : "SUBMIT"}
-            </button>
-          </form>
-        </div>
-
       </div>
 
       {/* MAP SECTION */}
@@ -224,7 +217,7 @@ const Contact = () => {
 
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
