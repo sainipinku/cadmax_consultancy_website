@@ -22,9 +22,9 @@ const data = [
   },
   {
     // img: img1,
-    name: "— SANWARMAL ",
+    name: "— SANWAR MAL ",
     desc: "Working with the Cadmax Group architects was a thoroughly positive experience. They listened carefully to our requirements, responded thoughtfully to every piece of feedback, and provided clear, professional guidance at each stage of the process. Their collaborative and solution-oriented approach greatly contributed to the smooth execution of the project and played a key role in its overall success.",
-    Role :" AHIANA HOUSING LTD"
+    Role :" ASHIANA HOUSING LTD"
   },
   {
     // img: img1,
@@ -112,8 +112,8 @@ const Testimonial = () => {
                   <div className="testimonial-client">
                     {/* <img src={t.img} alt="" /> */}
                     <div>
-                      <p className="client-name">{t.name}</p>
-                      <p className="client-role">{t.Role}</p>
+                      <p className="client-name">{t.name.toUpperCase()}</p>
+                      <p className="client-role">{t.Role.toUpperCase()}</p>
                     </div>
                   </div>
                 </div>

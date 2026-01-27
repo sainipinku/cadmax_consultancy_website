@@ -21,7 +21,7 @@ const AboutSlider = () => {
     { id: 3, url: image3, title: "GUJRAT" },
     { id: 4, url: image4, title: "JODHPUR" },
     { id: 5, url: image5, title: "LUCKNOW" },
-    { id: 6, url: image6, title: "MAHARASTRA" },
+    { id: 6, url: image6, title: "MAHARASHTRA" },
     { id: 7, url: image7, title: "PUNJAB" },
     { id: 8, url: image8, title: "RAJASTHAN" },
     { id: 9, url: image9, title: "VARANASI" },
@@ -68,7 +68,7 @@ const AboutSlider = () => {
         viewport={{ once: true }}
         className="text-center max-w-4xl mx-auto text-base md:text-lg text-gray-600 mb-14 leading-relaxed"
       >
-        From concept to construction, Cadmac Consultancy serves multiple states and cities
+        From concept to construction, Cadmax Consultancy serves multiple states and cities
         with expert architectural planning and infrastructure solutions—shaping
         sustainable, future-ready environments wherever we build.
       </motion.p>
