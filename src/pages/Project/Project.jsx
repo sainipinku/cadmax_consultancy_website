@@ -3,7 +3,7 @@ import "./Project.css";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
 
-import heroBG from "../../../src/assets/Images/project/hero-project-banner.jpg";
+import heroBG from "../../../src/assets/Images/project/project-banner.png";
 
 import image1 from "../../assets/Images/project/img-1.jpg";
 import image2 from "../../assets/Images/project/img-2.jpg";
