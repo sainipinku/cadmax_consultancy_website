@@ -5,9 +5,10 @@ import "./Services.css";
 import { Link } from "react-router-dom";
 
 import heroBG from "../../../src/assets/Images/service-page-1/service-banner.jpg";
-import img1 from "../../assets/Images/service-page-1/engineer-img.jpg";
-import img2 from "../../assets/Images/service-page-1/service2.png";
-import img3 from "../../assets/Images/service-page-1/service3.png";
+import img1 from "../../assets/Images/service-page-1/engineer-img.jpeg";
+import img2 from "../../assets/Images/service-page-1/architech-img.jpeg";
+import img3 from "../../assets/Images/service-page-1/interior-img.jpeg";
+import img4 from "../../assets/Images/service-page-1/infastructure-img.jpeg";
 
 const Service1 = () => {
   return (
@@ -15,9 +16,14 @@ const Service1 = () => {
       <Navbar />
 
       <div
-        className="service1-hero"
-        style={{ backgroundImage: `url(${heroBG})` }}
-      ></div>
+  className="service1-hero"
+  style={{ backgroundImage: `url(${heroBG})` }}
+>
+  <div className="hero-overlay text-white">
+    <h1>Designing Dreams Building Reality</h1>
+  </div>
+</div>
+
 
       <div className="service1-grid slide-in">
         <Link
@@ -41,8 +47,17 @@ const Service1 = () => {
           className="service1-card-1 delay-3"
         >
           <img src={img3} alt="service" />
+          <div className="card-text">INTERIOR</div>
+        </Link>
+
+         <Link
+          to="/Services/Engineering"
+          className="service1-card-1 delay-3"
+        >
+          <img src={img4} alt="service" />
           <div className="card-text">infrastructure</div>
         </Link>
+
       </div>
 
       <Footer />

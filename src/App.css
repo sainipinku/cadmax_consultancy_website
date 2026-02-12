@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
 
 *{
   font-family: "Lato", sans-serif;
@@ -14,4 +16,5 @@ a, a:link, a:visited {
 html, body {
     overflow-x: hidden !important;
     width: 100%;
+   
 }
