@@ -39,7 +39,7 @@ const Service1 = () => {
           className="service1-card-1 delay-2"
         >
           <img src={img2} alt="service" />
-          <div className="card-text">ARCHITECTURE</div>
+          <div className="card-text">architectural</div>
         </Link>
 
         <Link
@@ -47,7 +47,7 @@ const Service1 = () => {
           className="service1-card-1 delay-3"
         >
           <img src={img3} alt="service" />
-          <div className="card-text">INTERIOR</div>
+          <div className="card-text">INTERIOR DESIGNING</div>
         </Link>
 
          <Link
