@@ -1,10 +1,18 @@
 import React from 'react'
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
-import heroBG from "../../assets/Images/urbanmax/urbanmax-banner.jpg"
+import heroBG from "../../assets/Images/urbanmax/banner-img.png"
 import img1 from "../../assets/Images/urbanmax/image-1.jpg"
 import img2 from "../../assets/Images/urbanmax/image-2.jpg"
 import img3 from "../../assets/Images/urbanmax/image-3.jpg"
+import img4 from "../../assets/Images/urbanmax/mahadev-market.jpg"
+import img5 from "../../assets/Images/urbanmax/offer-img1.jpg"
+import img6 from "../../assets/Images/urbanmax/offer-img2.jpg"
+import img7 from "../../assets/Images/urbanmax/offer-img3.jpg"
+import img8 from "../../assets/Images/urbanmax/offer-img4.jpg"
+
+
+
 
 const Architecture = () => {
      
@@ -91,6 +99,138 @@ const Architecture = () => {
         </div>
       </div>
     </div>
+   <div className="relative pb-5 bg-gradient-to-b from-white to-gray-100">
+
+  <div className="max-w-6xl mx-auto px-6 text-center">
+
+    {/* Heading */}
+    <h2 className="text-3xl md:text-5xl font-light tracking-wide text-gray-800 leading-snug">
+      An architect who transforms the old into 
+      <span className="block font-semibold text-gray-900 mt-2">
+        timeless new designs
+      </span>
+    </h2>
+
+    {/* Decorative Line */}
+    <div className="w-24 h-[2px] bg-gray-900 mx-auto mt-6 mb-12"></div>
+
+    {/* Image Card */}
+    <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
+
+      <img 
+        src={img4} 
+        alt="mahadev market"
+        className="w-full h-[500px] object-cover transform group-hover:scale-105 transition duration-700 ease-in-out"
+      />
+
+      {/* Soft Overlay */}
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-500"></div>
+
+    </div>
+
+  </div>
+
+</div>
+<section className="relative py-24 ">
+
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* Header */}
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+
+      <h1 className="text-3xl md:text-5xl font-light tracking-wide text-gray-900">
+        WHAT WE OFFER
+      </h1>
+
+      <p className="mt-6 md:mt-0 text-sm md:text-base tracking-[3px] text-gray-500 uppercase">
+        Residential • Commercial • Industrial Planning
+      </p>
+
+    </div>
+
+    {/* UNIQUE COLLAGE */}
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
+
+      {/* Large Left Image */}
+      <div className="relative md:col-span-2 md:row-span-2 group overflow-hidden rounded-2xl">
+
+        <img
+          src={img8}
+          alt=""
+          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+
+        {/* Text */}
+        <div className="absolute bottom-6 left-6 z-10">
+          <h3 className="text-2xl md:text-3xl text-white font-light tracking-wide">
+            Cadmax
+          </h3>
+        </div>
+      </div>
+
+      {/* Top Right */}
+      <div className="relative group overflow-hidden rounded-2xl">
+
+        <img
+          src={img6}
+          alt=""
+          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+
+        <div className="absolute bottom-6 left-6 z-10">
+          <h3 className="text-lg md:text-xl text-white font-light tracking-wide">
+            Turnkey Construction
+          </h3>
+        </div>
+      </div>
+
+      {/* Bottom Right */}
+      <div className="relative group overflow-hidden rounded-2xl">
+
+        <img
+          src={img7}
+          alt=""
+          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+
+        <div className="absolute bottom-6 left-6 z-10">
+          <h3 className="text-lg md:text-xl text-white font-light tracking-wide">
+            Renovation
+          </h3>
+        </div>
+      </div>
+
+      {/* Bottom Wide */}
+      <div className="relative md:col-span-2 group overflow-hidden rounded-2xl">
+
+        <img
+          src={img5}
+          alt=""
+          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+
+        <div className="absolute bottom-6 left-6 z-10">
+          <h3 className="text-xl md:text-2xl text-white font-light tracking-wide">
+            3D Elevation
+          </h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 
 

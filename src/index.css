@@ -59,3 +59,23 @@ code {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes smoothSlideRTL {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.rtl-animate {
+  animation: smoothSlideRTL 1s ease-out forwards;
+}
+
+.rtl-animate-delay {
+  animation: smoothSlideRTL 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
