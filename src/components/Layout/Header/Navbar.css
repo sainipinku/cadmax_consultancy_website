@@ -234,29 +234,47 @@
 
 
 
-
-
+/* NAV LINK BASE */
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  padding: 6px 0;
+  color: #000 !important;
+  font-weight: 600 !important;
+  padding: 14px 16px !important;
+  transition: all 0.3s ease;
 }
 
-/* hidden line by default */
+/* Hover Effect */
+.nav-link:hover {
+  color: #0F2C59 !important;
+}
+
+/* Underline default hidden */
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: 6px;
   width: 0%;
   height: 2px;
-  background-color: #ffffff6e; /* underline color */
-  transition: width 0.1s ease;
+  background-color: #1B3C73;
+  transition: width 0.3s ease;
 }
 
-/* on hover show line */
+/* Hover underline */
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* ACTIVE LINK STYLE */
+.active-link {
+  color: #0F2C59 !important;
+  font-weight: 800 !important;
+  transform: scale(1.1); /* slightly bigger */
+}
+
+
+/* .active-link::after {
+  width: 100%;
+  height: 3px; 
+} */

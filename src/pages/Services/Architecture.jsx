@@ -22,9 +22,20 @@ const Architecture = () => {
     
 
  <div
-  className="w-full h-[500px] bg-cover bg-center"
+  className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
   style={{ backgroundImage: `url(${heroBG})` }}
-></div>
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/30"></div>
+
+  {/* Text */}
+  <div className="relative z-10 text-center">
+    <h1 className="text-white font-['Playfair_Display'] font-bold tracking-[3px] text-4xl md:text-6xl">
+      ARCHITECTURAL
+    </h1>
+  </div>
+</div>
+
 
     {/* <div className="max-w-6xl mx-auto px-4 py-14">
      

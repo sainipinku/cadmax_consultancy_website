@@ -5,6 +5,19 @@
   background-size: cover;
   background-position: center;
 }
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-overlay h1 {
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;   /* thin look */
+    letter-spacing: 2px;  /* wide spacing like screenshot */
+    color: #ffffff;
+}
 
 /* BLACK BOX */
 .black-box {

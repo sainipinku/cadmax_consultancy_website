@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
 import heroBG from "../../assets/Images/urbanmax/interior-banner.jpg"
-import WorkSlider from "../../components/common/slider/ourworkSlider";
-import img1 from "../../assets/Images/urbanmax/interior-work1.jpg";
-import img2 from "../../assets/Images/urbanmax/interior-work2.jpg";
-import img3 from "../../assets/Images/urbanmax/interior-work3.jpg";
-import img4 from "../../assets/Images/urbanmax/interior-work4.jpg";
+// import WorkSlider from "../../components/common/slider/ourworkSlider";
+// import img1 from "../../assets/Images/urbanmax/interior-work1.jpg";
+// import img2 from "../../assets/Images/urbanmax/interior-work2.jpg";
+// import img3 from "../../assets/Images/urbanmax/interior-work3.jpg";
+// import img4 from "../../assets/Images/urbanmax/interior-work4.jpg";
 import img5 from "../../assets/Images/urbanmax/cadmax-consultancy-img.jpg";
 import img6 from "../../assets/Images/urbanmax/cadmax-project-img.jpg";
 import img7 from "../../assets/Images/urbanmax/dipendra-ji-goner.jpg";
@@ -21,111 +22,59 @@ export const InteriorDesign = () => {
    <>
    <Navbar/>
    <div
-  className="w-full h-[500px] bg-cover bg-center"
+  className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
   style={{ backgroundImage: `url(${heroBG})` }}
-></div>
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/30"></div>
+
+  {/* Text */}
+  <div className="relative z-10 text-center">
+    <h1 className="text-white font-['Playfair_Display'] font-bold tracking-[3px] text-4xl md:text-6xl">
+      INTERIOR DESIGN
+    </h1>
+  </div>
+</div>
 
 
-<section className="relative pt-5  ">
 
-  <div className="max-w-7xl mx-auto px-6">
+      <div className="service1-grid  slide-in">
+        <Link
+          to="/Services/Engineering"
+          className="service1-card-1 delay-1"
+        >
+          <img src={img5} alt="service" />
+          <div className="card-text">CADMAX CONSULTANCY</div>
+        </Link>
 
-    {/* Header */}
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+        <Link
+          to="/Services/Architecture"
+          className="service1-card-1 delay-2"
+        >
+          <img src={img6} alt="service" />
+          <div className="card-text">CADMAX PROJECTS</div>
+        </Link>
 
-      <h1 className="text-3xl md:text-5xl font-light tracking-wide text-gray-900">
-        WHAT WE OFFER
-      </h1>
+        <Link
+          to="/Services/InteriorDesign"
+          className="service1-card-1 delay-3"
+        >
+          <img src={img7} alt="service" />
+          <div className="card-text">DIPENDRA JI GONER SITE</div>
+        </Link>
 
-      <p className="mt-6 md:mt-0 text-sm md:text-base tracking-[3px] text-gray-500 uppercase">
-        Residential • Commercial • Industrial Planning
-      </p>
+         <Link
+          to="/Services/infrastructure"
+          className="service1-card-1 delay-3"
+        >
+          <img src={img8} alt="service" />
+          <div className="card-text">ABHISHEK JI FARM HOUSE</div>
+        </Link>
 
-    </div>
-
- {/* UNIQUE COLLAGE */}
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
-
-      {/* Large Left Image */}
-      <div className="relative md:col-span-2 md:row-span-2 group overflow-hidden rounded-2xl">
-
-        <img
-          src={img5}
-          alt=""
-          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-        />
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
-
-        {/* Text */}
-        <div className="absolute bottom-6 left-6 z-10">
-          <h3 className="text-2xl md:text-3xl text-white font-light tracking-wide">
-            CADMAX CONSULTANCY
-          </h3>
-        </div>
       </div>
 
-      {/* Top Right */}
-      <div className="relative group overflow-hidden rounded-2xl">
 
-        <img
-          src={img7}
-          alt=""
-          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-        />
-
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
-
-        <div className="absolute bottom-6 left-6 z-10">
-          <h3 className="text-lg md:text-xl text-white font-light tracking-wide">
-           DIPENDRA JI GONER SITE
-          </h3>
-        </div>
-      </div>
-
-      {/* Bottom Right */}
-      <div className="relative group overflow-hidden rounded-2xl">
-
-        <img
-          src={img8}
-          alt=""
-          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-        />
-
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
-
-        <div className="absolute bottom-6 left-6 z-10">
-          <h3 className="text-lg md:text-xl text-white font-light tracking-wide">
-            ABHISHEK JI FARM HOUSE
-          </h3>
-        </div>
-      </div>
-
-      {/* Bottom Wide */}
-      <div className="relative md:col-span-2 group overflow-hidden rounded-2xl">
-
-        <img
-          src={img6}
-          alt=""
-          className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-        />
-
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
-
-        <div className="absolute bottom-6 left-6 z-10">
-          <h3 className="text-xl md:text-2xl text-white font-light tracking-wide">
-           CADMAX PROJECTS
-          </h3>
-        </div>
-      </div>
-
-    </div>
-     </div>
-     </section>
-
-
-      <div className='py-10'>
+      {/* <div className='py-10'>
  <WorkSlider
       prefix="electricity"
       slides={[
@@ -139,7 +88,7 @@ export const InteriorDesign = () => {
 
       ]}
     />
-</div>
+</div> */}
     
    
    <Footer/>

@@ -32,7 +32,12 @@ const Engineering = () => {
       <div
         className="service1-hero"
         style={{ backgroundImage: `url(${heroBG})` }}
-      ></div>
+
+      >
+         <div className="hero-overlay text-white">
+    <h1>ENGINEERING</h1>
+  </div>
+      </div>
 
       
       <div className="black-box">

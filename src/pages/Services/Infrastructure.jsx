@@ -15,10 +15,22 @@ const Infrastructure = () => {
    <>
    <Navbar/>
     
-   <div
-  className="w-full h-[500px] bg-cover bg-center"
+    <div
+  className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
   style={{ backgroundImage: `url(${heroBG})` }}
-></div>
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/30"></div>
+
+  {/* Text */}
+  <div className="relative z-10 text-center">
+    <h1 className="text-white font-['Playfair_Display'] font-bold tracking-[3px] text-4xl md:text-6xl">
+      INFRASTRUCTURE
+    </h1>
+  </div>
+</div>
+
+
  <section className="py-12  md:py-15 bg-white">
   <div className="max-w-full mx-auto px-4 md:px-6">
 
