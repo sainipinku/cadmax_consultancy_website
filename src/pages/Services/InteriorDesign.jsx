@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
 import heroBG from "../../assets/Images/urbanmax/interior-banner.jpg"
@@ -36,42 +36,74 @@ export const InteriorDesign = () => {
   </div>
 </div>
 
+<div className="max-w-7xl mx-auto px-6 py-16">
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-
-      <div className="service1-grid  slide-in">
-        <Link
-          to="/Services/Engineering"
-          className="service1-card-1 delay-1"
-        >
-          <img src={img5} alt="service" />
-          <div className="card-text">CADMAX CONSULTANCY</div>
-        </Link>
-
-        <Link
-          to="/Services/Architecture"
-          className="service1-card-1 delay-2"
-        >
-          <img src={img6} alt="service" />
-          <div className="card-text">CADMAX PROJECTS</div>
-        </Link>
-
-        <Link
-          to="/Services/InteriorDesign"
-          className="service1-card-1 delay-3"
-        >
-          <img src={img7} alt="service" />
-          <div className="card-text">DIPENDRA JI GONER SITE</div>
-        </Link>
-
-         <Link
-          to="/Services/infrastructure"
-          className="service1-card-1 delay-3"
-        >
-          <img src={img8} alt="service" />
-          <div className="card-text">ABHISHEK JI FARM HOUSE</div>
-        </Link>
-
+    {/* Card 1 */}
+    <div className="relative group overflow-hidden h-[400px]">
+      <img
+        src={img5}
+        alt="service"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition duration-500"></div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+          CADMAX CONSULTANCY
+        </h3>
       </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="relative group overflow-hidden h-[400px]">
+      <img
+        src={img6}
+        alt="service"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition duration-500"></div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+          CADMAX PROJECTS
+        </h3>
+      </div>
+    </div>
+
+    {/* Card 3 */}
+    <div className="relative group overflow-hidden h-[400px]">
+      <img
+        src={img7}
+        alt="service"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition duration-500"></div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+          DIPENDRA JI GONER SITE
+        </h3>
+      </div>
+    </div>
+
+    {/* Card 4 */}
+    <div className="relative group overflow-hidden h-[400px]">
+      <img
+        src={img8}
+        alt="service"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition duration-500"></div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+          ABHISHEK JI FARM HOUSE
+        </h3>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 
 
       {/* <div className='py-10'>
