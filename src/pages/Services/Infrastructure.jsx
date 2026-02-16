@@ -3,9 +3,9 @@ import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
 import heroBG from "../../assets/Images/urbanmax/Infra-banner.jpg";
 import img1 from "../../assets/Images/urbanmax/road-design.jpg";
-import img2 from "../../assets/Images/urbanmax/sewer.jpg";
+import img2 from "../../assets/Images/urbanmax/sewar-image.jpeg";
 import img3 from "../../assets/Images/urbanmax/water-supply.jpg";
-import img4 from "../../assets/Images/urbanmax/rain-water.jpg";
+import img4 from "../../assets/Images/urbanmax/rain-water.jpeg";
 import img5 from "../../assets/Images/urbanmax/eletrical.jpg";
 
 

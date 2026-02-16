@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import heroBG from "../../../src/assets/Images/service-page-1/service-banner.jpg";
 import img1 from "../../assets/Images/service-page-1/engineer-img.jpeg";
-import img2 from "../../assets/Images/service-page-1/architech-img.jpeg";
+import img2 from "../../assets/Images/service-page-1/service-architech-front.jpeg";
 import img3 from "../../assets/Images/service-page-1/interior-img.jpeg";
 import img4 from "../../assets/Images/service-page-1/infastructure-img.jpeg";
 

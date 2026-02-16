@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
-import heroBG from "../../assets/Images/urbanmax/banner-img.png"
+import heroBG from "../../assets/Images/urbanmax/ARCHITECH-BANNER.jpeg"
 // import img1 from "../../assets/Images/urbanmax/image-1.jpg"
 // import img2 from "../../assets/Images/urbanmax/image-2.jpg"
 // import img3 from "../../assets/Images/urbanmax/image-3.jpg"
