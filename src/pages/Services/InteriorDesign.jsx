@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
-import heroBG from "../../assets/Images/interior-image/interior-banner-image.jpg"
+import heroBG from "../../assets/Images/interior-image/interior-banner-image.jpeg"
 // import WorkSlider from "../../components/common/slider/ourworkSlider";
 // import img1 from "../../assets/Images/urbanmax/interior-work1.jpg";
 // import img2 from "../../assets/Images/urbanmax/interior-work2.jpg";
