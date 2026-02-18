@@ -26,7 +26,7 @@ const Architecture = () => {
   style={{ backgroundImage: `url(${heroBG})` }}
 >
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/30"></div>
+  <div className="absolute inset-0 bg-black/10"></div>
 
   {/* Text */}
   <div className="relative z-10 text-center">
@@ -135,7 +135,7 @@ const Architecture = () => {
       />
 
       {/* Soft Overlay */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-500"></div>
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-500"></div>
 
     </div>
 
@@ -172,7 +172,7 @@ const Architecture = () => {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition duration-500"></div>
 
         {/* Text */}
         <div className="absolute bottom-6 left-6 z-10">
@@ -191,7 +191,7 @@ const Architecture = () => {
           className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
         />
 
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition duration-500"></div>
 
         <div className="absolute bottom-6 left-6 z-10">
           <h3 className="text-lg md:text-xl text-white font-light tracking-wide">
@@ -209,7 +209,7 @@ const Architecture = () => {
           className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
         />
 
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition duration-500"></div>
 
         <div className="absolute bottom-6 left-6 z-10">
           <h3 className="text-lg md:text-xl text-white font-light tracking-wide">
@@ -227,7 +227,7 @@ const Architecture = () => {
           className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
         />
 
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition duration-500"></div>
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition duration-500"></div>
 
         <div className="absolute bottom-6 left-6 z-10">
           <h3 className="text-xl md:text-2xl text-white font-light tracking-wide">

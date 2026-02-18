@@ -26,7 +26,7 @@ export const InteriorDesign = () => {
   style={{ backgroundImage: `url(${heroBG})` }}
 >
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/30"></div>
+  <div className="absolute inset-0 bg-black/10"></div>
 
   {/* Text */}
   <div className="relative z-10 text-center">
@@ -45,7 +45,7 @@ export const InteriorDesign = () => {
         alt="service"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition duration-500"></div>
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
       <div className="absolute inset-0 flex items-center justify-center">
         <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
           CADMAX CONSULTANCY
@@ -60,7 +60,7 @@ export const InteriorDesign = () => {
         alt="service"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition duration-500"></div>
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
       <div className="absolute inset-0 flex items-center justify-center">
         <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
           CADMAX PROJECTS
@@ -75,7 +75,7 @@ export const InteriorDesign = () => {
         alt="service"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition duration-500"></div>
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
       <div className="absolute inset-0 flex items-center justify-center">
         <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
           DIPENDRA JI GONER SITE
