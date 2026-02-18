@@ -11,7 +11,7 @@ import heroBG from "../../assets/Images/interior-image/interior-banner-image.jpg
 import img5 from "../../assets/Images/urbanmax/cadmax-consultancy-img.jpg";
 import img6 from "../../assets/Images/urbanmax/cadmax-project-img.jpg";
 import img7 from "../../assets/Images/urbanmax/dipendra-ji-goner.jpg";
-// import img8 from "../../assets/Images/urbanmax/abhishek-ji-farmHouse.jpg";
+
 
 
 
