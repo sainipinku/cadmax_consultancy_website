@@ -8,9 +8,10 @@ import img2 from "../../../assets/Images/interior-image/DEEPENDRA-JI-LANDSCAPING
 import img3 from "../../../assets/Images/interior-image/HOUSE-BEDROOM2-VIEW.png";
 import img4 from "../../../assets/Images/interior-image/HOUSE-BEDROOM3-VIEW.jpg";
 import img5 from "../../../assets/Images/interior-image/HOUSE-DRAWINGROOM-VIEW.png";
+import img6 from "../../../assets/Images/interior-image/Drawing-Room-View-2.png";
 
 const DipendraSite = () => {
-    const images = [img1, img2, img3, img4, img5];
+    const images = [img1, img2, img3, img4, img5,img6];
   return (
       <>
     <Navbar/>
