@@ -10,6 +10,9 @@ import image6 from "../../../assets/Images/about/maharastra.jpeg";
 import image7 from "../../../assets/Images/about/punjab.jpeg";
 import image8 from "../../../assets/Images/about/rajasthan.jpeg";
 import image9 from "../../../assets/Images/about/varanasi.jpeg";
+import image10 from "../../../assets/Images/about/congo-photo.jpeg";
+import image11 from "../../../assets/Images/about/shri-lanka.jpeg";
+import image12 from "../../../assets/Images/about/AFRICA-IMAGES.webp";
 
 const AboutSlider = () => {
   const sliderRef = useRef(null);
@@ -25,6 +28,9 @@ const AboutSlider = () => {
     { id: 7, url: image7, title: "PUNJAB" },
     { id: 8, url: image8, title: "RAJASTHAN" },
     { id: 9, url: image9, title: "VARANASI" },
+    { id: 10, url: image10, title: "CONGO" },
+    { id: 11, url: image11, title: "SHRI LANKA" },
+    { id: 12, url: image12, title: "AFRICA" },
   ]);
 
   const loopImages = [...images, ...images];
@@ -47,7 +53,7 @@ const AboutSlider = () => {
   }, []);
 
   return (
-   <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 pt-0 pb-20 overflow-hidden">
+   <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 py-10 overflow-hidden">
 
       {/* Heading */}
       <motion.h2

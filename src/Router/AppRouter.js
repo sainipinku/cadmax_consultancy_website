@@ -12,7 +12,7 @@ import About from "../pages/About/About";
 import Services from "../pages/Services/Services";
 import Engineering from "../pages/Services/Engineering";
 import Architecture from "../pages/Services/Architecture";
-import  InteriorDesign from "../pages/Services/InteriorDesign";
+import InteriorDesign from "../pages/Services/InteriorDesign";
 import Infrastructure from "../pages/Services/Infrastructure";
 
 // engineering sub-pages
@@ -21,6 +21,14 @@ import Roadnetwork from "../pages/Services/Engineering-subpage/roadNetwork";
 import Watersupply from "../pages/Services/Engineering-subpage/waterSupply";
 import Electricity1 from "../pages/Services/Engineering-subpage/electricity";
 import Sewer from "../pages/Services/Engineering-subpage/Sewer";
+
+
+// interior sub page 
+import CadmaxConsultancy from "../pages/Services/interior-sub-page/CadmaxConsultancy";
+import CadmaxProjects from "../pages/Services/interior-sub-page/CadmaxProjects";
+import DipendraSite from "../pages/Services/interior-sub-page/DipendraSite";
+
+
 
 // project
 import Project from "../pages/Project/Project";
@@ -44,9 +52,17 @@ export default function AppRouter() {
 
         <Route path="/services" element={<Services />} />
         <Route path="/services/engineering" element={<Engineering />} />
-        <Route path="/services/Architecture" element={<Architecture/>} />
-        <Route path="/services/InteriorDesign" element={<InteriorDesign/>} />  
-        <Route path="/services/Infrastructure" element={<Infrastructure/>} />
+        <Route path="/services/Architecture" element={<Architecture />} />
+        <Route path="/services/InteriorDesign" element={<InteriorDesign />} />
+        <Route path="/services/Infrastructure" element={<Infrastructure />} />
+
+
+
+        <Route path="/cadmax-consultancy" element={<CadmaxConsultancy />} />
+        <Route path="/cadmax-projects" element={<CadmaxProjects />} />
+        <Route path="/dipendra-ji-goner-site" element={<DipendraSite />} />
+        
+
 
 
         <Route path="/services/maingate" element={<Maingate />} />

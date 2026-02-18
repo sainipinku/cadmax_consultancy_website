@@ -36,6 +36,14 @@ const Navbar = () => {
         </NavLink>
 
         <NavLink 
+          to="/about" 
+          className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} 
+          onClick={toggleMenu}
+        >
+          ABOUT
+        </NavLink>
+
+        <NavLink 
           to="/Services" 
           className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} 
           onClick={toggleMenu}
@@ -51,13 +59,7 @@ const Navbar = () => {
           PROJECT
         </NavLink>
 
-        <NavLink 
-          to="/about" 
-          className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} 
-          onClick={toggleMenu}
-        >
-          ABOUT
-        </NavLink>
+        
 
         <NavLink 
           to="/careerpath" 

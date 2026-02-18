@@ -1,8 +1,8 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
-import heroBG from "../../assets/Images/urbanmax/interior-banner.jpg"
+import heroBG from "../../assets/Images/interior-image/interior-banner-image.jpg"
 // import WorkSlider from "../../components/common/slider/ourworkSlider";
 // import img1 from "../../assets/Images/urbanmax/interior-work1.jpg";
 // import img2 from "../../assets/Images/urbanmax/interior-work2.jpg";
@@ -11,7 +11,7 @@ import heroBG from "../../assets/Images/urbanmax/interior-banner.jpg"
 import img5 from "../../assets/Images/urbanmax/cadmax-consultancy-img.jpg";
 import img6 from "../../assets/Images/urbanmax/cadmax-project-img.jpg";
 import img7 from "../../assets/Images/urbanmax/dipendra-ji-goner.jpg";
-import img8 from "../../assets/Images/urbanmax/abhishek-ji-farmHouse.jpg";
+// import img8 from "../../assets/Images/urbanmax/abhishek-ji-farmHouse.jpg";
 
 
 
@@ -35,13 +35,11 @@ export const InteriorDesign = () => {
     </h1>
   </div>
 </div>
-
 <div className="max-w-7xl mx-auto px-6 py-16">
-  
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
     {/* Card 1 */}
-    <div className="relative group overflow-hidden h-[400px]">
+    <Link to="/cadmax-consultancy" className="relative group overflow-hidden h-[400px] block rounded-xl">
       <img
         src={img5}
         alt="service"
@@ -53,10 +51,10 @@ export const InteriorDesign = () => {
           CADMAX CONSULTANCY
         </h3>
       </div>
-    </div>
+    </Link>
 
     {/* Card 2 */}
-    <div className="relative group overflow-hidden h-[400px]">
+    <Link to="/cadmax-projects" className="relative group overflow-hidden h-[400px] block rounded-xl">
       <img
         src={img6}
         alt="service"
@@ -68,10 +66,10 @@ export const InteriorDesign = () => {
           CADMAX PROJECTS
         </h3>
       </div>
-    </div>
+    </Link>
 
     {/* Card 3 */}
-    <div className="relative group overflow-hidden h-[400px]">
+    <Link to="/dipendra-ji-goner-site" className="relative group overflow-hidden h-[400px] block rounded-xl">
       <img
         src={img7}
         alt="service"
@@ -83,26 +81,11 @@ export const InteriorDesign = () => {
           DIPENDRA JI GONER SITE
         </h3>
       </div>
-    </div>
-
-    {/* Card 4 */}
-    <div className="relative group overflow-hidden h-[400px]">
-      <img
-        src={img8}
-        alt="service"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      />
-      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition duration-500"></div>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
-          ABHISHEK JI FARM HOUSE
-        </h3>
-      </div>
-    </div>
+    </Link>
 
   </div>
-
 </div>
+
 
 
 

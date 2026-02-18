@@ -260,11 +260,14 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 30px;
+  align-items: center;
 }
 
 .values-left h2 {
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 900;
+  text-align: center;
+  align-items: ;
 }
 
 .values-right p {
@@ -297,7 +300,7 @@
 
 .value-texts {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* ================================

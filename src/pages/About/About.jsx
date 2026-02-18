@@ -5,15 +5,15 @@ import Navbar from '../../components/Layout/Header/Navbar';
 import Footer from '../../components/Layout/Footer/Footer';
 
 import heroBG from "../../../src/assets/Images/about/About-hero-bg.jpg";
-import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
+// import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
 import awardimg from "../../assets/Images/about/md-sir-image.jpeg"
 
-import cap1 from "../../../src/assets/Images/about/image-1.jpeg";
-import cap2 from "../../../src/assets/Images/about/image-2.png";
-import cap3 from "../../../src/assets/Images/about/image-4.jpeg";
-import cap4 from "../../../src/assets/Images/about/image-3.jpeg";
-import cap5 from "../../../src/assets/Images/about/image-5.jpeg";
-import cap6 from "../../../src/assets/Images/about/image-6.jpeg";
+// import cap1 from "../../../src/assets/Images/about/image-1.jpeg";
+// import cap2 from "../../../src/assets/Images/about/image-2.png";
+// import cap3 from "../../../src/assets/Images/about/image-4.jpeg";
+// import cap4 from "../../../src/assets/Images/about/image-3.jpeg";
+// import cap5 from "../../../src/assets/Images/about/image-5.jpeg";
+// import cap6 from "../../../src/assets/Images/about/image-6.jpeg";
 
 
 
@@ -38,12 +38,12 @@ const About = () => {
             At CADMAX Consultancy, we specialize in architectural design, planning, and consultancy services for residential, commercial, and industrial projects. Our experienced team combines advanced CAD technology with thoughtful design to bring ideas to life. We build trust before we build structures. That’s the CadMax difference.Customers choose CadMax because we turn complex ideas into precise, buildable designs—on time, every time.CadMax: Where accuracy meets creativity. Trusted by clients who value quality, innovation, and flawless execution.We don’t just design spaces—CadMax designs solutions. That’s why clients trust us to deliver excellence from concept to completion.CadMax stands out for our attention to detail, advanced CAD technology, and commitment to client satisfaction.From 2D to 3D perfection—customers choose CadMax for designs that are accurate, clear, and construction-ready.
           </p>
 
-          <img src={storyImage} alt="our story" className="story-image" />
+          {/* <img src={storyImage} alt="our story" className="story-image" /> */}
         </div>
       </div>
 
       {/* MISSION & VISION */}
-      <div className="mission-vision">
+      {/* <div className="mission-vision">
         <div className="mv-card">
           <div className="mv-icon ">
             <i class="fa-solid fa-handshake"></i>
@@ -64,7 +64,7 @@ const About = () => {
             To be a trusted leader in architectural and technical consultancy, delivering innovative, accurate, and design-ready solutions by seamlessly translating real-world site conditions into intelligent, sustainable, and future-focused outcomes that inspire confidence and long-term value
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* award section  */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-5">
@@ -100,7 +100,7 @@ const About = () => {
 
 
       {/* CAPABILITIES SECTION */}
-      <div className="cap-section">
+      {/* <div className="cap-section">
 
         <div className="cap-header">
           <h2>CAPABILITIES THAT HOLD UP IN THE FIELD</h2>
@@ -109,46 +109,46 @@ const About = () => {
 
         <div className="cap-collage">
 
-          {/* 1st BIG */}
+          
           <div className="cap-item cap-big">
             <img src={cap1} alt="" />
             <h3>TOTAL STATION</h3>
           </div>
 
-          {/* 2nd */}
+        
           <div className="cap-item cap-small">
             <img src={cap2} alt="" />
             <h3>DRONE</h3>
           </div>
 
-          {/* 4th */}
+         
           <div className="cap-item cap-small">
             <img src={cap4} alt="" />
             <h3>DGPS</h3>
           </div>
 
-          {/* 3rd */}
+         
           <div className="cap-item cap-big">
             <img src={cap3} alt="" />
             <h3>GPS</h3>
           </div>
 
-          {/* 5th */}
+          
           <div className="cap-item cap-small">
             <img src={cap5} alt="" />
             <h3>LIDAR</h3>
           </div>
 
-          {/* 6th BIG */}
+         
           <div className="cap-item cap-small">
             <img src={cap6} alt="" />
             <h3> DIGITAL AUTO LEVEL</h3>
           </div>
 
-        </div>
+        </div> */}
 
 
-      </div>
+      {/* </div> */}
 
 
 
@@ -158,16 +158,9 @@ const About = () => {
 
 
       <div className="values-section">
-        <div className='value-texts'>
-          <div className="values-left">
-            <h2>OPERATIONAL VALUES THAT ANCHOR EVERY DELIVERABLE</h2>
-          </div>
-
-          <div className="values-right">
-            <p>
-              Clear principles applied as measurable behaviours across design,
-              surveying and engineering.
-            </p>
+        <div className='value-texts center'>
+          <div className="values-left pb-5">
+            <h2>OUR CORE VALUES</h2>
           </div>
         </div>
 
