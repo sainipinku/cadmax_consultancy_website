@@ -34,8 +34,17 @@ const DipendraSite = () => {
                 className="w-full h-[300px] md:h-[350px] object-cover transition duration-500 hover:scale-110"
               />
             </div>
+
+
+
           ))}
+
+
+
         </div>
+
+
+
       </section>
     
     <Footer/>
