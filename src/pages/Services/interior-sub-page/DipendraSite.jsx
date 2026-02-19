@@ -3,8 +3,8 @@ import Navbar from "../../../components/Layout/Header/Navbar";
 import Footer from "../../../components/Layout/Footer/Footer";
 
 
-import img1 from "../../../assets/Images/interior-image/DEEPENDRA-JI-LANDSCAPING-VIEW-.jpg";
-import img2 from "../../../assets/Images/interior-image/DEEPENDRA-JI-LANDSCAPING-VIEW.jpg";
+import img2 from "../../../assets/Images/interior-image/DEEPENDRA-JI-LANDSCAPING-VIEW-.jpg";
+import img1 from "../../../assets/Images/interior-image/DEEPENDRA-JI-LANDSCAPING-VIEW.jpg";
 import img3 from "../../../assets/Images/interior-image/HOUSE-BEDROOM2-VIEW.png";
 import img4 from "../../../assets/Images/interior-image/HOUSE-BEDROOM3-VIEW.jpg";
 import img5 from "../../../assets/Images/interior-image/HOUSE-DRAWINGROOM-VIEW.png";
