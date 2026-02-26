@@ -128,9 +128,7 @@ const Project = () => {
             <div className="project-card" key={index}>
               <div className="img-box">
                 <img src={item.img} alt={item.title} className="project-img" />
-                <div className="download-icon">
-                  <i className="bi bi-download"></i>
-                </div>
+                
               </div>
 
               <div className="project-content">
