@@ -8,10 +8,12 @@ import img1 from "../../../assets/Images/interior-image/HOUSE-BEDROOM2-VIEW.png"
 import img2 from "../../../assets/Images/interior-image/HOUSE-BEDROOM3-VIEW.jpg";
 import img3 from "../../../assets/Images/interior-image/HOUSE-DRAWINGROOM-VIEW.png";
 import img4 from "../../../assets/Images/interior-image/Drawing-Room-View-2.png";
+import img5 from "../../../assets/Images/interior-image/dipendra-ji-project.jpeg";
+import img6 from "../../../assets/Images/interior-image/dipendra-ji-project1.jpeg";
 
 const DipendraSite = () => {
 
-    const images = [img1, img2, img3, img4];
+    const images = [img1, img2, img3, img4 , img5 , img6];
 
     return (
         <>

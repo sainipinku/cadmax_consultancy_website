@@ -7,10 +7,11 @@ import img2 from "../../../assets/Images/interior-image/cadmax-project-2.jpg";
 import img3 from "../../../assets/Images/interior-image/cadmax-project-3.jpg";
 import img4 from "../../../assets/Images/interior-image/cadmax-project-4.jpg";
 import img5 from "../../../assets/Images/interior-image/cadmax-project-5.jpg";
+import img6 from "../../../assets/Images/interior-image/cadmax-project-6.jpeg";
 
 
 const CadmaxProjects = () => { 
-    const images = [img1, img2, img3, img4, img5];
+    const images = [img1, img2, img3, img4, img5 , img6 ];
   return (
     <>
     <Navbar/>
