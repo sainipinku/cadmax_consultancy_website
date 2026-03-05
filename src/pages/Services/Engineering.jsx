@@ -29,15 +29,18 @@ const Engineering = () => {
       <Navbar />
 
    
-      <div
-        className="service1-hero"
-        style={{ backgroundImage: `url(${heroBG})` }}
+     <div
+  className="service1-hero relative"
+  style={{ backgroundImage: `url(${heroBG})` }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/40"></div>
 
-      >
-         <div className="hero-overlay text-white">
-    <h1>URBAN PLANNING</h1>
+  {/* Content */}
+  <div className="hero-overlay relative z-10 text-white flex items-center justify-center h-full">
+    <h1 className="text-5xl font-bold">URBAN PLANNING</h1>
   </div>
-      </div>
+</div>
 
       
       <div className="black-box">
