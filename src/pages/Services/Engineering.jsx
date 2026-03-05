@@ -4,7 +4,7 @@ import Footer from "../../components/Layout/Footer/Footer";
 import "./Engineering.css";
 import { Link } from "react-router-dom";
 
-import heroBG from "../../../src/assets/Images/service-page-2/engineer-banner.jpg";
+import heroBG from "../../../src/assets/Images/service-page-2/urban-planning.jpeg";
 import overlapImg from "../../../src/assets/Images/service-page-2/survey-img.jpg";
 
 import collage1 from "../../../src/assets/Images/service-page-2/main-gate.jpg";
@@ -35,7 +35,7 @@ const Engineering = () => {
 
       >
          <div className="hero-overlay text-white">
-    <h1>ENGINEERING</h1>
+    <h1>URBAN PLANNING</h1>
   </div>
       </div>
 

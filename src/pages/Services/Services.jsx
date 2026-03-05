@@ -33,7 +33,7 @@ const Service1 = () => {
           className="service1-card-1 delay-1"
         >
           <img src={img1} alt="service" />
-          <div className="card-text">engineering</div>
+          <div className="card-text">urban planning</div>
         </Link>
 
         <Link

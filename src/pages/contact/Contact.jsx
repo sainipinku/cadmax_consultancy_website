@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 
-import heroBG from "../../assets/Images/contact/contact-hero.png";
+import heroBG from "../../assets/Images/contact/contact-page-banner.jpeg";
 
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
@@ -97,7 +97,7 @@ const Contact = () => {
             <div className="h-[3px] w-85 bg-orange-500 mb-10"></div>
 
             {/* PHONE */}
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex items-start gap-4 mb-10">
               <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
                 <FaPhoneAlt className="text-orange-500 text-lg" />
               </div>
@@ -105,7 +105,7 @@ const Contact = () => {
             </div>
 
             {/* ADDRESS */}
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex items-start gap-6 mb-8">
               <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
                 <FaMapMarkerAlt className="text-orange-500 text-lg" />
               </div>
