@@ -112,11 +112,11 @@
   object-fit: cover;
   filter: brightness(0.60);
   transition: .3s;
-  border: rgb(255, 200, 0) 1px solid ;
+  border: black 1px solid ;
 }
 
 .collage-item:hover img {
-  filter: brightness(0.90);
+  filter: brightness(0.99);
 }
 
 .collage-item h2 {
