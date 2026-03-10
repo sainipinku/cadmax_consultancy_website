@@ -2,25 +2,25 @@ import React from "react";
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer";
 import "./Engineering.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import heroBG from "../../../src/assets/Images/service-page-2/urban-planning.jpeg";
 import overlapImg from "../../../src/assets/Images/service-page-2/survey-img.jpg";
 
-import collage1 from "../../../src/assets/Images/service-page-2/main-gate.jpg";
-import collage2 from "../../../src/assets/Images/service-page-2/road-network.jpg";
-import collage3 from "../../../src/assets/Images/service-page-2/water-supply.jpg";
-import collage4 from "../../../src/assets/Images/service-page-2/ELECTRICITY.jpg";
+import collage1 from "../../../src/assets/Images/service-page-2/COLLAGE-1.jpeg";
+import collage2 from "../../../src/assets/Images/service-page-2/COLLAGE-2.jpeg";
+import collage3 from "../../../src/assets/Images/service-page-2/COLLAGE-3.jpeg";
+import collage4 from "../../../src/assets/Images/service-page-2/COLLAGE-4.jpeg";
 import collage5 from "../../../src/assets/Images/service-page-2/sewer-img8.jpeg";
 
 const Engineering = () => {
 
 
   const collageImages = [
-    { img: collage1, title: "MAINGATE AND BOUNDARY CONSTRUCTION" },
-    { img: collage2, title: "ROAD NETWORK" },
-    { img: collage3, title: "WATER SUPPLY" },
-    { img: collage4, title: "ELECTRICITY" },
+    { img: collage1, title: "MOUNTAIN LIFE MANPUR MACHEDI FARM HOUSE PLANNING" },
+    { img: collage2, title: "NAVSAAR VALLEY CHANDLAI RESIDENTIAL TOWNSHIP PLANNING FILE" },
+    { img: collage3, title: "MOTUKA INDUSTRIAL PLANNING" },
+    { img: collage4, title: "MOUNTAIN LIFE MANPUR MACHEDI FARM HOUSE PLANNING" },
     { img: collage5, title: "SEWER AND RAIN WATER HARVESTING" }
   ];
 
@@ -42,11 +42,11 @@ const Engineering = () => {
   </div>
 </div>
 
-      
+  
       <div className="black-box">
         <h2> Where imagination meets structure</h2>
         <p>
-         Turning concepts into concrete reality, our engineering team works hand in hand with architectural vision to design, plan, and build spaces that are strong,         functional, and timeless. Every detail reflects precision, collaboration, and a commitment to quality that shapes structures built to serve generations.
+        urban planning shape the way people live, move, and connect within a city. Thoughtful design blends functionality, sustainability, and aesthetics to create spaces that support communities and respect the environment. From well-planned streets and green public spaces to innovative buildings, urban planning focuses on building cities that are efficient, inclusive, and resilient for future generations.
         </p>
       </div>
 
@@ -61,8 +61,39 @@ const Engineering = () => {
         <p>An architectural and engineering company plays a vital role in planning and designing essential infrastructure such as water supply systems, road networks, and electricity distribution. Engineers in the company analyze site conditions, safety standards, and community needs to design reliable water supply systems that ensure clean and efficient delivery. They also plan and develop road networks that support smooth transportation, proper drainage, and long-term durability. In addition, electrical engineers design and coordinate electricity layouts to ensure safe, efficient, and sustainable power distribution. Together, these services contribute to well-organized, functional, and sustainable built environments.</p>
       </div>
 
-      
+
+
       <div className="collage-wrapper">
+
+  <div className="collage-item item-1">
+    <img src={collageImages[0].img} alt="" />
+    <h2>{collageImages[0].title}</h2>
+  </div>
+
+  <div className="collage-item item-2">
+    <img src={collageImages[1].img} alt="" />
+    <h2>{collageImages[1].title}</h2>
+  </div>
+
+  <div className="collage-item item-3">
+    <img src={collageImages[2].img} alt="" />
+    <h2>{collageImages[2].title}</h2>
+  </div>
+
+  <div className="collage-item item-4">
+    <img src={collageImages[3].img} alt="" />
+    <h2>{collageImages[3].title}</h2>
+  </div>
+
+  <div className="collage-item item-5">
+    <img src={collageImages[3].img} alt="" />
+    <h2>{collageImages[3].title}</h2>
+  </div>
+
+</div>
+
+      
+      {/* <div className="collage-wrapper">
 
         
         <Link to="/Services/maingate" className="collage-item item-1">
@@ -75,6 +106,8 @@ const Engineering = () => {
           <img src={collageImages[1].img} alt="" />
           <h2>{collageImages[1].title}</h2>
         </Link>
+
+        
 
         
         <Link to="/Services/waterSupply" className="collage-item item-3">
@@ -93,7 +126,7 @@ const Engineering = () => {
           <h2>{collageImages[4].title}</h2>
         </Link>
 
-      </div>
+      </div> */}
 
 
       <Footer />
