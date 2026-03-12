@@ -5,7 +5,7 @@ import "./Engineering.css";
 // import { Link } from "react-router-dom";
 
 import heroBG from "../../../src/assets/Images/service-page-2/urban-planning.jpeg";
-import overlapImg from "../../../src/assets/Images/service-page-2/survey-img.jpg";
+// import overlapImg from "../../../src/assets/Images/service-page-2/survey-img.jpg";
 
 import collage1 from "../../../src/assets/Images/service-page-2/COLLAGE-1.jpeg";
 import collage2 from "../../../src/assets/Images/service-page-2/COLLAGE-2.jpeg";
