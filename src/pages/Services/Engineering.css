@@ -5,18 +5,21 @@
   background-size: cover;
   background-position: center;
 }
+
 .hero-overlay {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-overlay h1 {
-    font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 700;
-  font-style: normal;   /* thin look */
-    letter-spacing: 2px;  /* wide spacing like screenshot */
-    color: #ffffff;
+  font-style: normal;
+  /* thin look */
+  letter-spacing: 2px;
+  /* wide spacing like screenshot */
+  color: #ffffff;
 }
 
 /* BLACK BOX */
@@ -24,7 +27,7 @@
   background: #111;
   color: white;
   text-align: center;
-  padding: 20px 20px 200px;
+  padding: 40px 40px ;
   position: relative;
   z-index: 1;
 }
@@ -54,7 +57,7 @@
 
 .black-box p {
   font-size: 17px;
-  max-width: 900px;
+  max-width: 90%;
   margin: 10px auto;
   opacity: 0.9;
   line-height: 1.5;
@@ -62,8 +65,8 @@
 
 .flex-section {
   display: flex;
-  flex-direction: column;   
-  align-items: center;      
+  flex-direction: column;
+  align-items: center;
   /* text-align: center;        */
   margin-top: 40px;
   margin-bottom: 20px;
@@ -79,7 +82,7 @@
 .flex-section p {
   font-size: 20px;
   font-weight: 500;
-  max-width: 95%;   
+  max-width: 95%;
 }
 
 
@@ -90,13 +93,14 @@
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  /* left slightly bigger */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* left slightly bigger */
   grid-template-rows: 1fr 1fr;
   gap: 20px;
   padding: 0 20px;
   margin-bottom: 40px;
   box-sizing: border-box;
-  
+
 }
 
 .collage-item {
@@ -112,7 +116,7 @@
   object-fit: cover;
   filter: brightness(0.60);
   transition: .3s;
-  border: black 1px solid ;
+  border: black 1px solid;
 }
 
 .collage-item:hover img {
@@ -134,7 +138,7 @@
 
 
 .collage-item:hover h2 {
-  color: #1a1a1a; 
+  color: #1a1a1a;
 }
 
 /* LEFT BIG */
@@ -238,8 +242,3 @@
     height: 720px;
   }
 }
-
-
-
-
-

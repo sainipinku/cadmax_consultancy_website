@@ -34,31 +34,31 @@ const Engineering = () => {
   style={{ backgroundImage: `url(${heroBG})` }}
 >
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
+  {/* <div className="absolute inset-0 bg-black/40"></div> */}
 
   {/* Content */}
-  <div className="hero-overlay relative z-10 text-white flex items-center justify-center h-full">
+
+  {/* <div className="hero-overlay relative z-10 text-white flex items-center justify-center h-full">
     <h1 className="text-5xl font-bold">URBAN PLANNING</h1>
-  </div>
+  </div> */}
+  
 </div>
+  
 
   
       <div className="black-box">
-        <h2> Where imagination meets structure</h2>
-        <p>
-        urban planning shape the way people live, move, and connect within a city. Thoughtful design blends functionality, sustainability, and aesthetics to create spaces that support communities and respect the environment. From well-planned streets and green public spaces to innovative buildings, urban planning focuses on building cities that are efficient, inclusive, and resilient for future generations.
-        </p>
+        <p>An architectural and engineering company plays a vital role in planning and designing essential infrastructure such as water supply systems, road networks, and electricity distribution. Engineers in the company analyze site conditions, safety standards, and community needs to design reliable water supply systems that ensure clean and efficient delivery. They also plan and develop road networks that support smooth transportation, proper drainage, and long-term durability. In addition, electrical engineers design and coordinate electricity layouts to ensure safe, efficient, and sustainable power distribution. Together, these services contribute to well-organized, functional, and sustainable built environments.</p>
       </div>
 
       
-      <div className="overlap-img-box">
+      {/* <div className="overlap-img-box">
         <img src={overlapImg} alt="" />
-      </div>
+      </div> */}
 
       
       <div className="flex-section">
         <h2>What We Offer</h2>
-        <p>An architectural and engineering company plays a vital role in planning and designing essential infrastructure such as water supply systems, road networks, and electricity distribution. Engineers in the company analyze site conditions, safety standards, and community needs to design reliable water supply systems that ensure clean and efficient delivery. They also plan and develop road networks that support smooth transportation, proper drainage, and long-term durability. In addition, electrical engineers design and coordinate electricity layouts to ensure safe, efficient, and sustainable power distribution. Together, these services contribute to well-organized, functional, and sustainable built environments.</p>
+        
       </div>
 
 
