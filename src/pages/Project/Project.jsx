@@ -114,9 +114,9 @@ const Project = () => {
 
        
         <div className="project-tabs">
-          <button className="tab active">
+          {/* <button className="tab active">
             MANORATE AND BOUNDARY CONSTRUCTION
-          </button>
+          </button> */}
           {/* <button className="tab">ROAD NETWORK</button>
           <button className="tab">WATER SUPPLY</button>
           <button className="tab">ELECTRICITY</button> */}

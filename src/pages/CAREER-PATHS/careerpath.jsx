@@ -1,13 +1,30 @@
 import React from "react";
+import "./Careerpath.css"
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer"
 import { motion } from "framer-motion";
 
 
-import heroBGCareer from "../../../src/assets/Images/careerpath/HERO-BG.png";
+// import heroBGCareer from "../../../src/assets/Images/careerpath/HERO-BG.png";
+import heroBGCareer from "../../../src/assets/Images/careerpath/banner-img.jpg";
 import img1 from "../../../src/assets/Images/careerpath/development-img.jpg";
-import img2 from "../../../src/assets/Images/careerpath/environment-img.jpg";
+import img2 from "../../../src/assets/Images/careerpath/work-environment.jpg";
 import img3 from "../../../src/assets/Images/careerpath/learning-and-development.jpeg"
+
+
+
+// mamber image 
+
+import m1 from "../../assets/Images/careerpath/member-1.jpeg";
+import m2 from "../../assets/Images/careerpath/member-2.jpeg";
+import m3 from "../../assets/Images/careerpath/member-3.jpeg";
+import m4 from "../../assets/Images/careerpath/member-4.jpeg";
+// import m5 from "../../assets/Images/careerpath/member-5.jpeg";
+import m6 from "../../assets/Images/careerpath/member-6.jpeg";
+import m7 from "../../assets/Images/careerpath/member-7.jpeg";
+import m8 from "../../assets/Images/careerpath/member-8.jpeg";
+
+
 
 
 const fadeUp = {
@@ -15,6 +32,16 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
+const members = [
+ { img: m1, name: "name", role: "role" },
+ { img: m2, name: "name", role: "role" },
+ { img: m3, name: "name", role: "role" },
+ { img: m4, name: "name", role: "role" },
+//  { img: m5, name: "Neha Jain", role: "Site Engineer" },
+ { img: m6, name: "name", role: "role" },
+ { img: m7, name: "name", role: "role" },
+ { img: m8, name: "name", role: "role" }
+];
 const CareerPath = () => {
   return (
     <>
@@ -132,6 +159,56 @@ const CareerPath = () => {
         </motion.div>
 
       </div>
+
+{/* out team */}
+
+
+<div className="w-full py-20 bg-white overflow-hidden">
+
+  <h2 className="text-center text-3xl font-bold mb-14">
+    Our Team
+  </h2>
+
+  <div className="relative w-full overflow-hidden">
+
+    <div className="flex gap-10 animate-scroll">
+
+      {[...members, ...members].map((member, index) => (
+        <div
+          key={index}
+          className="min-w-[260px] bg-white rounded-xl overflow-hidden shadow-xl border group transition duration-500 hover:-translate-y-2"
+        >
+
+          {/* Image */}
+          <div className="h-[360px] overflow-hidden">
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          {/* Info */}
+          <div className="text-center py-4 px-3 bg-white">
+            <h3 className="text-lg font-bold text-gray-800">
+              {member.name}
+            </h3>
+
+            <p className="text-sm text-gray-500 mt-1">
+              {member.role}
+            </p>
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</div>
+
+
+
       <Footer/>
     </>
   );

@@ -60,36 +60,63 @@ const Engineering = () => {
         <h2>What We Offer</h2>
         
       </div>
+<div className="max-w-7xl mx-auto px-6 py-16">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
+    {/* Card 1 */}
+    <div className="relative group overflow-hidden h-[400px] rounded-xl border border-black">
+      <img
+        src={collageImages[0].img}
+        alt=""
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
 
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
 
-      <div className="collage-wrapper">
+      {/* Title */}
+      <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
+        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+          {collageImages[0].title}
+        </h3>
+      </div>
+    </div>
 
-  <div className="collage-item item-1">
-    <img src={collageImages[0].img} alt="" />
-    <h2>{collageImages[0].title}</h2>
+    {/* Card 2 */}
+    <div className="relative group overflow-hidden h-[400px] rounded-xl border border-black">
+      <img
+        src={collageImages[1].img}
+        alt=""
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
+
+      <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
+        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+          {collageImages[1].title}
+        </h3>
+      </div>
+    </div>
+
+    {/* Card 3 */}
+    <div className="relative group overflow-hidden h-[400px] rounded-xl border border-black">
+      <img
+        src={collageImages[2].img}
+        alt=""
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
+
+      <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
+        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+          {collageImages[2].title}
+        </h3>
+      </div>
+    </div>
+
   </div>
-
-  <div className="collage-item item-2">
-    <img src={collageImages[1].img} alt="" />
-    <h2>{collageImages[1].title}</h2>
-  </div>
-
-  <div className="collage-item item-3">
-    <img src={collageImages[2].img} alt="" />
-    <h2>{collageImages[2].title}</h2>
-  </div>
-
-  <div className="collage-item item-4">
-    <img src={collageImages[3].img} alt="" />
-    <h2>{collageImages[3].title}</h2>
-  </div>
-
-  <div className="collage-item item-5">
-    <img src={collageImages[3].img} alt="" />
-    <h2>{collageImages[3].title}</h2>
-  </div>
-
 </div>
 
       
