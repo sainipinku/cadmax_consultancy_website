@@ -37,7 +37,7 @@ const Textbox = () => {
       </div>
 
       {/* 🔹 Bottom Text Row */}
-      <div className='small-text'>
+      {/* <div className='small-text'>
 
         <div className="first scroll-left">
           <p className="line1">
@@ -51,7 +51,7 @@ const Textbox = () => {
           </p>
         </div>
 
-      </div>
+      </div> */}
 
     </div>
   )

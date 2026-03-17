@@ -26,41 +26,51 @@ const Service1 = () => {
   </div>
 </div>
 
+<div className="service1-grid slide-in">
 
-      <div className="service1-grid slide-in">
-        <Link
-          to="/Services/Engineering"
-          className="service1-card-1 delay-1"
-        >
-          <img src={img1} alt="service" />
-          <div className="card-text">urban planning</div>
-        </Link>
+  <Link to="/Services/Engineering" className="service1-card-1 delay-1 relative overflow-hidden">
+    <img src={img1} alt="service" className="w-full h-full object-cover" />
+    
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-        <Link
-          to="/Services/Architecture"
-          className="service1-card-1 delay-2"
-        >
-          <img src={img2} alt="service" />
-          <div className="card-text">architectural</div>
-        </Link>
+    {/* Text */}
+    <div className="absolute uppercase bottom-3 left-3 text-white font-bold text-lg z-10">
+      urban planning
+    </div>
+  </Link>
 
-        <Link
-          to="/Services/InteriorDesign"
-          className="service1-card-1 delay-3"
-        >
-          <img src={img3} alt="service" />
-          <div className="card-text">INTERIOR DESIGNING</div>
-        </Link>
+  <Link to="/Services/Architecture" className="service1-card-1 delay-2 relative overflow-hidden">
+    <img src={img2} alt="service" className="w-full h-full object-cover" />
+    
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-         <Link
-          to="/Services/infrastructure"
-          className="service1-card-1 delay-3"
-        >
-          <img src={img4} alt="service" />
-          <div className="card-text">infrastructure</div>
-        </Link>
+    <div className="absolute uppercase bottom-3 left-3 text-white font-bold text-lg z-10">
+      architectural
+    </div>
+  </Link>
 
-      </div>
+  <Link to="/Services/InteriorDesign" className="service1-card-1 delay-3 relative overflow-hidden">
+    <img src={img3} alt="service" className="w-full h-full object-cover" />
+    
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+    <div className="absolute uppercase bottom-3 left-3 text-white font-bold text-lg z-10">
+      INTERIOR DESIGNING
+    </div>
+  </Link>
+
+  <Link to="/Services/infrastructure" className="service1-card-1 delay-3 relative overflow-hidden">
+    <img src={img4} alt="service" className="w-full h-full object-cover" />
+    
+    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+
+    <div className="absolute uppercase bottom-3 left-3 text-white font-bold text-lg z-10">
+      infrastructure
+    </div>
+  </Link>
+
+</div>
 
       <Footer />
     </>

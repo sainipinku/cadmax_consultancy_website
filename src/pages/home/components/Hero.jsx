@@ -2,10 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "./Hero.css";
 
-import img1 from "../../../assets/Images/header/banner-home-1.jpeg";
-import img2 from "../../../assets/Images/header/home-banner.jpg";
-import img3 from "../../../assets/Images/header/home-banner-img.jpg";
-import img4 from "../../../assets/Images/header/ring-road.png";
+import img1 from "../../../assets/Images/header/home-banner-1.jpg";
+import img2 from "../../../assets/Images/header/home-banner-2.jpg";
+import img3 from "../../../assets/Images/header/home-banner-3.jpg";
+import img4 from "../../../assets/Images/header/home-banner-4.jpg";
 
 
 

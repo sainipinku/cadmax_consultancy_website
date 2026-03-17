@@ -1,97 +1,79 @@
 import React from "react";
 import "./image.css";
-import image1 from "../../../assets/Images/collage/high-accuracy.jpeg"
-import image2 from "../../../assets/Images/collage/engineer-survay.jpeg"
-import image3 from "../../../assets/Images/collage/TOPOGRAPHIC-GROUND.jpg"
-import image4 from "../../../assets/Images/collage/land-survay.jpeg"
-import image5 from "../../../assets/Images/collage/mobile-mapping.jpeg"
-import image6 from "../../../assets/Images/collage/urban-plan.jpg"
-import image7 from "../../../assets/Images/collage/on-site-marking.jpeg"
-import image8 from "../../../assets/Images/collage/geodetic-surveying.jpg"
-import image9 from "../../../assets/Images/collage/insfructure-survay.jpeg"
+import image1 from "../../../assets/Images/collage/DGPS.jpg"
+import image2 from "../../../assets/Images/collage/TOPOGRAPHICAL.jpg"
+import image3 from "../../../assets/Images/collage/ENGINEERING.jpg"
+import image4 from "../../../assets/Images/collage/LAND.jpg"
+import image5 from "../../../assets/Images/collage/MOBILR.jpg"
+
 
 
 const MasonryGallery = () => {
+  const images = [
+    { img: image1, title: "1. DGPS SURVEY" },
+    { img: image2, title: "2. TOPOGRAPHICAL SURVEY" },
+    { img: image3, title: "3. ENGINEERING SURVEY" },
+    { img: image4, title: "4. LAND SURVEYING" },
+    { img: image5, title: "5. MOBILE MAPPING & GIS" },
+  ];
+
   return (
-    <div className="gallery-wrapper">
+    
+    <div className="max-w-7xl mx-auto px-6 py-16">
+       <div className="text-center pb-20">
+       <h2 className="text-3xl md:text-5xl  font-light tracking-wide text-gray-800 leading-snug">
+      <span className="block font-semibold text-gray-900 mt-2">
+        TYPES OF SURVEY
+      </span>
+    </h2>
+    </div>
 
-      {/* ------------------ TOP COLLAGE ------------------ */}
-      <div className="gallery-top">
+      {/* TOP 3 */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
+        {images.slice(0, 3).map((item, index) => (
+          <div key={index} className="relative h-[300px] overflow-hidden rounded-xl group">
+            
+            <img
+              src={item.img}
+              alt=""
+              className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+            />
 
-        <div className="gallery-col">
-          <div className="gallery-card tall">
-            <img src={image1} alt=""/>
-            <div className="gallery-overlay" />
-            <div className="gallery-title">HIGH ACCURACY DGPS STATIC SURVEY</div>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition"></div>
+
+            {/* Text */}
+            <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg z-10">
+              {item.title}
+            </div>
+
           </div>
-        </div>
-
-        <div className="gallery-col">
-          <div className="gallery-card big">
-            <img src={image2} alt=""/>
-            <div className="gallery-overlay" />
-            <div className="gallery-title">ROAD ALIGNMENT SURVEY</div>
-          </div>
-
-          <div className="gallery-card small">
-            <img src={image3} alt=""/>
-            <div className="gallery-overlay" />
-            <div className="gallery-title">DETAIL TOPOGRAPHICAL MODELING</div>
-          </div>
-        </div>
-
-        <div className="gallery-col">
-          <div className="gallery-card small">
-            <img src={image4} alt="" />
-            <div className="gallery-overlay" />
-            <div className="gallery-title">BACK STATION FOR TOPOGRAPHICAL SURVEY</div>
-          </div>
-
-          <div className="gallery-card big">
-            <img src={image5} alt=""/>
-            <div className="gallery-overlay" />
-            <div className="gallery-title">DRON SURVEY + GIS PRODUCTION</div>
-          </div>
-        </div>
-
-        <div className="gallery-col">
-          <div className="gallery-card big">
-            <img src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ServicesPhoto.jpg" alt=""/>
-            <div className="gallery-overlay" />
-            <div className="gallery-title">GATE DESIGN</div>
-          </div>
-
-          <div className="gallery-card small">
-            <img src={image6} alt=""/>
-            <div className="gallery-overlay" />
-            <div className="gallery-title">URBAN PLANNING</div>
-          </div>
-        </div>
-
+        ))}
       </div>
 
-      {/* ------------------ BOTTOM COLLAGE ------------------ */}
-      <div className="gallery-bottom">
+      {/* BOTTOM 2 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        {images.slice(3, 5).map((item, index) => (
+          <div key={index} className="relative h-[300px] overflow-hidden rounded-xl group">
+            
+            <img
+              src={item.img}
+              alt=""
+              className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+            />
 
-        <div className="gallery-card bottom-card">
-          <img src={image7} alt=""/>
-          <div className="gallery-overlay" />
-          <div className="gallery-title">ON-SITE LAYOUT MARKING</div>
-        </div>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition"></div>
 
-        <div className="gallery-card bottom-card">
-          <img src={image8} alt=""/>
-          <div className="gallery-overlay" />
-          <div className="gallery-title">BM FIXING ROAD ALIGNMENT SURVEY</div>
-        </div>
+            {/* Text */}
+            <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg z-10">
+              {item.title}
+            </div>
 
-        <div className="gallery-card bottom-card">
-          <img src={image9} alt=""/>
-          <div className="gallery-overlay" />
-          <div className="gallery-title">CANEL / RIVER SURVEY</div>
-        </div>
-
+          </div>
+        ))}
       </div>
+
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef, useState } from "react";
 import './About.css';
 import AboutSlider from "../../components/common/slider/AboutSlider";
 import Navbar from '../../components/Layout/Header/Navbar';
@@ -8,21 +8,72 @@ import heroBG from "../../../src/assets/Images/about/About-hero-bg.jpg";
 // import storyImage from "../../../src/assets/Images/about/ourstory-img.jpg";
 import awardimg from "../../assets/Images/about/md-sir-image.jpeg"
 
-// import cap1 from "../../../src/assets/Images/about/image-1.jpeg";
-// import cap2 from "../../../src/assets/Images/about/image-2.png";
-// import cap3 from "../../../src/assets/Images/about/image-4.jpeg";
-// import cap4 from "../../../src/assets/Images/about/image-3.jpeg";
-// import cap5 from "../../../src/assets/Images/about/image-5.jpeg";
-// import cap6 from "../../../src/assets/Images/about/image-6.jpeg";
+import img4 from "../../assets/Images/about/our-team.jpg"
 
 
 
-import svg1 from "../../../src/assets/Images/about/Frame 35.png";
-import svg2 from "../../../src/assets/Images/about/Frame 35 (1).png";
-import svg3 from "../../../src/assets/Images/about/Frame 35 (2).png";
-import svg4 from "../../../src/assets/Images/about/Frame 35 (3).png";
+
+
+// mamber image 
+
+import m1 from "../../assets/Images/careerpath/member-1.jpg";
+import m2 from "../../assets/Images/careerpath/member-2.jpg";
+import m3 from "../../assets/Images/careerpath/member-3.jpg";
+import m4 from "../../assets/Images/careerpath/member-4.jpg";
+import m5 from "../../assets/Images/careerpath/member-5.jpg";
+import m6 from "../../assets/Images/careerpath/member-6.jpg";
+import m7 from "../../assets/Images/careerpath/member-7.jpg";
+import m8 from "../../assets/Images/careerpath/member-8.jpg";
+import m9 from "../../assets/Images/careerpath/member-9.jpg";
+import m10 from "../../assets/Images/careerpath/member-10.jpg";
+import m11 from "../../assets/Images/careerpath/member-11.jpg";
+
+import svg1 from "../../../src/assets/Images/about/Frame-35.png";
+import svg2 from "../../../src/assets/Images/about/Frame-36.png";
+import svg3 from "../../../src/assets/Images/about/Frame-37.png";
+import svg4 from "../../../src/assets/Images/about/Frame-38.png";
+
+
+const members = [
+ { img: m1, name: "HANUMAN SHARMA", role: "CHAIRMAN" },
+ { img: m2, name: "KIRAN SHARMA", role: "DIRECTOR INTERIOR " },
+ { img: m3, name: "RAMDAYAL SHARMA ", role: "MANAGER ADMIN" },
+ { img: m4, name: "BABU LAL SHARMA ", role: "C.E.O " },
+ { img: m5, name: "MUKESH SAINI", role: "PLANNING MANAGER" },
+ { img: m6, name: "KUNDAN SHARMA ", role: "SURVEY MANAGER" },
+ { img: m7, name: "NITESH SHARMA ", role: "ENGINEERING MANAGER" },
+ { img: m8, name: "RICHHPAL SINGH ", role: "DRAWING MANAGER" },
+ { img: m9, name: "RAMCHARAN SHARMA ", role: "ACCOUNTS MANAGER" },
+ { img: m10, name: "RAKESH GUPTA ", role: "LEGAL ADVISIOR" },
+ { img: m11, name: "JAGDISH MATHUR ", role: "LEGAL ADVISIOR" }
+];
+
+
+
 
 const About = () => {
+
+  const sliderRef = useRef(null);
+const [isDown, setIsDown] = useState(false);
+const [startX, setStartX] = useState(0);
+const [scrollLeft, setScrollLeft] = useState(0);
+
+const handleMouseDown = (e) => {
+  setIsDown(true);
+  setStartX(e.pageX - sliderRef.current.offsetLeft);
+  setScrollLeft(sliderRef.current.scrollLeft);
+};
+
+const handleMouseLeave = () => setIsDown(false);
+const handleMouseUp = () => setIsDown(false);
+
+const handleMouseMove = (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - sliderRef.current.offsetLeft;
+  const walk = (x - startX) * 2;
+  sliderRef.current.scrollLeft = scrollLeft - walk;
+};
   return (
     <>
       <Navbar />
@@ -153,11 +204,97 @@ const About = () => {
       <AboutSlider />
 
 
+      
+{/* out team */}
 
 
-      <div className="values-section">
+<div className="w-full py-10 bg-white overflow-hidden">
+
+  <h2 className="text-center text-3xl font-bold mb-14">
+    Our Team
+  </h2>
+
+  <div
+    ref={sliderRef}
+    className="flex gap-10 overflow-x-auto cursor-grab active:cursor-grabbing animate-scroll hover:[animation-play-state:paused]"
+    onMouseDown={handleMouseDown}
+    onMouseLeave={handleMouseLeave}
+    onMouseUp={handleMouseUp}
+    onMouseMove={handleMouseMove}
+  >
+
+    {[...members, ...members].map((member, index) => (
+      <div
+        key={index}
+        className="w-[320px] bg-white rounded-xl overflow-hidden shadow-xl border group transition duration-500 hover:-translate-y-2"
+      >
+
+        <div className="h-[360px] overflow-hidden">
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
+
+        <div className="text-center py-4 px-3 bg-white">
+          <h3 className="text-lg font-bold text-gray-800">
+            {member.name}
+          </h3>
+
+          <p className="text-sm text-gray-500 mt-1">
+            {member.role}
+          </p>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+
+  </div>
+
+
+
+  {/* our team core value */}
+
+  <div className="relative py-10 bg-gradient-to-b from-white to-gray-100">
+
+  <div className="max-w-6xl mx-auto px-6 text-center">
+
+    {/* Heading */}
+    <h2 className="text-3xl md:text-5xl font-light tracking-wide text-gray-800 leading-snug">
+      <span className="block font-semibold text-gray-900 mt-2">
+        OUR CORE TEAM MEMBERS
+      </span>
+    </h2>
+
+    {/* Decorative Line */}
+    <div className="w-24 h-[2px] bg-gray-900 mx-auto mt-6 mb-12"></div>
+
+    {/* Image Card */}
+    <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
+
+      <img 
+        src={img4} 
+        alt="mahadev market"
+        className="w-full h-[500px] object-cover transform group-hover:scale-105 transition duration-700 ease-in-out"
+      />
+
+    
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+      <div className="values-section ">
         <div className='value-texts center'>
-          <div className="values-left pb-5">
+          <div className="values-left py-10">
             <h2>OUR CORE VALUES</h2>
           </div>
         </div>

@@ -10,8 +10,8 @@ import heroBG from "../../../src/assets/Images/service-page-2/urban-planning.jpe
 import collage1 from "../../../src/assets/Images/service-page-2/COLLAGE-1.jpeg";
 import collage2 from "../../../src/assets/Images/service-page-2/COLLAGE-2.jpeg";
 import collage3 from "../../../src/assets/Images/service-page-2/COLLAGE-3.jpeg";
-import collage4 from "../../../src/assets/Images/service-page-2/COLLAGE-4.jpeg";
-import collage5 from "../../../src/assets/Images/service-page-2/sewer-img8.jpeg";
+import collage4 from "../../../src/assets/Images/service-page-2/MDP-2025.jpg";
+import collage5 from "../../../src/assets/Images/service-page-2/Zonal-development.jpg";
 
 const Engineering = () => {
 
@@ -20,8 +20,8 @@ const Engineering = () => {
     { img: collage1, title: "MOUNTAIN LIFE MANPUR MACHEDI FARM HOUSE PLANNING" },
     { img: collage2, title: "NAVSAAR VALLEY CHANDLAI RESIDENTIAL TOWNSHIP PLANNING FILE" },
     { img: collage3, title: "MOTUKA INDUSTRIAL PLANNING" },
-    { img: collage4, title: "MOUNTAIN LIFE MANPUR MACHEDI FARM HOUSE PLANNING" },
-    { img: collage5, title: "SEWER AND RAIN WATER HARVESTING" }
+    { img: collage4, title: "4.	MDP -2025" },
+    { img: collage5, title: "Zonal Development Plan Planning Zone-15" }
   ];
 
   return (
@@ -34,13 +34,13 @@ const Engineering = () => {
   style={{ backgroundImage: `url(${heroBG})` }}
 >
   {/* Dark Overlay */}
-  {/* <div className="absolute inset-0 bg-black/40"></div> */}
+  <div className="absolute inset-0 bg-black/10"></div>
 
   {/* Content */}
 
-  {/* <div className="hero-overlay relative z-10 text-white flex items-center justify-center h-full">
-    <h1 className="text-5xl font-bold">URBAN PLANNING</h1>
-  </div> */}
+  <div className="hero-overlay relative z-10 text-white flex items-end justify-center h-full pb-10">
+  <h1 className="text-5xl font-bold">URBAN PLANNING</h1>
+</div>
   
 </div>
   
@@ -60,61 +60,31 @@ const Engineering = () => {
         <h2>What We Offer</h2>
         
       </div>
-<div className="max-w-7xl mx-auto px-6 py-16">
+<div className="max-w-7xl mx-auto px-6 py-10">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    {/* Card 1 */}
-    <div className="relative group overflow-hidden h-[400px] rounded-xl border border-black">
-      <img
-        src={collageImages[0].img}
-        alt=""
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      />
+    {collageImages.slice(0, 5).map((item, index) => (
+      <div
+        key={index}
+        className="relative group overflow-hidden h-[400px] rounded-xl border border-black"
+      >
+        <img
+          src={item.img}
+          alt=""
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
 
-      {/* Title */}
-      <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
-        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
-          {collageImages[0].title}
-        </h3>
+        {/* Title */}
+        <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
+          <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
+            {item.title}
+          </h3>
+        </div>
       </div>
-    </div>
-
-    {/* Card 2 */}
-    <div className="relative group overflow-hidden h-[400px] rounded-xl border border-black">
-      <img
-        src={collageImages[1].img}
-        alt=""
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      />
-
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
-
-      <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
-        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
-          {collageImages[1].title}
-        </h3>
-      </div>
-    </div>
-
-    {/* Card 3 */}
-    <div className="relative group overflow-hidden h-[400px] rounded-xl border border-black">
-      <img
-        src={collageImages[2].img}
-        alt=""
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      />
-
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
-
-      <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
-        <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
-          {collageImages[2].title}
-        </h3>
-      </div>
-    </div>
+    ))}
 
   </div>
 </div>

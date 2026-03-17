@@ -5,6 +5,7 @@ import Footer from "../../components/Layout/Footer/Footer";
 
 import heroBG from "../../../src/assets/Images/project/project-banner.png";
 
+import image0 from "../../assets/Images/project/image-1.jpg";
 import image1 from "../../assets/Images/project/img-1.jpg";
 import image2 from "../../assets/Images/project/img-2.jpg";
 import image3 from "../../assets/Images/project/img-3.jpg";
@@ -22,6 +23,11 @@ import image14 from "../../assets/Images/project/img-14.jpeg";
 
 const Project = () => {
   const projects = [
+     {
+      img: image0,
+      title: "ONE REALITY GROUP- KALPVAN  TOWNSHIP AT NAWA ",
+      
+    },
     {
       img: image1,
       title: "HOMELAND GROUP- KESHVAM HOMELAND",
