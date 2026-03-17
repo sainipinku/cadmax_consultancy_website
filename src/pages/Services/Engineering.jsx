@@ -38,7 +38,7 @@ const Engineering = () => {
 
   {/* Content */}
 
-  <div className="hero-overlay relative z-10 text-white flex items-end justify-center h-full pb-10">
+  <div className="hero-overlay relative z-10 text-white flex items-end justify-center h-full pb-4">
   <h1 className="text-5xl font-bold">URBAN PLANNING</h1>
 </div>
   

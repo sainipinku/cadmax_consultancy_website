@@ -13,19 +13,6 @@ import img3 from "../../../src/assets/Images/careerpath/learning-and-development
 
 
 
-// mamber image 
-
-import m1 from "../../assets/Images/careerpath/member-1.jpg";
-import m2 from "../../assets/Images/careerpath/member-2.jpg";
-import m3 from "../../assets/Images/careerpath/member-3.jpg";
-import m4 from "../../assets/Images/careerpath/member-4.jpg";
-import m5 from "../../assets/Images/careerpath/member-5.jpg";
-import m6 from "../../assets/Images/careerpath/member-6.jpg";
-import m7 from "../../assets/Images/careerpath/member-7.jpg";
-import m8 from "../../assets/Images/careerpath/member-8.jpg";
-import m9 from "../../assets/Images/careerpath/member-9.jpg";
-import m10 from "../../assets/Images/careerpath/member-10.jpg";
-import m11 from "../../assets/Images/careerpath/member-11.jpg";
 
 
 
@@ -35,43 +22,11 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-const members = [
- { img: m1, name: "HANUMAN SHARMA", role: "CHAIRMAN" },
- { img: m2, name: "KIRAN SHARMA", role: "DIRECTOR INTERIOR " },
- { img: m3, name: "RAMDAYAL SHARMA ", role: "MANAGER ADMIN" },
- { img: m4, name: "BABU LAL SHARMA ", role: "C.E.O " },
- { img: m5, name: "MUKESH SAINI", role: "PLANNING MANAGER" },
- { img: m6, name: "KUNDAN SHARMA ", role: "SURVEY MANAGER" },
- { img: m7, name: "NITESH SHARMA ", role: "ENGINEERING MANAGER" },
- { img: m8, name: "RICHHPAL SINGH ", role: "DRAWING MANAGER" },
- { img: m9, name: "RAMCHARAN SHARMA ", role: "ACCOUNTS MANAGER" },
- { img: m10, name: "RAKESH GUPTA ", role: "LEGAL ADVISIOR" },
- { img: m11, name: "JAGDISH MATHUR ", role: "LEGAL ADVISIOR" }
-];
+
 
 
 const CareerPath = () => {
-  const sliderRef = useRef(null);
-const [isDown, setIsDown] = useState(false);
-const [startX, setStartX] = useState(0);
-const [scrollLeft, setScrollLeft] = useState(0);
-
-const handleMouseDown = (e) => {
-  setIsDown(true);
-  setStartX(e.pageX - sliderRef.current.offsetLeft);
-  setScrollLeft(sliderRef.current.scrollLeft);
-};
-
-const handleMouseLeave = () => setIsDown(false);
-const handleMouseUp = () => setIsDown(false);
-
-const handleMouseMove = (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - sliderRef.current.offsetLeft;
-  const walk = (x - startX) * 2;
-  sliderRef.current.scrollLeft = scrollLeft - walk;
-};
+  
   return (
     <>
       <Navbar />
@@ -189,54 +144,6 @@ const handleMouseMove = (e) => {
 
       </div>
 
-{/* out team */}
-
-
-<div className="w-full py-20 bg-white overflow-hidden">
-
-  <h2 className="text-center text-3xl font-bold mb-14">
-    Our Team
-  </h2>
-
-  <div
-    ref={sliderRef}
-    className="flex gap-10 overflow-x-auto cursor-grab active:cursor-grabbing animate-scroll hover:[animation-play-state:paused]"
-    onMouseDown={handleMouseDown}
-    onMouseLeave={handleMouseLeave}
-    onMouseUp={handleMouseUp}
-    onMouseMove={handleMouseMove}
-  >
-
-    {[...members, ...members].map((member, index) => (
-      <div
-        key={index}
-        className="w-[280px] bg-white rounded-xl overflow-hidden shadow-xl border group transition duration-500 hover:-translate-y-2"
-      >
-
-        <div className="h-[360px] overflow-hidden">
-          <img
-            src={member.img}
-            alt={member.name}
-            className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-          />
-        </div>
-
-        <div className="text-center py-4 px-3 bg-white">
-          <h3 className="text-lg font-bold text-gray-800">
-            {member.name}
-          </h3>
-
-          <p className="text-sm text-gray-500 mt-1">
-            {member.role}
-          </p>
-        </div>
-
-      </div>
-    ))}
-
-  </div>
-
-  </div>
 
 
 

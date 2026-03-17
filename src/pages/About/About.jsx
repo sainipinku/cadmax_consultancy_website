@@ -36,8 +36,8 @@ import svg4 from "../../../src/assets/Images/about/Frame-38.png";
 
 const members = [
  { img: m1, name: "HANUMAN SHARMA", role: "CHAIRMAN" },
- { img: m2, name: "KIRAN SHARMA", role: "DIRECTOR INTERIOR " },
- { img: m3, name: "RAMDAYAL SHARMA ", role: "MANAGER ADMIN" },
+ { img: m2, name: "KIRAN SHARMA", role: "INTERIOR DIRECTOR  " },
+ { img: m3, name: "RAMDAYAL SHARMA ", role: "ADMIN MANAGER " },
  { img: m4, name: "BABU LAL SHARMA ", role: "C.E.O " },
  { img: m5, name: "MUKESH SAINI", role: "PLANNING MANAGER" },
  { img: m6, name: "KUNDAN SHARMA ", role: "SURVEY MANAGER" },
@@ -210,49 +210,54 @@ const handleMouseMove = (e) => {
 
 <div className="w-full py-10 bg-white overflow-hidden">
 
-  <h2 className="text-center text-3xl font-bold mb-14">
-    Our Team
-  </h2>
+  {/* Heading */}
+    <h2 className="text-3xl text-center md:text-5xl font-light tracking-wide text-gray-800 leading-snug">
+      <span className="block font-semibold text-gray-900 mt-2">
+        OUR CORE TEAM MEMBERS
+      </span>
+    </h2>
 
-  <div
-    ref={sliderRef}
-    className="flex gap-10 overflow-x-auto cursor-grab active:cursor-grabbing animate-scroll hover:[animation-play-state:paused]"
-    onMouseDown={handleMouseDown}
-    onMouseLeave={handleMouseLeave}
-    onMouseUp={handleMouseUp}
-    onMouseMove={handleMouseMove}
-  >
+    {/* Decorative Line */}
+    <div className="w-24 h-[2px] bg-gray-900 mx-auto mt-6 mb-12"></div>
+<div
+  ref={sliderRef}
+  className="flex gap-10 overflow-x-auto overflow-y-hidden whitespace-nowrap cursor-grab active:cursor-grabbing animate-scroll hover:[animation-play-state:paused] scrollbar-hide"
+  onMouseDown={handleMouseDown}
+  onMouseLeave={handleMouseLeave}
+  onMouseUp={handleMouseUp}
+  onMouseMove={handleMouseMove}
+>
 
-    {[...members, ...members].map((member, index) => (
-      <div
-        key={index}
-        className="w-[320px] bg-white rounded-xl overflow-hidden shadow-xl border group transition duration-500 hover:-translate-y-2"
-      >
+  {[...members, ...members].map((member, index) => (
+    <div
+      key={index}
+      className="min-w-[320px] bg-white rounded-xl overflow-hidden shadow-xl border group transition duration-500 hover:-translate-y-2"
+    >
 
-        <div className="h-[360px] overflow-hidden">
-          <img
-            src={member.img}
-            alt={member.name}
-            className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-          />
-        </div>
-
-        <div className="text-center py-4 px-3 bg-white">
-          <h3 className="text-lg font-bold text-gray-800">
-            {member.name}
-          </h3>
-
-          <p className="text-sm text-gray-500 mt-1">
-            {member.role}
-          </p>
-        </div>
-
+      <div className="h-[360px] overflow-hidden">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+        />
       </div>
-    ))}
 
-  </div>
+      <div className="text-center py-4 px-3 bg-white">
+        <h3 className="text-lg font-bold text-gray-800">
+          {member.name}
+        </h3>
 
-  </div>
+        <p className="text-sm text-gray-500 mt-1">
+          {member.role}
+        </p>
+      </div>
+
+    </div>
+  ))}
+
+</div>
+
+</div>
 
 
 
@@ -262,15 +267,15 @@ const handleMouseMove = (e) => {
 
   <div className="max-w-6xl mx-auto px-6 text-center">
 
-    {/* Heading */}
-    <h2 className="text-3xl md:text-5xl font-light tracking-wide text-gray-800 leading-snug">
-      <span className="block font-semibold text-gray-900 mt-2">
-        OUR CORE TEAM MEMBERS
+    
+<h2 className="text-3xl text-center md:text-5xl font-light tracking-wide text-gray-800 leading-snug">
+      <span className="block font-semibold text-gray-900 mt-2 mb-4">
+        OUR TEAM
       </span>
     </h2>
 
-    {/* Decorative Line */}
-    <div className="w-24 h-[2px] bg-gray-900 mx-auto mt-6 mb-12"></div>
+
+
 
     {/* Image Card */}
     <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
