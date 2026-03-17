@@ -207,12 +207,13 @@ const Contact = () => {
 
       {/* MAP SECTION */}
       <div className="contact-map w-full">
-        <iframe
-          title="office-location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.XXXXXX!2d75.7984772!3d26.8862782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDUzJzEwLjYiTiA3NcKwNDcnNTQuNSJF!5e0!3m2!1sen!2sin!4v0000000000000"
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
+       <iframe
+  title="office-location"
+  src="https://www.google.com/maps?q=Pinncadmax%20Group&output=embed"
+  className="w-full h-[400px] border-0"
+  allowFullScreen
+  loading="lazy"
+></iframe>
       </div>
 
       <Footer />
