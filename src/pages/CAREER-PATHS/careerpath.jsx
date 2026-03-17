@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+
 import "./Careerpath.css"
 import Navbar from "../../components/Layout/Header/Navbar";
 import Footer from "../../components/Layout/Footer/Footer"
