@@ -247,7 +247,84 @@
   }
 
   .collage2-desc {
-    font-size: 13px;
+    font-size: 10px;
     bottom: 12px;
+  }
+}
+
+/* ===========================
+   EXTRA MOBILE OPTIMIZATION
+=========================== */
+
+@media (max-width: 768px) {
+
+  .collage2-hero {
+    padding: 40px 0;
+  }
+
+  .collage2-wrapper {
+    width: 95%;
+  }
+
+  /* Headings better spacing */
+  .collage2-left-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .collage2-right-heading {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Stack images properly */
+  .collage2-row {
+    gap: 25px;
+  }
+
+  .collage2-box {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  /* Image height fix (important) */
+  .collage2-box img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  /* Middle image slightly bigger */
+  .collage2-big img {
+    height: 250px;
+  }
+
+  /* Remove overlap on mobile */
+  .collage2-row .collage2-box:first-child,
+  .collage2-row .collage2-box:last-child {
+    margin: 0 !important;
+  }
+
+  /* Better border spacing */
+  .collage2-big img {
+    border: 10px solid #fff;
+    border-bottom: 50px solid #fff;
+  }
+
+  .collage2-small img {
+    border: 8px solid #fff;
+    border-bottom: 35px solid #fff;
+  }
+
+  /* Description text fix */
+  .collage2-desc {
+    font-size: 11px;
+    bottom: 10px;
+    width: 90%;
+  }
+
+  .collage2-descs {
+    font-size: 10px;
+    bottom: 8px;
+    width: 85%;
   }
 }
