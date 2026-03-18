@@ -48,101 +48,96 @@ const CareerPath = () => {
       </div>
 
       {/* CONTENT SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-20">
+      <div className="max-w-7xl mx-auto px-6 py-20 space-y-28">
 
-        {/* SECTION 1 */}
-        <motion.div
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.8 }}
-  className="grid md:grid-cols-2 gap-10 items-center"
->
+  {/* SECTION 1 */}
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.3 }}
+    transition={{ duration: 0.8 }}
+    className="grid md:grid-cols-2 gap-12 items-center bg-white/70 backdrop-blur-md rounded-3xl p-6 md:p-10 shadow-xl"
+  >
+    <div>
+      <h2 className="text-3xl font-bold mb-5 bg-gradient-to-r from-blue-600 via-orange-500 to-green-500 bg-clip-text text-transparent">
+        1. Leadership & Teamwork
+      </h2>
 
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">
-              1. Leadership & Teamwork
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-             1.	Leadership - At Cadmax Consultancy, teamwork is our greatest strength. By combining diverse expertise, creative thinking, and coordinated collaboration, our team transforms ideas into well-planned, high-quality architectural solutions. Every project reflects our shared commitment to precision, efficiency, and excellence—proving that strong teamwork builds stronger designs and lasting success. We’re committed to creating an equitable      workplace. An inclusive environment improves our teams, our firm, and our community, while also enriching and challenging our thinking about design
-            </p>
-          </div>
+      <p className="text-gray-600 leading-relaxed text-[15px] md:text-[16px]">
+        1. Leadership - At Cadmax Consultancy, teamwork is our greatest strength. By combining diverse expertise, creative thinking, and coordinated collaboration, our team transforms ideas into well-planned, high-quality architectural solutions. Every project reflects our shared commitment to precision, efficiency, and excellence—proving that strong teamwork builds stronger designs and lasting success. We’re committed to creating an equitable workplace. An inclusive environment improves our teams, our firm, and our community, while also enriching and challenging our thinking about design
+      </p>
+    </div>
 
-         <motion.img
-  src={img1}
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.7 }}
-  className="rounded-2xl h-auto shadow-lg"
-/>
-
-        </motion.div>
-
-        
-        {/* SECTION 2 */}
-        <motion.div
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.8 }}
-  className="grid md:grid-cols-2 gap-10 items-center"
->
     <motion.img
-  src={img3}
+      src={img1}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.7 }}
+      className="rounded-3xl shadow-2xl hover:scale-105 transition duration-500"
+    />
+  </motion.div>
 
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.7 }}
-  className="rounded-2xl h-auto shadow-lg"
-/>
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">
-             2. Learning & Development- 
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-            Learning & Development at Cadmax Consultancy is the driving force behind our creativity and innovation. We nurture a culture where ideas grow, skills evolve, and knowledge is constantly redefined. By investing in continuous learning, hands-on training, and the latest architectural tools and technologies, we empower our team to think beyond boundaries. This dedication to development allows us to craft intelligent, sustainable, and future-focused design solutions that add lasting value for our clients and the built environment.
-            </p>
-          </div>
+  {/* SECTION 2 */}
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.3 }}
+    transition={{ duration: 0.8 }}
+    className="grid md:grid-cols-2 gap-12 items-center bg-white/70 backdrop-blur-md rounded-3xl p-6 md:p-10 shadow-xl"
+  >
+    <motion.img
+      src={img3}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.7 }}
+      className="rounded-3xl shadow-2xl hover:scale-105 transition duration-500"
+    />
 
-     
+    <div>
+      <h2 className="text-3xl font-bold mb-5 bg-gradient-to-r from-green-500 via-orange-500 to-blue-600 bg-clip-text text-transparent">
+        2. Learning & Development-
+      </h2>
 
-        </motion.div>
-        {/* SECTION 3 */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid md:grid-cols-2 gap-10 items-center"
-        >
-          
+      <p className="text-gray-600 leading-relaxed text-[15px] md:text-[16px]">
+        Learning & Development at Cadmax Consultancy is the driving force behind our creativity and innovation. We nurture a culture where ideas grow, skills evolve, and knowledge is constantly redefined. By investing in continuous learning, hands-on training, and the latest architectural tools and technologies, we empower our team to think beyond boundaries. This dedication to development allows us to craft intelligent, sustainable, and future-focused design solutions that add lasting value for our clients and the built environment.
+      </p>
+    </div>
+  </motion.div>
 
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">
-              3. Work Environment
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-            Cadmax Consultancy provides a positive and inspiring work environment where creativity, collaboration, and professionalism thrive. We believe that a supportive workplace encourages innovation and excellence, allowing our team to perform at their best. Open communication, mutual respect, and teamwork form the core of our culture, while modern tools and well-structured processes ensure efficiency and growth. By fostering a healthy balance between learning and work, CADMAX Consultancy creates an environment where talent is valued, ideas are encouraged, and individuals grow along with the organization.
-            </p>
-          </div>
+  {/* SECTION 3 */}
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.3 }}
+    transition={{ duration: 0.8 }}
+    className="grid md:grid-cols-2 gap-12 items-center bg-white/70 backdrop-blur-md rounded-3xl p-6 md:p-10 shadow-xl"
+  >
+    <div>
+      <h2 className="text-3xl font-bold mb-5 bg-gradient-to-r from-orange-500 via-blue-600 to-green-500 bg-clip-text text-transparent">
+        3. Work Environment
+      </h2>
 
+      <p className="text-gray-600 leading-relaxed text-[15px] md:text-[16px]">
+        Cadmax Consultancy provides a positive and inspiring work environment where creativity, collaboration, and professionalism thrive. We believe that a supportive workplace encourages innovation and excellence, allowing our team to perform at their best. Open communication, mutual respect, and teamwork form the core of our culture, while modern tools and well-structured processes ensure efficiency and growth. By fostering a healthy balance between learning and work, CADMAX Consultancy creates an environment where talent is valued, ideas are encouraged, and individuals grow along with the organization.
+      </p>
+    </div>
 
-            <motion.img
-  src={img2}
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.7 }}
-  className="rounded-2xl shadow-lg"
-/>
-        </motion.div>
+    <motion.img
+      src={img2}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.7 }}
+      className="rounded-3xl shadow-2xl hover:scale-105 transition duration-500"
+    />
+  </motion.div>
 
-      </div>
+</div>
 
       <Footer/>
     </>

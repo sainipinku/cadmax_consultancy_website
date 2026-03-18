@@ -192,13 +192,16 @@ const Contact = () => {
               )}
 
               {/* BUTTON */}
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-orange-500 text-white font-semibold py-3 rounded-lg hover:bg-orange-600 transition disabled:opacity-60"
-              >
-                {loading ? "SENDING..." : "SUBMIT"}
-              </button>
+            <button
+  type="submit"
+  disabled={loading}
+  className="w-full text-white font-semibold py-3 rounded-lg 
+  bg-gradient-to-r from-green-500 via-orange-500 to-blue-500
+  hover:from-green-600 hover:via-orange-600 hover:to-blue-600
+  transition-all duration-300 disabled:opacity-60"
+>
+  {loading ? "SENDING..." : "SUBMIT"}
+</button>
             </form>
           </motion.div>
 

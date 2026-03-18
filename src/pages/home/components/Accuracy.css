@@ -1,107 +1,12 @@
-/* KEEP NORMAL SPACING – DO NOT REMOVE */
-.accuracy-section {
-    margin-top: 50px;
-    padding-bottom: 20px;
-}
+/* KEEP EXISTING IMPORT — DO NOT REMOVE */
 
-/* Heading */
-.accuracy-section h2 {
-    font-size: 22px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #171717;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
-    line-height: 1.2;
-}
-
-/* Paragraph */
-.accuracy-section p {
-    font-size: 16px;
-    line-height: 1.4;       /* better readability */
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-/* Read More button */
-.read-more-btn {
-    background: none;
-    border: none;
-    color: #0066cce2;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    padding: 0;
-    margin-top: 5px;
-    transition: opacity 0.2s ease;
-}
-
-.read-more-btn:hover {
-    text-decoration: underline;
-    opacity: 0.8;
-}
-
-/* Image Styling */
-.accuracy-image {
-    width: 100%;
-    max-width: 600px;
-    transition: transform 0.6s ease;
-    border-radius: 8px;
-}
-
-/* Text initial */
-.accuracy-text {
-    opacity: 0;
-    transform: translateX(-60px);
-    transition: 0.6s ease-out;
-}
-
-/* On show */
+/* Animation trigger */
 .accuracy-text.animate-show {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
 
-/* Image initial */
-.accuracy-img-wrapper {
-    opacity: 0;
-    transform: translateX(60px);
-    transition: 0.6s ease-out;
-}
-
-/* On show */
 .accuracy-img-wrapper.animate-show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Hover zoom */
-.accuracy-image:hover {
-    transform: scale(1.08);
-}
-
-/* RESPONSIVE */
-@media (max-width: 991px) {
-    .accuracy-section p {
-        font-size: 16px;
-        line-height: 1.45;
-    }
-}
-
-@media (max-width: 768px) {
-    .accuracy-section {
-        text-align: center;
-        font-size: 14px;
-    }
-    .read-more-btn {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .accuracy-section p {
-        font-size: 14px;
-        line-height: 1.4;
-    }
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
