@@ -16,17 +16,17 @@ import img4 from "../../assets/Images/about/our-team.jpg"
 
 // mamber image 
 
-import m1 from "../../assets/Images/careerpath/member-1.jpg";
-import m2 from "../../assets/Images/careerpath/member-2.jpg";
-import m3 from "../../assets/Images/careerpath/member-3.jpg";
-import m4 from "../../assets/Images/careerpath/member-4.jpg";
-import m5 from "../../assets/Images/careerpath/member-5.jpg";
-import m6 from "../../assets/Images/careerpath/member-6.jpg";
-import m7 from "../../assets/Images/careerpath/member-7.jpg";
-import m8 from "../../assets/Images/careerpath/member-8.jpg";
-import m9 from "../../assets/Images/careerpath/member-9.jpg";
-import m10 from "../../assets/Images/careerpath/member-10.jpg";
-import m11 from "../../assets/Images/careerpath/member-11.jpg";
+import m1 from "../../assets/Images/about/member-1.jpg";
+import m2 from "../../assets/Images/about/member-2.jpg";
+import m3 from "../../assets/Images/about/member-3.jpg";
+import m4 from "../../assets/Images/about/member-4.jpg";
+import m5 from "../../assets/Images/about/member-5.jpg";
+import m6 from "../../assets/Images/about/member-6.jpg";
+import m7 from "../../assets/Images/about/member-7.jpg";
+import m8 from "../../assets/Images/about/member-8.jpg";
+import m9 from "../../assets/Images/about/member-9.jpg";
+import m10 from "../../assets/Images/about/member-10.jpg";
+import m11 from "../../assets/Images/about/member-11.jpg";
 
 import svg1 from "../../../src/assets/Images/about/Frame-35.png";
 import svg2 from "../../../src/assets/Images/about/Frame-36.png";
@@ -118,7 +118,7 @@ const handleMouseMove = (e) => {
       </div> */}
 
       {/* award section  */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-5">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-10">
 
         {/* LEFT CONTENT */}
         <div>
