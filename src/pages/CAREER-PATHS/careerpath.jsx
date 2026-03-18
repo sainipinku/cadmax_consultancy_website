@@ -125,6 +125,7 @@ const CareerPath = () => {
       <p className="text-gray-600 leading-relaxed text-[15px] md:text-[16px]">
         Cadmax Consultancy provides a positive and inspiring work environment where creativity, collaboration, and professionalism thrive. We believe that a supportive workplace encourages innovation and excellence, allowing our team to perform at their best. Open communication, mutual respect, and teamwork form the core of our culture, while modern tools and well-structured processes ensure efficiency and growth. By fostering a healthy balance between learning and work, CADMAX Consultancy creates an environment where talent is valued, ideas are encouraged, and individuals grow along with the organization.
       </p>
+
     </div>
 
     <motion.img
