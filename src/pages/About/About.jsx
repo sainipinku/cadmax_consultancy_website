@@ -208,17 +208,51 @@ const handleMouseMove = (e) => {
 {/* out team */}
 
 
+{/* TOP LEADERS */}
+<div className="text-center my-16">
+  <h2 className="text-4xl md:text-5xl font-playfair font-bold bg-gradient-to-r from-gray-900 to-gray-800 bg-clip-text text-transparent">
+    OUR TEAM MEMBERS
+  </h2>
+   {/* Decorative Line */}
+    <div className="w-[80px] h-[2px] bg-gray-900 mx-auto mt-3 mb-12"></div>
+</div>
+
+
+<div className="max-w-[900px] mx-auto px-5 mb-20 grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center">
+
+  {members.slice(0, 2).map((member, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-2xl overflow-hidden shadow-2xl border group transition duration-500 hover:-translate-y-2"
+    >
+      <div className="h-[360px] overflow-hidden">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+        />
+      </div>
+
+      <div className="text-center py-5 px-4 bg-white">
+        <h3 className="text-lg font-bold text-gray-900 tracking-wide whitespace-normal break-words">
+          {member.name}
+        </h3>
+
+        <p className="text-sm text-gray-600 mt-1 tracking-wider whitespace-normal break-words">
+          {member.role}
+        </p>
+      </div>
+    </div>
+  ))}
+
+</div>
+
+
 <div className="w-full py-10 bg-white overflow-hidden">
 
-  {/* Heading */}
-    <h2 className="text-3xl text-center md:text-5xl font-light tracking-wide text-gray-800 leading-snug">
-      <span className="block font-semibold text-gray-900 mt-2">
-        OUR CORE TEAM MEMBERS
-      </span>
-    </h2>
+  
 
-    {/* Decorative Line */}
-    <div className="w-24 h-[2px] bg-gray-900 mx-auto mt-6 mb-12"></div>
+   
 <div
   ref={sliderRef}
   className="flex gap-10 overflow-x-auto overflow-y-hidden whitespace-nowrap cursor-grab active:cursor-grabbing animate-scroll hover:[animation-play-state:paused] scrollbar-hide"
@@ -228,7 +262,7 @@ const handleMouseMove = (e) => {
   onMouseMove={handleMouseMove}
 >
 
-  {[...members, ...members].map((member, index) => (
+ {[...members.slice(2), ...members.slice(2)].map((member, index) => (
     <div
       key={index}
       className="min-w-[320px] bg-white rounded-xl overflow-hidden shadow-xl border group transition duration-500 hover:-translate-y-2"
@@ -267,15 +301,13 @@ const handleMouseMove = (e) => {
 
   <div className="max-w-6xl mx-auto px-6 text-center">
 
-    
-<h2 className="text-3xl text-center md:text-5xl font-light tracking-wide text-gray-800 leading-snug">
-      <span className="block font-semibold text-gray-900 mt-2 mb-4">
-        OUR TEAM
-      </span>
-    </h2>
-
-
-
+<div className="text-center my-16">
+  <h2 className="text-4xl md:text-5xl font-playfair font-bold bg-gradient-to-r from-gray-900 to-gray-800 bg-clip-text text-transparent">
+   OUR CORE TEAM
+  </h2>
+   {/* Decorative Line */}
+    <div className="w-[120px] h-[2px] bg-gray-900 mx-auto mt-3 mb-12"></div>
+</div>
 
     {/* Image Card */}
     <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
@@ -298,11 +330,13 @@ const handleMouseMove = (e) => {
 
 
       <div className="values-section ">
-        <div className='value-texts center'>
-          <div className="values-left py-10">
-            <h2>OUR CORE VALUES</h2>
-          </div>
-        </div>
+
+        <div className="text-center my-16">
+  <h2 className="text-4xl md:text-5xl font-playfair font-bold bg-gradient-to-r from-gray-900 to-gray-800 bg-clip-text text-transparent">
+  OUR CORE VALUES
+  </h2>
+  
+</div>
 
         <div className="values-grid">
 

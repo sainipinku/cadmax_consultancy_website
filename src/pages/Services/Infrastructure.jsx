@@ -67,7 +67,7 @@ const Infrastructure = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/40 group-hover:via-black/20"></div>
+          <div className="absolute inset-0 bg-black/50 transition-opacity duration-500 group-hover:opacity-0"></div>
 
           {/* Text */}
           <div className="absolute bottom-0 left-0 p-6 z-10">

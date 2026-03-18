@@ -40,7 +40,7 @@ const MasonryGallery = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition"></div>
+            <div className="absolute inset-0 bg-black/70 group-hover:bg-black/0 transition"></div>
 
             {/* Text */}
             <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg z-10">
@@ -63,7 +63,7 @@ const MasonryGallery = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition"></div>
+            <div className="absolute inset-0 bg-black/70 group-hover:bg-black/0 transition"></div>
 
             {/* Text */}
             <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg z-10">

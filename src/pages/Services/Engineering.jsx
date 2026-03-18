@@ -20,7 +20,7 @@ const Engineering = () => {
     { img: collage1, title: "MOUNTAIN LIFE MANPUR MACHEDI FARM HOUSE PLANNING" },
     { img: collage2, title: "NAVSAAR VALLEY CHANDLAI RESIDENTIAL TOWNSHIP PLANNING FILE" },
     { img: collage3, title: "MOTUKA INDUSTRIAL PLANNING" },
-    { img: collage4, title: "4.	MDP -2025" },
+    { img: collage4, title: "MDP -2025" },
     { img: collage5, title: "Zonal Development Plan Planning Zone-15" }
   ];
 
@@ -55,40 +55,34 @@ const Engineering = () => {
         <img src={overlapImg} alt="" />
       </div> */}
 
-      
-      <div className="flex-section">
-        <h2>What We Offer</h2>
-        
-      </div>
-<div className="max-w-7xl mx-auto px-6 py-10">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-    {collageImages.slice(0, 5).map((item, index) => (
-      <div
-        key={index}
-        className="relative group overflow-hidden h-[400px] rounded-xl border border-black"
-      >
-        <img
-          src={item.img}
-          alt=""
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+    {collageImages.map((item, index) => (
+      <div key={index} className="group">
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
+        {/* Image */}
+        <div className="relative overflow-hidden rounded-xl">
+          <img
+            src={item.img}
+            alt=""
+            className="w-full h-[320px] object-cover transition duration-700 group-hover:scale-105"
+          />
 
-        {/* Title */}
-        <div className="absolute inset-0 flex items-center justify-center transition duration-300 group-hover:opacity-0">
-          <h3 className="text-white text-xl font-extrabold tracking-wide text-center px-4 drop-shadow-lg">
-            {item.title}
-          </h3>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition duration-500"></div>
         </div>
+
+        {/* Title BELOW */}
+        <h3 className="mt-4 text-lg font-semibold text-gray-800 uppercase tracking-wide">
+          {item.title}
+        </h3>
+
       </div>
     ))}
 
   </div>
 </div>
-
       
       {/* <div className="collage-wrapper">
 

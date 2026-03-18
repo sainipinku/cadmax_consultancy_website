@@ -137,7 +137,7 @@ const Architecture = () => {
       />
 
       {/* Soft Overlay */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-500"></div>
+      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition duration-500"></div>
 
     </div>
 
