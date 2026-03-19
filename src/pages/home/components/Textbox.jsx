@@ -24,7 +24,7 @@ const Textbox = () => {
   >
 
     {/* CONTENT WRAPPER (IMPORTANT 🔥) */}
-    <div className="max-w-[90%] sm:max-w-[600px] md:max-w-[750px] lg:max-w-[900px] text-center">
+    <div className="max-w-[100%] sm:max-w-[100%] md:max-w-[100%] lg:max-w-[100%px] text-center">
 
       <h2 className="
         text-white uppercase font-extrabold
@@ -38,14 +38,14 @@ const Textbox = () => {
       </h2>
 
       <p className="
-        text-white uppercase font-extrabold mt-3
+        text-white uppercase font-bold mt-3
         text-[13px] 
         sm:text-[14px] 
         md:text-[15px] 
         lg:text-[16px]
         leading-[1.6]
       ">
-        At Architech, every detail counts. From innovative interiors that inspire to engineering solutions that endure, we’re committed to shaping spaces where design meets precision. Take our survey and help us craft environments that reflect your vision.
+       At Architech, every detail counts. From innovative interiors that inspire to engineering solutions that endure, we’re committed to shaping spaces where design meets precision. Take our survey and help us craft environments that reflect your vision.
       </p>
 
     </div>
