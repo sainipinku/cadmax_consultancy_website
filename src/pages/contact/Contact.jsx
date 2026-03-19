@@ -88,7 +88,7 @@ const Contact = () => {
               BUILD YOUR DREAMS, WITH US
             </h2>
 
-            <p className="text-lg text-gray-200 mb-8 max-w-xl">
+            <p className="text-lg text-white mb-8 max-w-xl">
               Contact CADMAX directly—no delays. Get clear communication, expert
               guidance, and personalized solutions straight from our team to
               bring your project to life with confidence.
@@ -109,7 +109,7 @@ const Contact = () => {
               <div className="w-11 h-11 rounded-full border-2 border-orange-500 flex items-center justify-center">
                 <FaMapMarkerAlt className="text-orange-500 text-lg" />
               </div>
-              <p className="text-gray-200 leading-relaxed max-w-lg">
+              <p className="text-white leading-relaxed max-w-lg">
                 GROUND FLOOR-1,2,3 AND 302-3RD FLOOR, PRISM TOWER,  
                 OPP. RAJASTHAN POLICE HEADQUARTER, LAL KOTHI SCHEME,  
                 TONK ROAD, JAIPUR (RAJ.)
