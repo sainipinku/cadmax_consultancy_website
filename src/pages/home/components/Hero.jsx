@@ -16,7 +16,7 @@ const Hero = () => {
     <section className="w-full overflow-hidden">
 
       {/* SAME HEIGHT */}
-      <div className="relative w-full h-[400px] md:h-[560px] lg:h-[720px] md:mt-[-150px]">
+      <div className="relative w-full h-[400px] md:h-[560px] lg:h-[750px] pb-0 md:mt-[-100px]">
 
         <Swiper
           slidesPerView={1}
