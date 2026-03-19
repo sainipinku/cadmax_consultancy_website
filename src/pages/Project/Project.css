@@ -1,41 +1,74 @@
-
+/* HERO */
 .project-hero {
   width: 100%;
-  height: 550px;
+  height: 400px;
   background-size: cover;
   background-position: center;
 }
 
+@media (min-width: 768px) {
+  .project-hero {
+    height: 500px;
+  }
+}
 
+@media (min-width: 1200px) {
+  .project-hero {
+    height: 550px;
+  }
+}
+
+
+/* WRAPPER */
 .project-wrapper {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 40px 16px;
+}
+
+@media (min-width: 768px) {
+  .project-wrapper {
+    padding: 60px 20px;
+  }
 }
 
 
+/* TITLE */
 .project-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .project-title {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-title {
+    font-size: 28px;
+  }
 }
 
 
+/* TABS */
 .project-tabs {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 45px;
+  gap: 10px;
+  margin-bottom: 35px;
 }
 
 .tab {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
   background: #ebebeb;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   border-radius: 20px;
@@ -46,14 +79,35 @@
   color: white;
 }
 
-/* leptop// */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+@media (min-width: 768px) {
+  .tab {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
 
 
+/* GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* CARD */
 .project-card {
   background: white;
   border-radius: 8px;
@@ -65,25 +119,42 @@
   transform: translateY(-4px);
 }
 
+
+/* IMAGE BOX */
 .img-box {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 200px;
 }
 
+@media (min-width: 600px) {
+  .img-box {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .img-box {
+    height: 260px;
+  }
+}
+
+
+/* IMAGE */
 .project-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+
 /* DOWNLOAD ICON */
 .download-icon {
   position: absolute;
   right: 12px;
   bottom: 12px;
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   background: white;
   border-radius: 50%;
   display: flex;
@@ -92,78 +163,66 @@
 }
 
 .download-icon i {
-  font-size: 18px;
+  font-size: 16px;
   color: black;
 }
 
+@media (min-width: 768px) {
+  .download-icon {
+    width: 42px;
+    height: 42px;
+  }
 
+  .download-icon i {
+    font-size: 18px;
+  }
+}
+
+
+/* CONTENT */
 .project-content {
-  padding: 18px;
+  padding: 16px;
 }
 
 .project-content h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .project-content p {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.8;
   line-height: 1.5;
 }
 
-
-.load-more {
-  margin: 50px auto 0;
-  display: block;
-  padding: 12px 30px;
-  background: white;
-  border: 1px solid black;
-  color: black;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-@media (min-width: 1200px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .img-box {
-    height: 300px;
-  }
-}
-
-
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .img-box {
-    height: 220px;
-  }
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .img-box {
-    height: 200px;
-  }
-
-  .project-title {
-    font-size: 22px;
-  }
-
+@media (min-width: 768px) {
   .project-content h3 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .project-content p {
-    font-size: 13px;
+    font-size: 14px;
+  }
+}
+
+
+/* LOAD MORE */
+.load-more {
+  margin: 40px auto 0;
+  display: block;
+  padding: 10px 24px;
+  background: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .load-more {
+    margin: 50px auto 0;
+    padding: 12px 30px;
+    font-size: 14px;
   }
 }

@@ -37,7 +37,7 @@ const Accuracy = () => {
   }, []);
 
   return (
-    <div className="max-w-8xl mx-auto px-4 mt-12 mb-6">
+    <div className="max-w-8xl mx-auto px-4  mb-6 pb-10">
       <div className="flex flex-col md:flex-row items-center gap-10">
 
         {/* LEFT TEXT */}

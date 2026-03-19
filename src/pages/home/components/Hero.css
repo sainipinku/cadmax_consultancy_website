@@ -15,13 +15,14 @@
 .hero-item {
   width: 100%;
   height: 85vh;
+  position: relative;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: cover; /* desktop */
 }
 
 /* Slick Dots */
@@ -32,7 +33,7 @@
   transform: translateX(-50%);
 }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 992px) {
   .hero-slider-box,
   .hero-item {
@@ -40,16 +41,27 @@
   }
 }
 
+/* Mobile FIX 🔥 */
 @media (max-width: 768px) {
   .hero-slider-box,
   .hero-item {
-    height: 60vh;
+    height: 70vh;   /* 👈 height increase */
+  }
+
+  .hero-image {
+    height: 100%;
+    object-fit: cover; /* 👈 NO WHITE SPACE */
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .hero-slider-box,
   .hero-item {
-    height: 50vh;
+    height: 65vh;
+  }
+
+  .hero-image {
+    object-fit: cover;
   }
 }

@@ -1,50 +1,50 @@
 import React from "react";
-import Slider from "react-slick";
-import "./Hero.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
-import img1 from "../../../assets/Images/header/home-banner-1.jpg";
+import "swiper/css";
+import img1 from "../../../assets/Images/header/banner1.jpg";
+// import img1 from "../../../assets/Images/header/home-banner-1.jpg";
 import img2 from "../../../assets/Images/header/home-banner-2.jpg";
 import img3 from "../../../assets/Images/header/home-banner-3.jpg";
 import img4 from "../../../assets/Images/header/home-banner-4.jpg";
 
-
-
 const Hero = () => {
-  const sliderImages = [img1, img2, img3, img4 ];
-
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    pauseOnHover: false,
-  };
+  const sliderImages = [img1, img2, img3, img4];
 
   return (
-    <section className="hero-wrapper">
-      <div className="hero-slider-box">
-        <Slider {...settings}>
-          {sliderImages.map((img, i) => (
-            <div key={i} className="hero-item">
-              <img src={img} alt={`slide-${i}`} className="hero-image"
-              
-              
-              />
-              {/* <div className="hero-center-btn">
-  <button className="header-button">
-    <Link to="/contact">ENQUIRE TODAY</Link>
-  </button>
-</div> */}
+    <section className="w-full overflow-hidden">
 
-            </div>
+      {/* SAME HEIGHT */}
+      <div className="relative w-full h-[400px] md:h-[560px] lg:h-[720px] md:mt-[-150px]">
+
+        <Swiper
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          modules={[Autoplay]}
+          className="w-full h-full"
+        >
+          {sliderImages.map((img, i) => (
             
+            <SwiperSlide key={i}>
+              <div className="relative w-full h-full">
+
+                {/* IMAGE */}
+                <img
+                  src={img}
+                  alt={`slide-${i}`}
+                  className="w-full h-full object-cover"
+                />
+
+              </div>
+            </SwiperSlide>
+
           ))}
-        </Slider>
+        </Swiper>
+
       </div>
+
     </section>
   );
 };

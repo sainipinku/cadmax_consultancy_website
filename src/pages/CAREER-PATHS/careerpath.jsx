@@ -31,20 +31,23 @@ const CareerPath = () => {
     <>
       <Navbar />
 
-      {/* HERO SECTION */}
+  <div className="relative w-full h-[420px] sm:h-[450px] md:h-[550px] xl:h-[650px] flex items-center justify-center overflow-hidden">
+
+  {/* Background Image */}
   <div
-  className="w-full h-[600px] xl:h-[650px] bg-cover bg-center flex items-center justify-center relative"
-  style={{
-    backgroundImage: `url(${heroBGCareer})`,
-    filter: "brightness(1.8)", 
-  }}
->
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: `url(${heroBGCareer})` }}
+  ></div>
+
+  {/* Overlay (Brightness Control) */}
+  <div className="absolute inset-0 bg-black/10"></div>
 
 
-        <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative text-white text-4xl md:text-5xl font-bold tracking-wide">
-          {/* Career Path at CADMAX */}
-        </h1>
+
+
+
+        
+      
       </div>
 
       {/* CONTENT SECTION */}

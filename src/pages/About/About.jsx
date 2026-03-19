@@ -247,49 +247,64 @@ const handleMouseMove = (e) => {
 
 </div>
 
-
 <div className="w-full py-10 bg-white overflow-hidden">
 
-  
+  <div
+    ref={sliderRef}
+    className="
+      flex 
+      gap-4 sm:gap-6 md:gap-8 lg:gap-10
+      overflow-x-auto overflow-y-hidden
+      cursor-grab active:cursor-grabbing
+      animate-scroll hover:[animation-play-state:paused]
+      scrollbar-hide
+      px-4
+    "
+    onMouseDown={handleMouseDown}
+    onMouseLeave={handleMouseLeave}
+    onMouseUp={handleMouseUp}
+    onMouseMove={handleMouseMove}
+  >
 
-   
-<div
-  ref={sliderRef}
-  className="flex gap-10 overflow-x-auto overflow-y-hidden whitespace-nowrap cursor-grab active:cursor-grabbing animate-scroll hover:[animation-play-state:paused] scrollbar-hide"
-  onMouseDown={handleMouseDown}
-  onMouseLeave={handleMouseLeave}
-  onMouseUp={handleMouseUp}
-  onMouseMove={handleMouseMove}
->
+    {[...members.slice(2), ...members.slice(2)].map((member, index) => (
+      
+      <div
+        key={index}
+        className="
+          flex-shrink-0
+          w-[260px] 
+          sm:w-[280px] 
+          md:w-[300px] 
+          lg:w-[320px]
+          bg-white rounded-xl overflow-hidden 
+          shadow-lg border
+          group transition duration-500 hover:-translate-y-2
+        "
+      >
 
- {[...members.slice(2), ...members.slice(2)].map((member, index) => (
-    <div
-      key={index}
-      className="min-w-[320px] bg-white rounded-xl overflow-hidden shadow-xl border group transition duration-500 hover:-translate-y-2"
-    >
+        <div className="h-[280px] sm:h-[300px] md:h-[320px] lg:h-[360px] overflow-hidden">
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
 
-      <div className="h-[360px] overflow-hidden">
-        <img
-          src={member.img}
-          alt={member.name}
-          className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-        />
+        <div className="text-center py-4 px-3 bg-white">
+          <h3 className="text-base sm:text-lg font-bold text-gray-800">
+            {member.name}
+          </h3>
+
+          <p className="text-xs sm:text-sm text-gray-500 mt-1">
+            {member.role}
+          </p>
+        </div>
+
       </div>
 
-      <div className="text-center py-4 px-3 bg-white">
-        <h3 className="text-lg font-bold text-gray-800">
-          {member.name}
-        </h3>
+    ))}
 
-        <p className="text-sm text-gray-500 mt-1">
-          {member.role}
-        </p>
-      </div>
-
-    </div>
-  ))}
-
-</div>
+  </div>
 
 </div>
 
