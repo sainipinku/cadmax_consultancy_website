@@ -5,8 +5,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import img1 from "../../../assets/Images/header/banner1.jpg";
 // import img1 from "../../../assets/Images/header/home-banner-1.jpg";
-import img2 from "../../../assets/Images/header/home-banner-2.jpg";
-import img3 from "../../../assets/Images/header/home-banner-3.jpg";
+import img2 from "../../../assets/Images/header/banner2.jpg";
+import img3 from "../../../assets/Images/header/banner3.jpg";
 import img4 from "../../../assets/Images/header/home-banner-4.jpg";
 
 const Hero = () => {

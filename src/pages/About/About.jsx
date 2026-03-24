@@ -35,18 +35,18 @@ import svg4 from "../../../src/assets/Images/about/Frame-38.png";
 
 
 const members = [
- { img: m1, name: "HANUMAN SHARMA", role: "CHAIRMAN" },
- { img: m2, name: "KIRAN SHARMA", role: "INTERIOR DIRECTOR  " },
- { img: m3, name: "RAMDAYAL SHARMA ", role: "ADMIN MANAGER " },
- { img: m4, name: "BABU LAL SHARMA ", role: "C.E.O " },
- { img: m5, name: "MUKESH SAINI", role: "PLANNING MANAGER" },
- { img: m6, name: "KUNDAN SHARMA ", role: "SURVEY MANAGER" },
- { img: m7, name: "NITESH SHARMA ", role: "ENGINEERING MANAGER" },
- { img: m8, name: "RICHHPAL SINGH ", role: "DRAWING MANAGER" },
- { img: m9, name: "RAMCHARAN SHARMA ", role: "ACCOUNTS MANAGER" },
- { img: m10, name: "RAKESH GUPTA ", role: "LEGAL ADVISIOR" },
- { img: m11, name: "JAGDISH MATHUR ", role: "LEGAL ADVISIOR" }
-];
+ { img: m1, name: "Mr. HANUMAN SHARMA", role: "CHAIRMAN" },
+ { img: m2, name: "Ms. KIRAN SHARMA", role: "INTERIOR DIRECTOR  " },
+ { img: m3, name: "Mr. RAMDAYAL SHARMA ", role: "ADMIN MANAGER " },
+ { img: m4, name: "Mr. BABU LAL SHARMA ", role: "C.E.O " },
+ { img: m5, name: "Mr. MUKESH SAINI", role: "PLANNING MANAGER" },
+ { img: m6, name: "Mr. KUNDAN SHARMA ", role: "SURVEY MANAGER" },
+ { img: m7, name: "Mr. NITESH SHARMA ", role: "ENGINEERING MANAGER" },
+ { img: m8, name: "Mr. RICHHPAL SINGH ", role: "DRAWING MANAGER" },
+ { img: m9, name: "Mr. RAMCHARAN SHARMA ", role: "ACCOUNTS MANAGER" },
+ { img: m10, name:"Mr. RAKESH GUPTA ", role: "LEGAL ADVISIOR" },
+ { img: m11, name:"Mr. JAGDISH MATHUR ", role: "LEGAL ADVISIOR" }
+]; 
 
 
 
