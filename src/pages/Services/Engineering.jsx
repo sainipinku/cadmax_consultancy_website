@@ -12,6 +12,9 @@ import collage2 from "../../../src/assets/Images/service-page-2/COLLAGE-2.jpeg";
 import collage3 from "../../../src/assets/Images/service-page-2/COLLAGE-3.jpeg";
 import collage4 from "../../../src/assets/Images/service-page-2/MDP-2025.jpg";
 import collage5 from "../../../src/assets/Images/service-page-2/Zonal-development.jpg";
+import collage6 from "../../../src/assets/Images/service-page-2/kanakvrindavanSIRSI.jpg.jpeg";
+import collage7 from "../../../src/assets/Images/service-page-2/VATIKAINFOTECHCITYAJMERROAD.jpg.jpeg";
+import collage8 from "../../../src/assets/Images/service-page-2/Padam-vatika.jpeg";
 
 const Engineering = () => {
 
@@ -21,7 +24,10 @@ const Engineering = () => {
     { img: collage2, title: "NAVSAAR VALLEY CHANDLAI RESIDENTIAL TOWNSHIP PLANNING FILE" },
     { img: collage3, title: "MOTUKA INDUSTRIAL PLANNING" },
     { img: collage4, title: "MDP -2025" },
-    { img: collage5, title: "Zonal Development Plan Planning Zone-15" }
+    { img: collage5, title: "Zonal Development Plan Planning Zone-15" },
+    { img: collage6, title: "kanak Vrindavan Sirsi" },
+    { img: collage7, title: "VATIKA INFOTECH CITY AJMER ROAD" },
+    { img: collage8, title: "SHREE RAM GROUP PADAM VATIKA" }
   ];
 
   return (
