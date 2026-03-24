@@ -211,7 +211,7 @@ const handleMouseMove = (e) => {
 {/* TOP LEADERS */}
 <div className="text-center my-16">
   <h2 className="text-4xl md:text-5xl font-playfair font-bold bg-gradient-to-r from-gray-900 to-gray-800 bg-clip-text text-transparent">
-    OUR TEAM MEMBERS
+    OUR CREATIVE LEADERS
   </h2>
    {/* Decorative Line */}
     <div className="w-[80px] h-[2px] bg-gray-900 mx-auto mt-3 mb-12"></div>
