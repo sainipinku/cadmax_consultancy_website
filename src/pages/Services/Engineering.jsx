@@ -20,14 +20,14 @@ const Engineering = () => {
 
 
   const collageImages = [
-    { img: collage1, title: "MOUNTAIN LIFE MANPUR MACHEDI FARM HOUSE PLANNING" },
-    { img: collage2, title: "NAVSAAR VALLEY CHANDLAI RESIDENTIAL TOWNSHIP PLANNING FILE" },
-    { img: collage3, title: "MOTUKA INDUSTRIAL PLANNING" },
-    { img: collage4, title: "MDP -2025" },
+    { img: collage1, title: "MOUNTAIN LIFE  FARM HOUSE SCHEME AT MANPUR MACHEDI JAIPUR. " },
+    { img: collage2, title: "NAVSAAR VALLEY RESIDENTIAL TOWNSHIP  AT CHANDLAI VILLAGE JAIPUR." },
+    { img: collage3, title: " INDUSTRIAL PLANNING AT MOTUKA VILLAGE TONK. " },
+    { img: collage4, title: "MASTER DEVELOPMENT PLAN 2025." },
     { img: collage5, title: "Zonal Development Plan Planning Zone-15" },
-    { img: collage6, title: "kanak Vrindavan Sirsi" },
-    { img: collage7, title: "VATIKA INFOTECH CITY AJMER ROAD" },
-    { img: collage8, title: "SHREE RAM GROUP PADAM VATIKA" }
+    { img: collage6, title: "kanak Vrindavan RESIDENTIAL SCHEME AT SIRSI JAIPUR. " },
+    { img: collage7, title: "VATIKA INFOTECH CITY AT AJMER ROAD JAIPUR. " },
+    { img: collage8, title: "PADAM VATIKA RESIDENTIAL SCHEME AT VATIKA JAIPUR." }
   ];
 
   return (
