@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { MapPin } from "lucide-react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../../components/Layout/Header/Navbar";
 import Footer from "../../../components/Layout/Footer/Footer";
 import API, { resolveFileUrl } from "../../../api/axios";
@@ -62,11 +61,32 @@ const ProjectLayout = ({
   sector,
   subCategory = null,
   showProjectList = true,
+  noProjectContent = null,
 }) => {
   const [cardProjects, setCardProjects] = useState([]);
   const [listProjects, setListProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleDownload = async (url, filename) => {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("Network response was not ok");
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = filename || url.split('/').pop() || 'download';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error("Download failed:", error);
+      // Fallback: open in new tab if blob download fails
+      window.open(url, '_blank');
+    }
+  };
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -78,7 +98,7 @@ const ProjectLayout = ({
         if (subCategory) {
           cardUrl += `&subCategory=${subCategory}`;
         }
-        const cardRes = await API.get(`/api${cardUrl}`);
+        const cardRes = await API.get(cardUrl);
         setCardProjects(cardRes.data?.data || []);
         
         // Fetch PROJECT LIST type
@@ -86,7 +106,7 @@ const ProjectLayout = ({
         if (subCategory) {
           listUrl += `&subCategory=${subCategory}`;
         }
-        const listRes = await API.get(`/api${listUrl}`);
+        const listRes = await API.get(listUrl);
         setListProjects(listRes.data?.data || []);
         
       } catch (error) {
@@ -234,16 +254,21 @@ const ProjectLayout = ({
                               <td className="py-4 px-6 text-gray-600">{project.area || "—"}</td>
                               <td className="py-4 px-6">
                                 {(project.file || project.image) ? (
-                                  <a
-                                    href={resolveFileUrl(project.file || project.image?.url || project.image)}
-                                    download
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handleDownload(
+                                        resolveFileUrl(project.file || project.image?.url || project.image),
+                                        project.fileName || project.title || 'download'
+                                      );
+                                    }}
                                     className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:from-red-600 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-md"
                                   >
                                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                     </svg>
                                     DOWNLOAD
-                                  </a>
+                                  </button>
                                 ) : (
                                   <span className="text-gray-400 font-medium">—</span>
                                 )}
@@ -258,8 +283,10 @@ const ProjectLayout = ({
 
                 {/* NO PROJECTS FOUND */}
                 {cardProjects.length === 0 && listProjects.length === 0 && (
-                  <div className="text-center py-12">
-                    <p className="text-xl text-gray-600">No projects found.</p>
+                  <div className="py-12">
+                    {noProjectContent || (
+                      <p className="text-xl text-gray-600 text-center">No projects found.</p>
+                    )}
                   </div>
                 )}
               </>
